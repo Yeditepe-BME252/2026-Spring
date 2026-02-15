@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Unit 3: Mass and Force Concepts</title>
+<meta name="author" content="Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../style.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>Unit 3: Mass and Force Concepts</h2> <h3>Readings from Stuart and Gonzales, Chapter 3</h3> <h4>2025-04-13</h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-orga9762f8">(\(\S 3.1\)) Continuum Bodies (Session 9)</a></li>
+<li><a href="#/slide-org23bf2b5">(\(\S 3.3.2\)) Surface Forces (Session 10)</a></li>
+<li><a href="#/slide-orgedd16e9">(\(\S 3.3.3\)) The Stress Tensor (Session 11)</a></li>
+<li><a href="#/slide-org25a2054">(\(\S 3.4\)) Equilibrium Conditions (Session 12)</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-orga9762f8">
+<h2 id="orga9762f8">(\(\S 3.1\)) Continuum Bodies (Session 9)</h2>
+
+<div id="org6474c49" class="figure">
+<p><img src="../images/Continuum_body.svg" alt="Continuum_body.svg" class="org-svg" width="600px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">What is the notion of a <i><a href="https://en.wikipedia.org/wiki/Continuum_mechanics">continuum</a></i>? (ask chat AI)</li>
+<li class="fragment appear">In this context define <b>density</b> of a material, \(\rho\) (units in mass/volume)</li>
+<li class="fragment appear">We identify the <i>placement of a <b>material body</b></i> as an open subset \(\mathcal{B}\) of Euclidean Space \(\mathbb{E}^3\)</li>
+<li class="fragment ...">The placement of a body may change in time, i.e. \(\mathcal{B}=\mathcal{B}(t)\), under the effect of external factors.</li>
+<li class="fragment ...">Study of the relationship between the change in placement and external factors, is called <i>continuum mechanics</i>.</li>
+
+</ul>
+</section>
+<section id="slide-orga91767e">
+<h3 id="orga91767e">(\(\S 3.2\)) Volume and Mass</h3>
+
+<div id="org010e0c1" class="figure">
+<p><img src="../images/Continuum_body.svg" alt="Continuum_body.svg" class="org-svg" width="300px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">The <b>mass</b> of the body is distributed continuously throughout its <b>volume</b>.</li>
+<li class="fragment appear">The volume of an arbitrary open subset \(\Omega\) of \(\mathcal{B}\) is \[\mathrm{vol}[\Omega] = \int_\Omega dV.\] where \(dV\) denotes an infinitesimal volume element at \(\boldsymbol{x}\in\Omega\).</li>
+<li class="fragment appear">Let there be a <b>mass density</b> field per unit volume \(\rho:B\to\mathbb{R}\) such that \[\mathrm{mass}[\Omega] = \int_\Omega \rho(\boldsymbol{x})dV.\]</li>
+
+</ul>
+</section>
+<section id="slide-orgca7d751">
+<h4 id="orgca7d751">(\(\S 3.2.2\)) Centers of Volume and Mass</h4>
+
+<div id="org2ed2e79" class="figure">
+<p><img src="../images/Continuum_body.svg" alt="Continuum_body.svg" class="org-svg" width="300px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">By the center of volume of an open subset \(\Omega\) of \(\mathcal{B}\) we mean the point \[\boldsymbol{x}_\mathrm{cov} = \frac{1}{\mathrm{vol}[\Omega]} \int_\Omega \boldsymbol{x} dV.\]</li>
+<li class="fragment appear">This integral is known as the first moment of volume about \(O\).</li>
+<li class="fragment appear">By the center of mass of an open subset \(\Omega\) of \(\mathcal{B}\) we mean the point \[\boldsymbol{x}_\mathrm{com} = \frac{1}{\mathrm{mass}[\Omega]} \int_\Omega \boldsymbol{x} \rho(\boldsymbol{x}) dV.\]</li>
+
+</ul>
+
+</section>
+<section id="slide-orgca7d751-split">
+</section>
+<section id="slide-org4d0ae02">
+<h3 id="org4d0ae02">(\(\S 3.3\)) Body Forces</h3>
+
+<div id="orgb088988" class="figure">
+<p><img src="../images/forces_in_nature.jpg" alt="forces_in_nature.jpg" width="1200px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">How do body forces arise from distant effects such as gravity, electromagnetism?</li>
+
+</ul>
+</section>
+<section id="slide-org96fc770">
+<h4 id="org96fc770">(\(\S 3.3.1\))  Body Forces and their Resultants (Integrals)</h4>
+
+<div id="org7c2158e" class="figure">
+<p><img src="../images/traction_bodyIntegrals.jpg" alt="traction_bodyIntegrals.jpg" width="360px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">Let, \(\boldsymbol{b}(\boldsymbol{x}):\mathbb{E}^3 \to \mathcal{V}\), denote any force field that does not arise from physical contact (between bodies).</li>
+<li class="fragment appear">Example: gravity, \(\boldsymbol{g}\) (has units of m/s\(^2\))</li>
+<li class="fragment appear">It is usually measured in terms of the force field per unit mass (i.e. force/mass)</li>
+<li class="fragment appear">Let \(\Omega\) be an open volume in \(\mathcal{B}\), then, the resultant force accumulating in \(\Omega\) due to \(\boldsymbol{b}\) is \[\boldsymbol{r}_b[\Omega] = \int_\Omega \boldsymbol{b}(\boldsymbol{x}) \rho(\boldsymbol{x}) dV,\]</li>
+<li class="fragment appear">and the resultant torque about a point \(\boldsymbol{z}\) can be written as  \[\boldsymbol{\tau}_b[\Omega,\boldsymbol{z}] = \int_\Omega (\boldsymbol{x} - \boldsymbol{z}) \times \boldsymbol{b}(\boldsymbol{x}) \rho(\boldsymbol{x}) dV.\]</li>
+
+</ul>
+</section>
+<section id="slide-org72aa4b1">
+<h3 id="org72aa4b1">Questions for next session</h3>
+<p>
+Ask AI:
+</p>
+<ul>
+<li>In which ways do the surface forces differ from the body forces?</li>
+
+</ul>
+</section>
+<section id="slide-orgb30ece3">
+<h3 id="orgb30ece3">Deliverables</h3>
+<p>
+Students should be able to:
+</p>
+<ul>
+<li class="off"><code>[&#xa0;]</code> use density to find continuum mass and center of mass</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org23bf2b5">
+<h2 id="org23bf2b5">(\(\S 3.3.2\)) Surface Forces (Session 10)</h2>
+
+<div id="orgdf70bbc" class="figure">
+<p><img src="../images/traction_glued.jpg" alt="traction_glued.jpg" width="1200 px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">How do surface forces, a.k.a. tractions arise from the mutual interaction (contact) between a pair of bodies?</li>
+<li class="fragment appear">Contact occurs over the <i>boundary</i> of \(\mathcal{B}\), i.e. \(\partial\mathcal{B}\), boundary tractions are labeled \(\bar{\boldsymbol{t}}\).</li>
+
+</ul>
+</section>
+<section id="slide-orge95b72f">
+<h3 id="orge95b72f">Definitions</h3>
+
+<div id="org4b3187b" class="figure">
+<p><img src="../images/traction_definitions.jpg" alt="traction_definitions.jpg" width="1400 px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">\(\Gamma\)  denotes the area projected by \(\mathcal{B}\) over a plane with normal \(\boldsymbol{n}\)</li>
+<li class="fragment appear">It separates \(\mathcal{B}\) into the (\(-\)) and a (\(+\)) sides.</li>
+<li class="fragment appear">The force, per unit area, exerted by the (\(+\)) side of  \(\Gamma\) upon the (\(-\)) side is the <b>traction function</b>, \(\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x}): \mathcal{N} \times \mathcal{B} \to \mathcal{V}\).</li>
+<li class="fragment appear">When the \(\Gamma\) is part of \(\partial\mathcal{B}\), tractions become the boundary tractions,  \(\boldsymbol{t} = \bar{\boldsymbol{t}}\).</li>
+<li class="fragment appear">The tractions at a point \(\boldsymbol{x}\) and over opposite faces of \(\Gamma\) are equal but have  opposite signs, i.e.: \(\boldsymbol{t} (\boldsymbol{-n}, \boldsymbol{x}) = - \boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x})\)</li>
+
+</ul>
+</section>
+<section id="slide-orgb0fad99">
+<h4 id="orgb0fad99">Example 1: Balance of Tractions in an Axial Bar</h4>
+
+<div id="org0c08b61" class="figure">
+<p><img src="../images/traction_axialbar.jpg" alt="traction_axialbar.jpg" width="1200 px" />
+</p>
+</div>
+
+<p>
+A <b>fundamental problem</b> is to determine the traction distribution over the contact interface.
+</p>
+
+<p>
+Other motivations:
+</p>
+<ul>
+<li class="fragment appear">How do the surface shear tractions applied at the ends gradually dive into the body and become normal tractions?</li>
+<li class="fragment appear">How can the resultant of the internal normal tractions be computed?</li>
+
+</ul>
+</section>
+<section id="slide-org1e7d15e">
+<h3 id="org1e7d15e">Resultant Force and Torque (Integrals)</h3>
+
+<div id="org75a2e2c" class="figure">
+<p><img src="../images/traction_surfaceIntegrals.jpg" alt="traction_surfaceIntegrals.jpg" width="360 px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">Similar to the integrals of body forces we define the resultant force due to a traction field as
+\[\boldsymbol{r}_s[\partial\Omega] = \int_{\partial\Omega} \bar{\boldsymbol{t}} dA,\]</li>
+<li class="fragment appear">and the resultant torque about point \(\boldsymbol{z}\) as   \[\boldsymbol{\tau}_s[\partial\Omega,\boldsymbol{z}] = \int_{\partial\Omega} (\boldsymbol{x} - \boldsymbol{z}) \times \bar{\boldsymbol{t}} dA.\]</li>
+
+</ul>
+</section>
+<section id="slide-org4b04ab8">
+<h4 id="org4b04ab8">Why care about the torque?</h4>
+<p>
+Consider equilibrium for the models below &#x2026;
+</p>
+
+<div id="orgb58fa4e" class="figure">
+<p><img src="../images/traction_torque.jpg" alt="traction_torque.jpg" width="1500px" />
+</p>
+</div>
+
+<p>
+\[\int_{\partial\mathcal{B}} \bar{\boldsymbol{t}} dA = \int_{\partial\mathcal{B}_L} \bar{\boldsymbol{t}}_L dA + \int_{\partial\mathcal{B}_R} \bar{\boldsymbol{t}}_R dA = \boldsymbol{0} \hspace{4em} \quad \quad \int_\Gamma \boldsymbol{t} dA = \boldsymbol{0}\]
+</p>
+<ul>
+<li class="fragment appear">Zero net force in both cases.</li>
+<li class="fragment appear">How can the rotation tendency under zero net force be explained?</li>
+
+</ul>
+</section>
+<section id="slide-org25fd1e8">
+<h4 id="org25fd1e8">Example 2: Balance of Tractions in a Pressurized Vessel</h4>
+
+<div id="org460f99e" class="figure">
+<p><img src="../images/traction_vessel.jpg" alt="traction_vessel.jpg" width="1200px" />
+</p>
+</div>
+
+<p>
+Another <b>fundamental problem</b> is to determine the internal tractions resulting from the applied boundary tractions.
+</p>
+
+<p>
+Further questions:
+</p>
+<ul>
+<li class="fragment appear">Is there a coordinate system (alternative to Cartesian) which would be more suitable for this (cylindrical) problem?
+\(\{1,2,3\} = \{r,\theta\,z\}\)</li>
+
+<li class="fragment appear">How is the internal pressure related with boundary tractions?  
+\(\bar{\boldsymbol{t}} = -p\,\boldsymbol{e}_r\)</li>
+
+<li class="fragment appear">Visualize the internal wall tensions that are expected in radial planes:  
+\(\boldsymbol{t} = t\,\boldsymbol{e}_\theta\)</li>
+
+</ul>
+</section>
+<section id="slide-orga53ee52">
+<h3 id="orga53ee52">Questions for next session</h3>
+<p>
+Ask AI:
+</p>
+<ul>
+<li>How is the definition of the stress tensor related with the internal tractions?</li>
+
+</ul>
+</section>
+<section id="slide-org1791320">
+<h3 id="org1791320">Deliverables</h3>
+<p>
+Students should be able to:
+</p>
+<ul>
+<li class="off"><code>[&#xa0;]</code> differentiate surface and body forces</li>
+<li class="off"><code>[&#xa0;]</code> provide an example to the surface traction vector</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgedd16e9">
+<h2 id="orgedd16e9">(\(\S 3.3.3\)) The Stress Tensor (Session 11)</h2>
+<ul>
+<li class="fragment appear">The internal tractions can be assembled to define the concept of <i>stress</i> in a body</li>
+<li class="fragment appear">Stress is a second-order tensor</li>
+
+</ul>
+</section>
+<section id="slide-orgf49b303">
+<h3 id="orgf49b303">Cauchy&rsquo;s Stress Tetrahedron</h3>
+
+<div id="org59cf572" class="figure">
+<p><img src="../images/stress_tetrahedron.png" alt="stress_tetrahedron.png" width="600 px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">Visualize a tetrahedron in \(\mathcal{B}\) with three of its faces normal to \(\boldsymbol{e}_i,\;i=1,2,3\), and its fourth face normal to unit vector \(\boldsymbol{n}\).</li>
+<li class="fragment appear">The internal traction vector on the plane with unit normal \(\boldsymbol{n}\) is \(\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x})\)</li>
+<li class="fragment appear">The internal traction vectors on the coordinate planes having normals \(-\boldsymbol{e}_j\) are \(\boldsymbol{t} (-\boldsymbol{e}_j, \boldsymbol{x})\)</li>
+<li class="fragment appear">By extending the arguments of force equilibrium the above tractions can be shown to obey \[\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x}) + \sum_{j=1}^3 \boldsymbol{t} (-\boldsymbol{e}_j, \boldsymbol{x}) n_j = \boldsymbol{0}.\]</li>
+
+</ul>
+</section>
+<section id="slide-org172e333">
+<h3 id="org172e333">Definition</h3>
+
+<div id="orge5d727a" class="figure">
+<p><img src="../images/stress_tetrahedra.jpg" alt="stress_tetrahedra.jpg" width="1000 px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">There exists a second-order tensor field, \(\boldsymbol{\sigma} (\boldsymbol{x}):\mathcal{B} \to \mathcal{V}^2\), called the <b>stress field</b>, which transforms the unit normal field  into the traction field as \[\cancel{\boldsymbol{t} = \boldsymbol{\sigma} \cdot \boldsymbol{n} \quad \mathrm{or} \quad t_i = \sigma_{ij} n_j} \quad \boldsymbol{t} = \boldsymbol{n} \cdot \boldsymbol{\sigma} = \boldsymbol{\sigma}^T \cdot \boldsymbol{n} \quad \mathrm{or} \quad t_j = n_i \sigma_{ij}\]  where \(\cancel{\sigma_{ij} = t_i(\boldsymbol{e}_j, \boldsymbol{x})} \; \sigma_{ij} = t_j(\boldsymbol{e}_i, \boldsymbol{x})\)</li>
+<li class="fragment appear">the stress component \(\sigma_{ij}\) corresponds to the \(j^\mathrm{th}\) component of traction on the  plane with normal \(\boldsymbol{e}_i\).</li>
+<li class="fragment appear">The diagonal and off-diagonal components are termed as, <i>normal</i> and <i>shear</i> stresses, respectively.</li>
+
+</ul>
+</section>
+<section id="slide-org5c59bda">
+<h3 id="org5c59bda">(\(\S 3.5.1\)) Simple States of Stress</h3>
+<ul>
+<li class="fragment appear">Hydrostatic (Spherical) Stress</li>
+<li class="fragment appear">Uniaxial State of Stress</li>
+<li class="fragment appear">The State of Pure Shear</li>
+
+</ul>
+</section>
+<section id="slide-orgf4583fc">
+<h4 id="orgf4583fc">Hydrostatic (Spherical) Stress</h4>
+<ul>
+<li class="fragment appear">A state of stress at a point \(\boldsymbol{x}\) is said to be <b>spherical</b> if
+\[\boldsymbol{\sigma} = -p \boldsymbol{I}, \quad \mathrm{or} \quad \sigma_{ij} = -p \, \delta_{ij},\]
+where \(p\) denotes the hydrostatic pressure. Note that, <i>compressive</i> pressures are taken as (\(-\)) while <i>expansive</i> pressures are (\(+\)).</li>
+<li class="fragment appear">For this state of stress, we find the tractions on any surface with normal \(\boldsymbol{n}\) at \(\boldsymbol{x}\) is given by
+\[\boldsymbol{t} = \boldsymbol{n} \cdot \boldsymbol{\sigma} = -p \boldsymbol{n} \quad \mathrm{or} \quad t_i = -p \,n_i.\]</li>
+
+</ul>
+</section>
+<section id="slide-org99095d2">
+<h4 id="org99095d2">Uniaxial State of Stress</h4>
+<ul>
+<li class="fragment appear">The state of stress at a point \(\boldsymbol{x}\) is said to be <b>uniaxial</b> if
+\[\boldsymbol{\sigma} = \sigma\,\boldsymbol{\gamma} \otimes \boldsymbol{\gamma} \quad \mathrm{or} \quad \sigma_{ij} = \sigma \,n_i\,n_j,\]
+where \(\boldsymbol{\gamma}\) is a unit vector that denotes the axis of loading and \(\sigma\) is the stress magnitude.</li>
+<li class="fragment appear">For a uniaxial stress state the traction on any surface with normal \(\boldsymbol{n}\) at \(\boldsymbol{x}\) is given by
+\[\boldsymbol{t} = \boldsymbol{n} \cdot \boldsymbol{\sigma} = (\boldsymbol{n} \cdot \boldsymbol{\gamma}) \sigma \boldsymbol{\gamma} \quad \mathrm{or} \quad t_i = (\gamma_j n_j) \sigma \gamma_i\]
+Notice that no matter in which direction \(\boldsymbol{n}\) points, the traction is always parallel to \(\boldsymbol{\gamma}\).</li>
+
+</ul>
+</section>
+<section id="slide-orga088cdd">
+<h4 id="orga088cdd">The State of Pure Shear</h4>
+
+<div id="org1b808c0" class="figure">
+<p><img src="../images/pure_shear.jpg" alt="pure_shear.jpg" width="900 px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">If at a point \(\boldsymbol{x}\) there exists a pair of orthogonal unit vectors \(\boldsymbol{\gamma}\) and \(\boldsymbol{\eta}\) and a scalar \(\tau\) such that
+\[\boldsymbol{\sigma} = \tau (\boldsymbol{\gamma} \otimes \boldsymbol{\eta} + \boldsymbol{\eta} \otimes \boldsymbol{\gamma}) \quad \mathrm{or} \quad \sigma_{ij} = \tau (\gamma_i \eta_j + \gamma_j \eta_i),\]
+we say that a state of <b>pure shear</b> exists.</li>
+<li class="fragment appear">For this stress state the traction on any surface with normal \(\boldsymbol{n}\) is given by
+\[\boldsymbol{t} = \boldsymbol{n} \cdot \boldsymbol{\sigma} = (\boldsymbol{n} \cdot \boldsymbol{\eta}) \tau \boldsymbol{\gamma} + (\boldsymbol{n} \cdot \boldsymbol{\gamma}) \tau \boldsymbol{\eta} \quad \mathrm{or} \quad t_i = (n_j \eta_j) \tau \gamma_i + (n_j \gamma_j) \tau \eta_i.\]</li>
+
+</ul>
+</section>
+<section id="slide-orgdc8b89f">
+<h3 id="orgdc8b89f">Questions for Next Session</h3>
+<p>
+Ask AI:
+</p>
+<ul>
+<li>What global conditions on body and surfaces forces are necessary, for a continuum body to remain stationary?</li>
+
+</ul>
+</section>
+<section id="slide-org471a154">
+<h3 id="org471a154">Deliverables</h3>
+<p>
+Students should be able to:
+</p>
+<ul>
+<li class="off"><code>[&#xa0;]</code> relate the surface traction vector and the stress tensor</li>
+<li class="off"><code>[&#xa0;]</code> provide examples of simple states of stress</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org25a2054">
+<h2 id="org25a2054">(\(\S 3.4\)) Equilibrium Conditions (Session 12)</h2>
+<ul>
+<li class="fragment appear">What <i>global conditions</i> on body and surfaces forces are necessary for a continuum body to remain <b>stationary</b>?</li>
+<li class="fragment appear">What is the Gauss&rsquo;s (divergence) theorem?</li>
+<li class="fragment appear">How are the <i>local conditions</i> on body and surface forces obtained from the global ones?</li>
+
+</ul>
+</section>
+<section id="slide-orgb0aed9c">
+<h3 id="orgb0aed9c">(\(\S 3.4.2\)) The Global Resultants</h3>
+
+<div id="orgb06235d" class="figure">
+<p><img src="../images/AFC-3.5.png" alt="AFC-3.5.png" width="1200 px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">Let \(\mathcal{B}\) be a body under external forces whose undeformed shape is \(\mathcal{B}_0\)  and let \(\bar{\boldsymbol{t}}:\partial\mathcal{B} \to \mathcal{V}\) be the traction field acting on it&rsquo;s bounding surface.</li>
+<li class="fragment appear">The resultant force on \(\mathcal{B}\) due to body and surface forces is
+\[ \boldsymbol{r}[\mathcal{B}] = \boldsymbol{r}_b[\mathcal{B}] + \boldsymbol{r}_s[\partial\mathcal{B}] = \int_\mathcal{B} \boldsymbol{b}\, \rho\,dV + \int_{\partial\mathcal{B}} \bar{\boldsymbol{t}} \, dA \]</li>
+<li class="fragment appear">The resultant torque on \(\mathcal{B}\), about point \(\boldsymbol{z}\), due to body and surface forces is
+\[ \boldsymbol{\tau}[\mathcal{B},\boldsymbol{z}] = \boldsymbol{\tau}_b[\mathcal{B},\boldsymbol{z}] + \boldsymbol{\tau}_s[\partial\mathcal{B},\boldsymbol{z}] = \int_\mathcal{B} (\boldsymbol{x} - \boldsymbol{z}) \times \boldsymbol{b}\, \rho\,dV+ \int_{\partial\mathcal{B}} (\boldsymbol{x} - \boldsymbol{z}) \times  \bar{\boldsymbol{t}}\, dA \]</li>
+
+</ul>
+</section>
+<section id="slide-org7dd25e6">
+<h4 id="org7dd25e6">(Axiom 3.4) Conditions for Stationary Equilibrium</h4>
+<p>
+A stationary body will remain <i>stationary</i> (in <b>mechanical equilibrium</b>), IF AND ONLY IF:
+</p>
+<ul>
+<li class="fragment appear">the resultant force
+\[ \boldsymbol{r}[\Omega] = \boldsymbol{0}, \]</li>
+<li class="fragment appear">and the resultant torque about an arbitrary point
+\[ \boldsymbol{\tau}[\Omega,\boldsymbol{z}] = \boldsymbol{0}.\]</li>
+
+</ul>
+</section>
+<section id="slide-org13d781d">
+<h3 id="org13d781d">(\(\S 2.3.1\)) Divergence Theorem</h3>
+
+<div id="org441f664" class="figure">
+<p><img src="../images/AFC-2.1.png" alt="AFC-2.1.png" width="1200 px" />
+</p>
+</div>
+
+<p>
+Let \(\mathcal{B}\) denote a regular region in \(\mathbb{E}^3\) with boundary \(\partial\mathcal{B}\). It can be shown using analytical methods that:
+</p>
+<ol>
+<li class="fragment appear">for an arbitrary vector field \(\boldsymbol{v}: \mathcal{B} \to \mathcal{V}\),
+\[ \int_{\partial\mathcal{B}} \boldsymbol{v} \cdot \boldsymbol{n}\, dA = \int_\mathcal{B} \nabla \cdot \boldsymbol{v}\, dV \quad \mathrm{or} \quad \int_{\partial\mathcal{B}} v_i n_i\, dA = \int_\mathcal{B} v_{i,i}\, dV, \]</li>
+<li class="fragment appear">and, for a second order tensor field \(\boldsymbol{S}: \mathcal{B} \to \mathcal{V}^2\)
+\[ \int_{\partial\mathcal{B}} \boldsymbol{n} \cdot \boldsymbol{S}\, dA = \int_\mathcal{B} \nabla \cdot \boldsymbol{S}\, dV \quad \mathrm{or} \quad \int_{\partial\mathcal{B}} n_i S_{ij}\, dA = \int_\mathcal{B} S_{ij,i}\, dV \]</li>
+
+</ol>
+</section>
+<section id="slide-orgecef048">
+<h3 id="orgecef048">(\(\S 3.4.3\)) Localization</h3>
+<ul>
+<li class="fragment appear">The global (<i>integral</i>) condition of (<i>linear</i>) force equilibrium in stationary bodies reads:
+\[ \int_\mathcal{B} \boldsymbol{b}\, \rho\,dV + \int_{\partial\mathcal{B}} \bar{\boldsymbol{t}} \, dA = \boldsymbol{0}. \]</li>
+<li class="fragment appear">It is implied that \(\bar{\boldsymbol{t}}\) over the boundary is equilibrated by the internal traction \(\boldsymbol{t} = \boldsymbol{n} \cdot \boldsymbol{\sigma}\).</li>
+<li class="fragment appear">Substituting the internal tractions into the second term, the <b>linear equilibrium equation</b> becomes
+\[ \int_\mathcal{B} \boldsymbol{b}\, \rho\,dV + \int_{\partial\mathcal{B}} \boldsymbol{n} \cdot \boldsymbol{\sigma} \, dA = \boldsymbol{0}. \]</li>
+<li class="fragment appear">But the second term involving the surface integral can be replaced with a volume integral by issuing the <i>divergence theorem</i>, which results in rewriting the linear equilibrium as
+\[ \int_{\mathcal{B}} (\nabla \cdot \boldsymbol{\sigma} + \rho\,\boldsymbol{b})\, dV = \boldsymbol{0}. \]</li>
+<li class="fragment appear">Since the above equation must hold for any arbitrary region \(\Omega\) in \(\mathcal{B}\), we conclude that
+\[ \nabla \cdot \boldsymbol{\sigma} + \rho \boldsymbol{b} = \boldsymbol{0} \quad \forall\,\boldsymbol{x} \in \mathcal{B}, \]
+which is known as the <b>local</b> (<i>differential</i>) <b>form</b> of linear equilibrium.</li>
+<li class="fragment appear">By a similar argument, the global condition of (angular) torque equilibrium can be used to reveal that
+\[ \boldsymbol{\sigma}^T = \boldsymbol{\sigma} \quad \forall\,\boldsymbol{x} \in \mathcal{B},\]
+which is known as the <b>local form</b> of angular equilibrium.</li>
+
+</ul>
+</section>
+<section id="slide-org57194fb">
+<h4 id="org57194fb">Equations of Equilibrium (in expanded form)</h4>
+<ul>
+<li class="fragment appear">In [IB:SFAD/15] (\(\S 3.1\)) the equations of equilibrium in a Cartesian frame are provided as
+\[ \frac{\partial\sigma_{xx}}{\partial x} + \frac{\partial\sigma_{yx}}{\partial y} + \frac{\partial\sigma_{zx}}{\partial z} + \rho g_x = 0 \] \[
+  \frac{\partial\sigma_{xy}}{\partial x} + \frac{\partial\sigma_{yy}}{\partial y} + \frac{\partial\sigma_{zy}}{\partial z} + \rho g_y = 0 \] \[
+  \frac{\partial\sigma_{zx}}{\partial x} + \frac{\partial\sigma_{zy}}{\partial y} + \frac{\partial\sigma_{zz}}{\partial z} + \rho g_z = 0 \]</li>
+<li class="fragment appear">Note that this is equivalent to the indicial expression
+\[ \sigma_{ji,j} + \rho b_i = 0 \]
+where the body force \(\boldsymbol{b} = \boldsymbol{g}\).</li>
+<li class="fragment appear">Sections \(\S 3.3\) and \(\S 3.4\) from [IB:SFAD/15] can be studied within this framework.</li>
+
+</ul>
+</section>
+<section id="slide-org4473a35">
+<h3 id="org4473a35">Questions for Next Session</h3>
+<p>
+Ask AI:
+</p>
+<ul>
+<li>Briefly describe the concept of material time derivative, using arguments that can be followed by an engineering undergraduate student.</li>
+
+</ul>
+</section>
+<section id="slide-orgb1bd2a1">
+<h3 id="orgb1bd2a1">Deliverables</h3>
+<p>
+Students should be able to:
+</p>
+<ul>
+<li class="off"><code>[&#xa0;]</code> write the condition of static equilibrium in global form</li>
+<li class="off"><code>[&#xa0;]</code> apply the divergence theorem to integral forms</li>
+<li class="off"><code>[&#xa0;]</code> obtain the local form of static equilibrium using the divergence theorem</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>

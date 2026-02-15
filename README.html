@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>BME 252 (Bio)mechanics</title>
+<meta name="author" content="Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="./mystyle.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>BME 252 (Bio)mechanics</h2> <h3>Spring 2025 Syllabus</h3>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-orgcc7f1c9">Why does this course exist?</a></li>
+<li><a href="#/slide-org598221e">Syllabus</a></li>
+<li><a href="#/slide-org8fbcc86">Modus Operandi</a></li>
+<li><a href="#/slide-org4b57085">Code of Conduct &amp; Ethics</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-orgcc7f1c9">
+<h2 id="orgcc7f1c9">Why does this course exist?</h2>
+<p>
+The <b>first course in Biomechanics</b> offered by the Biomedical Engineering Department aims to enhance the understanding of the science of motion and mechanical interactions between living tissue.
+</p>
+<p class="fragment (appear)">
+<b>Essential reading</b>: Chapter 1 of <a href="#/slide-orgf6e9e18" class="fragment (appear)">IB:SFAD/15</a>
+</p>
+<ul>
+<li class="fragment appear">Point of Departure, the development of biomechanics</li>
+<li class="fragment appear">Health Care Applications, complex mechanical phenomenon in living organisms</li>
+<li class="fragment appear">What Is Continuum Mechanics?</li>
+<li class="fragment ...">A Brief on Cell Biology,</li>
+<li class="fragment ...">The Extracellular Matrix</li>
+<li class="fragment ...">Mechanotransduction in Cells</li>
+
+</ul>
+
+<p>
+<a href="https://app.jove.com/playlist?plid=9205458">Jove playlist</a> (motivational)
+</p>
+
+<p>
+Jove: a scientific educational video content provider with free access through Yeditepe
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org598221e">
+<h2 id="org598221e">Syllabus</h2>
+<div class="outline-text-2" id="text-org598221e">
+</div>
+</section>
+<section id="slide-org79c6fa2">
+<h3 id="org79c6fa2">Course learning objectives-CLOs</h3>
+<ul>
+<li class="fragment appear"><code>[X]</code> exemplify some basic biomechanical phenomenon that arise in living tissues ()</li>
+<li class="fragment appear"><code>[X]</code> perform simple algebraic operations with vectors</li>
+<li class="fragment appear"><code>[X]</code> read and verify expressions written in the indicial notation</li>
+<li class="fragment ..."><code>[X]</code> convert expressions between their tensor and indicial forms</li>
+<li class="fragment ..."><code>[X]</code> transform vectors linearly via second-order tensors</li>
+<li class="fragment ..."><code>[X]</code> convert expressions between their tensor and matrix forms</li>
+<li class="fragment ..."><code>[X]</code> perform change of basis of vector components</li>
+<li class="fragment ..."><code>[X]</code> calculate the determinant of a second-order tensor</li>
+<li class="fragment ..."><code>[X]</code> calculate the eigenvalues and eigenvectors of a second-order tensor</li>
+<li class="fragment ..."><code>[X]</code> provide examples of scalar and vector fields</li>
+<li class="fragment ..."><code>[X]</code> apply the gradient operator to  a scalar field</li>
+<li class="fragment ..."><code>[X]</code> apply the gradient operator to a vector field</li>
+<li class="fragment ..."><code>[X]</code> identify divergence, curl and laplacian operators in cartesian coordinates</li>
+
+</ul>
+
+</section>
+<section id="slide-org79c6fa2-split">
+<ul>
+<li class="fragment appear"><code>[X]</code> use density to find continuum mass and center of mass</li>
+<li class="fragment appear"><code>[X]</code> differentiate surface and body forces</li>
+<li class="fragment appear"><code>[X]</code> provide an example to the surface traction vector</li>
+<li class="fragment ..."><code>[X]</code> relate the surface traction vector and the stress tensor</li>
+<li class="fragment ..."><code>[X]</code> provide examples of simple states of stress</li>
+<li class="fragment ..."><code>[X]</code> write the condition of static equilibrium in global form</li>
+<li class="fragment ..."><code>[X]</code> apply the divergence theorem to integral forms</li>
+<li class="fragment ..."><code>[X]</code> obtain the local form of static equilibrium using the divergence theorem</li>
+<li class="fragment ..."><code>[X]</code> explain the concept of material time derivative</li>
+<li class="fragment ..."><code>[X]</code> state the balance laws for a system of particles</li>
+<li class="fragment ..."><code>[X]</code> state the balance laws for a continuum (integral form)</li>
+<li class="fragment ..."><code>[&#xa0;]</code> identify mechanical variables in the first law of thermodynamics</li>
+<li class="fragment ..."><code>[&#xa0;]</code> state the local (differential) form of balance laws for a continuum</li>
+
+</ul>
+</section>
+<section id="slide-orgb74e677">
+<h3 id="orgb74e677">Weekly outline</h3>
+<div style="font-size: 80%;">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Week</th>
+<th scope="col" class="org-left">Lectures (Tuesday)</th>
+<th scope="col" class="org-left">Lectures (Thursday)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">No lecture</td>
+<td class="org-left">Course Conduct, <a href="./lecture-slides/U1-tensor-algebra.html">Tensor Algebra</a> bases, projections</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">Motivation: Point of Departure</td>
+<td class="org-left">Indicial Notation, kroenecker delta and permutation</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">Second Order Tensors</td>
+<td class="org-left">Change of Basis, Trace, Determinant</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">Eigenvalues, principal invariants (<b>Quiz 1</b>)</td>
+<td class="org-left"><a href="./lecture-slides/U2-tensor-calculus.html">Tensor calculus</a>, gradient operator, divergence, curl</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Divergence theorem, localization</td>
+<td class="org-left"><a href="./lecture-slides/U3-mass-force.html">Mass and force concepts</a>, surface traction and stress</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">Condition of statical equilibrium</td>
+<td class="org-left"><a href="./lecture-slides/U4-time-motion.html">Time and Motion</a>, Velocity, Acceleration, Vorticity, etc</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">Bayram</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-left"><a href="./lecture-slides/U5-balance-laws.html">Balance Laws</a>, global forms</td>
+<td class="org-left">Local Forms, Biosolid Simple Constitutive Equations</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-left">Axially tethered structures</td>
+<td class="org-left">TBA</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">Thin-Walled Pressurized Tubes (<b>Quiz 3</b>)</td>
+<td class="org-left">Biofluidic Mechanics: Constitution of an Ideal Flow</td>
+</tr>
+
+<tr>
+<td class="org-right">11</td>
+<td class="org-left">Newtonian and Non-Newtonian Flows</td>
+<td class="org-left">Worker&rsquo;s Day Holiday (1 Mayıs)</td>
+</tr>
+
+<tr>
+<td class="org-right">12</td>
+<td class="org-left">Navier-Stokes Equations</td>
+<td class="org-left">Cone-Plate Viscometry</td>
+</tr>
+
+<tr>
+<td class="org-right">13</td>
+<td class="org-left">Bernoulli Equation  (<b>Quiz 4</b>)</td>
+<td class="org-left">Application of the Bernoulli Equation</td>
+</tr>
+
+<tr>
+<td class="org-right">14</td>
+<td class="org-left">Measurement of Flow and Pressure</td>
+<td class="org-left">Navier-Stokes Worksheets: Formulation of Problems</td>
+</tr>
+
+<tr>
+<td class="org-right">15</td>
+<td class="org-left">Flow Between Flat Plates</td>
+<td class="org-left">Steady Flow in Circular Tubes</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="slide-orgdd17abf">
+<h3 id="orgdd17abf">Resources</h3>
+<ul>
+<li class="fragment appear"><code>README.org</code> The lecture presentations will be made available to students and public</li>
+<li class="fragment appear"><a id="orgf6e9e18"></a>[IB:SFAD/15] <a href="https://link.springer.com/book/10.1007/978-1-4939-2623-7">2015 Humphrey</a> (Introduction to Biomechanics: Solids and Fluids, Analysis and Design; roughly in weeks 8-15)</li>
+<li class="fragment appear">[AFCiCM/08] <a href="https://www.cambridge.org/core/books/first-course-in-continuum-mechanics/DC9A87155531958AD5EFC66AEB981DAE">2008 Gonzales and Stuart</a> (A First Course in Continuum Mechanics, rougly in weeks 1-7)</li>
+<li class="fragment ...">[B:MPLT/04] <a href="https://archive.org/details/biomechanicsmech0000fung">2004 Fung</a> (Biomechanics: Mechanical Properties of Living Tissues, week 1)</li>
+<li class="fragment ...">Software
+<ul>
+<li>Online Octave</li>
+<li>Octave: <a href="https://octave.org/download">https://octave.org/download</a></li>
+
+</ul></li>
+<li class="fragment ...">Web Resources
+<ul>
+<li><a href="https://silver.neep.wisc.edu/~lakes/BME315Fr.html">BME 315 Biomechanics, University of Wisconsin</a></li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-orgbcb0cd1">
+<h3 id="orgbcb0cd1">Assessment</h3>
+<div style="font-size: 90%;">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">In-term studies</th>
+<th scope="col" class="org-right">Count #</th>
+<th scope="col" class="org-right">Percentage (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Exit-Surveys</td>
+<td class="org-right">9</td>
+<td class="org-right">35</td>
+</tr>
+
+<tr>
+<td class="org-left">Quizzes</td>
+<td class="org-right">4</td>
+<td class="org-right">35</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Final</td>
+<td class="org-right">1</td>
+<td class="org-right">30</td>
+</tr>
+</tbody>
+</table>
+<div>
+</section>
+</section>
+<section>
+<section id="slide-org8fbcc86">
+<h2 id="org8fbcc86">Modus Operandi</h2>
+<p>
+Course is composed of a few activities,
+</p>
+<ul>
+<li class="fragment appear">Lectures
+<ul>
+<li class="fragment appear">Listening and taking notes in the lecture</li>
+<li class="fragment appear">Prepare for next lectures with study questions and <b>openAI</b></li>
+
+</ul></li>
+<li class="fragment appear">Attendence through Yulearn check-in</li>
+<li class="fragment appear">Quizzes</li>
+<li class="fragment ...">Exit Survey Questions</li>
+<li class="fragment ...">Jove Videos</li>
+<li class="fragment ...">Final</li>
+
+</ul>
+</section>
+<section id="slide-orgb846d8a">
+<h3 id="orgb846d8a">Lectures</h3>
+<ul>
+<li class="fragment appear">The board, projector, and supplementary materials will be utilized.</li>
+<li class="fragment appear"><span class="underline">Asking questions</span>, and <span class="underline">taking notes</span> are encouraged.</li>
+<li class="fragment appear">The lecture notes are shared on Yulearn.</li>
+
+</ul>
+</section>
+<section id="slide-org454c927">
+<h3 id="org454c927">Quizzes</h3>
+<p>
+Three or four quizzes, half-an-hour with a single question each, will be given during the semester.
+</p>
+</section>
+<section id="slide-orgb75a50c">
+<h3 id="orgb75a50c">Exit Survey Questions</h3>
+<p>
+Eight of nine such questions shall be asked to students during the last 5 minutes of lectures during the semester.
+</p>
+</section>
+<section id="slide-orgee12369">
+<h3 id="orgee12369">How to get updates about this course?</h3>
+<ul>
+<li class="fragment appear">Yulearn course page</li>
+<li class="fragment appear">OBS course announcements</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org4b57085">
+<h2 id="org4b57085">Code of Conduct &amp; Ethics</h2>
+<ul>
+<li class="fragment appear">The interpersonal communication in class is based on a level of minimum respect towards each other.</li>
+<li class="fragment appear">The class is a communal space, it is not a stage to show off (except for the instructor).</li>
+<li class="fragment appear">Students are expected to arrive to class on a voluntary basis, involuntary participation is strongly discouraged.</li>
+<li class="fragment ...">Mechanics requires a direct teaching model where the role of the student is usually limited to a receiver, however, the students are encouraged to ask questions and participate in the learning process.</li>
+<li class="fragment ...">Here’s a fascinating account of ethics (in Turkish): <a href="https://www.youtube.com/watch?v=Q88NhXSmK_I">Etik Değerler ve Eğitimi</a> by Prof. Ioanna Kuçuradi (Maltepe University).</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
