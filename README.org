@@ -1,5 +1,5 @@
-#+TITLE: BME 252 (Bio)mechanics
-#+SUBTITLE: Spring 2025 Syllabus
+#+TITLE: BME 252 (Continuum) Biomechanics
+#+SUBTITLE: Spring 2026 Syllabus
 #+AUTHOR: Fethi Okyar
 #+STARTUP: overview
 #+REVEAL_THEME: simple
@@ -13,7 +13,7 @@
 * Why does this course exist?
 The *first course in Biomechanics* offered by the Biomedical Engineering Department aims to enhance the understanding of the science of motion and mechanical interactions between living tissue.
 #+ATTR_REVEAL: :frag (appear)
-*Essential reading*: Chapter 1 of [[IB:SFAD/15][IB:SFAD/15]]
+*Essential reading*: Chapter 1 of [FUNG/94, HUMP/15, FUNG/04] (see References below)
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - Point of Departure, the development of biomechanics
 - Health Care Applications, complex mechanical phenomenon in living organisms
@@ -29,62 +29,46 @@ Jove: a scientific educational video content provider with free access through Y
 * Syllabus  
 ** Course learning objectives-CLOs
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- [X] exemplify some basic biomechanical phenomenon that arise in living tissues ()
-- [X] perform simple algebraic operations with vectors
-- [X] read and verify expressions written in the indicial notation
-- [X] convert expressions between their tensor and indicial forms
-- [X] transform vectors linearly via second-order tensors
-- [X] convert expressions between their tensor and matrix forms
-- [X] perform change of basis of vector components
-- [X] calculate the determinant of a second-order tensor
-- [X] calculate the eigenvalues and eigenvectors of a second-order tensor
-- [X] provide examples of scalar and vector fields
-- [X] apply the gradient operator to  a scalar field
-- [X] apply the gradient operator to a vector field
-- [X] identify divergence, curl and laplacian operators in cartesian coordinates
 
-#+REVEAL: split
-#+ATTR_REVEAL: :frag (appear appear appear ...)
-- [X] use density to find continuum mass and center of mass
-- [X] differentiate surface and body forces
-- [X] provide an example to the surface traction vector
-- [X] relate the surface traction vector and the stress tensor
-- [X] provide examples of simple states of stress
-- [X] write the condition of static equilibrium in global form
-- [X] apply the divergence theorem to integral forms
-- [X] obtain the local form of static equilibrium using the divergence theorem
-- [X] explain the concept of material time derivative
-- [X] state the balance laws for a system of particles
-- [X] state the balance laws for a continuum (integral form)
-- [X] identify mechanical variables in the first law of thermodynamics
-- [ ] state the local (differential) form of balance laws for a continuum 
+- [ ] exemplify some basic biomechanical phenomena that arise in living tissues 
+- [ ] read and convert expressions between their tensor, matrix and indicial forms
+- [ ] identify gradient, divergence, curl, and Laplacian operators
+- [ ] state the balance of mass
+- [ ] differentiate between surface and body forces
+- [ ] relate the surface traction vector and the stress tensor
+- [ ] calculate principal values of the stress tensor
+- [ ] state the balance laws for a continuum
+- [ ] state the first law of thermostatics
+- [ ] formulate problems to be solved using computational tools
 
 ** Weekly outline
 #+REVEAL_HTML: <div style="font-size: 80%;">
-| Week | Lectures (Tuesday)                           | Lectures (Thursday)                                     |
-|------+----------------------------------------------+---------------------------------------------------------|
-|    1 | No lecture                                   | Course Conduct, [[./lecture-slides/U1-tensor-algebra.html][Tensor Algebra]] bases, projections       |
-|    2 | Motivation: Point of Departure               | Indicial Notation, kroenecker delta and permutation     |
-|    3 | Second Order Tensors                         | Change of Basis, Trace, Determinant                     |
-|    4 | Eigenvalues, principal invariants (*Quiz 1*) | [[./lecture-slides/U2-tensor-calculus.html][Tensor calculus]], gradient operator, divergence, curl    |
-|    5 | Divergence theorem, localization             | [[./lecture-slides/U3-mass-force.html][Mass and force concepts]], surface traction and stress    |
-|    6 | Condition of statical equilibrium            | [[./lecture-slides/U4-time-motion.html][Time and Motion]], Velocity, Acceleration, Vorticity, etc |
-|    7 | Bayram                                       |                                                         |
-|    8 | [[./lecture-slides/U5-balance-laws.html][Balance Laws]], global forms                   | Local Forms, Biosolid Simple Constitutive Equations     |
-|    9 | Axially tethered structures                  | TBA                                                     |
-|   10 | Thin-Walled Pressurized Tubes (*Quiz 3*)     | Biofluidic Mechanics: Constitution of an Ideal Flow     |
-|   11 | Newtonian and Non-Newtonian Flows            | Worker's Day Holiday (1 Mayıs)                          |
-|   12 | Navier-Stokes Equations                      | Cone-Plate Viscometry                                   |
-|   13 | Bernoulli Equation  (*Quiz 4*)               | Application of the Bernoulli Equation                   |
-|   14 | Measurement of Flow and Pressure             | Navier-Stokes Worksheets: Formulation of Problems       |
-|   15 | Flow Between Flat Plates                     | Steady Flow in Circular Tubes                           |
+| Week | Lectures (Tuesday)                   | Lectures (Thursday)                |
+|------+--------------------------------------+------------------------------------|
+| 16/2 | No lecture                           | Course Conduct, Introduction       |
+| 23/2 | Axioms of Mechanics                  | Elementary Topics                  |
+| 2/3  | Vectors and Tensors                  | Indicial Notation                  |
+| 9/3  | Coordinate Transformations           | Stress Hypothesis                  |
+| 16/3 | Stress Tensor                        | /Ramadan Eve Holiday/              |
+| 23/3 | Laws of Motion                       | Transformation of Stress           |
+| 30/3 | Stress Boundary Conditions           | States of Stress                   |
+| 6/4  | Mohr's Circle for Plane Stress       | Principal Stresses                 |
+| 13/4 | Deformation                          | Strain                             |
+| 20/4 | Geometric Interpretation             | /National Sovereignty Day Holiday/ |
+| 27/4 | Other Strain Measures                | Velocity Fields and Compatibility  |
+| 4/5  | Constitutive Equations               | Fluids and Elastic Solids          |
+| 11/5 | Some Other Constitutive Models       | Isotropy                           |
+| 18/5 | Commemoration of Ataturk Day Holiday | Biological Material Behaviour      |
+| 25/5 | Computational Biomechanics           | Sacrifice Feast Holiday            |
+| 1/6  | Tools of the Trade                   | Review                             |
 
 ** Resources
 #+ATTR_REVEAL: :frag (appear appear appear ...)
+- *Textbook:* [[[https://yulearn.yeditepe.edu.tr/mod/resource/view.php?id=328912][FUNG/94]]] Fung YC, 1994, A First Course in Continuum Mechanics, 3ed. 
 - ~README.org~ The lecture presentations will be made available to students and public
-- <<IB:SFAD/15>>[IB:SFAD/15] [[https://link.springer.com/book/10.1007/978-1-4939-2623-7][2015 Humphrey]] (Introduction to Biomechanics: Solids and Fluids, Analysis and Design; roughly in weeks 8-15)
-- [AFCiCM/08] [[https://www.cambridge.org/core/books/first-course-in-continuum-mechanics/DC9A87155531958AD5EFC66AEB981DAE][2008 Gonzales and Stuart]] (A First Course in Continuum Mechanics, rougly in weeks 1-7)
-- [B:MPLT/04] [[https://archive.org/details/biomechanicsmech0000fung][2004 Fung]] (Biomechanics: Mechanical Properties of Living Tissues, week 1)
+- [[[https://link.springer.com/book/10.1007/978-1-4939-2623-7][HUMP/15]]] Humphrey, Introduction to Biomechanics: Solids and Fluids, Analysis and Design, Springer, 2015
+- [[[https://www.cambridge.org/core/books/first-course-in-continuum-mechanics/DC9A87155531958AD5EFC66AEB981DAE][GONZ/08]]] Gonzales and Stuart, A First Course in Continuum Mechanics, Cambridge Press, 2008
+- [[[https://archive.org/details/biomechanicsmech0000fung][FUNG/04]]] Fung, Biomechanics: Mechanical Properties of Living Tissues, Springer, 2004
 - Software
   + Online Octave
   + Octave: https://octave.org/download
@@ -95,8 +79,8 @@ Jove: a scientific educational video content provider with free access through Y
 #+REVEAL_HTML: <div style="font-size: 90%;">
 | In-term studies | Count # | Percentage (%) |
 |-----------------+---------+----------------|
-| Exit-Surveys    |       9 |             35 |
-| Quizzes         |       4 |             35 |
+| Exit-Surveys    |      10 |             30 |
+| Quizzes         |       4 |             40 |
 |                 |         |                |
 | Final           |       1 |             30 |
 #+REVEAL_HTML: <div>
@@ -108,10 +92,9 @@ Course is composed of a few activities,
   #+ATTR_REVEAL: :frag (appear appear appear ...)
   + Listening and taking notes in the lecture
   + Prepare for next lectures with study questions and *openAI*
-- Attendence through Yulearn check-in
+- Attendence through A7 QR code
 - Quizzes
 - Exit Survey Questions
-- Jove Videos
 - Final
 
 ** Lectures
@@ -121,15 +104,16 @@ Course is composed of a few activities,
 - The lecture notes are shared on Yulearn.
 
 ** Quizzes
-Three or four quizzes, half-an-hour with a single question each, will be given during the semester.
+Four quizzes, half-an-hour with a single question each, will be given during the semester.
 
 ** Exit Survey Questions
-Eight of nine such questions shall be asked to students during the last 5 minutes of lectures during the semester.
+Nine or ten questions shall be asked to students during the last 5 minutes of lectures during the semester.
 
 ** How to get updates about this course?
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - Yulearn course page
-- OBS course announcements
+- A7 course announcements
+  
 * Code of Conduct & Ethics
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - The interpersonal communication in class is based on a level of minimum respect towards each other.
