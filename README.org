@@ -45,7 +45,7 @@ Jove: a scientific educational video content provider with free access through Y
 #+REVEAL_HTML: <div style="font-size: 80%;">
 | Week | Lectures (Tuesday)                   | Lectures (Thursday)                |
 |------+--------------------------------------+------------------------------------|
-| 16/2 | No lecture                           | Course Conduct, Introduction       |
+| 16/2 | No lecture                           | Course Conduct, [[./C1-introduction.html][Ch1:Introduction]]   |
 | 23/2 | Axioms of Mechanics                  | Elementary Topics                  |
 | 2/3  | Vectors and Tensors                  | Indicial Notation                  |
 | 9/3  | Coordinate Transformations           | Stress Hypothesis                  |
@@ -116,7 +116,7 @@ Nine or ten questions shall be asked to students during the last 5 minutes of le
   
 * Code of Conduct & Ethics
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- The interpersonal communication in class is based on a level of minimum respect towards each other.
+- The interpersonal communication in class will require respect, punctuality and patience towards each other.
 - The class is a communal space, it is not a stage to show off (except for the instructor).
 - Students are expected to arrive to class on a voluntary basis, involuntary participation is strongly discouraged.
 - Mechanics requires a direct teaching model where the role of the student is usually limited to a receiver, however, the students are encouraged to ask questions and participate in the learning process.

@@ -16,9 +16,9 @@
 * ($\S 1.1$) Objectives (Session 1)
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - To emphasize the formulation of problems in mechanics,
-- To reduce vadue ideas into precise mathematical statements,
-- To cultivate the habit of questioning, analyzing, and designing
-- To observe nature, think of previous problems, write down a possible set of governing equations and boundary conditions
+- To reduce vague ideas into precise mathematical statements,
+- To cultivate the habit of questioning, analyzing, and designing,
+- To observe nature, think of previous problems, write down a possible set of governing equations and boundary conditions.
 
 *** What is /mechanics/ concerned with?
 #+ATTR_REVEAL: :frag (appear)
@@ -35,7 +35,7 @@
 #+REVEAL: split
 #+ATTR_REVEAL: :frag (appear)
 - These changes (deformation, etc.) together with axioms of continuum mechanics, can be expressed as boundary value problems
-  $$ \sigma_{ij} = -p \delta_{ij} + \lambda D_{kk}\delta_{ij} + 2\mu D_{ij}\, \hspace{1em} \forall x \in \Omega $$
+  $$ \frac{\partial \sigma_{ij}}{\partial x_i} + f_j = \frac{\partial v_j}{\partial t}, \hspace{1em} \forall x \in \Omega $$
   \begin{align}
    n_i \sigma_{ij} = \bar{t_j} \hspace{1em} & \forall x \in \partial\Omega_n \\
    u_i = \bar{u}_i \hspace{1em} & \forall x \in \partial\Omega - \partial\Omega_n
@@ -51,9 +51,9 @@
 What is a /Continuum/?
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - good question... ask chatGPT\\
-  _PROMPT:_ we are a group of undergraduate students enrolled in the biomedical engineering program. we are taking the biomechanics course, and it is the first time that we encounter the notion of a continuum. How could you give an everyday description of this notion to an ordinary person?
+  _PROMPT:_ we are a group of undergraduate students enrolled in the biomedical engineering program. we are taking the biomechanics course, and it is the first time that we encounter the notion of a continuum. How could you give an everyday description of this cohort?
 - Is the real number system a /continuum/? 
-- What about in 3D? What is the most obvious reason for not being able to call *matter* as a continuum? 
+- What about matter occupying a volume in 3D space? What is the most obvious reason for not being able to call *matter* as a continuum? 
 
 #+REVEAL: split
 #+ATTR_HTML: :width 1200px
@@ -65,18 +65,18 @@ What is a /Continuum/?
   
 ** Notion of Density, $\rho$
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- Let the volume $\mathcal{V}_n$ be $V_n$ and the mass of the matter contained in $\mathcal{V}_n$ be $M_n$.
+- Let the volume encapsulated in $\mathcal{V}_n$ be denoted by $V_n$ and the mass of the matter contained in $\mathcal{V}_n$ be denoted by $M_n$.
 - If the limit of $M_n/V_n$ exists as $n \to \infty$ and $V_n \to 0$, the limiting value is defined as the /density of the mass distribution/ at the point $P$, and is denoted by $\rho(P)$:
   $$ \rho(P) = \lim_{V_n \to 0} \frac{M_n}{V_n} $$
-- /A material continuum is a/ definition for which /the densities of mass, momentum and energy exist in this strict mathematical sense/.
-- No such materials exists!!
+- /An ideal material continuum is a/ definition for which /the densities of mass, momentum and energy exist in this strict mathematical sense/.
+- But unfortunately no such materials exists!!
 
 ** Modifying the Limit to fit Reality
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - As $n \to \infty$, the limit of $V_n$ tends to a finite positive number $\omega$.
-- The volume is not let to vanish but tends to a non-zero value controlled by a characteristic size (e.g. on the order of $\mathcal{O}(\mu m)$) below which the continuity of the distribution is disrupted.
+- The volume is not let to vanish but tends to a non-zero value controlled by a characteristic size, e.g. on the order of $\mathcal{O}(\mu m)$, below which the continuity and homogeneity of the distribution is disrupted.
 - The quantity $\rho$ is then said to be the /density of material at $P$ with an  acceptable variability $\epsilon$ in a defining limit volume $\omega$/.
-- This is /``our definition of a continuum''/.
+- This is "/our definition of a continuum/".
 
 * ($\S 1.6$) Notion of Stress
 The Scene:
@@ -93,7 +93,7 @@ The Scene:
 - Traction is also known as the stress vector, and is a measure of the amount of force passing thru a unit area.
    
 #+REVEAL: split
-#+ATTR_HTML: :width 1200px
+#+ATTR_HTML: :width 1400px
 [[./images/FU94-fig1.2.png]]
 
 $$ \overset{(\boldsymbol{n})}{\boldsymbol{t}} = \frac{d \boldsymbol{F}}{d S} $$
@@ -102,7 +102,7 @@ The stress principle of Euler and Cauchy.
 
 * ($\S 1.7$) Abstract Copy of a Real Continuum
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- Imagine we obtain the material properties (e.g. density, etc.) for a Real Continuum.
+- Imagine we obtain the material properties (e.g. density, etc.) of a matter (real continuum).
 - To make useful calculations we need a mathematical model that uses these properties.
 - We say we clone the real material and produce an abstract copy of it.
 - This abstract copy is isomorphic with the real number system, it is an idealization.
@@ -113,22 +113,29 @@ The stress principle of Euler and Cauchy.
 * ($\S 1.9$) Axioms of Continuum Mechanics
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - First, the axioms of physics, i.e. the balance of momentum, the balance of moment of momentum, and the first and second laws of thermostatics are copied as axioms of continuum mechanics,
-- Second, /a material continuum remains as a continuum under the action of forces/, i.e., the /axiom of continuity/. This does not limit the opening of new surfaces due to fracturing or tearing, but these have to be accounted for in a thermodynamic sense. Also, growth (increase or migration of cells) or resorption (reduction) of matter is allowed.
+- Second, /a material continuum remains as a continuum under the action of forces/, i.e., the /axiom of continuity/. This does not limit the opening of new surfaces due to fracturing or tearing, but these have to be accounted for in a thermodynamic sense. Also, growth (increase or migration of cells) or resorption (reduction) of matter is allowed,
 - Third, the stress and strain can be determined everywhere, which is the /axiom of determinism/.
-- Fourth, the stress at a point depends on the strain at and around that point, the /axiom of neighborhood/.
+- Fourth, the stress at a point depends on the strain at and around that point, the /axiom of neighborhood/,
 - Fifth, the stress at a given moment depends on the strain at that moment and and previous moments, the /axiom of memory/. The stress-strain relation may be influenced by other parameters such as temperature, electrical change, ion transport, etc., that is the problem is of a multi-physics nature.
 
 * ($\S 1.10$) A Biological Example of Hierarchy of Continua
 The change of microstructure by shifting the scale of observation (i.e. switching the scale of magnification of a microscope, x100, x10$^4$, x10$^6$, etc.). 
-#+ATTR_REVEAL: :frag (appear appear appear ...)
-- Example is from the human lung. Three consecutive trees, an airway tree, an arterial three and a venous tree.
-  
+
+#+REVEAL: split
+One example is the human lung. Three consecutive trees, an airway tree, an arterial three and a venous tree.
+#+ATTR_HTML: :width 1200px
+[[./images/FU94-fig1.3.png]]
+
+#+REVEAL: split
+#+ATTR_HTML: :width 1000px
+[[./images/FU94-fig1.4.png]]
+
+#+REVEAL: split
+#+ATTR_HTML: :width 1200px
+[[./images/FU94-fig1.5.png]]
+
 ** Questions for next session
 Ask AI:
-- Discuss the axioms of mechanics.
+- Discuss the meaning of a free-body diagram in the context of mechanics.
 
-** Deliverables
-Students should be able to:
-- [ ] perform simple algebraic operations with vectors 
-   
 END OF UNIT 1

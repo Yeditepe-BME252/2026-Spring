@@ -39,29 +39,29 @@ pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-orgd5bd702">(\(\S 1.1\)) Objectives (Session 1)</a></li>
-<li><a href="#/slide-orgce53d05">(\(\S 1.4\)) Prototype of a Continuum</a></li>
-<li><a href="#/slide-orge8a14aa">(\(\S 1.6\)) Notion of Stress</a></li>
-<li><a href="#/slide-org3edba53">(\(\S 1.7\)) Abstract Copy of a Real Continuum</a></li>
-<li><a href="#/slide-org06f37e0">(\(\S 1.9\)) Axioms of Continuum Mechanics</a></li>
-<li><a href="#/slide-org7c74f8e">(\(\S 1.10\)) A Biological Example of Hierarchy of Continua</a></li>
+<li><a href="#/slide-orgab795b8">(\(\S 1.1\)) Objectives (Session 1)</a></li>
+<li><a href="#/slide-org663a391">(\(\S 1.4\)) Prototype of a Continuum</a></li>
+<li><a href="#/slide-org77b7f0c">(\(\S 1.6\)) Notion of Stress</a></li>
+<li><a href="#/slide-orgde4db17">(\(\S 1.7\)) Abstract Copy of a Real Continuum</a></li>
+<li><a href="#/slide-orgc669b29">(\(\S 1.9\)) Axioms of Continuum Mechanics</a></li>
+<li><a href="#/slide-orgdd6ecff">(\(\S 1.10\)) A Biological Example of Hierarchy of Continua</a></li>
 </ul>
 </div>
 </div>
 </section>
 <section>
-<section id="slide-orgd5bd702">
-<h2 id="orgd5bd702">(\(\S 1.1\)) Objectives (Session 1)</h2>
+<section id="slide-orgab795b8">
+<h2 id="orgab795b8">(\(\S 1.1\)) Objectives (Session 1)</h2>
 <ul>
 <li class="fragment appear">To emphasize the formulation of problems in mechanics,</li>
-<li class="fragment appear">To reduce vadue ideas into precise mathematical statements,</li>
-<li class="fragment appear">To cultivate the habit of questioning, analyzing, and designing</li>
-<li class="fragment ...">To observe nature, think of previous problems, write down a possible set of governing equations and boundary conditions</li>
+<li class="fragment appear">To reduce vague ideas into precise mathematical statements,</li>
+<li class="fragment appear">To cultivate the habit of questioning, analyzing, and designing,</li>
+<li class="fragment ...">To observe nature, think of previous problems, write down a possible set of governing equations and boundary conditions.</li>
 
 </ul>
 </section>
-<section id="slide-org69099f3">
-<h4 id="org69099f3">What is <i>mechanics</i> concerned with?</h4>
+<section id="slide-orgc1048d4">
+<h4 id="orgc1048d4">What is <i>mechanics</i> concerned with?</h4>
 <ul>
 <li class="fragment appear">Motion</li>
 <li class="fragment appear">Deformation</li>
@@ -76,11 +76,11 @@ pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
 </ul>
 
 </section>
-<section id="slide-org69099f3-split">
+<section id="slide-orgc1048d4-split">
 <ul>
 <li class="fragment appear"><p>
 These changes (deformation, etc.) together with axioms of continuum mechanics, can be expressed as boundary value problems
-\[ \sigma_{ij} = -p \delta_{ij} + \lambda D_{kk}\delta_{ij} + 2\mu D_{ij}\, \hspace{1em} \forall x \in \Omega \]
+\[ \frac{\partial \sigma_{ij}}{\partial x_i} + f_j = \frac{\partial v_j}{\partial t}, \hspace{1em} \forall x \in \Omega \]
 </p>
 <div>
 \begin{align}
@@ -94,33 +94,33 @@ These changes (deformation, etc.) together with axioms of continuum mechanics, c
 
 </ul>
 </section>
-<section id="slide-org5fcdc45">
-<h4 id="org5fcdc45">Mechanics (definition)</h4>
+<section id="slide-org5d3ad26">
+<h4 id="org5d3ad26">Mechanics (definition)</h4>
 
-<div id="org5d6a84c" class="figure">
+<div id="orgc0febac" class="figure">
 <p><img src="./images/FU94-SS-1.png" alt="FU94-SS-1.png" width="1400px" />
 </p>
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgce53d05">
-<h2 id="orgce53d05">(\(\S 1.4\)) Prototype of a Continuum</h2>
+<section id="slide-org663a391">
+<h2 id="org663a391">(\(\S 1.4\)) Prototype of a Continuum</h2>
 <p>
 What is a <i>Continuum</i>?
 </p>
 <ul>
 <li class="fragment appear">good question&#x2026; ask chatGPT<br />
-<span class="underline">PROMPT:</span> we are a group of undergraduate students enrolled in the biomedical engineering program. we are taking the biomechanics course, and it is the first time that we encounter the notion of a continuum. How could you give an everyday description of this notion to an ordinary person?</li>
+<span class="underline">PROMPT:</span> we are a group of undergraduate students enrolled in the biomedical engineering program. we are taking the biomechanics course, and it is the first time that we encounter the notion of a continuum. How could you give an everyday description of this cohort?</li>
 <li class="fragment appear">Is the real number system a <i>continuum</i>?</li>
-<li class="fragment appear">What about in 3D? What is the most obvious reason for not being able to call <b>matter</b> as a continuum?</li>
+<li class="fragment appear">What about matter occupying a volume in 3D space? What is the most obvious reason for not being able to call <b>matter</b> as a continuum?</li>
 
 </ul>
 
 </section>
-<section id="slide-orgce53d05-split">
+<section id="slide-org663a391-split">
 
-<div id="org2791ee6" class="figure">
+<div id="org7d55d3a" class="figure">
 <p><img src="./images/FU94-fig1.1.png" alt="FU94-fig1.1.png" width="1200px" />
 </p>
 </div>
@@ -131,31 +131,31 @@ What is a <i>Continuum</i>?
 
 </ul>
 </section>
-<section id="slide-orgc540915">
-<h3 id="orgc540915">Notion of Density, \(\rho\)</h3>
+<section id="slide-orgd7a4ce8">
+<h3 id="orgd7a4ce8">Notion of Density, \(\rho\)</h3>
 <ul>
-<li class="fragment appear">Let the volume \(\mathcal{V}_n\) be \(V_n\) and the mass of the matter contained in \(\mathcal{V}_n\) be \(M_n\).</li>
+<li class="fragment appear">Let the volume encapsulated in \(\mathcal{V}_n\) be denoted by \(V_n\) and the mass of the matter contained in \(\mathcal{V}_n\) be denoted by \(M_n\).</li>
 <li class="fragment appear">If the limit of \(M_n/V_n\) exists as \(n \to \infty\) and \(V_n \to 0\), the limiting value is defined as the <i>density of the mass distribution</i> at the point \(P\), and is denoted by \(\rho(P)\):
 \[ \rho(P) = \lim_{V_n \to 0} \frac{M_n}{V_n} \]</li>
-<li class="fragment appear"><i>A material continuum is a</i> definition for which <i>the densities of mass, momentum and energy exist in this strict mathematical sense</i>.</li>
-<li class="fragment ...">No such materials exists!!</li>
+<li class="fragment appear"><i>An ideal material continuum is a</i> definition for which <i>the densities of mass, momentum and energy exist in this strict mathematical sense</i>.</li>
+<li class="fragment ...">But unfortunately no such materials exists!!</li>
 
 </ul>
 </section>
-<section id="slide-orgbc0d4b7">
-<h3 id="orgbc0d4b7">Modifying the Limit to fit Reality</h3>
+<section id="slide-org167a1bd">
+<h3 id="org167a1bd">Modifying the Limit to fit Reality</h3>
 <ul>
 <li class="fragment appear">As \(n \to \infty\), the limit of \(V_n\) tends to a finite positive number \(\omega\).</li>
-<li class="fragment appear">The volume is not let to vanish but tends to a non-zero value controlled by a characteristic size (e.g. on the order of \(\mathcal{O}(\mu m)\)) below which the continuity of the distribution is disrupted.</li>
+<li class="fragment appear">The volume is not let to vanish but tends to a non-zero value controlled by a characteristic size, e.g. on the order of \(\mathcal{O}(\mu m)\), below which the continuity and homogeneity of the distribution is disrupted.</li>
 <li class="fragment appear">The quantity \(\rho\) is then said to be the <i>density of material at \(P\) with an  acceptable variability \(\epsilon\) in a defining limit volume \(\omega\)</i>.</li>
-<li class="fragment ...">This is <i>``our definition of a continuum&rsquo;&rsquo;</i>.</li>
+<li class="fragment ...">This is &ldquo;<i>our definition of a continuum</i>&rdquo;.</li>
 
 </ul>
 </section>
 </section>
 <section>
-<section id="slide-orge8a14aa">
-<h2 id="orge8a14aa">(\(\S 1.6\)) Notion of Stress</h2>
+<section id="slide-org77b7f0c">
+<h2 id="org77b7f0c">(\(\S 1.6\)) Notion of Stress</h2>
 <p>
 The Scene:
 </p>
@@ -174,10 +174,10 @@ as the traction at point \(P\) over a plane with normal \(\boldsymbol{n}\).</li>
 </ul>
 
 </section>
-<section id="slide-orge8a14aa-split">
+<section id="slide-org77b7f0c-split">
 
-<div id="org919a718" class="figure">
-<p><img src="./images/FU94-fig1.2.png" alt="FU94-fig1.2.png" width="1200px" />
+<div id="org262c324" class="figure">
+<p><img src="./images/FU94-fig1.2.png" alt="FU94-fig1.2.png" width="1400px" />
 </p>
 </div>
 
@@ -191,10 +191,10 @@ The stress principle of Euler and Cauchy.
 </section>
 </section>
 <section>
-<section id="slide-org3edba53">
-<h2 id="org3edba53">(\(\S 1.7\)) Abstract Copy of a Real Continuum</h2>
+<section id="slide-orgde4db17">
+<h2 id="orgde4db17">(\(\S 1.7\)) Abstract Copy of a Real Continuum</h2>
 <ul>
-<li class="fragment appear">Imagine we obtain the material properties (e.g. density, etc.) for a Real Continuum.</li>
+<li class="fragment appear">Imagine we obtain the material properties (e.g. density, etc.) of a matter (real continuum).</li>
 <li class="fragment appear">To make useful calculations we need a mathematical model that uses these properties.</li>
 <li class="fragment appear">We say we clone the real material and produce an abstract copy of it.</li>
 <li class="fragment ...">This abstract copy is isomorphic with the real number system, it is an idealization.</li>
@@ -206,46 +206,59 @@ The stress principle of Euler and Cauchy.
 </section>
 </section>
 <section>
-<section id="slide-org06f37e0">
-<h2 id="org06f37e0">(\(\S 1.9\)) Axioms of Continuum Mechanics</h2>
+<section id="slide-orgc669b29">
+<h2 id="orgc669b29">(\(\S 1.9\)) Axioms of Continuum Mechanics</h2>
 <ul>
 <li class="fragment appear">First, the axioms of physics, i.e. the balance of momentum, the balance of moment of momentum, and the first and second laws of thermostatics are copied as axioms of continuum mechanics,</li>
-<li class="fragment appear">Second, <i>a material continuum remains as a continuum under the action of forces</i>, i.e., the <i>axiom of continuity</i>. This does not limit the opening of new surfaces due to fracturing or tearing, but these have to be accounted for in a thermodynamic sense. Also, growth (increase or migration of cells) or resorption (reduction) of matter is allowed.</li>
+<li class="fragment appear">Second, <i>a material continuum remains as a continuum under the action of forces</i>, i.e., the <i>axiom of continuity</i>. This does not limit the opening of new surfaces due to fracturing or tearing, but these have to be accounted for in a thermodynamic sense. Also, growth (increase or migration of cells) or resorption (reduction) of matter is allowed,</li>
 <li class="fragment appear">Third, the stress and strain can be determined everywhere, which is the <i>axiom of determinism</i>.</li>
-<li class="fragment ...">Fourth, the stress at a point depends on the strain at and around that point, the <i>axiom of neighborhood</i>.</li>
+<li class="fragment ...">Fourth, the stress at a point depends on the strain at and around that point, the <i>axiom of neighborhood</i>,</li>
 <li class="fragment ...">Fifth, the stress at a given moment depends on the strain at that moment and and previous moments, the <i>axiom of memory</i>. The stress-strain relation may be influenced by other parameters such as temperature, electrical change, ion transport, etc., that is the problem is of a multi-physics nature.</li>
 
 </ul>
 </section>
 </section>
 <section>
-<section id="slide-org7c74f8e">
-<h2 id="org7c74f8e">(\(\S 1.10\)) A Biological Example of Hierarchy of Continua</h2>
+<section id="slide-orgdd6ecff">
+<h2 id="orgdd6ecff">(\(\S 1.10\)) A Biological Example of Hierarchy of Continua</h2>
 <p>
 The change of microstructure by shifting the scale of observation (i.e. switching the scale of magnification of a microscope, x100, x10\(^4\), x10\(^6\), etc.). 
 </p>
-<ul>
-<li class="fragment appear">Example is from the human lung. Three consecutive trees, an airway tree, an arterial three and a venous tree.</li>
 
-</ul>
 </section>
-<section id="slide-org336521b">
-<h3 id="org336521b">Questions for next session</h3>
+<section id="slide-orgdd6ecff-split">
+<p>
+One example is the human lung. Three consecutive trees, an airway tree, an arterial three and a venous tree.
+</p>
+
+<div id="org9f7028f" class="figure">
+<p><img src="./images/FU94-fig1.3.png" alt="FU94-fig1.3.png" width="1200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgdd6ecff-split">
+
+<div id="org4a98cc2" class="figure">
+<p><img src="./images/FU94-fig1.4.png" alt="FU94-fig1.4.png" width="1000px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgdd6ecff-split">
+
+<div id="org60abc99" class="figure">
+<p><img src="./images/FU94-fig1.5.png" alt="FU94-fig1.5.png" width="1200px" />
+</p>
+</div>
+</section>
+<section id="slide-orgddf3274">
+<h3 id="orgddf3274">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
 <ul>
-<li>Discuss the axioms of mechanics.</li>
-
-</ul>
-</section>
-<section id="slide-orgde81825">
-<h3 id="orgde81825">Deliverables</h3>
-<p>
-Students should be able to:
-</p>
-<ul>
-<li class="off"><code>[&#xa0;]</code> perform simple algebraic operations with vectors</li>
+<li>Discuss the meaning of a free-body diagram in the context of mechanics.</li>
 
 </ul>
 
