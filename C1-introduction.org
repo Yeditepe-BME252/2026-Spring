@@ -138,4 +138,68 @@ One example is the human lung. Three consecutive trees, an airway tree, an arter
 Ask AI:
 - Discuss the meaning of a free-body diagram in the context of mechanics.
 
+** Motivation
+A recent post in Linkedin reveals the computational simulation of breathing.
+#+ATTR_HTML: :width 800px
+[[./images/breathing.gif]]
+
+* ($\S 1.11$) Elementary Ideas and Topics
+** Fundamentals
+- Let a body $B$ occupy a region $\mathcal{V}$ in space. We bring in calculus to calculate certain quantities such as the volume $V$ enclosed in space $\mathcal{V}$ as
+  $$ V = \int_\mathcal{B} dV $$
+  where the integral is taken over the entire body which implies that $\int$ is synonymous with a triple integral, and $dV$ represents a three-dimensional volume element (e.g. $dV=dx\,dy\,dz$ in cartesian coordinates).
+- The notion of a coordinate system enters into our treatment as a tool for locating points in space. We need as many rulers in a sense as the number of dimensions, $n$,  in encapsulated by $\mathcal{V}$. A three-dimensional coordinate system, for example, is set up by establishing its' origin $O$ and three independent directions for measurement (i.e. $x$, $y$ and $z$ directions, and their unit vectors $\boldsymbol{i}$, $\boldsymbol{j}$, and $\boldsymbol{k}$).
+- Note that there always is a reference of a reference, including our newly formed coordinate system $O-xyz$.
+
+#+REVEAL: split  
+- An important property of volume, as a geometric entity, is that it possesses a centroid, $G$. The location of $G$ can be determined by making use of the first moments of the volume integral with respect to three independent planes.
+- By the first moment we mean appending the differential element with its distance to a particular plane, for example, the first moment of the volume integral with respect to the $x$ plane (i.e. the plane perpendicular to $x$, or the $y-z$ plane) would be
+  $$ \mathbb{1}_x(V) = \int_\mathcal{B} x dV $$
+- For example, the $x$ coordinate of the centroid can then be determined by evaluating
+  $$ x_G = \frac{\mathbb{1}_x(V)}{V} $$
+  The other two coordinates can be found by applying a similar procedure for the $y$ and $z$ planes.
+  $$ y_G = \mathbb{1}_y(V)/V,\hspace{1em} z_G = \mathbb{1}_z(V)/V $$
+
+#+REVEAL: split  
+- If the mass density of matter filling this space is given as $\rho(\boldsymbol{x})$, where it is assumed that the density field is a function of the location, we can use it to calculate the mass $m$ of $\mathcal{B}$ by introducing density into the above integral,
+  $$ m = \int_\mathcal{B} \rho(\boldsymbol{x}) dV $$
+  Here the location symbol $\boldsymbol{x}$ represents the three coordinates of the differential element grouped in a vector form (a list of ordered numbers) as $\boldsymbol{x} = \{x,\,y,\,z\}$. Usually the functional dependence of $\rho$ on $\boldsymbol{x}$ is not indicated explicitly for the purpose of mathematical brevity, i.e. we write
+  $$ m = \int_\mathcal{B} \rho dV $$
+  
+** Law's of Motion
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- We accept that the axioms of the /balance of momentum/ and /balance of moment of momentum/ govern motion of bodies under forces. (Tested positive against experimental findings for almost about the past 400 years.)
+- Bodies reduce to particles when their scale is dominated by the effect of the force acting upon them. Then we simply call the body as a /point mass/ or a /particle/.
+- In that case, the body becomes distant and its /shape/ and /orientation/ becomes immaterial to the problem at hand. Its effectively treated by tracking its centoid, $G$.
+- Having left its "cover and shape", a body is only able to receive external forces from its centroid, whence the concept of /moment of a force/ acting upon this body also becomes immaterial.
+  #+ATTR_HTML: :width 300px
+  [[./images/tikz_1.11.1.png]]
+- Remember that the moment, $\boldsymbol{M}^O$, produced by a force, $\boldsymbol{F}$, about point $O$ can be determined by
+  $$ \boldsymbol{M}^O = \boldsymbol{r} \times \boldsymbol{F} $$
+  where $\times$ denotes the vector (cross) product operation and $O$ can be any arbitrary point in the theater.
+
+*** The Motion of a Body
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Let the body $\mathcal{B}$ be traveling in curvilinear motion (without rotation) in space $\mathcal{V}$. In this case, the time rate of change of point locations, $\boldsymbol{x}$, in $\mathcal{B}$ measured from an /inertial frame of reference/
+  $$ \frac{d \boldsymbol{x}}{dt} \triangleq \boldsymbol{v} $$
+  are uniform, i.e. all points within are traveling with the same velocity,  $\boldsymbol{v}$.
+
+  Freehand depiction of a body in curvilinear motion (i.e. moving with uniform velocity without rotation).
+  
+- The time rate of change of velocity
+  $$ \frac{d \boldsymbol{v}}{dt} \triangleq \boldsymbol{a} $$
+  is called the acceleration of point $\boldsymbol{x}$.
+
+- An inertial frame of reference is one which has no motion or one that moves with a constant velocity (zero acceleration).
+
+*** The Momentum of a Body
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- The momentum of a body can be found by using a procedure similar to that used in determining its mass, i.e. integration
+  $$ \mathcal{P} = \int_\mathcal{B} \boldsymbol{v} \rho dV .$$
+  Here, $\mathcal{P}$ is known as the /linear momentum/ or simply the /momentum/ of $\mathcal{B}$. 
+- For bodies in curvilinear translation, the velocity can be taken out of the integral due to its uniform nature (i.e. does not depend on the location in $\mathcal{B}$). Hence,
+  $$  \mathcal{P} = \boldsymbol{v} \int_\mathcal{B} \rho dV = m \boldsymbol{v}. $$
+- The moment of momentum of the body can be expressed by introducing the moment operation into integration in the form of the vector product with the position vector from the point about which moment is taken, $O$ for example
+  $$ \mathcal{H}^O = \int_\mathcal{B} \boldsymbol{r} \times \boldsymbol{v} \rho dV $$
+  
 END OF UNIT 1

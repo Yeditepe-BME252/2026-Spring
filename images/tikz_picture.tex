@@ -1,0 +1,15 @@
+\documentclass[tikz,border={2cm 1pt 2cm 1pt}]{standalone}
+\usepackage{amsmath}
+
+\begin{document}
+\begin{tikzpicture}
+    \fill (0,0) circle (2pt);
+    \node[below left] at (0,0) {$G$};
+    \draw[->, thick] (0.2,0.1) -- (.7,0.4)
+       node[midway,below] {$\boldsymbol{F}$};
+    \fill (0.4,-2) circle (1pt);
+    \node[left] at (0.4,-2) {$O$};
+    \draw[->, thick] (0.4,-2) -- (0.1,-.1)
+       node[midway, left] {$\boldsymbol{x}_G$};
+\end{tikzpicture}
+\end{document}
