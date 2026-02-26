@@ -45,8 +45,8 @@ Jove: a scientific educational video content provider with free access through Y
 #+REVEAL_HTML: <div style="font-size: 80%;">
 | Week | Lectures (Tuesday)                   | Lectures (Thursday)                |
 |------+--------------------------------------+------------------------------------|
-| 16/2 | No lecture                           | Course Conduct, [[./C1-introduction.html][Ch1:Introduction]]   |
-| 23/2 | Axioms of Mechanics                  | Elementary Topics                  |
+| 16/2 | No lecture                           | Course Conduct, [[./Ch1-intro.html][Ch1:Introduction]]   |
+| 23/2 | Axioms of Mechanics                  | Equations of Equilibrium           |
 | 2/3  | Vectors and Tensors                  | Indicial Notation                  |
 | 9/3  | Coordinate Transformations           | Stress Hypothesis                  |
 | 16/3 | Stress Tensor                        | /Ramadan Eve Holiday/              |

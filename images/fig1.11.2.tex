@@ -1,0 +1,104 @@
+\documentclass[tikz,border={2cm 1pt 2cm 1pt}]{standalone}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{tikz-3dplot}
+
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\tdplotsetmaincoords{7}{10}
+\begin{tikzpicture}[scale=1.2, tdplot_main_coords]
+
+% --- Points ---
+\coordinate (O) at (0,-3,0);
+\coordinate (P) at (1,-1.5,0.2);
+\coordinate (Q) at (-2,-0.5,-1.0);
+
+% --- Light lines of action ---
+\draw[gray!35, thin]
+    ($(P)+(-2,-0.6,-0.8)$) -- ($(P)+(2,0.6,0.8)$);
+
+\draw[gray!35, thin]
+    ($(Q)+(-2,-0.6,-0.8)$) -- ($(Q)+(2,0.6,0.8)$);
+
+% --- Forces ---
+\draw[-{Latex[length=4mm]}, very thick]
+    (P) -- ++(1.2,0.4,0.6)
+    node[pos=0.65, above, sloped] {$\bm{F}$};
+
+\draw[-{Latex[length=4mm]}, very thick]
+    (Q) -- ++(-1.2,-0.4,-0.6)
+    node[pos=0.65, below, sloped] {$-\bm{F}$};
+
+% --- Position vectors ---
+\draw[-{Latex[length=3mm]}, thick]
+    (O) -- (P)
+    node[pos=0.55, left] {$\bm{r}_P$};
+
+\draw[-{Latex[length=3mm]}, thick]
+    (O) -- (Q)
+    node[pos=0.55, right] {$\bm{r}_Q$};
+
+% --- Relative position vector (offset slightly upward) ---
+\draw[-{Latex[length=3mm]}, thick]
+    ($(Q)+(0,0.,0)$) -- ($(P)+(0,0.,0)$)
+    node[midway, above] {$\bm{r}_{P/Q}$};
+
+% --- Points ---
+\fill (O) circle (1.6pt) node[below left] {$O$};
+\fill (P) circle (1.6pt) node[above] {$P$};
+\fill (Q) circle (1.6pt) node[above right] {$Q$};
+
+\end{tikzpicture}
+\end{document}
+
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.2]
+
+% ---- Define 3D view ----
+\tdplotsetmaincoords{65}{110}
+\begin{scope}[tdplot_main_coords]
+
+% ---- Points ----
+\coordinate (O) at (0,0,0);
+\coordinate (P) at (3,0.8,1.2);
+\coordinate (Q) at (-1.8,-0.6,-0.8);
+
+% ---- Extended lines of action (light gray) ----
+\draw[gray!50] ($(P)+(-1.5,-0.4,-0.6)$) -- ($(P)+(2.0,0.6,1.0)$);
+\draw[gray!50] ($(Q)+(-2.0,-0.6,-1.0)$) -- ($(Q)+(1.5,0.4,0.6)$);
+
+% ---- Force vectors (thick, longer arrowheads) ----
+\draw[-{Latex[length=4mm,width=2.5mm]}, very thick]
+      (P) -- ++(1.5,0.5,0.8)
+      node[pos=0.6, above, sloped] {$\bm{F}$};
+
+\draw[-{Latex[length=4mm,width=2.5mm]}, very thick]
+      (Q) -- ++(-1.5,-0.5,-0.8)
+      node[pos=0.6, below, sloped] {$-\bm{F}$};
+
+% ---- Position vectors from O ----
+\draw[-{Latex[length=3mm]}, thick]
+      (O) -- (P)
+      node[midway, left] {$\bm{r}_P$};
+
+\draw[-{Latex[length=3mm]}, thick]
+      (O) -- (Q)
+      node[midway, right] {$\bm{r}_Q$};
+
+% ---- Relative position vector r_{P/Q} ----
+\draw[-{Latex[length=3mm]}, thick]
+      (Q) -- (P)
+      node[midway, below] {$\bm{r}_{P/Q}$};
+
+% ---- Mark points ----
+\fill (O) circle (1.5pt) node[below left] {$O$};
+\fill (P) circle (1.5pt) node[above left] {$P$};
+\fill (Q) circle (1.5pt) node[below right] {$Q$};
+
+\end{scope}
+\end{tikzpicture}
+
+\end{document}
