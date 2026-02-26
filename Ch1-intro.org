@@ -258,7 +258,7 @@ A recent post in Linkedin reveals the computational simulation of breathing.
 [[./images/fig1.11.2.jpg]]
 - The couple (moment) vector can be obtained by taking the summation of the moments of the couple about an arbitrary point $O$. This results in
   $$ \boldsymbol{M} = \boldsymbol{r}^{P/Q} \times \boldsymbol{F} $$
-- The system of couple forces vectors are said to be equivalent to their couple moment vector in terms of the mechanical effect produced on the body.
+- The system of couple force vectors are said to be equivalent to their couple moment vector in terms of the mechanical effect produced on the body.
 
 *** Equivalence of Force Systems
 #+ATTR_REVEAL: :frag (appear appear appear ...)
@@ -269,13 +269,39 @@ A recent post in Linkedin reveals the computational simulation of breathing.
   #+ATTR_HTML: :width 800px
   [[./images/FU77_fig1.2de.jpg]]
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 *** Equilibrium of Moments
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - The second condition of equilibrium of a free-body or group of bodies is derived based on the equilibrium of moments.
-- This requires that in addition to the equilibrium of forces derived previously, the external forces acting on the body should obey
+- This requires that in addition to the equilibrium of forces derived previously, the resultant moment of external forces acting on the body should obey
    $$ \sum_{I=1}^K \boldsymbol{r}^I \times \overset{\mathrm{ex}}{\boldsymbol{F}^I} =  \boldsymbol{0} $$
    where $\boldsymbol{r}^I$ denotes the position vector of particle $I$ with respect to the origin $O$ or any arbitrary location, $Q$, for that matter.
-- The two equilibrium conditions are necessary and sufficient for a rigid body to remain motionless.
+- The two equilibrium conditions are necessary and sufficient for a rigid body to remain steady or motionless.
 
 #+REVEAL: split
 Example:
