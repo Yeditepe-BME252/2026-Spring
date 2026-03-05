@@ -43,24 +43,24 @@ Jove: a scientific educational video content provider with free access through Y
 
 ** Weekly outline
 #+REVEAL_HTML: <div style="font-size: 80%;">
-| Week | Lectures (Tuesday)                   | Lectures (Thursday)                |
-|------+--------------------------------------+------------------------------------|
-| 16/2 | No lecture                           | Course Conduct, [[./Ch1-intro.html][Ch.1]]               |
-| 23/2 | Axioms of Mechanics                  | Equations of Equilibrium           |
-| 2/3  | Vectors and Tensors, [[./Ch2-vectors.html][Ch.2]]            | Vector Algebra                     |
-| 9/3  | Vector Calculus                      | Indicial Notation                  |
-| 16/3 | Coordinate Transformations           | /Ramadan Eve Holiday/              |
-| 23/3 | Stress Hypothesis                    | Stress Tensor                      |
-| 30/3 | Laws of Motion                       | Transformation of Stress           |
-| 6/4  | Stress Boundary Conditions           | States of Stress                   |
-| 13/4 | Mohr's Circle for Plane Stress       | Principal Stresses                 |
-| 20/4 | Deformation                          | /National Sovereignty Day Holiday/ |
-| 27/4 | Strain                               | Geometric Interpretation           |
-| 4/5  | Other Strain Measures                | Velocity Fields and Compatibility  |
-| 11/5 | Constitutive Equations               | Fluids and Elastic Solids          |
-| 18/5 | Commemoration of Ataturk Day Holiday | Isotropy                           |
-| 25/5 | Some Other Constitutive Models       | Sacrifice Feast Holiday            |
-| 1/6  | Biological Material Behaviour        | Computational Biomechanics         |
+| Week | Lectures (Tuesday)             | Lectures (Thursday)                |
+|------+--------------------------------+------------------------------------|
+| 16/2 | No lecture                     | Course Conduct, [[./Ch1-intro.html][Ch.1]]               |
+| 23/2 | Axioms of Mechanics            | Equations of Equilibrium           |
+| 2/3  | Vectors and Tensors, [[./Ch2-vectors.html][Ch.2]]      | Vector Algebra                     |
+| 9/3  | Vector Calculus                | Indicial Notation                  |
+| 16/3 | Coordinate Transformations     | /Ramadan Eve Holiday/              |
+| 23/3 | Stress Hypothesis              | Stress Tensor                      |
+| 30/3 | Laws of Motion                 | Transformation of Stress           |
+| 6/4  | Stress Boundary Conditions     | States of Stress                   |
+| 13/4 | Mohr's Circle for Plane Stress | Principal Stresses                 |
+| 20/4 | Deformation                    | /National Sovereignty Day Holiday/ |
+| 27/4 | Strain                         | Geometric Interpretation           |
+| 4/5  | Other Strain Measures          | Velocity Fields and Compatibility  |
+| 11/5 | Constitutive Equations         | Fluids and Elastic Solids          |
+| 18/5 | /Commemoration of Ataturk Day/ | Isotropy                           |
+| 25/5 | Some Other Constitutive Models | /Sacrifice Feast Holiday/          |
+| 1/6  | Biological Material Behaviour  | Computational Biomechanics         |
 
 ** Resources
 #+ATTR_REVEAL: :frag (appear appear appear ...)

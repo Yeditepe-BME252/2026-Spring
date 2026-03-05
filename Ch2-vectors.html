@@ -39,52 +39,52 @@ pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-org7d2572d">(\(\S 2.1\)) Vector Algebra</a></li>
-<li><a href="#/slide-orgb5a7742">(\(\S 2.1\)) Vector Calculus</a></li>
+<li><a href="#/slide-orge2754c4">(\(\S 2.1\)) Vector Algebra</a></li>
+<li><a href="#/slide-orgf6f4034">(\(\S 2.2\)) Vector Calculus</a></li>
 </ul>
 </div>
 </div>
 </section>
 <section>
-<section id="slide-org7d2572d">
-<h2 id="org7d2572d">(\(\S 2.1\)) Vector Algebra</h2>
-<div class="outline-text-2" id="text-org7d2572d">
+<section id="slide-orge2754c4">
+<h2 id="orge2754c4">(\(\S 2.1\)) Vector Algebra</h2>
+<div class="outline-text-2" id="text-orge2754c4">
 </div>
 </section>
-<section id="slide-org3538e07">
-<h3 id="org3538e07">Objectives</h3>
+<section id="slide-org760d56a">
+<h3 id="org760d56a">Objectives</h3>
 <ul>
 <li class="fragment appear">To review the basic operations in vector algebra</li>
 
 </ul>
 </section>
-<section id="slide-orgefb933e">
-<h3 id="orgefb933e">Definition</h3>
+<section id="slide-orgbd56890">
+<h3 id="orgbd56890">Definition</h3>
 <ul>
 <li>A directed line segment with a given magnitude and direction</li>
 <li>In reference with a coordinate system of measurement, a vector is an ordered list of triple (three-dimensional) or double (two-dimensional) numbers
-\[ \{ 1, -1, 3\}   \hspace{1.5em} \{ \cos\theta, \sin\theta \} \]</li>
+\[ \{ 1, -1, 3\}   \hspace{1.5em} \{ \cos\theta, \sin\theta \} \]
+<span style="color:#2255cc;">Freehand depiction of the scene</span></li>
 
 </ul>
 </section>
-<section id="slide-org0f47ef2">
-<h3 id="org0f47ef2">Notation</h3>
+<section id="slide-org7eda317">
+<h3 id="org7eda317">Notation</h3>
 <ul>
-<li class="fragment appear">In printed form, either the overline, \(\overline{AB}\), or lowercase <b>boldface</b> <i>italic</i> font will be used to denote vectors.
-\[ \boldsymbol{u}=\overline{AB}, \hspace{1em} \boldsymbol{e}_2, \hspace{1em} \boldsymbol{f} \]</li>
+<li class="fragment appear">In printed form, either the overline, \(\vec{AB}\), or lowercase <b>boldface</b> <i>italic</i> font will be used to denote vectors.
+\[ \boldsymbol{u}=\vec{AB}, \hspace{1em} \boldsymbol{e}_2, \hspace{1em} \boldsymbol{f} \]</li>
 <li class="fragment appear">A zero vector \(\boldsymbol{0}\) has zero magnitude.</li>
 <li class="fragment appear">Vector magnitudes are indicated by the symbols \(|\boldsymbol{u}|\), or simply as \(u\), using the same letter without <b>boldface</b> <i>italic</i>.</li>
 <li class="fragment ...">Multiplying a vector by a scalar scales the vector magnitude but has no effect on it&rsquo;s magnitude, e.g., multiplying \(\boldsymbol{u}\) with the reciprocal of its magnitude, i.e.
-\[ \frac{1}{|\boldsymbol{u}|} \boldsymbol{u} = \frac{\boldsymbol{u}}{|\boldsymbol{u}|} = \frac{\boldsymbol{u}}{u} \]
-gives a vector of length unity.</li>
+\[ \left( \frac{1}{|\boldsymbol{u}|} \right) \boldsymbol{u} = \frac{\boldsymbol{u}}{|\boldsymbol{u}|} = \frac{\boldsymbol{u}}{u} = \boldsymbol{e}_u \]
+gives a vector of length unity. Note that, \(\boldsymbol{e}_u\) is a <i>base vector</i>.</li>
 <li class="fragment ...">A unit vector is a vector of magnitude unity (1). In this course (and in many others), the letter \(\boldsymbol{e}\) is reserved to denote unit vectors, e.g.
-\[ \boldsymbol{e}_1,\; \boldsymbol{e}_u,\; \boldsymbol{e}_\theta, \]
-etc.</li>
+\[ \boldsymbol{e}_1,\; \boldsymbol{e}_u,\; \boldsymbol{e}_\theta,\ldots \]</li>
 
 </ul>
 
 </section>
-<section id="slide-org0f47ef2-split">
+<section id="slide-org7eda317-split">
 <ul>
 <li><p>
 We can add two or more vectors using the \(+\) operator
@@ -93,7 +93,7 @@ which is known as the parallelogram rule.
 </p>
 
 
-<div id="orga1354e9" class="figure">
+<div id="org670911d" class="figure">
 <p><img src="./images/fig2.1.1.png" alt="fig2.1.1.png" width="600px" />
 </p>
 </div>
@@ -107,8 +107,8 @@ which is known as the parallelogram rule.
 
 </ul>
 </section>
-<section id="slide-org9c93419">
-<h4 id="org9c93419">The Law of Sines and Cosines</h4>
+<section id="slide-orgad38a35">
+<h4 id="orgad38a35">The Law of Sines and Cosines</h4>
 <ul>
 <li>The vectors: \(\boldsymbol{a} = \vec{BC}\), \(\quad \boldsymbol{b} = \vec{CA}\), \(\quad\boldsymbol{c} = \vec{BA} = \boldsymbol{a} + \boldsymbol{b}\)</li>
 <li>the corner angles \(C = (\boldsymbol{a},\boldsymbol{b})\) , \(A = (\boldsymbol{b},\boldsymbol{c})\) , \(B = (\boldsymbol{a},\boldsymbol{c})\)</li>
@@ -119,15 +119,15 @@ The <b>Law of Sines</b> reads
 \[ \frac{a}{\sin A} = \frac{b}{\sin B} =\frac{c}{\sin C} \] 
 </p>
 
-<div id="org6f7b114" class="figure">
+<div id="org084c4e9" class="figure">
 <p><img src="./images/fig2.1.2.png" alt="fig2.1.2.png" width="600px" />
 </p>
 </div></li>
 
 </ul>
 </section>
-<section id="slide-org154e260">
-<h3 id="org154e260">Scalar (dot) Product</h3>
+<section id="slide-org035d80b">
+<h3 id="org035d80b">Scalar (dot) Product</h3>
 <ul>
 <li class="fragment appear">The <i>scalar</i> (or <i>dot</i>) <i>product</i> of \(\boldsymbol{u}\) and \(\boldsymbol{v}\), denoted \(\boldsymbol{u} \cdot \boldsymbol{v}\), is defined by the formula
 \[ \boldsymbol{u} \cdot \boldsymbol{v} = |\boldsymbol{u}| |\boldsymbol{v}| \cos\theta \hspace{1em} (0\leq \theta \leq \pi), \]
@@ -137,11 +137,11 @@ One of the major uses of this operation is to determine the projected length, \(
 </p>
 
 <p>
-Freehand depiction of the scene
+<span style="color:#2255cc;">Freehand depiction of the scene</span>
 </p>
 <ul>
-<li class="fragment appear">A unit vector along the axis \(a-a\) is constructed by locating two points \(C\) and \(D\) on \(a-a\), constructing the vector \(\overline{CD}\), and then dividing it to its length \(|\overline{CD}|\)
-\[ \boldsymbol{e}_a = \overline{CD}/|\overline{CD}| \]</li>
+<li class="fragment appear">A unit vector along the axis \(a-a\) is constructed by locating two points \(C\) and \(D\) on \(a-a\), constructing the vector \(\vec{CD}\), and then dividing it to its length \(|\vec{CD}|\)
+\[ \boldsymbol{e}_a = \vec{CD}/|\vec{CD}| \]</li>
 
 <li class="fragment appear">The dot product between \(\boldsymbol{u}\) and the unit vector yields the projection, also called <i>component</i> \(\boldsymbol{u}_{\parallel a}\)
 \[ \boldsymbol{u} \cdot \boldsymbol{e}_a = u_{\parallel a} \]</li>
@@ -151,7 +151,7 @@ Freehand depiction of the scene
 </ul>
 
 </section>
-<section id="slide-org154e260-split">
+<section id="slide-org035d80b-split">
 <ul>
 <li><p>
 Introducing a coordinate system \(O-x_1 x_2 x_3\), using the indices {1,2,3} to denote the first, second and third coordinate directions having a set of unit <b>base vectors</b> \(\boldsymbol{e}_1\), \(\boldsymbol{e}_2\), and \(\boldsymbol{e}_3\), respectively.
@@ -170,12 +170,13 @@ which can be written in shorthand (indicial) notation by the use of a <i>free-in
 \[ u_i = \boldsymbol{u}\cdot \boldsymbol{e}_i, \quad i={1,2,3} \]</li>
 
 <li class="fragment appear">In this way, the representation of the vector in the \(O-x_1 x_2 x_3\) system can be written as
-\[ \boldsymbol{u} = u_1 \boldsymbol{e}_1 + u_2 \boldsymbol{e}_2 + u_3 \boldsymbol{e}_3 \]</li>
+\[ \boldsymbol{u} = u_1 \boldsymbol{e}_1 + u_2 \boldsymbol{e}_2 + u_3 \boldsymbol{e}_3 = \sum_{i=1}^3 u_i \boldsymbol{e}_i  \]
+where summation occurs over a <i>repeated index</i> \(i\).</li>
 
 </ul>
 
 </section>
-<section id="slide-org154e260-split">
+<section id="slide-org035d80b-split">
 <ul>
 <li>Note from it&rsquo;s definition the  <i>dot product</i> of two perpendicular vectors \((\boldsymbol{u},\boldsymbol{v}) = \pi/2\) yields
 \[ \boldsymbol{u} \cdot \boldsymbol{v} = |\boldsymbol{u}| |\boldsymbol{v}| \cos(\pi/2) = 0 \]</li>
@@ -210,16 +211,16 @@ which is an <i>identity matrix</i> in a sense.</li>
 
 </ul>
 </section>
-<section id="slide-org1075896">
-<h4 id="org1075896">Review Problems</h4>
+<section id="slide-org151929d">
+<h4 id="org151929d">Review Problems</h4>
 
-<div id="org49377bf" class="figure">
+<div id="org3824997" class="figure">
 <p><img src="./images/FU94_2.1problems1.png" alt="FU94_2.1problems1.png" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-orgc5faf31">
-<h3 id="orgc5faf31">Vector (cross) Product</h3>
+<section id="slide-org4443685">
+<h3 id="org4443685">Vector (cross) Product</h3>
 <ul>
 <li class="fragment appear"><p>
 Whereas the scalar product of two vectors is a scalar quantity, the <i>vector</i> (or <i>cross</i>) <i>product</i> of two vectors \(\boldsymbol{u}\) and \(\boldsymbol{v}\) produces another vector \(\boldsymbol{w}\); and we write \(\boldsymbol{w} = \boldsymbol{u} \times \boldsymbol{v}\). The magnitude of \(\boldsymbol{w}\) is defined as
@@ -228,7 +229,7 @@ where \(\theta=(\boldsymbol{u}, \boldsymbol{v})\), and the vector \(\boldsymbol{
 </p>
 
 
-<div id="org9818327" class="figure">
+<div id="org105b377" class="figure">
 <p><img src="./images/fig2.1.3.png" alt="fig2.1.3.png" width="600px" />
 </p>
 </div></li>
@@ -236,7 +237,7 @@ where \(\theta=(\boldsymbol{u}, \boldsymbol{v})\), and the vector \(\boldsymbol{
 </ul>
 
 </section>
-<section id="slide-orgc5faf31-split">
+<section id="slide-org4443685-split">
 <ul>
 <li><p>
 Vector products satisfy the following relations:
@@ -249,45 +250,135 @@ Vector products satisfy the following relations:
 \end{align}
 
 </div></li>
+<li>Very useful in finding the moment of physical variables, such as <i>moment of a force</i>, or the <i>moment of momentum about a point</i>.</li>
+<li>Calculations become possible upon designation of a set of inertial or relative coordinates.</li>
 
 </ul>
 
 </section>
-<section id="slide-orgc5faf31-split">
+<section id="slide-org4443685-split">
+<p>
+The vector product can be expressed in terms of the vector components in  a coordinate system \(O-x_1 x_2 x_3\) as
+  \[ \boldsymbol{u} \times \boldsymbol{v} =  (u_1 \boldsymbol{e}_1 + u_2 \boldsymbol{e}_2 + u_3 \boldsymbol{e}_3) \times (v_1 \boldsymbol{e}_1 + v_2 \boldsymbol{e}_2 + v_3 \boldsymbol{e}_3) \]  
+</p>
 <ul>
-<li>The vector product can be expressed in terms of the vector components in  a coordinate system \(O-x_1 x_2 x_3\) as
-\[ \boldsymbol{u} \times \boldsymbol{v} = (u_2 v_3 - u_3 v_2) \boldsymbol{e}_1 + (u_3 v_1 - u_1 v_3) \boldsymbol{e}_2 + (u_1 v_2 - u_2 v_1) \boldsymbol{e}_3 \]</li>
+<li class="fragment appear">This can be expanded into nine terms (on the board) &#x2026;</li>
+<li class="fragment appear">which finally yield 
+\[ \boldsymbol{u} \times \boldsymbol{v} =  (u_2 v_3 - u_3 v_2) \boldsymbol{e}_1 + (u_3 v_1 - u_1 v_3) \boldsymbol{e}_2 + (u_1 v_2 - u_2 v_1) \boldsymbol{e}_3 \]</li>
+<li class="fragment appear">The expression can be written in a compacted for by using the concept of a <i>determinant</i>
+\[ \boldsymbol{u} \times \boldsymbol{v} = \left| \begin{array} d u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \\  \boldsymbol{e}_1 & \boldsymbol{e}_2 & \boldsymbol{e}_3 \end{array} \right| \]</li>
+
+</ul>
+
+</section>
+<section id="slide-org4443685-split">
+<p>
+It may be instructive to revisit the ideas of <i>combinations</i> and <i>permutations</i>
+</p>
+<ul>
+<li class="fragment appear">Game theory?</li>
+<li class="fragment appear"><p>
+Ask GPT:
+</p>
+<blockquote >
+<p>
+can you summarize the notions of combination and permutation in the context of set logic? can you demonstrate this definition by applying it to the notion of a determinant of a matrix, for example?
+</p>
+</blockquote></li>
+
+</ul>
+
+</section>
+<section id="slide-org4443685-split">
+<ul>
+<li>It is interesting to discover certain symmetries in the how the triplets \(u_i\), \(v_j\) and \(\boldsymbol{e}_k\) permute and combine with each other.</li>
 
 </ul>
 <ul>
-<li class="fragment appear">It is interesting to discover certain symmetries in the how the triplets \(u_i\), \(v_j\) and \(\boldsymbol{e}_k\) permute and combine with each other.</li>
 <li class="fragment appear">For example, looking at the first paranthesis, the term \(u_2 v_3 \boldsymbol{e}_1\) has an index triplet 231 with a \(+\) sign while the next term \(u_3 v_2 \boldsymbol{e}_1\) with an index triplet 321 has a \(-\) sign.</li>
 <li class="fragment appear">We notice that positive \(\circlearrowleft\) cyclic permutations (123, 231, 312) yield positive coefficients, while negative \(\circlearrowright\) cyclic permutations (321, 213, 132) yield the opposite sign (negative).</li>
-<li class="fragment ...">Also notice that, none of the triplets that appear in the result contain a repeating index.</li>
-<li class="fragment ..."><p>
+<li class="fragment appear">Also, none of the triplets that appear in the result contain a repeating index (e.g. 221,333, etc.)</li>
+<li class="fragment appear"><p>
 In this way, a novel apparatus called the <i>alternating symbol</i> was invented (by Levi-Civita) to give the sign of permuting triplets
 </p>
 <div>
 \begin{align}
-\boldsymbol{\epsilon}_{ijk} = \left\{ \begin{array} 0+1, \quad \circlearrowleft\, ijk\; \mathrm{cycles} \quad  (123, 231, 312) \\ -1, \quad \circlearrowright\, ijk\; \mathrm{cycles} \quad  (321, 213, 132) \\ 0 \quad \mathrm{otherwise (repeating)} \end{array} \right.
+\boldsymbol{\epsilon}_{ijk} = \left\{ \begin{array} 0+1, \quad \circlearrowleft\; \mathrm{cycles} \quad  (123, 231, 312) \\ -1, \quad \circlearrowright\; \mathrm{cycles} \quad  (321, 213, 132) \\ 0 \quad \mathrm{otherwise (repeating)} \end{array} \right.
 \end{align}
 
 </div></li>
 
 </ul>
-</section>
-<section id="slide-org0fb1d5e">
-<h4 id="org0fb1d5e">Review Problems</h4>
 
-<div id="org0fd69db" class="figure">
+</section>
+<section id="slide-org4443685-split">
+<ul>
+<li>The result of the cross product operation can be written in shorthand (indicial) notation by multiplying the free-triple-index term \(u_i v_j \boldsymbol{e}_k\) with the alternating symbol and summing over all the free indices
+\[ \boldsymbol{u} \times \boldsymbol{v} = \sum_k \sum_j \sum_i \epsilon_{ijk} u_i v_j \boldsymbol{e}_k \]</li>
+
+</ul>
+<ul>
+<li class="fragment appear">The resulting sum has 27 terms, only six of which are non-zero. Three of these (the \(\circlearrowleft\) cycles) appear with a \(+\) sign while the other three (the \(\circlearrowright\) cycles)  with a \(-\) sign.</li>
+<li class="fragment appear">Note that, similar to the expression in the dot product, summations take place over three pairs of <i>repeated indices</i> again.</li>
+
+</ul>
+</section>
+<section id="slide-org0a1ec0a">
+<h4 id="org0a1ec0a">Review Problems</h4>
+
+<div id="orgcaff19f" class="figure">
 <p><img src="./images/FU94_2.1problems2.png" alt="FU94_2.1problems2.png" width="1600px" />
 </p>
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgb5a7742">
-<h2 id="orgb5a7742">(\(\S 2.1\)) Vector Calculus</h2>
+<section id="slide-orgf6f4034">
+<h2 id="orgf6f4034">(\(\S 2.2\)) Vector Calculus</h2>
+<div class="outline-text-2" id="text-orgf6f4034">
+</div>
+</section>
+<section id="slide-orga7b8249">
+<h3 id="orga7b8249">Vector Equations</h3>
+<ul>
+<li class="fragment appear">An important difference between an equation in terms of <i>scalars</i> and an equation in terms of <i>vectors</i> is the amount of information within.</li>
+<li class="fragment appear">For example, in order to establish the identity of two vectors
+\[ \boldsymbol{M} = \boldsymbol{r} \times \boldsymbol{F} \]
+has to be satisfied with respect to each and every one of the components of the resulting vectors on each side (i.e. two for a 2-D space, of three for a 3-D space)</li>
+<li class="fragment appear">Consider the conservation of momentum
+\[ \frac{d}{dt}m\boldsymbol{v} = \sum_i \boldsymbol{F}^i \]
+essentially provides three equations in a 3-D space</li>
+
+</ul>
+
+</section>
+<section id="slide-orga7b8249-split">
+<p>
+Or consider describing a plane with normal \(\boldsymbol{n}\) that is at a distance \(p\) from a point \(O\).
+</p>
+<ul>
+<li class="fragment appear"><p>
+We can show that the position vector \(\boldsymbol{r}\) for any point \(P\) that starts from \(O\) and end up in this plane satisfies \(\boldsymbol{r} \cdot \boldsymbol{n} = p\).
+</p>
+
+<div id="orge29d423" class="figure">
+<p><img src="./images/FU94-fig2.1.png" alt="FU94-fig2.1.png" width="1200px" />
+</p>
+</div></li>
+<li class="fragment appear">The vector equation above can be expressed in terms of the vector components with respect to a fixed frame of reference \(O-x_1 x_2 x_3\).
+\[ n_1 x_1 + n_2 x_2 + n_3 x_3 - p = 0 \]</li>
+<li class="fragment appear">Yet this eqaution can further be simplified by relying on the notion of a <i>free-index</i>
+\[ \sum_i n_i x_i - p = 0 \]</li>
+
+</ul>
+</section>
+<section id="slide-org1596b4e">
+<h4 id="org1596b4e">Time derivative of a vector</h4>
+
+<div id="orgf3fb1a6" class="figure">
+<p><img src="./images/FU94_2.2problem13.png" alt="FU94_2.2problem13.png" width="1600px" />
+</p>
+</div>
 </section>
 </section>
 </div>
