@@ -56,6 +56,9 @@
   [[./images/fig2.1.2.png]]
   
 ** Scalar (dot) Product
+:PROPERTIES:
+:CUSTOM_ID: scalar-product
+:END:
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - The /scalar/ (or /dot/) /product/ of $\boldsymbol{u}$ and $\boldsymbol{v}$, denoted $\boldsymbol{u} \cdot \boldsymbol{v}$, is defined by the formula
   $$ \boldsymbol{u} \cdot \boldsymbol{v} = |\boldsymbol{u}| |\boldsymbol{v}| \cos\theta \hspace{1em} (0\leq \theta \leq \pi), $$
@@ -73,7 +76,7 @@
 #+REVEAL: split
 - Introducing a coordinate system $O-x_1 x_2 x_3$, using the indices {1,2,3} to denote the first, second and third coordinate directions having a set of unit *base vectors* $\boldsymbol{e}_1$, $\boldsymbol{e}_2$, and $\boldsymbol{e}_3$, respectively.
 
-  A freehand depiction of the scene
+  @@html:<span style="color:#2255cc;">Freehand depiction of the scene</span>@@
 
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - We can obtain a representation of the vector, $\boldsymbol{u}$, in terms of its components by using the /dot product/ operation
@@ -96,7 +99,7 @@
   \end{align}
 - A shorthand of the nine equations above is provided by introducing the /free-indices/ $i,j$ as
   \begin{align}
-  \boldsymbol{e}_i \cdot \boldsymbol{e}_j = \left\{ \begin{array} 01, \quad i=j \\ 0, \quad i\neq j \end{array} \right.
+  \boldsymbol{e}_i \cdot \boldsymbol{e}_j = \left\{ \begin{array}{c} 1, \quad i=j \\ 0, \quad i\neq j \end{array} \right.
   \end{align}
   where $i,j$ can freely take any values from the set of coordinate numbers ${1,2,3}$. 
 - This above gives rise to the definition of the /Kroenecker's delta/, $\delta_{ij}$
@@ -106,7 +109,6 @@
 *** Review Problems
 #+ATTR_HTML: :width 1600px
 [[./images/FU94_2.1problems1.png]]
-
 
 ** Vector (cross) Product
 #+ATTR_REVEAL: :frag (appear appear appear ...)
@@ -135,7 +137,7 @@ The vector product can be expressed in terms of the vector components in  a coor
 - which finally yield 
   $$ \boldsymbol{u} \times \boldsymbol{v} =  (u_2 v_3 - u_3 v_2) \boldsymbol{e}_1 + (u_3 v_1 - u_1 v_3) \boldsymbol{e}_2 + (u_1 v_2 - u_2 v_1) \boldsymbol{e}_3 $$
 - The expression can be written in a compacted for by using the concept of a /determinant/
-  $$ \boldsymbol{u} \times \boldsymbol{v} = \left| \begin{array} d u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \\  \boldsymbol{e}_1 & \boldsymbol{e}_2 & \boldsymbol{e}_3 \end{array} \right| $$
+  $$ \boldsymbol{u} \times \boldsymbol{v} = \left| \begin{array}{c} u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \\  \boldsymbol{e}_1 & \boldsymbol{e}_2 & \boldsymbol{e}_3 \end{array} \right| $$
 
 #+REVEAL: split
 It may be instructive to revisit the ideas of /combinations/ and /permutations/
@@ -147,14 +149,14 @@ It may be instructive to revisit the ideas of /combinations/ and /permutations/
   #+END_QUOTE
   
 #+REVEAL: split
-- It is interesting to discover certain symmetries in the how the triplets $u_i$, $v_j$ and $\boldsymbol{e}_k$ permute and combine with each other.
+- It is interesting to discover certain symmetries in the determinant that govern how the triplets $u_i$, $v_j$ and $\boldsymbol{e}_k$ permute and combine with each other.
 #+ATTR_REVEAL: :frag (appear)
 - For example, looking at the first paranthesis, the term $u_2 v_3 \boldsymbol{e}_1$ has an index triplet 231 with a $+$ sign while the next term $u_3 v_2 \boldsymbol{e}_1$ with an index triplet 321 has a $-$ sign.
 - We notice that positive $\circlearrowleft$ cyclic permutations (123, 231, 312) yield positive coefficients, while negative $\circlearrowright$ cyclic permutations (321, 213, 132) yield the opposite sign (negative).
 - Also, none of the triplets that appear in the result contain a repeating index (e.g. 221,333, etc.)
 - In this way, a novel apparatus called the /alternating symbol/ was invented (by Levi-Civita) to give the sign of permuting triplets
   \begin{align}
-  \boldsymbol{\epsilon}_{ijk} = \left\{ \begin{array} 0+1, \quad \circlearrowleft\; \mathrm{cycles} \quad  (123, 231, 312) \\ -1, \quad \circlearrowright\; \mathrm{cycles} \quad  (321, 213, 132) \\ 0 \quad \mathrm{otherwise (repeating)} \end{array} \right.
+  \boldsymbol{\epsilon}_{ijk} = \left\{ \begin{array}{c} +1, \quad \circlearrowleft\; \mathrm{cycles} \quad  (123, 231, 312) \\ -1, \quad \circlearrowright\; \mathrm{cycles} \quad  (321, 213, 132) \\ 0 \quad \mathrm{otherwise (repeating)} \end{array} \right.
   \end{align}
 
 #+REVEAL: split  
@@ -189,7 +191,142 @@ Or consider describing a plane with normal $\boldsymbol{n}$ that is at a distanc
 - Yet this eqaution can further be simplified by relying on the notion of a /free-index/
   $$ \sum_i n_i x_i - p = 0 $$
 
-*** Time derivative of a vector
+** Definition of a Vector Field
+- Say a physical variable $\boldsymbol{v}$ measured at points of space exhibits changes as a function of the point coordinates, $\boldsymbol{x}$, as well as time, $t$.
+#+ATTR_REVEAL: :frag (appear)
+- Consider the atmospheric current visualization provided by an app (such as [[https://windy.com]])
+  #+BEGIN_EXPORT html
+  <div style="text-align:center;">
+  <video width="700" controls>
+    <source src="./images/windy.mp4" type="video/mp4">
+  </video>
+  </div>
+  #+END_EXPORT
+
+*** Derivatives of a Vector Field
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- A vector field of the air current velocities is defined by
+  $$ \boldsymbol{v} = \boldsymbol{v}(\boldsymbol{x},t) $$
+- This implies the existence of derivatives with respect to the vector arguments (position and time)
+- For example, the time derivative of the vector field would be like
+  $$ \frac{\partial \boldsymbol{v}}{\partial t} $$
+- The derivative with respect to spatial coordinates, $x_i$, would be like
+  $$ \frac{\partial \boldsymbol{v}}{\partial x_i} $$
+  called the /spatial derivative/. Here $i$ represents the /free-index/.
+
+** Curvilinear Coordinate Systems
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Apart from *linear* rectangular coordinates (such as Cartesian), other ways of measuring location of points exist, such as, the spherical, /cylindrical/, parabolic, elliptic, etc. systems. These are known, in general, as *curvilinear* coordinates.
+
+- The *cylindrical* coordinate system, for example, is defined by an axis of revolution, usually labeled with $z$, an origin $O$, and a fixed plane through the $z$ axes used in measuring the angular orientations of points in space. 
+
+  @@html:<span style="color:#2255cc;">Freehand depiction of the scene</span>@@
+  
+- The measurements in the cylindrical coordinates are labeled as $\{r,\,\theta,\,z\}$ which correspond with bases vectors $\{\boldsymbol{e}_r,\,\boldsymbol{e}_\theta,\, \boldsymbol{e}_z\}$.
+
+- The *polar* coordinate system is a reduced version of the cylindrical system, obtained by eliminating the axial ($z$) coordinate. Hence, the coordinates and their base vectors in the polar system are  $\{r,\,\theta\}$ and $\{\boldsymbol{e}_r,\, \boldsymbol{e}_\theta\}$, respectively. 
+
+*** Another Application of the Cross Product  
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- The orbital plane motion of a particle, $P$, located at a fixed distance $r$ away from an axis, $z-z$, about which $P$ rotates with an angular velocity, $\omega$.
+  
+  @@html:<span style="color:#2255cc;">Freehand depiction of the scene</span>@@
+
+- This problem is of special and crucial interest in understanding the geometry of orbital motion.  The velocity of $P$ is provided by taking the cross product between it's position vector, $\boldsymbol{r}$, and the angular velocity vector, $\boldsymbol{\omega}$.
+  $$ \boldsymbol{v} = \boldsymbol{\omega} \times \boldsymbol{r} $$
+
+- Due to the planar nature of motion, a *polar* representation of variables will suffice. In that case, the position vector of $P$ is $\boldsymbol{r} = r \boldsymbol{e}_r$ and the angular velocity vector is $\boldsymbol{\omega} = \omega \boldsymbol{e}_z$
+
+- The velocity of $P$ can then be determined by applying the cross product as
+  \begin{align}
+   \boldsymbol{v} & = \omega \boldsymbol{e}_z \times r \boldsymbol{e}_r \\
+                  & = \omega r (\boldsymbol{e}_z \times \boldsymbol{e}_r) \\
+                  & = \omega r \boldsymbol{e}_\theta
+  \end{align}
+
+#+REVEAL: split  
+- By setting $\boldsymbol{v} = \frac{d (r \boldsymbol{e}_r)}{dt}$ into the above formula, we obtain important relations about the time derivatives of the base vectors.
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- For example, the time derivative of $\boldsymbol{r}=r\boldsymbol{e}_r$ becomes
+  $$ \frac{d (r \boldsymbol{e}_r)}{dt} = r\frac{d \boldsymbol{e}_r}{dt} $$
+  which yields
+  $$ \frac{d \boldsymbol{e}_r}{dt} = \omega \boldsymbol{e}_\theta $$.
+- Similarly, an expression for the time derivative of the other base vector can be obtained by using analogy with the above derivation
+  \begin{align}
+    \frac{d \boldsymbol{e}_\theta}{dt} & = \boldsymbol{\omega} \times \boldsymbol{e}_\theta \\
+                                       & = \omega (\boldsymbol{e}_z \times \boldsymbol{e}_\theta) \\
+                                       & = - \omega \boldsymbol{e}_r
+  \end{align}
+                                       
+*** Example: Time Derivative of a Base Vector
 #+ATTR_HTML: :width 1600px
 [[./images/FU94_2.2problem13.png]]
 
+* ($\S 2.3$) The Summation Convention
+Inquire GPT about the use and history of the topic.
+  #+BEGIN_QUOTE
+  To whom is the summation convention attributed? What is it's relation with the contraction operation with some background about the latter?
+  #+END_QUOTE
+
+#+REVEAL: split
+- The summation convention is closely related with the *index contraction* operation in tensor algebra.
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- For example, take the inner product between two vectors, $\boldsymbol{u} \cdot \boldsymbol{v}$. Written in it's matrix form this reads
+  $$ \boldsymbol{u} \cdot \boldsymbol{v} = \{ u_1 \; u_2 \; u_3 \} \left\{ \begin{array}{c} v_1 \\ v_2 \\ v_3 \end{array} \right\} = u_1 v_1 + u_2 v_2 + u_3 v_3 = \sum_{i=1}^3 u_i v_i $$
+  which is essentially identical with the /scalar product/ operation. The summation over a repeated index is known as *index contraction*. because in the resulting statement both of the contracted indices dissapear. 
+- The multiplication of a second order tensor with a vector involves an inner product between them which reads
+  $$ \boldsymbol{A} \boldsymbol{u} = \begin{bmatrix} A_{11} & A_{12} & A_{13} \\ A_{21} & A_{22} & A_{23} \\ A_{31} & A_{32} & A_{33} \end{bmatrix} \begin{Bmatrix} u_1 \\ u_2 \\ u_3 \end{Bmatrix} = \begin{Bmatrix} A_{11} u_1 + A_{12} u_2 + A_{13} u_3 \\ A_{21} u_1 + A_{22} u_2 + A_{23} u_3 \\ A_{31} u_1 + A_{32} u_2 + A_{33} u_3 \end{Bmatrix} = \sum_{j=1}^3 A_{ij} u_j$$
+- Note the placement of the /free/ index ($i$), and the /summation/ index ($j$). The summation index is also called as the /dummy/ index.
+
+#+REVEAL: split
+- Even when writing the vector as a sum over it's components and corresponding bases vectors, we use the summation 
+  $$ \boldsymbol{u} = u_1 \boldsymbol{e}_1 +  u_2 \boldsymbol{e}_2 +  u_3 \boldsymbol{e}_3 = \sum_{i=1}^3 u_i \boldsymbol{e}_i $$
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- The expression on the right hand of the second equal sign is said to be in /indicial notation/.
+- Because contractions of indices occur very frequently in mechanics, Albert Einstein introduced the *summation convention*, whereby a summation sign is omitted and it is understood that whenever an index appears twice in a term, summation over that index is implied.
+- The above equation reads
+  $$ \boldsymbol{u} =  u_i \boldsymbol{e}_i $$
+- In reading expression written in indicial notation, the non-repeating indices are called as /free/, while the twice repeating ones are called as /dummy/ indices.
+- Note that, repetition of an index more than twice is *invalid* according to the summation convention.
+
+** Examples
+*** Direction Cosines of a Vector
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Let $\boldsymbol{n}$ be a unit vector. It's components can be evaluated by using the single equation in indicial notation
+  $$ n_i = \boldsymbol{n} \cdot \boldsymbol{e}_i = \cos\alpha_i $$
+  where $\alpha_i$ are the direction angles that $\boldsymbol{n}$ makes with each coordinate axis.
+  
+  @@html:<span style="color:#2255cc;">Freehand depiction of the scene</span>@@
+  
+- Using the fact that a unit vector has a magnitude equal to unity, we write
+  $$ |\boldsymbol{n}|^2 = \boldsymbol{n} \cdot \boldsymbol{n} = n_i n_i = 1 $$
+- Based on this expression a relation between the direction cosines can be obtained by expanding the dummy index 
+  $$ \cos\alpha_i \cos\alpha_i = \cos^2\alpha_1 + \cos^2\alpha_2 + \cos^2\alpha_3 = 1 $$
+  
+*** Length of a fiber, $d\boldsymbol{x}$
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Consider a short fiber with components $dx_1,\, dx_2,\, dx_3$ in a three-dimensional Eucidean space with rectangular components $x_1,\, x_2,\, x_3$.
+- The square of its length can be found by
+  $$ ds^2 = dx_1^2 + dx_2^2 + dx_3^2 $$
+- In terms of its component representation the same result can be achieved by taking the scalar product of the vector by itself, as
+  \begin{align}
+   ds^2 & = d\boldsymbol{x} \cdot d\boldsymbol{x} \\
+        & = (dx_i \boldsymbol{e}_i) \cdot (dx_j \boldsymbol{e}_j) \\
+        & = dx_i dx_j (\boldsymbol{e}_i \cdot \boldsymbol{e}_j) \\
+        & = dx_i dx_j \delta_{ij}
+  \end{align}
+  where the definition of the Kroenecker's delta ([[#scalar-product][$\S 2.1$]]) was used to convert the last line.
+- We see that the expression $dx_i dx_j \delta_{ij}$ is non-zero only when $i=j$. Then the above equation can be written as $ds^2 = dx_i dx_i$, or equivalently as $ds^2 = dx_j dx_j$.
+- In this context, the role of Kroenecker's delta is to act as an index shifter, or simply a /shifter/.
+  
+*** The Cross Product in Indicial Notation
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Previously we saw the arisal of the alternator symbol in representing the vector product $\boldsymbol{u} \times \boldsymbol{v}$ as
+  $$  \sum_k \sum_j \sum_i \epsilon_{ijk} u_i v_j \boldsymbol{e}_k $$
+- But according to the summation convention there is no need to display the summation symbols and the cross product in indicial notation reads
+*** Higher (Second) Order Tensors
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- The order (or rank) of a tensor is equal to the number of indices in it.
+* ($\S 2.4$) Transformation Under Rotation
+
+* ($\S 2.10$) Partial Differentiation Rules

@@ -39,27 +39,30 @@ pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-orge2754c4">(\(\S 2.1\)) Vector Algebra</a></li>
-<li><a href="#/slide-orgf6f4034">(\(\S 2.2\)) Vector Calculus</a></li>
+<li><a href="#/slide-org750265c">(\(\S 2.1\)) Vector Algebra</a></li>
+<li><a href="#/slide-org2f282fb">(\(\S 2.2\)) Vector Calculus</a></li>
+<li><a href="#/slide-orge73a92b">(\(\S 2.3\)) The Summation Convention</a></li>
+<li><a href="#/slide-org23683e7">(\(\S 2.4\)) Transformation Under Rotation</a></li>
+<li><a href="#/slide-org93a13fc">(\(\S 2.10\)) Partial Differentiation Rules</a></li>
 </ul>
 </div>
 </div>
 </section>
 <section>
-<section id="slide-orge2754c4">
-<h2 id="orge2754c4">(\(\S 2.1\)) Vector Algebra</h2>
-<div class="outline-text-2" id="text-orge2754c4">
+<section id="slide-org750265c">
+<h2 id="org750265c">(\(\S 2.1\)) Vector Algebra</h2>
+<div class="outline-text-2" id="text-org750265c">
 </div>
 </section>
-<section id="slide-org760d56a">
-<h3 id="org760d56a">Objectives</h3>
+<section id="slide-orgf14470b">
+<h3 id="orgf14470b">Objectives</h3>
 <ul>
 <li class="fragment appear">To review the basic operations in vector algebra</li>
 
 </ul>
 </section>
-<section id="slide-orgbd56890">
-<h3 id="orgbd56890">Definition</h3>
+<section id="slide-orgefe620c">
+<h3 id="orgefe620c">Definition</h3>
 <ul>
 <li>A directed line segment with a given magnitude and direction</li>
 <li>In reference with a coordinate system of measurement, a vector is an ordered list of triple (three-dimensional) or double (two-dimensional) numbers
@@ -68,8 +71,8 @@ pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
 
 </ul>
 </section>
-<section id="slide-org7eda317">
-<h3 id="org7eda317">Notation</h3>
+<section id="slide-org9dbfe28">
+<h3 id="org9dbfe28">Notation</h3>
 <ul>
 <li class="fragment appear">In printed form, either the overline, \(\vec{AB}\), or lowercase <b>boldface</b> <i>italic</i> font will be used to denote vectors.
 \[ \boldsymbol{u}=\vec{AB}, \hspace{1em} \boldsymbol{e}_2, \hspace{1em} \boldsymbol{f} \]</li>
@@ -84,7 +87,7 @@ gives a vector of length unity. Note that, \(\boldsymbol{e}_u\) is a <i>base vec
 </ul>
 
 </section>
-<section id="slide-org7eda317-split">
+<section id="slide-org9dbfe28-split">
 <ul>
 <li><p>
 We can add two or more vectors using the \(+\) operator
@@ -93,7 +96,7 @@ which is known as the parallelogram rule.
 </p>
 
 
-<div id="org670911d" class="figure">
+<div id="orge0c25e6" class="figure">
 <p><img src="./images/fig2.1.1.png" alt="fig2.1.1.png" width="600px" />
 </p>
 </div>
@@ -107,8 +110,8 @@ which is known as the parallelogram rule.
 
 </ul>
 </section>
-<section id="slide-orgad38a35">
-<h4 id="orgad38a35">The Law of Sines and Cosines</h4>
+<section id="slide-orgcec5e1f">
+<h4 id="orgcec5e1f">The Law of Sines and Cosines</h4>
 <ul>
 <li>The vectors: \(\boldsymbol{a} = \vec{BC}\), \(\quad \boldsymbol{b} = \vec{CA}\), \(\quad\boldsymbol{c} = \vec{BA} = \boldsymbol{a} + \boldsymbol{b}\)</li>
 <li>the corner angles \(C = (\boldsymbol{a},\boldsymbol{b})\) , \(A = (\boldsymbol{b},\boldsymbol{c})\) , \(B = (\boldsymbol{a},\boldsymbol{c})\)</li>
@@ -119,15 +122,15 @@ The <b>Law of Sines</b> reads
 \[ \frac{a}{\sin A} = \frac{b}{\sin B} =\frac{c}{\sin C} \] 
 </p>
 
-<div id="org084c4e9" class="figure">
+<div id="org4a655ac" class="figure">
 <p><img src="./images/fig2.1.2.png" alt="fig2.1.2.png" width="600px" />
 </p>
 </div></li>
 
 </ul>
 </section>
-<section id="slide-org035d80b">
-<h3 id="org035d80b">Scalar (dot) Product</h3>
+<section id="slide-scalar-product">
+<h3 id="scalar-product">Scalar (dot) Product</h3>
 <ul>
 <li class="fragment appear">The <i>scalar</i> (or <i>dot</i>) <i>product</i> of \(\boldsymbol{u}\) and \(\boldsymbol{v}\), denoted \(\boldsymbol{u} \cdot \boldsymbol{v}\), is defined by the formula
 \[ \boldsymbol{u} \cdot \boldsymbol{v} = |\boldsymbol{u}| |\boldsymbol{v}| \cos\theta \hspace{1em} (0\leq \theta \leq \pi), \]
@@ -151,14 +154,14 @@ One of the major uses of this operation is to determine the projected length, \(
 </ul>
 
 </section>
-<section id="slide-org035d80b-split">
+<section id="slide-scalar-product-split">
 <ul>
 <li><p>
 Introducing a coordinate system \(O-x_1 x_2 x_3\), using the indices {1,2,3} to denote the first, second and third coordinate directions having a set of unit <b>base vectors</b> \(\boldsymbol{e}_1\), \(\boldsymbol{e}_2\), and \(\boldsymbol{e}_3\), respectively.
 </p>
 
 <p>
-A freehand depiction of the scene
+<span style="color:#2255cc;">Freehand depiction of the scene</span>
 </p></li>
 
 </ul>
@@ -176,7 +179,7 @@ where summation occurs over a <i>repeated index</i> \(i\).</li>
 </ul>
 
 </section>
-<section id="slide-org035d80b-split">
+<section id="slide-scalar-product-split">
 <ul>
 <li>Note from it&rsquo;s definition the  <i>dot product</i> of two perpendicular vectors \((\boldsymbol{u},\boldsymbol{v}) = \pi/2\) yields
 \[ \boldsymbol{u} \cdot \boldsymbol{v} = |\boldsymbol{u}| |\boldsymbol{v}| \cos(\pi/2) = 0 \]</li>
@@ -198,7 +201,7 @@ A shorthand of the nine equations above is provided by introducing the <i>free-i
 </p>
 <div>
 \begin{align}
-\boldsymbol{e}_i \cdot \boldsymbol{e}_j = \left\{ \begin{array} 01, \quad i=j \\ 0, \quad i\neq j \end{array} \right.
+\boldsymbol{e}_i \cdot \boldsymbol{e}_j = \left\{ \begin{array}{c} 1, \quad i=j \\ 0, \quad i\neq j \end{array} \right.
 \end{align}
 
 </div>
@@ -211,16 +214,16 @@ which is an <i>identity matrix</i> in a sense.</li>
 
 </ul>
 </section>
-<section id="slide-org151929d">
-<h4 id="org151929d">Review Problems</h4>
+<section id="slide-org436bb3c">
+<h4 id="org436bb3c">Review Problems</h4>
 
-<div id="org3824997" class="figure">
+<div id="orgc04278d" class="figure">
 <p><img src="./images/FU94_2.1problems1.png" alt="FU94_2.1problems1.png" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-org4443685">
-<h3 id="org4443685">Vector (cross) Product</h3>
+<section id="slide-org67386b6">
+<h3 id="org67386b6">Vector (cross) Product</h3>
 <ul>
 <li class="fragment appear"><p>
 Whereas the scalar product of two vectors is a scalar quantity, the <i>vector</i> (or <i>cross</i>) <i>product</i> of two vectors \(\boldsymbol{u}\) and \(\boldsymbol{v}\) produces another vector \(\boldsymbol{w}\); and we write \(\boldsymbol{w} = \boldsymbol{u} \times \boldsymbol{v}\). The magnitude of \(\boldsymbol{w}\) is defined as
@@ -229,7 +232,7 @@ where \(\theta=(\boldsymbol{u}, \boldsymbol{v})\), and the vector \(\boldsymbol{
 </p>
 
 
-<div id="org105b377" class="figure">
+<div id="orgeb99298" class="figure">
 <p><img src="./images/fig2.1.3.png" alt="fig2.1.3.png" width="600px" />
 </p>
 </div></li>
@@ -237,7 +240,7 @@ where \(\theta=(\boldsymbol{u}, \boldsymbol{v})\), and the vector \(\boldsymbol{
 </ul>
 
 </section>
-<section id="slide-org4443685-split">
+<section id="slide-org67386b6-split">
 <ul>
 <li><p>
 Vector products satisfy the following relations:
@@ -256,7 +259,7 @@ Vector products satisfy the following relations:
 </ul>
 
 </section>
-<section id="slide-org4443685-split">
+<section id="slide-org67386b6-split">
 <p>
 The vector product can be expressed in terms of the vector components in  a coordinate system \(O-x_1 x_2 x_3\) as
   \[ \boldsymbol{u} \times \boldsymbol{v} =  (u_1 \boldsymbol{e}_1 + u_2 \boldsymbol{e}_2 + u_3 \boldsymbol{e}_3) \times (v_1 \boldsymbol{e}_1 + v_2 \boldsymbol{e}_2 + v_3 \boldsymbol{e}_3) \]  
@@ -266,12 +269,12 @@ The vector product can be expressed in terms of the vector components in  a coor
 <li class="fragment appear">which finally yield 
 \[ \boldsymbol{u} \times \boldsymbol{v} =  (u_2 v_3 - u_3 v_2) \boldsymbol{e}_1 + (u_3 v_1 - u_1 v_3) \boldsymbol{e}_2 + (u_1 v_2 - u_2 v_1) \boldsymbol{e}_3 \]</li>
 <li class="fragment appear">The expression can be written in a compacted for by using the concept of a <i>determinant</i>
-\[ \boldsymbol{u} \times \boldsymbol{v} = \left| \begin{array} d u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \\  \boldsymbol{e}_1 & \boldsymbol{e}_2 & \boldsymbol{e}_3 \end{array} \right| \]</li>
+\[ \boldsymbol{u} \times \boldsymbol{v} = \left| \begin{array}{c} u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \\  \boldsymbol{e}_1 & \boldsymbol{e}_2 & \boldsymbol{e}_3 \end{array} \right| \]</li>
 
 </ul>
 
 </section>
-<section id="slide-org4443685-split">
+<section id="slide-org67386b6-split">
 <p>
 It may be instructive to revisit the ideas of <i>combinations</i> and <i>permutations</i>
 </p>
@@ -289,9 +292,9 @@ can you summarize the notions of combination and permutation in the context of s
 </ul>
 
 </section>
-<section id="slide-org4443685-split">
+<section id="slide-org67386b6-split">
 <ul>
-<li>It is interesting to discover certain symmetries in the how the triplets \(u_i\), \(v_j\) and \(\boldsymbol{e}_k\) permute and combine with each other.</li>
+<li>It is interesting to discover certain symmetries in the determinant that govern how the triplets \(u_i\), \(v_j\) and \(\boldsymbol{e}_k\) permute and combine with each other.</li>
 
 </ul>
 <ul>
@@ -303,7 +306,7 @@ In this way, a novel apparatus called the <i>alternating symbol</i> was invented
 </p>
 <div>
 \begin{align}
-\boldsymbol{\epsilon}_{ijk} = \left\{ \begin{array} 0+1, \quad \circlearrowleft\; \mathrm{cycles} \quad  (123, 231, 312) \\ -1, \quad \circlearrowright\; \mathrm{cycles} \quad  (321, 213, 132) \\ 0 \quad \mathrm{otherwise (repeating)} \end{array} \right.
+\boldsymbol{\epsilon}_{ijk} = \left\{ \begin{array}{c} +1, \quad \circlearrowleft\; \mathrm{cycles} \quad  (123, 231, 312) \\ -1, \quad \circlearrowright\; \mathrm{cycles} \quad  (321, 213, 132) \\ 0 \quad \mathrm{otherwise (repeating)} \end{array} \right.
 \end{align}
 
 </div></li>
@@ -311,7 +314,7 @@ In this way, a novel apparatus called the <i>alternating symbol</i> was invented
 </ul>
 
 </section>
-<section id="slide-org4443685-split">
+<section id="slide-org67386b6-split">
 <ul>
 <li>The result of the cross product operation can be written in shorthand (indicial) notation by multiplying the free-triple-index term \(u_i v_j \boldsymbol{e}_k\) with the alternating symbol and summing over all the free indices
 \[ \boldsymbol{u} \times \boldsymbol{v} = \sum_k \sum_j \sum_i \epsilon_{ijk} u_i v_j \boldsymbol{e}_k \]</li>
@@ -323,23 +326,23 @@ In this way, a novel apparatus called the <i>alternating symbol</i> was invented
 
 </ul>
 </section>
-<section id="slide-org0a1ec0a">
-<h4 id="org0a1ec0a">Review Problems</h4>
+<section id="slide-orgddae621">
+<h4 id="orgddae621">Review Problems</h4>
 
-<div id="orgcaff19f" class="figure">
+<div id="org94544e2" class="figure">
 <p><img src="./images/FU94_2.1problems2.png" alt="FU94_2.1problems2.png" width="1600px" />
 </p>
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgf6f4034">
-<h2 id="orgf6f4034">(\(\S 2.2\)) Vector Calculus</h2>
-<div class="outline-text-2" id="text-orgf6f4034">
+<section id="slide-org2f282fb">
+<h2 id="org2f282fb">(\(\S 2.2\)) Vector Calculus</h2>
+<div class="outline-text-2" id="text-org2f282fb">
 </div>
 </section>
-<section id="slide-orga7b8249">
-<h3 id="orga7b8249">Vector Equations</h3>
+<section id="slide-org3c1ab0b">
+<h3 id="org3c1ab0b">Vector Equations</h3>
 <ul>
 <li class="fragment appear">An important difference between an equation in terms of <i>scalars</i> and an equation in terms of <i>vectors</i> is the amount of information within.</li>
 <li class="fragment appear">For example, in order to establish the identity of two vectors
@@ -352,7 +355,7 @@ essentially provides three equations in a 3-D space</li>
 </ul>
 
 </section>
-<section id="slide-orga7b8249-split">
+<section id="slide-org3c1ab0b-split">
 <p>
 Or consider describing a plane with normal \(\boldsymbol{n}\) that is at a distance \(p\) from a point \(O\).
 </p>
@@ -361,7 +364,7 @@ Or consider describing a plane with normal \(\boldsymbol{n}\) that is at a dista
 We can show that the position vector \(\boldsymbol{r}\) for any point \(P\) that starts from \(O\) and end up in this plane satisfies \(\boldsymbol{r} \cdot \boldsymbol{n} = p\).
 </p>
 
-<div id="orge29d423" class="figure">
+<div id="org7fa6d36" class="figure">
 <p><img src="./images/FU94-fig2.1.png" alt="FU94-fig2.1.png" width="1200px" />
 </p>
 </div></li>
@@ -372,13 +375,224 @@ We can show that the position vector \(\boldsymbol{r}\) for any point \(P\) that
 
 </ul>
 </section>
-<section id="slide-org1596b4e">
-<h4 id="org1596b4e">Time derivative of a vector</h4>
+<section id="slide-org9076da3">
+<h3 id="org9076da3">Definition of a Vector Field</h3>
+<ul>
+<li>Say a physical variable \(\boldsymbol{v}\) measured at points of space exhibits changes as a function of the point coordinates, \(\boldsymbol{x}\), as well as time, \(t\).</li>
 
-<div id="orgf3fb1a6" class="figure">
+</ul>
+<ul>
+<li class="fragment appear"><p>
+Consider the atmospheric current visualization provided by an app (such as <a href="https://windy.com">https://windy.com</a>)
+</p>
+<div style="text-align:center;">
+<video width="700" controls>
+  <source src="./images/windy.mp4" type="video/mp4">
+</video>
+</div></li>
+
+</ul>
+</section>
+<section id="slide-orgc4a3769">
+<h4 id="orgc4a3769">Derivatives of a Vector Field</h4>
+<ul>
+<li class="fragment appear">A vector field of the air current velocities is defined by
+\[ \boldsymbol{v} = \boldsymbol{v}(\boldsymbol{x},t) \]</li>
+<li class="fragment appear">This implies the existence of derivatives with respect to the vector arguments (position and time)</li>
+<li class="fragment appear">For example, the time derivative of the vector field would be like
+\[ \frac{\partial \boldsymbol{v}}{\partial t} \]</li>
+<li class="fragment ...">The derivative with respect to spatial coordinates, \(x_i\), would be like
+\[ \frac{\partial \boldsymbol{v}}{\partial x_i} \]
+called the <i>spatial derivative</i>. Here \(i\) represents the <i>free-index</i>.</li>
+
+</ul>
+</section>
+<section id="slide-org4839d0f">
+<h3 id="org4839d0f">Curvilinear Coordinate Systems</h3>
+<ul>
+<li class="fragment appear">Apart from <b>linear</b> rectangular coordinates (such as Cartesian), other ways of measuring location of points exist, such as, the spherical, <i>cylindrical</i>, parabolic, elliptic, etc. systems. These are known, in general, as <b>curvilinear</b> coordinates.</li>
+
+<li class="fragment appear"><p>
+The <b>cylindrical</b> coordinate system, for example, is defined by an axis of revolution, usually labeled with \(z\), an origin \(O\), and a fixed plane through the \(z\) axes used in measuring the angular orientations of points in space. 
+</p>
+
+<p>
+<span style="color:#2255cc;">Freehand depiction of the scene</span>
+</p></li>
+
+<li class="fragment appear">The measurements in the cylindrical coordinates are labeled as \(\{r,\,\theta,\,z\}\) which correspond with bases vectors \(\{\boldsymbol{e}_r,\,\boldsymbol{e}_\theta,\, \boldsymbol{e}_z\}\).</li>
+
+<li class="fragment ...">The <b>polar</b> coordinate system is a reduced version of the cylindrical system, obtained by eliminating the axial (\(z\)) coordinate. Hence, the coordinates and their base vectors in the polar system are  \(\{r,\,\theta\}\) and \(\{\boldsymbol{e}_r,\, \boldsymbol{e}_\theta\}\), respectively.</li>
+
+</ul>
+</section>
+<section id="slide-org952273b">
+<h4 id="org952273b">Another Application of the Cross Product</h4>
+<ul>
+<li class="fragment appear"><p>
+The orbital plane motion of a particle, \(P\), located at a fixed distance \(r\) away from an axis, \(z-z\), about which \(P\) rotates with an angular velocity, \(\omega\).
+</p>
+
+<p>
+<span style="color:#2255cc;">Freehand depiction of the scene</span>
+</p></li>
+
+<li class="fragment appear">This problem is of special and crucial interest in understanding the geometry of orbital motion.  The velocity of \(P\) is provided by taking the cross product between it&rsquo;s position vector, \(\boldsymbol{r}\), and the angular velocity vector, \(\boldsymbol{\omega}\).
+\[ \boldsymbol{v} = \boldsymbol{\omega} \times \boldsymbol{r} \]</li>
+
+<li class="fragment appear">Due to the planar nature of motion, a <b>polar</b> representation of variables will suffice. In that case, the position vector of \(P\) is \(\boldsymbol{r} = r \boldsymbol{e}_r\) and the angular velocity vector is \(\boldsymbol{\omega} = \omega \boldsymbol{e}_z\)</li>
+
+<li class="fragment ..."><p>
+The velocity of \(P\) can then be determined by applying the cross product as
+</p>
+<div>
+\begin{align}
+ \boldsymbol{v} & = \omega \boldsymbol{e}_z \times r \boldsymbol{e}_r \\
+                & = \omega r (\boldsymbol{e}_z \times \boldsymbol{e}_r) \\
+                & = \omega r \boldsymbol{e}_\theta
+\end{align}
+
+</div></li>
+
+</ul>
+
+</section>
+<section id="slide-org952273b-split">
+<ul>
+<li>By setting \(\boldsymbol{v} = \frac{d (r \boldsymbol{e}_r)}{dt}\) into the above formula, we obtain important relations about the time derivatives of the base vectors.</li>
+
+</ul>
+<ul>
+<li class="fragment appear">For example, the time derivative of \(\boldsymbol{r}=r\boldsymbol{e}_r\) becomes
+\[ \frac{d (r \boldsymbol{e}_r)}{dt} = r\frac{d \boldsymbol{e}_r}{dt} \]
+which yields
+\[ \frac{d \boldsymbol{e}_r}{dt} = \omega \boldsymbol{e}_\theta \].</li>
+<li class="fragment appear"><p>
+Similarly, an expression for the time derivative of the other base vector can be obtained by using analogy with the above derivation
+</p>
+<div>
+\begin{align}
+  \frac{d \boldsymbol{e}_\theta}{dt} & = \boldsymbol{\omega} \times \boldsymbol{e}_\theta \\
+                                     & = \omega (\boldsymbol{e}_z \times \boldsymbol{e}_\theta) \\
+                                     & = - \omega \boldsymbol{e}_r
+\end{align}
+
+</div></li>
+
+</ul>
+</section>
+<section id="slide-org75cc686">
+<h4 id="org75cc686">Example: Time Derivative of a Base Vector</h4>
+
+<div id="org741e87d" class="figure">
 <p><img src="./images/FU94_2.2problem13.png" alt="FU94_2.2problem13.png" width="1600px" />
 </p>
 </div>
+</section>
+</section>
+<section>
+<section id="slide-orge73a92b">
+<h2 id="orge73a92b">(\(\S 2.3\)) The Summation Convention</h2>
+<p>
+Inquire GPT about the use and history of the topic.
+</p>
+<blockquote >
+<p>
+To whom is the summation convention attributed? What is it&rsquo;s relation with the contraction operation with some background about the latter?
+</p>
+</blockquote>
+
+</section>
+<section id="slide-orge73a92b-split">
+<ul>
+<li class="fragment appear">The summation convention is closely related with the <b>index contraction</b> operation in tensor algebra.</li>
+<li class="fragment appear">For example, take the inner product between two vectors, \(\boldsymbol{u} \cdot \boldsymbol{v}\). Written in it&rsquo;s matrix form this reads
+\[ \boldsymbol{u} \cdot \boldsymbol{v} = \{ u_1 \; u_2 \; u_3 \} \left\{ \begin{array}{c} v_1 \\ v_2 \\ v_3 \end{array} \right\} = u_1 v_1 + u_2 v_2 + u_3 v_3 = \sum_{i=1}^3 u_i v_i \]
+which is essentially identical with the <i>scalar product</i> operation. The summation over a repeated index is known as <b>index contraction</b>. because in the resulting statement both of the contracted indices dissapear.</li>
+<li class="fragment appear">The multiplication of a second order tensor with a vector involves an inner product between them which reads
+\[ \boldsymbol{A} \boldsymbol{u} = \begin{bmatrix} A_{11} & A_{12} & A_{13} \\ A_{21} & A_{22} & A_{23} \\ A_{31} & A_{32} & A_{33} \end{bmatrix} \begin{Bmatrix} u_1 \\ u_2 \\ u_3 \end{Bmatrix} = \begin{Bmatrix} A_{11} u_1 + A_{12} u_2 + A_{13} u_3 \\ A_{21} u_1 + A_{22} u_2 + A_{23} u_3 \\ A_{31} u_1 + A_{32} u_2 + A_{33} u_3 \end{Bmatrix} = \sum_{j=1}^3 A_{ij} u_j\]</li>
+<li class="fragment ...">Note the placement of the <i>free</i> index (\(i\)), and the <i>summation</i> index (\(j\)). The summation index is also called as the <i>dummy</i> index.</li>
+
+</ul>
+
+</section>
+<section id="slide-orge73a92b-split">
+<ul>
+<li class="fragment appear">Even when writing the vector as a sum over it&rsquo;s components and corresponding bases vectors, we use the summation 
+\[ \boldsymbol{u} = u_1 \boldsymbol{e}_1 +  u_2 \boldsymbol{e}_2 +  u_3 \boldsymbol{e}_3 = \sum_{i=1}^3 u_i \boldsymbol{e}_i \]</li>
+<li class="fragment appear">The expression on the right hand of the second equal sign is said to be in <i>indicial notation</i>.</li>
+<li class="fragment appear">Because contractions of indices occur very frequently in mechanics, Albert Einstein introduced the <b>summation convention</b>, whereby a summation sign is omitted and it is understood that whenever an index appears twice in a term, summation over that index is implied.</li>
+<li class="fragment ...">The above equation reads
+\[ \boldsymbol{u} =  u_i \boldsymbol{e}_i \]</li>
+<li class="fragment ...">In reading expression written in indicial notation, the non-repeating indices are called as <i>free</i>, while the twice repeating ones are called as <i>dummy</i> indices.</li>
+<li class="fragment ...">Note that, repetition of an index more than twice is <b>invalid</b> according to the summation convention.</li>
+
+</ul>
+</section>
+<section id="slide-orgae1bafc">
+<h3 id="orgae1bafc">Examples</h3>
+<div class="outline-text-3" id="text-orgae1bafc">
+</div>
+</section>
+<section id="slide-org6204e0e">
+<h4 id="org6204e0e">Direction Cosines of a Vector</h4>
+<ul>
+<li class="fragment appear"><p>
+Let \(\boldsymbol{n}\) be a unit vector. It&rsquo;s components can be evaluated by using the single equation in indicial notation
+\[ n_i = \boldsymbol{n} \cdot \boldsymbol{e}_i = \cos\alpha_i \]
+where \(\alpha_i\) are the direction angles that \(\boldsymbol{n}\) makes with each coordinate axis.
+</p>
+
+<p>
+<span style="color:#2255cc;">Freehand depiction of the scene</span>
+</p></li>
+
+<li class="fragment appear">Using the fact that a unit vector has a magnitude equal to unity, we write
+\[ |\boldsymbol{n}|^2 = \boldsymbol{n} \cdot \boldsymbol{n} = n_i n_i = 1 \]</li>
+<li class="fragment appear">Based on this expression a relation between the direction cosines can be obtained by expanding the dummy index 
+\[ \cos\alpha_i \cos\alpha_i = \cos^2\alpha_1 + \cos^2\alpha_2 + \cos^2\alpha_3 = 1 \]</li>
+
+</ul>
+</section>
+<section id="slide-org52ebd8e">
+<h4 id="org52ebd8e">Length of a fiber, \(d\boldsymbol{x}\)</h4>
+<ul>
+<li class="fragment appear">Consider a short fiber with components \(dx_1,\, dx_2,\, dx_3\) in a three-dimensional Eucidean space with rectangular components \(x_1,\, x_2,\, x_3\).</li>
+<li class="fragment appear">The square of its length can be found by
+\[ ds^2 = dx_1^2 + dx_2^2 + dx_3^2 \]</li>
+<li class="fragment appear"><p>
+In terms of its component representation the same result can be achieved by taking the scalar product of the vector by itself, as
+</p>
+<div>
+\begin{align}
+ ds^2 & = d\boldsymbol{x} \cdot d\boldsymbol{x} \\
+      & = (dx_i \boldsymbol{e}_i) \cdot (dx_j \boldsymbol{e}_j) \\
+      & = dx_i dx_j (\boldsymbol{e}_i \cdot \boldsymbol{e}_j) \\
+      & = dx_i dx_j \delta_{ij}
+\end{align}
+
+</div>
+<p>
+where the definition of the Kroenecker&rsquo;s delta (<a href="#/slide-scalar-product">\(\S 2.1\)</a>) was used to convert the last line.
+</p></li>
+<li class="fragment ...">We see that the expression \(dx_i dx_j \delta_{ij}\) is non-zero only when \(i=j\). Then the above equation can be written as \(ds^2 = dx_i dx_i\), or equivalently as \(ds^2 = dx_j dx_j\).</li>
+<li class="fragment ...">In this context, the role of Kroenecker&rsquo;s delta is to act as an index shifter, or simply a <i>shifter</i>.</li>
+
+</ul>
+</section>
+<section id="slide-orgd1a9185">
+<h4 id="orgd1a9185">The Cross Product in Indicial Notation</h4>
+</section>
+</section>
+<section>
+<section id="slide-org23683e7">
+<h2 id="org23683e7">(\(\S 2.4\)) Transformation Under Rotation</h2>
+
+</section>
+</section>
+<section>
+<section id="slide-org93a13fc">
+<h2 id="org93a13fc">(\(\S 2.10\)) Partial Differentiation Rules</h2>
 </section>
 </section>
 </div>
