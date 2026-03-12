@@ -50,7 +50,7 @@ Jove: a scientific educational video content provider with free access through Y
 | 2/3  | Vectors and Tensors, [[./Ch2-vectors.html][Ch.2]]      | Vector Algebra                     |
 | 9/3  | Vector Calculus                | Indicial Notation                  |
 | 16/3 | Coordinate Transformations     | /Ramadan Eve Holiday/              |
-| 23/3 | Stress Hypothesis              | Stress Tensor                      |
+| 23/3 | Gradient Operator              | Stress Tensor                      |
 | 30/3 | Laws of Motion                 | Transformation of Stress           |
 | 6/4  | Stress Boundary Conditions     | States of Stress                   |
 | 13/4 | Mohr's Circle for Plane Stress | Principal Stresses                 |

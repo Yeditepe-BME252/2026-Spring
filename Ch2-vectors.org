@@ -137,7 +137,7 @@ The vector product can be expressed in terms of the vector components in  a coor
 - which finally yield 
   $$ \boldsymbol{u} \times \boldsymbol{v} =  (u_2 v_3 - u_3 v_2) \boldsymbol{e}_1 + (u_3 v_1 - u_1 v_3) \boldsymbol{e}_2 + (u_1 v_2 - u_2 v_1) \boldsymbol{e}_3 $$
 - The expression can be written in a compacted for by using the concept of a /determinant/
-  $$ \boldsymbol{u} \times \boldsymbol{v} = \left| \begin{array}{c} u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \\  \boldsymbol{e}_1 & \boldsymbol{e}_2 & \boldsymbol{e}_3 \end{array} \right| $$
+  $$ \boldsymbol{u} \times \boldsymbol{v} = \left| \begin{matrix} u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \\ \boldsymbol{e}_1 & \boldsymbol{e}_2 & \boldsymbol{e}_3 \end{matrix} \right| $$
 
 #+REVEAL: split
 It may be instructive to revisit the ideas of /combinations/ and /permutations/
