@@ -244,21 +244,22 @@ Or consider describing a plane with normal $\boldsymbol{n}$ that is at a distanc
                   & = \omega r \boldsymbol{e}_\theta
   \end{align}
 
-#+REVEAL: split  
-- By setting $\boldsymbol{v} = \frac{d (r \boldsymbol{e}_r)}{dt}$ into the above formula, we obtain important relations about the time derivatives of the base vectors.
+*** Derivatives of Polar Base Vectors  
+- By setting $\boldsymbol{v} = \dot{\boldsymbol{r}} = \frac{d (r \boldsymbol{e}_r)}{dt}$ into the above problem (where $r$ remains constant) we obtain important relations about the time derivatives of the *polar* base vectors.
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- For example, the time derivative of $\boldsymbol{r}=r\boldsymbol{e}_r$ becomes
-  $$ \frac{d (r \boldsymbol{e}_r)}{dt} = r\frac{d \boldsymbol{e}_r}{dt} $$
+- For example, the time derivative of the *radial* base vector is found as
+  $$ \dot{\boldsymbol{e}}_r = \frac{d (r \boldsymbol{e}_r)}{dt} = r\frac{d \boldsymbol{e}_r}{dt} $$
   which yields
-  $$ \frac{d \boldsymbol{e}_r}{dt} = \omega \boldsymbol{e}_\theta $$.
-- Similarly, an expression for the time derivative of the other base vector can be obtained by using analogy with the above derivation
+  $$ \dot{\boldsymbol{e}}_r  = \omega \boldsymbol{e}_\theta. $$
+- Similarly, an expression for the time derivative of the *circumferential* base vector can be obtained by using analogy with the above derivation
   \begin{align}
-    \frac{d \boldsymbol{e}_\theta}{dt} & = \boldsymbol{\omega} \times \boldsymbol{e}_\theta \\
-                                       & = \omega (\boldsymbol{e}_z \times \boldsymbol{e}_\theta) \\
-                                       & = - \omega \boldsymbol{e}_r
+    \dot{\boldsymbol{e}}_\theta  & = \frac{d \boldsymbol{e}_\theta}{dt} \\
+                                 & = \boldsymbol{\omega} \times \boldsymbol{e}_\theta \\
+                                 & = \omega (\boldsymbol{e}_z \times \boldsymbol{e}_\theta) \\
+                                 & = - \omega \boldsymbol{e}_r
   \end{align}
                                        
-*** Example: Time Derivative of a Base Vector
+*** Example: Orbital Motion of a Projectile
 #+ATTR_HTML: :width 1600px
 [[./images/FU94_2.2problem13.png]]
 
@@ -273,33 +274,30 @@ Inquire GPT about the use and history of the topic.
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - For example, take the inner product between two vectors, $\boldsymbol{u} \cdot \boldsymbol{v}$. Written in it's matrix form this reads
   $$ \boldsymbol{u} \cdot \boldsymbol{v} = \{ u_1 \; u_2 \; u_3 \} \left\{ \begin{array}{c} v_1 \\ v_2 \\ v_3 \end{array} \right\} = u_1 v_1 + u_2 v_2 + u_3 v_3 = \sum_{i=1}^3 u_i v_i $$
-  which is essentially identical with the /scalar product/ operation. The summation over a repeated index is known as *index contraction*. because in the resulting statement both of the contracted indices dissapear. 
-- The multiplication of a second order tensor with a vector involves an inner product between them which reads
-  $$ \boldsymbol{A} \boldsymbol{u} = \begin{bmatrix} A_{11} & A_{12} & A_{13} \\ A_{21} & A_{22} & A_{23} \\ A_{31} & A_{32} & A_{33} \end{bmatrix} \begin{Bmatrix} u_1 \\ u_2 \\ u_3 \end{Bmatrix} = \begin{Bmatrix} A_{11} u_1 + A_{12} u_2 + A_{13} u_3 \\ A_{21} u_1 + A_{22} u_2 + A_{23} u_3 \\ A_{31} u_1 + A_{32} u_2 + A_{33} u_3 \end{Bmatrix} = \sum_{j=1}^3 A_{ij} u_j$$
-- Note the placement of the /free/ index ($i$), and the /summation/ index ($j$). The summation index is also called as the /dummy/ index.
+  which is essentially identical with the /scalar product/ operation. The summation over a repeated pair of indices represents an /inner product/ over those indices. 
 
 #+REVEAL: split
-- Even when writing the vector as a sum over it's components and corresponding bases vectors, we use the summation 
+- Even when writing the vector as a sum over it's components and corresponding bases vectors, we use the index contraction process
   $$ \boldsymbol{u} = u_1 \boldsymbol{e}_1 +  u_2 \boldsymbol{e}_2 +  u_3 \boldsymbol{e}_3 = \sum_{i=1}^3 u_i \boldsymbol{e}_i $$
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - The expression on the right hand of the second equal sign is said to be in /indicial notation/.
 - Because contractions of indices occur very frequently in mechanics, Albert Einstein introduced the *summation convention*, whereby a summation sign is omitted and it is understood that whenever an index appears twice in a term, summation over that index is implied.
-- The above equation reads
+- Using the summation convention, the above equation simplifies to
   $$ \boldsymbol{u} =  u_i \boldsymbol{e}_i $$
-- In reading expression written in indicial notation, the non-repeating indices are called as /free/, while the twice repeating ones are called as /dummy/ indices.
+- In reading an expression written in indicial notation, the non-repeating indices are called as /free/, while the twice repeating ones are called as /dummy/ indices.
 - Note that, repetition of an index more than twice is *invalid* according to the summation convention.
 
 ** Examples
 *** Direction Cosines of a Vector
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - Let $\boldsymbol{n}$ be a unit vector. It's components can be evaluated by using the single equation in indicial notation
-  $$ n_i = \boldsymbol{n} \cdot \boldsymbol{e}_i = \cos\alpha_i $$
-  where $\alpha_i$ are the direction angles that $\boldsymbol{n}$ makes with each coordinate axis.
+  $$ n_i = \boldsymbol{n} \cdot \boldsymbol{e}_i = \cos(\boldsymbol{n}, \boldsymbol{e}_i) $$
+  where $(\boldsymbol{n}, \boldsymbol{e}_i) = \alpha_i$ are the angles that $\boldsymbol{n}$ makes with each coordinate axis.
   
   @@html:<span style="color:#2255cc;">Freehand depiction of the scene</span>@@
   
 - Using the fact that a unit vector has a magnitude equal to unity, we write
-  $$ |\boldsymbol{n}|^2 = \boldsymbol{n} \cdot \boldsymbol{n} = n_i n_i = 1 $$
+  $$ |\boldsymbol{n}|^2 = \boldsymbol{n} \cdot \boldsymbol{n} = n_i n_i = n_1 n_1 + n_2 n_2 + n_3 n_3 = 1 $$
 - Based on this expression a relation between the direction cosines can be obtained by expanding the dummy index 
   $$ \cos\alpha_i \cos\alpha_i = \cos^2\alpha_1 + \cos^2\alpha_2 + \cos^2\alpha_3 = 1 $$
   
@@ -313,20 +311,65 @@ Inquire GPT about the use and history of the topic.
    ds^2 & = d\boldsymbol{x} \cdot d\boldsymbol{x} \\
         & = (dx_i \boldsymbol{e}_i) \cdot (dx_j \boldsymbol{e}_j) \\
         & = dx_i dx_j (\boldsymbol{e}_i \cdot \boldsymbol{e}_j) \\
-        & = dx_i dx_j \delta_{ij}
+        & = dx_i \underbrace{dx_j \delta_{ij}}_{dx_i}
   \end{align}
   where the definition of the Kroenecker's delta ([[#scalar-product][$\S 2.1$]]) was used to convert the last line.
-- We see that the expression $dx_i dx_j \delta_{ij}$ is non-zero only when $i=j$. Then the above equation can be written as $ds^2 = dx_i dx_i$, or equivalently as $ds^2 = dx_j dx_j$.
-- In this context, the role of Kroenecker's delta is to act as an index shifter, or simply a /shifter/.
+- In the above, the role of Kroenecker's delta is sometimes referred to be an *index shifter*.
   
 *** The Cross Product in Indicial Notation
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - Previously we saw the arisal of the alternator symbol in representing the vector product $\boldsymbol{u} \times \boldsymbol{v}$ as
   $$  \sum_k \sum_j \sum_i \epsilon_{ijk} u_i v_j \boldsymbol{e}_k $$
 - But according to the summation convention there is no need to display the summation symbols and the cross product in indicial notation reads
-*** Higher (Second) Order Tensors
+  $$ \boldsymbol{u} \times \boldsymbol{v} = \epsilon_{ijk} u_i v_j \boldsymbol{e}_k $$
+** Higher (Second) Order Tensors
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- The order (or rank) of a tensor is equal to the number of indices in it.
+- The multiplication of a second order tensor with a vector also involves an inner product between the second (column) index of the second-order tensor and the index of the vector, reading
+  $$ \boldsymbol{A} \boldsymbol{u} = \begin{bmatrix} A_{11} & A_{12} & A_{13} \\ A_{21} & A_{22} & A_{23} \\ A_{31} & A_{32} & A_{33} \end{bmatrix} \begin{Bmatrix} u_1 \\ u_2 \\ u_3 \end{Bmatrix} = \begin{Bmatrix} A_{11} u_1 + A_{12} u_2 + A_{13} u_3 \\ A_{21} u_1 + A_{22} u_2 + A_{23} u_3 \\ A_{31} u_1 + A_{32} u_2 + A_{33} u_3 \end{Bmatrix} =  A_{ij} u_j$$
+- Note the placement of the /free/ index ($i$), and the /repeated/ indices ($j$). The repeated (/summation/) indices are also called as /dummy indices/.
+
+*** About the Notation
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- So far, we have seen two types of notations:
+  1. Vector Notation, $\boldsymbol{f}, \boldsymbol{B},\, \mathrm{etc.}$
+  2. Indicial Notation, $f_i,\, B_{jk}, \, \mathrm{etc.}$
+- There is another type of notation with which you (undergrads) are more familiar with, that is
+  3. Matrix Notation, $\{f\}, [B],\, \mathrm{etc.}$
+- All three types can be used to express (in other words 'to code') the axioms and equations of mechanics.     
+
+*** A Second Order Tensor in its *Matrix Form*
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_2.3equation9.png]]
+
+*** The Transpose Operator
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_2.3equation10.png]]
+
+*** The Matrix Product
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_2.3equation11-12.png]]
+
+*** The Determinant
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- The determinant of a second order tensor is the difference between the sum of triple products of components from each row/column having cyclic permutation with the sum having a reverse cyclic permutation:
+  \begin{align}
+   \det \boldsymbol{A} = \det [A] & = \left| \begin{matrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{matrix} \right|  \\ & = \epsilon_{rst} A_{r1} A_{s2} A_{t3} \\ & = \epsilon_{rst} A_{1r} A_{2s} A_{3t}
+  \end{align}
+  
+** The $\epsilon-\delta$ Identity
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_2.3equation19.png]]
+
+** Problems
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_2.3problems16-20.png]]
+
+#+REVEAL: split
+Problem 2.22
+- Derive the vector identity connecting three arbitrary vectors, $\boldsymbol{a}$, $\boldsymbol{b}$, and $\boldsymbol{c}$
+  $$ \boldsymbol{a} \times (\boldsymbol{b} \times \boldsymbol{c}) = (\boldsymbol{a} \cdot \boldsymbol{c}) \boldsymbol{b}  - (\boldsymbol{a} \cdot \boldsymbol{b}) \boldsymbol{c} $$
+  by using the method of indicial notation.
+
 * ($\S 2.4$) Transformation Under Rotation
 
-* ($\S 2.10$) Partial Differentiation Rules
+* ($\S 2.10$) Partial Derivatives
