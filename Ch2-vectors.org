@@ -443,23 +443,24 @@ Problem 2.22
   $$ \begin{array}{c}
    x_{1'} = (\beta_{1'1} \beta_{1'1} + \beta_{1'2} \beta_{1'2}) x_{1'} + (\beta_{1'1} \beta_{2'1} + \beta_{1'2} \beta_{2'2}) x_{2'} \\
    x_{2'} = (\beta_{2'1} \beta_{1'1} + \beta_{2'2} \beta_{1'2}) x_{1'} + (\beta_{2'1} \beta_{2'1} + \beta_{2'2} \beta_{2'2}) x_{2'}
-  \end{array} $$
-  and placing these two equations into their matrix form,
+  \end{array}. $$
+- Placing these two equations into their matrix form,
   $$ \begin{Bmatrix} x_{1'} \\ x_{2'} \end{Bmatrix} = \begin{bmatrix}  \beta_{1'1} \beta_{1'1} + \beta_{1'2} \beta_{1'2} & \beta_{1'1} \beta_{2'1} + \beta_{1'2} \beta_{2'2} \\ \beta_{2'1} \beta_{1'1} + \beta_{2'2} \beta_{1'2} & \beta_{2'1} \beta_{2'1} + \beta_{2'2} \beta_{2'2} \end{bmatrix} \begin{Bmatrix} x_{1'} \\ x_{2'} \end{Bmatrix}. $$
 - A careful investigation of the summations and free indices shows that the above can be expressed in indicial notation as
   $$ x_{i'} = \beta_{i'k} \beta_{j'k} x_{j'} $$
 
 *** From the Identity to the Inverse
 - Reminding that the Kroenecker's symbol has the property of shifting indices of it's argument as in
-  $$ x_i = \delta_{ij} x_j, \hspace{1.5em} x_{i'} = \delta_{i'j'} x_{j'}, $$
+  $$ x_i = \delta_{ij} x_j, \hspace{1.5em} x_{i'} = \delta_{i'j'} x_{j'}. $$
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-  suggests a striking similarity with the last equation $x_{i'} = \beta_{i'k} \beta_{j'k} x_{j'}$. We state that the coefficient of $x_{j'}$ should be equal to a Kroenecker's symbol for the above equation to be valid, i.e.,
+- This suggests a striking similarity with the last equation $x_{i'} = \beta_{i'k} \beta_{j'k} x_{j'}$. We state that the coefficient of $x_{j'}$ should be equal to a Kroenecker's symbol for the above equation to be valid, i.e.,
   $$ \beta_{i'k} \beta_{j'k} = \delta_{i'j'}. $$
 - Recast this into it's matrix form,
   $$ [\beta][\beta]^T = [I] $$
   where $I$ is the *identity matrix*.
   
 *** Orthogonality of the Rotation Matrix
+#+ATTR_REVEAL: :frag (appear appear appear ...)
 - The last equation
   $$ [\beta][\beta]^T = [I], $$
   deserves further attention because the product of two matrices are equal to the identity matrix if only if the matrices are the inverses of each other, i.e.,
@@ -467,11 +468,13 @@ Problem 2.22
 - Matrices having the above property (their transpose being equal to their inverse) are said to be *orthogonal*, which is proof that the *rotation* matrix is orthogonal.
   
 ** Rotating Frame Transformations in 3-D
+#+ATTR_REVEAL: :frag (appear appear appear ...)
 - The coordinate transformation relations that were derived for 2-D
   $$ x_{i'} = \beta_{i'j} x_j, \quad x_{j} = \beta_{i'j} x_{i'}, \quad i={1,2} $$
-  are readily available and valid in 3-D as well!
+- are readily available and valid in 3-D as well!
   $$ x_{i'} = \beta_{i'j} x_j, \quad x_{j} = \beta_{i'j} x_{i'}, \quad i={1,2,3} $$
   #+ATTR_HTML: :width 1100px
   [[./images/FU94-fig2.3.png]]
 
-* ($\S 2.10$) Partial Derivatives
+* ($\S 2.10$) The Gradient Operator
+Or partial derivative of a field variable with respect to spatial coordinates.
