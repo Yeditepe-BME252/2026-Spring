@@ -14,7 +14,7 @@
 \author{Fethi Okyar}
 \date{2026-02-28}
 \title{Chapter 2: Vectors and Tensors\\\medskip
-\large Reading: [Fung/94] \href{../textbook\_excerpts/1\_TensorAlgebra.pdf}{Chapter 1}}
+\large Reading: [Fung/94] \href{../textbook\_excerpts/1\_TensorAlgebra.pdf}{Chapter 2}}
 \hypersetup{
  pdfauthor={Fethi Okyar},
  pdftitle={Chapter 2: Vectors and Tensors},
@@ -29,21 +29,21 @@
 \tableofcontents
 
 \section*{(\(\S 2.1\)) Vector Algebra}
-\label{sec:org5b95906}
+\label{sec:org9f4e509}
 \subsection*{Objectives}
-\label{sec:org0603ae8}
+\label{sec:org1f4e9ab}
 \begin{itemize}
 \item To review the basic operations in vector algebra
 \end{itemize}
 \subsection*{Definition}
-\label{sec:org54b4b10}
+\label{sec:org6c75e1f}
 \begin{itemize}
 \item A directed line segment with a given magnitude and direction
 \item In reference with a coordinate system of measurement, a vector is an ordered list of triple (three-dimensional) or double (two-dimensional) numbers
 $$ \{ 1, -1, 3\}   \hspace{1.5em} \{ \cos\theta, \sin\theta \} $$
 \end{itemize}
 \subsection*{Notation}
-\label{sec:org50348c4}
+\label{sec:orgb76fca0}
 \begin{itemize}
 \item In printed form, either the overline, \(\vec{AB}\), or lowercase \textbf{boldface} \emph{italic} font will be used to denote vectors.
 $$ \boldsymbol{u}=\vec{AB}, \hspace{1em} \boldsymbol{e}_2, \hspace{1em} \boldsymbol{f} $$
@@ -70,7 +70,7 @@ which is known as the parallelogram rule.
 $$ \boldsymbol{a} - \boldsymbol{b} = \boldsymbol{a} + (-\boldsymbol{b}) $$
 \end{itemize}
 \subsubsection*{The Law of Sines and Cosines}
-\label{sec:org4462808}
+\label{sec:orgc411501}
 \begin{itemize}
 \item The vectors: \(\boldsymbol{a} = \vec{BC}\), \(\quad \boldsymbol{b} = \vec{CA}\), \(\quad\boldsymbol{c} = \vec{BA} = \boldsymbol{a} + \boldsymbol{b}\)
 \item the corner angles \(C = (\boldsymbol{a},\boldsymbol{b})\) , \(A = (\boldsymbol{b},\boldsymbol{c})\) , \(B = (\boldsymbol{a},\boldsymbol{c})\)
@@ -83,7 +83,7 @@ $$ \frac{a}{\sin A} = \frac{b}{\sin B} =\frac{c}{\sin C} $$
 \end{center}
 \end{itemize}
 \subsection*{Scalar (dot) Product}
-\label{sec:orga85f346}
+\label{sec:org3420418}
 \begin{itemize}
 \item The \emph{scalar} (or \emph{dot}) \emph{product} of \(\boldsymbol{u}\) and \(\boldsymbol{v}\), denoted \(\boldsymbol{u} \cdot \boldsymbol{v}\), is defined by the formula
 $$ \boldsymbol{u} \cdot \boldsymbol{v} = |\boldsymbol{u}| |\boldsymbol{v}| \cos\theta \hspace{1em} (0\leq \theta \leq \pi), $$
@@ -135,12 +135,12 @@ $$ \delta_{ij} =  \boldsymbol{e}_i \cdot \boldsymbol{e}_j $$
 which is an \emph{identity matrix} in a sense.
 \end{itemize}
 \subsubsection*{Review Problems}
-\label{sec:orgaf4de93}
+\label{sec:org2ab5220}
 \begin{center}
 \includegraphics[width=.9\linewidth]{./images/FU94_2.1problems1.png}
 \end{center}
 \subsection*{Vector (cross) Product}
-\label{sec:org3b59a09}
+\label{sec:org0f3152f}
 \begin{itemize}
 \item Whereas the scalar product of two vectors is a scalar quantity, the \emph{vector} (or \emph{cross}) \emph{product} of two vectors \(\boldsymbol{u}\) and \(\boldsymbol{v}\) produces another vector \(\boldsymbol{w}\); and we write \(\boldsymbol{w} = \boldsymbol{u} \times \boldsymbol{v}\). The magnitude of \(\boldsymbol{w}\) is defined as
 $$ |\boldsymbol{w}| = |\boldsymbol{u}| |\boldsymbol{v}| \sin\theta \quad (0\leq\theta\leq\pi) $$
@@ -169,7 +169,7 @@ The vector product can be expressed in terms of the vector components in  a coor
 \item which finally yield 
 $$ \boldsymbol{u} \times \boldsymbol{v} =  (u_2 v_3 - u_3 v_2) \boldsymbol{e}_1 + (u_3 v_1 - u_1 v_3) \boldsymbol{e}_2 + (u_1 v_2 - u_2 v_1) \boldsymbol{e}_3 $$
 \item The expression can be written in a compacted for by using the concept of a \emph{determinant}
-$$ \boldsymbol{u} \times \boldsymbol{v} = \left| \begin{matrix}{c} u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \\ \boldsymbol{e}_1 & \boldsymbol{e}_2 & \boldsymbol{e}_3 \end{matrix} \right| $$
+$$ \boldsymbol{u} \times \boldsymbol{v} = \left| \begin{matrix} u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \\ \boldsymbol{e}_1 & \boldsymbol{e}_2 & \boldsymbol{e}_3 \end{matrix} \right| $$
 \end{itemize}
 
 It may be instructive to revisit the ideas of \emph{combinations} and \emph{permutations}
@@ -203,14 +203,14 @@ $$ \boldsymbol{u} \times \boldsymbol{v} = \sum_k \sum_j \sum_i \epsilon_{ijk} u_
 \item Note that, similar to the expression in the dot product, summations take place over three pairs of \emph{repeated indices} again.
 \end{itemize}
 \subsubsection*{Review Problems}
-\label{sec:org18633f7}
+\label{sec:orgd2b4ddd}
 \begin{center}
 \includegraphics[width=.9\linewidth]{./images/FU94_2.1problems2.png}
 \end{center}
 \section*{(\(\S 2.2\)) Vector Calculus}
-\label{sec:org31259b8}
+\label{sec:org9e34bca}
 \subsection*{Vector Equations}
-\label{sec:org0e16eaa}
+\label{sec:org2b1aca1}
 \begin{itemize}
 \item An important difference between an equation in terms of \emph{scalars} and an equation in terms of \emph{vectors} is the amount of information within.
 \item For example, in order to establish the identity of two vectors
@@ -233,15 +233,16 @@ $$ n_1 x_1 + n_2 x_2 + n_3 x_3 - p = 0 $$
 $$ \sum_i n_i x_i - p = 0 $$
 \end{itemize}
 \subsection*{Definition of a Vector Field}
-\label{sec:org0b30e10}
+\label{sec:org433f1f1}
 \begin{itemize}
 \item Say a physical variable \(\boldsymbol{v}\) measured at points of space exhibits changes as a function of the point coordinates, \(\boldsymbol{x}\), as well as time, \(t\).
 \end{itemize}
 \begin{itemize}
 \item Consider the atmospheric current visualization provided by an app (such as \url{https://windy.com})
 \end{itemize}
+(link to \hyperref[sec:org5778fe1]{gradient})
 \subsubsection*{Derivatives of a Vector Field}
-\label{sec:org3df05ae}
+\label{sec:org59d3364}
 \begin{itemize}
 \item A vector field of the air current velocities is defined by
 $$ \boldsymbol{v} = \boldsymbol{v}(\boldsymbol{x},t) $$
@@ -253,7 +254,7 @@ $$ \frac{\partial \boldsymbol{v}}{\partial x_i} $$
 called the \emph{spatial derivative}. Here \(i\) represents the \emph{free-index}.
 \end{itemize}
 \subsection*{Curvilinear Coordinate Systems}
-\label{sec:orgf50aca2}
+\label{sec:org2b56ee2}
 \begin{itemize}
 \item Apart from \textbf{linear} rectangular coordinates (such as Cartesian), other ways of measuring location of points exist, such as, the spherical, \emph{cylindrical}, parabolic, elliptic, etc. systems. These are known, in general, as \textbf{curvilinear} coordinates.
 
@@ -264,7 +265,7 @@ called the \emph{spatial derivative}. Here \(i\) represents the \emph{free-index
 \item The \textbf{polar} coordinate system is a reduced version of the cylindrical system, obtained by eliminating the axial (\(z\)) coordinate. Hence, the coordinates and their base vectors in the polar system are  \(\{r,\,\theta\}\) and \(\{\boldsymbol{e}_r,\, \boldsymbol{e}_\theta\}\), respectively.
 \end{itemize}
 \subsubsection*{Another Application of the Cross Product}
-\label{sec:orgd867bbb}
+\label{sec:org6bd25fe}
 \begin{itemize}
 \item The orbital plane motion of a particle, \(P\), located at a fixed distance \(r\) away from an axis, \(z-z\), about which \(P\) rotates with an angular velocity, \(\omega\).
 
@@ -281,7 +282,7 @@ $$ \boldsymbol{v} = \boldsymbol{\omega} \times \boldsymbol{r} $$
 \end{align}
 \end{itemize}
 \subsubsection*{Derivatives of Polar Base Vectors}
-\label{sec:orge19bfa8}
+\label{sec:orgd4c8449}
 \begin{itemize}
 \item By setting \(\boldsymbol{v} = \dot{\boldsymbol{r}} = \frac{d (r \boldsymbol{e}_r)}{dt}\) into the above problem (where \(r\) remains constant) we obtain important relations about the time derivatives of the \textbf{polar} base vectors.
 \end{itemize}
@@ -299,12 +300,12 @@ $$ \dot{\boldsymbol{e}}_r  = \omega \boldsymbol{e}_\theta. $$
 \end{align}
 \end{itemize}
 \subsubsection*{Example: Orbital Motion of a Projectile}
-\label{sec:org5b06bc7}
+\label{sec:orgecb69da}
 \begin{center}
 \includegraphics[width=.9\linewidth]{./images/FU94_2.2problem13.png}
 \end{center}
 \section*{(\(\S 2.3\)) The Summation Convention}
-\label{sec:org3e71173}
+\label{sec:orgc7a8041}
 Inquire GPT about the use and history of the topic.
 \begin{quote}
 To whom is the summation convention attributed? What is it's relation with the contraction operation with some background about the latter?
@@ -332,9 +333,9 @@ $$ \boldsymbol{u} =  u_i \boldsymbol{e}_i $$
 \item Note that, repetition of an index more than twice is \textbf{invalid} according to the summation convention.
 \end{itemize}
 \subsection*{Examples}
-\label{sec:org97b5c08}
+\label{sec:org63a31e9}
 \subsubsection*{Direction Cosines of a Vector}
-\label{sec:org3819ada}
+\label{sec:org503de2c}
 \begin{itemize}
 \item Let \(\boldsymbol{n}\) be a unit vector. It's components can be evaluated by using the single equation in indicial notation
 $$ n_i = \boldsymbol{n} \cdot \boldsymbol{e}_i = \cos(\boldsymbol{n}, \boldsymbol{e}_i) $$
@@ -346,7 +347,7 @@ $$ |\boldsymbol{n}|^2 = \boldsymbol{n} \cdot \boldsymbol{n} = n_i n_i = n_1 n_1 
 $$ \cos\alpha_i \cos\alpha_i = \cos^2\alpha_1 + \cos^2\alpha_2 + \cos^2\alpha_3 = 1 $$
 \end{itemize}
 \subsubsection*{Length of a fiber, \(d\boldsymbol{x}\)}
-\label{sec:org9e017f6}
+\label{sec:orge1fd319}
 \begin{itemize}
 \item Consider a short fiber with components \(dx_1,\, dx_2,\, dx_3\) in a three-dimensional Eucidean space with rectangular components \(x_1,\, x_2,\, x_3\).
 \item The square of its length can be found by
@@ -358,11 +359,11 @@ $$ ds^2 = dx_1^2 + dx_2^2 + dx_3^2 $$
       & = dx_i dx_j (\boldsymbol{e}_i \cdot \boldsymbol{e}_j) \\
       & = dx_i \underbrace{dx_j \delta_{ij}}_{dx_i}
 \end{align}
-where the definition of the Kroenecker's delta (\hyperref[sec:orga85f346]{\(\S 2.1\)}) was used to convert the last line.
+where the definition of the Kroenecker's delta (\hyperref[sec:org3420418]{\(\S 2.1\)}) was used to convert the last line.
 \item In the above, the role of Kroenecker's delta is sometimes referred to be an \textbf{index shifter}.
 \end{itemize}
 \subsubsection*{The Cross Product in Indicial Notation}
-\label{sec:orgb87d6d5}
+\label{sec:org29f803a}
 \begin{itemize}
 \item Previously we saw the arisal of the alternator symbol in representing the vector product \(\boldsymbol{u} \times \boldsymbol{v}\) as
 $$  \sum_k \sum_j \sum_i \epsilon_{ijk} u_i v_j \boldsymbol{e}_k $$
@@ -370,14 +371,14 @@ $$  \sum_k \sum_j \sum_i \epsilon_{ijk} u_i v_j \boldsymbol{e}_k $$
 $$ \boldsymbol{u} \times \boldsymbol{v} = \epsilon_{ijk} u_i v_j \boldsymbol{e}_k $$
 \end{itemize}
 \subsection*{Higher (Second) Order Tensors}
-\label{sec:orgc69ea77}
+\label{sec:orgd12a04e}
 \begin{itemize}
 \item The multiplication of a second order tensor with a vector also involves an inner product between the second (column) index of the second-order tensor and the index of the vector, reading
 $$ \boldsymbol{A} \boldsymbol{u} = \begin{bmatrix} A_{11} & A_{12} & A_{13} \\ A_{21} & A_{22} & A_{23} \\ A_{31} & A_{32} & A_{33} \end{bmatrix} \begin{Bmatrix} u_1 \\ u_2 \\ u_3 \end{Bmatrix} = \begin{Bmatrix} A_{11} u_1 + A_{12} u_2 + A_{13} u_3 \\ A_{21} u_1 + A_{22} u_2 + A_{23} u_3 \\ A_{31} u_1 + A_{32} u_2 + A_{33} u_3 \end{Bmatrix} =  A_{ij} u_j$$
 \item Note the placement of the \emph{free} index (\(i\)), and the \emph{repeated} indices (\(j\)). The repeated (\emph{summation}) indices are also called as \emph{dummy indices}.
 \end{itemize}
 \subsubsection*{About the Notation}
-\label{sec:orgd0592cf}
+\label{sec:orgbaadd79}
 \begin{itemize}
 \item So far, we have seen two types of notations:
 \begin{enumerate}
@@ -391,22 +392,22 @@ $$ \boldsymbol{A} \boldsymbol{u} = \begin{bmatrix} A_{11} & A_{12} & A_{13} \\ A
 \item All three types can be used to express (in other words 'to code') the axioms and equations of mechanics.
 \end{itemize}
 \subsubsection*{A Second Order Tensor in its \textbf{Matrix Form}}
-\label{sec:orga659ef2}
+\label{sec:orga8b1efc}
 \begin{center}
 \includegraphics[width=.9\linewidth]{./images/FU94_2.3equation9.png}
 \end{center}
 \subsubsection*{The Transpose Operator}
-\label{sec:org065dc58}
+\label{sec:org39e5f3f}
 \begin{center}
 \includegraphics[width=.9\linewidth]{./images/FU94_2.3equation10.png}
 \end{center}
 \subsubsection*{The Matrix Product}
-\label{sec:orgd721a19}
+\label{sec:org7c15dca}
 \begin{center}
 \includegraphics[width=.9\linewidth]{./images/FU94_2.3equation11-12.png}
 \end{center}
 \subsubsection*{The Determinant}
-\label{sec:orga70ca1d}
+\label{sec:org9f8126a}
 \begin{itemize}
 \item The determinant of a second order tensor is the difference between the sum of triple products of components from each row/column having cyclic permutation with the sum having a reverse cyclic permutation:
 \begin{align}
@@ -414,12 +415,12 @@ $$ \boldsymbol{A} \boldsymbol{u} = \begin{bmatrix} A_{11} & A_{12} & A_{13} \\ A
 \end{align}
 \end{itemize}
 \subsection*{The \(\epsilon-\delta\) Identity}
-\label{sec:orgd345c11}
+\label{sec:orgbcbbb7d}
 \begin{center}
 \includegraphics[width=.9\linewidth]{./images/FU94_2.3equation19.png}
 \end{center}
-\subsection*{Problems}
-\label{sec:org13a6aa7}
+\subsection*{Study Problems}
+\label{sec:org861d0aa}
 \begin{center}
 \includegraphics[width=.9\linewidth]{./images/FU94_2.3problems16-20.png}
 \end{center}
@@ -430,9 +431,283 @@ Problem 2.22
 $$ \boldsymbol{a} \times (\boldsymbol{b} \times \boldsymbol{c}) = (\boldsymbol{a} \cdot \boldsymbol{c}) \boldsymbol{b}  - (\boldsymbol{a} \cdot \boldsymbol{b}) \boldsymbol{c} $$
 by using the method of indicial notation.
 \end{itemize}
-\section*{(\(\S 2.4\)) Transformation Under Rotation}
-\label{sec:org614ec42}
+\section*{(\(\S 2.4\)) Transformations in Time and Space}
+\label{sec:org970859e}
+\begin{itemize}
+\item The frame of reference used to record the space-time measurements may be subject to motion. In this case the measurements obtained from two frames (one stationary and the other moving) may be related to one another by appropriate transformations of the time and space variables.
+\item This section starts by considering two-dimensional frames of reference that are in
+\begin{itemize}
+\item translation, and,
+\item rotation,
+\end{itemize}
+with respect to each other.
+\item Then we look at the properties of the transformation.
+\item Finally, rotation in three-dimensional space will be considered.
+\end{itemize}
+\subsection*{Translations in Space-Time in 2-D}
+\label{sec:org0a7c86d}
+\begin{itemize}
+\item Consider two space-time frames of reference, \(Ox_1x_2,t\) and \(O'x_{1'}x_{2'},t'\) in a two-dimensional space. The goal is to record the geometry of motion of a body.
 
-\section*{(\(\S 2.10\)) Partial Derivatives}
-\label{sec:orga56fd5c}
+\item Let the unprimed be called as the \emph{initial} frame and the primed be called as the \emph{current} frame.
+\item Let the watch of the \emph{initial} frame reflect the world clock, while the watch of the primed frame reflects the \emph{process} time. That is, as the \emph{process} begins, the time \(t\) of the \emph{initial} frame is at some non-zero number, i.e. \(t_0 = c\), where \(c \in [0,\infty)\), while the time of the  \emph{current} frame, \(t'\) is reset to zero, i.e. \(t'_0 = 0\).
+\item Let the origins \(O\) and \(O'\) of both frames be coincident at \(t_0\), and the \emph{initial} frame is kept stationary, while the \emph{current} frame is allowed to translate away from \(O\) during the process.
+\item The location of an arbitrary point \(P\) in two-dimensional space will be \((x_1,x_2)\) with respect to the \emph{initial} frame, while with respect to the \emph{current} frame it is \((x_{1'},x_{2'})\).
+\item The records \((x_1,x_2,t)\) and \((x_{1'},x_{2'},t')\) of the two frames will be related to each other as
+$$ \begin{array}{c} x_1 = x_{1'} + d_1 \\ x_2 = x_{2'} + d_2 \\ t = t' + c \end{array} \quad \mathrm{or} \quad \begin{array}{c} x_{1'} = x_1 - d_1 \\ x_{2'} = x_2 - d_2 \\ t' = t - c \end{array} $$
+\end{itemize}
+\subsection*{Rotating Frame Transformations in 2-D}
+\label{sec:org177bf60}
+\begin{itemize}
+\item Apart from the translation of \(O'\), a \emph{current} frame may also rotate about it's origin during the process.
+\item Let there be no translation of \(O'\) for the sake of clarity. The rotation of the \emph{current} frame with respect to the \emph{initial} is measured by the angle between the \(x_1\) and \(x_{1'}\) axes.
+\begin{center}
+\includegraphics[width=.9\linewidth]{./images/fig2.4.1a.png}
+\end{center}
+\item From the geometry of motion, the components of \(P\) in the two frames can be related to each other as a function of \(\theta\) as
+$$ \begin{array}{c} x_1 = x_{1'} \cos\theta - x_{2'} \sin\theta \\ x_2 = x_{1'} \sin\theta + x_{2'} \cos\theta \end{array} \quad \mathrm{and} \quad \begin{array}{c} x_{1'} = x_1 \cos\theta + x_2 \sin\theta \\ x_{2'} = -x_1 \sin\theta + x_2 \cos\theta \end{array} $$
+\end{itemize}
+\subsubsection*{Under the Matrix Form}
+\label{sec:orge5baa7c}
+\begin{itemize}
+\item This seems to suggest that, the transformation results from a matrix-vector product as in:
+$$ \begin{Bmatrix} x_{1'} \\ x_{2'} \end{Bmatrix} = \begin{bmatrix} \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta \end{bmatrix} \begin{Bmatrix} x_1 \\ x_2 \end{Bmatrix} $$
+\end{itemize}
+\begin{itemize}
+\item A careful investigation shows that the trigonometric functions of \(\theta\) in the matrix are equal to the cosines of the angles between pair of basis vectors.
+\begin{center}
+\includegraphics[width=.9\linewidth]{./images/fig2.4.1b.png}
+\end{center}
+\item For example, in the equation for \(x_{1'}\), the coefficient of \(x_1\) is \(\cos\theta = \boldsymbol{e}_{1'} \cdot \boldsymbol{e}_1\).
+\end{itemize}
+\subsubsection*{Terms of the Rotation Tensor}
+\label{sec:orgc77338f}
+\begin{itemize}
+\item The other terms also reveal a similar pattern.
+\begin{align}
+ \boldsymbol{e}_{1'} \cdot \boldsymbol{e}_1 & = \cos\theta \\
+ \boldsymbol{e}_{1'} \cdot \boldsymbol{e}_2 & = \cos(90-\theta) = \sin\theta \\
+ \boldsymbol{e}_{2'} \cdot \boldsymbol{e}_1 & = \cos(90+\theta) = -\sin\theta \\
+ \boldsymbol{e}_{2'} \cdot \boldsymbol{e}_2 & = \cos\theta \\
+\end{align}
+\end{itemize}
+\begin{itemize}
+\item The four equations above can be \textbf{compiled} (or \emph{contracted}) into a single indicial equation as
+$$ \beta_{i'j} = \boldsymbol{e}_{i'} \cdot \boldsymbol{e}_j $$
+where \(\boldsymbol\beta\) is called the \textbf{rotation tensor}.
+\item Note the similarity and difference between \(\beta_{i'j}\) and \(\delta_{ij}\).
+\end{itemize}
+\subsubsection*{Expanded, Indicial and Matrix Forms Revealed}
+\label{sec:org4f70948}
+\begin{itemize}
+\item It is worth noting the equivalence between the \textbf{expanded}, \emph{indicial} (contracted) and \textbf{matrix} forms of the transformation side-by-side as
+$$ \begin{array}{c} x_{1'} = \beta_{1'1} x_1 + \beta_{1'2} x_2 \\ x_{2'} = \beta_{2'1} x_1 + \beta_{2'2} x_2 \end{array} \hspace{2em} \mathrm{or} \hspace{2em} x_{i'} = \beta_{i'j} x_j \hspace{2em} \mathrm{or} \hspace{2em} \{x'\} = [\beta] \{x\} $$
+\end{itemize}
+\begin{itemize}
+\item And the reverse transformation reads 
+$$ \begin{array}{c} x_1 = \beta_{1'1} x_{1'} + \beta_{2'1} x_{2'} \\ x_2 = \beta_{1'2} x_{1'} + \beta_{2'2} x_{2'} \end{array} \hspace{2em} \mathrm{or} \hspace{2em} x_j = \beta_{i'j} x_{i'}  \hspace{2em} \mathrm{or} \hspace{2em} \{x\} = [\beta]^T \{x'\}$$
+\item Note how transposition is implied by a pair of \uline{non-adjacent} repeating indices.
+\item Substitution of one of the transformations above into the other reveals very interesting properties of the \textbf{rotation tensor}, and provides good practice about indicial operations, in general.
+\end{itemize}
+\subsubsection*{Back-substitution Shows the Identity}
+\label{sec:org69009ad}
+\begin{itemize}
+\item The second set of transformation equations can now be substituted into the first, yielding,
+$$ \begin{array}{c}
+   x_{1'} = \beta_{1'1} (\beta_{1'1} x_{1'} + \beta_{2'1} x_{2'}) + \beta_{1'2} (\beta_{1'2} x_{1'} + \beta_{2'2} x_{2'}) \\
+   x_{2'} = \beta_{2'1} (\beta_{1'1} x_{1'} + \beta_{2'1} x_{2'}) + \beta_{2'2} (\beta_{1'2} x_{1'} + \beta_{2'2} x_{2'})
+  \end{array}. $$
+\end{itemize}
+\begin{itemize}
+\item Upon collecting terms we get,
+$$ \begin{array}{c}
+   x_{1'} = (\beta_{1'1} \beta_{1'1} + \beta_{1'2} \beta_{1'2}) x_{1'} + (\beta_{1'1} \beta_{2'1} + \beta_{1'2} \beta_{2'2}) x_{2'} \\
+   x_{2'} = (\beta_{2'1} \beta_{1'1} + \beta_{2'2} \beta_{1'2}) x_{1'} + (\beta_{2'1} \beta_{2'1} + \beta_{2'2} \beta_{2'2}) x_{2'}
+  \end{array}. $$
+\item Placing these two equations into their matrix form,
+$$ \begin{Bmatrix} x_{1'} \\ x_{2'} \end{Bmatrix} = \begin{bmatrix}  \beta_{1'1} \beta_{1'1} + \beta_{1'2} \beta_{1'2} & \beta_{1'1} \beta_{2'1} + \beta_{1'2} \beta_{2'2} \\ \beta_{2'1} \beta_{1'1} + \beta_{2'2} \beta_{1'2} & \beta_{2'1} \beta_{2'1} + \beta_{2'2} \beta_{2'2} \end{bmatrix} \begin{Bmatrix} x_{1'} \\ x_{2'} \end{Bmatrix}. $$
+\item A careful investigation of the summations and free indices shows that the above can be expressed in indicial notation as
+$$ x_{i'} = \beta_{i'k} \beta_{j'k} x_{j'} $$
+\end{itemize}
+\subsubsection*{From the Identity to the Inverse}
+\label{sec:org1605f95}
+\begin{itemize}
+\item Reminding that the Kroenecker's symbol has the property of shifting indices of it's argument as in
+$$ x_i = \delta_{ij} x_j, \hspace{1.5em} x_{i'} = \delta_{i'j'} x_{j'}. $$
+\end{itemize}
+\begin{itemize}
+\item This suggests a striking similarity with the last equation \(x_{i'} = \beta_{i'k} \beta_{j'k} x_{j'}\). We state that the coefficient of \(x_{j'}\) should be equal to a Kroenecker's symbol for the above equation to be valid, i.e.,
+$$ \beta_{i'k} \beta_{j'k} = \delta_{i'j'}. $$
+\item Recast this into it's matrix form,
+$$ [\beta][\beta]^T = [I] $$
+where \(I\) is the \textbf{identity matrix}.
+\end{itemize}
+\subsubsection*{Orthogonality of the Rotation Matrix}
+\label{sec:orgddd4437}
+\begin{itemize}
+\item The last equation
+$$ [\beta][\beta]^T = [I], $$
+deserves further attention because the product of two matrices are equal to the identity matrix if only if the matrices are the inverses of each other, i.e.,
+$$ [\beta]^T = [\beta]^{-1}. $$
+\item Matrices having the above property (their transpose being equal to their inverse) are said to be \textbf{orthogonal}, which is proof that the \textbf{rotation} matrix is orthogonal.
+\end{itemize}
+\subsection*{Rotating Frame Transformations in 3-D}
+\label{sec:orgab84659}
+\begin{itemize}
+\item The coordinate transformation relations that were derived for 2-D
+$$ x_{i'} = \beta_{i'j} x_j, \quad x_{j} = \beta_{i'j} x_{i'}, \quad i={1,2} $$
+\item are readily available and valid in 3-D as well!
+$$ x_{i'} = \beta_{i'j} x_j, \quad x_{j} = \beta_{i'j} x_{i'}, \quad i={1,2,3} $$
+\begin{center}
+\includegraphics[width=.9\linewidth]{./images/FU94-fig2.3.png}
+\end{center}
+\end{itemize}
+\section*{(\(\S 2.10\)) The Gradient Operator, \(\nabla\)}
+\label{sec:org4876e43}
+Or partial derivative of a field variable with respect to spatial coordinates.
+\subsubsection*{Differential of a single variable function}
+\label{sec:orgf508cbb}
+\begin{itemize}
+\item Change in a physical variable, \(\phi\), is usually denoted by \(d\) or \(\partial\), is called a \textbf{differential} of \(\phi\), such as \(d\phi\) or \(\partial\phi\).
+\end{itemize}
+\begin{itemize}
+\item The choice of correct representation depends on how many other variables it depends on, e.g. if it depends on a single variable such as \(\phi(t)\) then the \textbf{differential change in variable} \(\phi\) with respect to a \textbf{differential change in time}, \(dt\), is denoted as $$\frac{d\phi}{dt}$$
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{./images/one-dimension.jpg}
+\end{center}
+\end{itemize}
+\subsubsection*{Differential of a multi-variable function}
+\label{sec:orgbc7c11f}
+\begin{itemize}
+\item When the physical variable depends on more than one independent variables such as \(\phi(x_1, x_2)\), then the \textbf{differential change in} \(\phi\) with respect to each variable \(x_1\) and \(x_2\) needs to be considered separately.
+\end{itemize}
+\begin{itemize}
+\item The partial derivatives with respect to each variable are expressed as
+$$ \frac{\partial}{\partial x_1}, \quad \frac{\partial}{\partial x_2}, \quad \mathrm{etc.} $$
+\item We consider each term as one component of the gradient operator, and define \(\nabla\) in a two-dimensional space as:
+$$  \boldsymbol{e}_1 {{\partial}\over{\partial x_1}} + \boldsymbol{e}_2 {{\partial}\over{\partial x_2}} \triangleq \nabla, \quad \mathrm{or} \quad \nabla  = \boldsymbol{e}_i {{\partial}\over{\partial x_i}}, \quad i=1,2$$
+\item whereas in a three-dimensional space it reads
+$$ \nabla = \boldsymbol{e}_i {{\partial}\over{\partial x_i}}, \quad i=1,2,3$$
+\end{itemize}
+
+\begin{itemize}
+\item Consider a scalar field variable, \(f\), in a two-dimensional domain:
+\begin{center}
+\includegraphics[width=.9\linewidth]{./images/colormaps_ex4_glycerine.png}
+\end{center}
+\end{itemize}
+\begin{itemize}
+\item To find the isocontours, i.e. \(df=0\), we invoke the chain rule
+$$ df = {{\partial f}\over{\partial x_1}} d x_1 + {{\partial f}\over{\partial x_2}} d x_2. $$
+\item where the inner product of the gradient \(\nabla\) and a fiber element \(d\boldsymbol{x}\) is taken.
+\end{itemize}
+\subsection*{Gradient of a Scalar Field}
+\label{sec:orgeb210ba}
+\begin{center}
+\includegraphics[width=.9\linewidth]{./images/gradientofphi.jpg}
+\end{center}
+
+\begin{itemize}
+\item Let \(\{\boldsymbol{e}_i\}\) be an arbitrary frame. Then, the \textbf{gradient}  of a scalar field \(\phi = \phi(\boldsymbol{x})\), can be written as
+$$ \nabla \phi = \frac{\partial \phi}{\partial x_i} \boldsymbol{e}_i.$$
+\end{itemize}
+
+\begin{itemize}
+\item The gradient of a scalar field yields a vector field,
+\item The partial derivatives may be replaced with shorthand alternatives
+$$ \frac{\partial \Box}{\partial x_i} \equiv \partial_i \Box \equiv \Box_{,i} $$
+\item e.g. find the gradient of \(\phi = y^2 \ln x/\sin(xz)\)?
+\end{itemize}
+\subsection*{Gradient of a Vector Field}
+\label{sec:org5778fe1}
+Remember the application (\url{https://windy.com}) that shows the variation of the atmospheric currents (\hyperref[sec:org433f1f1]{Definition of a Vector Field}).
+
+\begin{itemize}
+\item Let \(\{\boldsymbol{e}_i\}\) be an arbitrary (Cartesian) frame and let \(\boldsymbol{v} = v_i \boldsymbol{e}_i\) denote a vector field. The application of the gradient operator on the vector field is known as a \textbf{tensor product} which uses the symbol \(\otimes\) as
+\begin{align}
+ \nabla \boldsymbol{v} & = \left(\boldsymbol{e}_i \frac{\partial}{\partial x_i}\right) \otimes (v_j \boldsymbol{e}_j) \\
+                      & = \frac{\partial v_j}{\partial x_i} \boldsymbol{e}_i \otimes  \boldsymbol{e}_j \\
+                      & = v_{j,i} \boldsymbol{e}_i \otimes  \boldsymbol{e}_j 
+\end{align}
+\end{itemize}
+\begin{itemize}
+\item The tensor product operator \(\otimes\) is known as the dyadic symbol.
+\item The resulting vector field derivative \(\partial v_j/\partial x_i\) is a second-order tensor.
+\item The gradient in indicial form can be written in a variety of ways including $$\frac{\partial v_j}{\partial x_i} \equiv \partial_i v_j \equiv v_{j,i}$$
+\item Confusion related with the ordering of indices and bases prevails.
+\item e.g. the gradient of vector field \(v = 3x^2y \boldsymbol{e}_1 + z\log(y) \boldsymbol{e}_2 - \cos(x^2+z) \boldsymbol{e}_3\).
+\end{itemize}
+\subsection*{Divergence Operator}
+\label{sec:org91c33a8}
+\begin{itemize}
+\item The divergence is defined by appyling the gradient operator via a scalar product as in
+$$ \nabla \cdot \Box $$
+\end{itemize}
+\begin{itemize}
+\item For example, by taking the gradient of a vector field \(\boldsymbol{v}\) we get
+\begin{align}
+\nabla \cdot \boldsymbol{v} & = \left(\boldsymbol{e}_i \frac{\partial}{\partial x_i}\right) \cdot (v_j \boldsymbol{e}_j) \\
+                      & = \frac{\partial v_j}{\partial x_i} \boldsymbol{e}_i \cdot  \boldsymbol{e}_j \\
+                      & = v_{j,i} \delta_{ij} \\
+                      & = v_{i,i} \\
+                      & = v_{1,1} + v_{2,2} + v_{3,3}
+\end{align}
+\end{itemize}
+
+\begin{itemize}
+\item Physical Context: Incompressible Fluid Flow
+\begin{quote}
+Consider a fluid with velocity field \(\boldsymbol{v}(\boldsymbol{x}, t)\). The divergence \(\nabla \cdot \boldsymbol{v}\) measures the \textbf{net volume flux} per unit volume at a point.
+\end{quote}
+\end{itemize}
+\subsubsection*{Examples from Mechanics}
+\label{sec:org0cbeb59}
+\begin{itemize}
+\item Conservation of Mass: $$\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \boldsymbol{v} ) = 0$$
+\item Conservation of Linear Momentum: $$\rho \dot{\boldsymbol{v}} = \nabla \cdot \boldsymbol{S} + \rho \boldsymbol{b}$$
+\end{itemize}
+\subsection*{Curl Operator}
+\label{sec:orgcf3bb36}
+\begin{itemize}
+\item The \textbf{curl} is defined by appyling the gradient operator via a vector product as in
+$$ \nabla \times \Box $$
+\end{itemize}
+\begin{itemize}
+\item For example, by taking the gradient of a vector field \(\boldsymbol{v}\) we get
+\begin{align}
+\nabla \times \boldsymbol{v} & = \left(\boldsymbol{e}_i \frac{\partial}{\partial x_i}\right) \times (v_j \boldsymbol{e}_j) \\
+                      & = \frac{\partial v_j}{\partial x_i} \boldsymbol{e}_i \times  \boldsymbol{e}_j \\
+                      & = \epsilon_{ijk} v_{j,i} \boldsymbol{e}_k 
+\end{align}
+\item Curl provides a measure of \textbf{vorticity} of a vector field.
+\end{itemize}
+\subsection*{Summary}
+\label{sec:orgaf37a08}
+\begin{center}
+\includegraphics[width=.9\linewidth]{./images/FU94_2.10table1.png}
+\end{center}
+\subsection*{Study Problems}
+\label{sec:org3862bad}
+Use the index notation and summation convention to prove the following relations:
+\begin{itemize}
+\item (a) \(\boldsymbol{u} \times \boldsymbol{v} = - \boldsymbol{v} \times \boldsymbol{u}\)
+\item (b) \((\boldsymbol{s} \times \boldsymbol{t}) \cdot (\boldsymbol{u} \times \boldsymbol{v}) = (\boldsymbol{s} \cdot \boldsymbol{u}) (\boldsymbol{t} \cdot \boldsymbol{v}) - (\boldsymbol{s} \cdot \boldsymbol{v}) (\boldsymbol{t} \cdot \boldsymbol{u})\)
+\item (c) \(\mathrm{curl}\; \mathrm{curl}\, \boldsymbol{v} = \mathrm{grad}\; \mathrm{div}\, \boldsymbol{v} - \Delta \boldsymbol{v}\)
+\end{itemize}
+
+Let \(\boldsymbol{r}\) be the radius vector of a typical point in a field and \(r\) be the magnitude of \(\boldsymbol{r}\). Prove that
+\begin{itemize}
+\item (a) \(\mathrm{div}\,(r^n \boldsymbol{r}) = (n+3) r^n\)
+\item (b) \(\mathrm{curl}\, (r^n \boldsymbol{r}) = 0\)
+\item (c) \(\Delta(r^n) = n(n+1) r^{n-2}\)
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{./images/FU94_2.10problem36.png}
+\end{center}
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{./images/FU94_2.10problem37.png}
+\end{center}
 \end{document}

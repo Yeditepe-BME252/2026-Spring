@@ -1,7 +1,7 @@
 #+TITLE:  Chapter 2: Vectors and Tensors
 #+AUTHOR: Fethi Okyar
 #+DATE: 2026-02-28
-#+SUBTITLE: Reading: [Fung/94] [[../textbook_excerpts/1_TensorAlgebra.pdf][Chapter 1]]
+#+SUBTITLE: Reading: [Fung/94] [[../textbook_excerpts/1_TensorAlgebra.pdf][Chapter 2]]
 #+STARTUP: overview
 #+REVEAL_THEME: simple
 #+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
