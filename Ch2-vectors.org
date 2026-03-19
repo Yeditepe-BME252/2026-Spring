@@ -192,6 +192,9 @@ Or consider describing a plane with normal $\boldsymbol{n}$ that is at a distanc
   $$ \sum_i n_i x_i - p = 0 $$
 
 ** Definition of a Vector Field
+:PROPERTIES:
+:CUSTOM_ID: def-vector-field
+:END:
 - Say a physical variable $\boldsymbol{v}$ measured at points of space exhibits changes as a function of the point coordinates, $\boldsymbol{x}$, as well as time, $t$.
 #+ATTR_REVEAL: :frag (appear)
 - Consider the atmospheric current visualization provided by an app (such as [[https://windy.com]])
@@ -202,7 +205,7 @@ Or consider describing a plane with normal $\boldsymbol{n}$ that is at a distanc
   </video>
   </div>
   #+END_EXPORT
-
+(link to [[#def-gradient][gradient]])
 *** Derivatives of a Vector Field
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - A vector field of the air current velocities is defined by
@@ -360,7 +363,7 @@ Inquire GPT about the use and history of the topic.
 #+ATTR_HTML: :width 1600px
 [[./images/FU94_2.3equation19.png]]
 
-** Problems
+** Study Problems
 #+ATTR_HTML: :width 1600px
 [[./images/FU94_2.3problems16-20.png]]
 
@@ -371,7 +374,6 @@ Problem 2.22
   by using the method of indicial notation.
 
 * ($\S 2.4$) Transformations in Time and Space
-#+ATTR_REVEAL: :frag (appear appear appear ...)
 - The frame of reference used to record the space-time measurements may be subject to motion. In this case the measurements obtained from two frames (one stationary and the other moving) may be related to one another by appropriate transformations of the time and space variables.
 - This section starts by considering two-dimensional frames of reference that are in
   + translation, and,
@@ -476,5 +478,127 @@ Problem 2.22
   #+ATTR_HTML: :width 1100px
   [[./images/FU94-fig2.3.png]]
 
-* ($\S 2.10$) The Gradient Operator
+* ($\S 2.10$) The Gradient Operator, $\nabla$
 Or partial derivative of a field variable with respect to spatial coordinates.
+
+*** Differential of a single variable function
+- Change in a physical variable, $\phi$, is usually denoted by $d$ or $\partial$, is called a *differential* of $\phi$, such as $d\phi$ or $\partial\phi$.
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- The choice of correct representation depends on how many other variables it depends on, e.g. if it depends on a single variable such as $\phi(t)$ then the *differential change in variable* $\phi$ with respect to a *differential change in time*, $dt$, is denoted as $$\frac{d\phi}{dt}$$
+
+  #+ATTR_HTML: :width 800px
+  [[./images/one-dimension.jpg]]
+
+*** Differential of a multi-variable function
+- When the physical variable depends on more than one independent variables such as $\phi(x_1, x_2)$, then the *differential change in* $\phi$ with respect to each variable $x_1$ and $x_2$ needs to be considered separately.
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- The partial derivatives with respect to each variable are expressed as
+  $$ \frac{\partial}{\partial x_1}, \quad \frac{\partial}{\partial x_2}, \quad \mathrm{etc.} $$
+- We consider each term as one component of the gradient operator, and define $\nabla$ in a two-dimensional space as:
+  $$  \boldsymbol{e}_1 {{\partial}\over{\partial x_1}} + \boldsymbol{e}_2 {{\partial}\over{\partial x_2}} \triangleq \nabla, \quad \mathrm{or} \quad \nabla  = \boldsymbol{e}_i {{\partial}\over{\partial x_i}}, \quad i=1,2$$
+- whereas in a three-dimensional space it reads
+    $$ \nabla = \boldsymbol{e}_i {{\partial}\over{\partial x_i}}, \quad i=1,2,3$$
+    
+#+REVEAL: split
+- Consider a scalar field variable, $f$, in a two-dimensional domain:
+  #+ATTR_HTML: :width 600px
+  [[./images/colormaps_ex4_glycerine.png]]
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- To find the isocontours, i.e. $df=0$, we invoke the chain rule
+  $$ df = {{\partial f}\over{\partial x_1}} d x_1 + {{\partial f}\over{\partial x_2}} d x_2. $$
+- where the inner product of the gradient $\nabla$ and a fiber element $d\boldsymbol{x}$ is taken. 
+
+** Gradient of a Scalar Field 
+#+ATTR_HTML: :width 1600px
+[[./images/gradientofphi.jpg]]
+
+#+REVEAL: split
+- Let $\{\boldsymbol{e}_i\}$ be an arbitrary frame. Then, the *gradient*  of a scalar field $\phi = \phi(\boldsymbol{x})$, can be written as
+  $$ \nabla \phi = \frac{\partial \phi}{\partial x_i} \boldsymbol{e}_i.$$
+
+#+ATTR_REVEAL: :frag (appear)
+- The gradient of a scalar field yields a vector field,
+- The partial derivatives may be replaced with shorthand alternatives
+  $$ \frac{\partial \Box}{\partial x_i} \equiv \partial_i \Box \equiv \Box_{,i} $$
+- e.g. find the gradient of $\phi = y^2 \ln x/\sin(xz)$?
+** Gradient of a Vector Field
+:PROPERTIES:
+:CUSTOM_ID: def-gradient
+:END:
+
+Remember the application (https://windy.com) that shows the variation of the atmospheric currents ([[#def-vector-field][Definition of a Vector Field]]).
+
+#+REVEAL: split
+- Let $\{\boldsymbol{e}_i\}$ be an arbitrary (Cartesian) frame and let $\boldsymbol{v} = v_i \boldsymbol{e}_i$ denote a vector field. The application of the gradient operator on the vector field is known as a *tensor product* which uses the symbol $\otimes$ as
+  \begin{align}
+   \nabla \boldsymbol{v} & = \left(\boldsymbol{e}_i \frac{\partial}{\partial x_i}\right) \otimes (v_j \boldsymbol{e}_j) \\
+                        & = \frac{\partial v_j}{\partial x_i} \boldsymbol{e}_i \otimes  \boldsymbol{e}_j \\
+                        & = v_{j,i} \boldsymbol{e}_i \otimes  \boldsymbol{e}_j 
+  \end{align}
+#+ATTR_REVEAL: :frag (appear)
+- The tensor product operator $\otimes$ is known as the dyadic symbol.
+- The resulting vector field derivative $\partial v_j/\partial x_i$ is a second-order tensor.
+- The gradient in indicial form can be written in a variety of ways including $$\frac{\partial v_j}{\partial x_i} \equiv \partial_i v_j \equiv v_{j,i}$$
+- Confusion related with the ordering of indices and bases prevails.
+- e.g. the gradient of vector field $v = 3x^2y \boldsymbol{e}_1 + z\log(y) \boldsymbol{e}_2 - \cos(x^2+z) \boldsymbol{e}_3$.
+
+** Divergence Operator
+- The divergence is defined by appyling the gradient operator via a scalar product as in
+  $$ \nabla \cdot \Box $$
+#+ATTR_REVEAL: :frag (appear)
+- For example, by taking the gradient of a vector field $\boldsymbol{v}$ we get
+  \begin{align}
+  \nabla \cdot \boldsymbol{v} & = \left(\boldsymbol{e}_i \frac{\partial}{\partial x_i}\right) \cdot (v_j \boldsymbol{e}_j) \\
+                        & = \frac{\partial v_j}{\partial x_i} \boldsymbol{e}_i \cdot  \boldsymbol{e}_j \\
+                        & = v_{j,i} \delta_{ij} \\
+                        & = v_{i,i} \\
+                        & = v_{1,1} + v_{2,2} + v_{3,3}
+  \end{align}                        
+
+#+REVEAL: split
+- Physical Context: Incompressible Fluid Flow
+  #+BEGIN_QUOTE
+  Consider a fluid with velocity field \(\boldsymbol{v}(\boldsymbol{x}, t)\). The divergence \(\nabla \cdot \boldsymbol{v}\) measures the *net volume flux* per unit volume at a point.
+  #+END_QUOTE
+  
+*** Examples from Mechanics
+#+ATTR_REVEAL: :frag (appear)
+- Conservation of Mass: $$\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \boldsymbol{v} ) = 0$$
+- Conservation of Linear Momentum: $$\rho \dot{\boldsymbol{v}} = \nabla \cdot \boldsymbol{S} + \rho \boldsymbol{b}$$
+  
+** Curl Operator
+- The *curl* is defined by appyling the gradient operator via a vector product as in
+  $$ \nabla \times \Box $$
+#+ATTR_REVEAL: :frag (appear)
+- For example, by taking the gradient of a vector field $\boldsymbol{v}$ we get
+  \begin{align}
+  \nabla \times \boldsymbol{v} & = \left(\boldsymbol{e}_i \frac{\partial}{\partial x_i}\right) \times (v_j \boldsymbol{e}_j) \\
+                        & = \frac{\partial v_j}{\partial x_i} \boldsymbol{e}_i \times  \boldsymbol{e}_j \\
+                        & = \epsilon_{ijk} v_{j,i} \boldsymbol{e}_k 
+  \end{align}
+- Curl provides a measure of *vorticity* of a vector field.
+
+** Summary
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_2.10table1.png]]
+
+** Study Problems
+Use the index notation and summation convention to prove the following relations:
+- (a) $\boldsymbol{u} \times \boldsymbol{v} = - \boldsymbol{v} \times \boldsymbol{u}$
+- (b) $(\boldsymbol{s} \times \boldsymbol{t}) \cdot (\boldsymbol{u} \times \boldsymbol{v}) = (\boldsymbol{s} \cdot \boldsymbol{u}) (\boldsymbol{t} \cdot \boldsymbol{v}) - (\boldsymbol{s} \cdot \boldsymbol{v}) (\boldsymbol{t} \cdot \boldsymbol{u})$
+- (c) $\mathrm{curl}\; \mathrm{curl}\, \boldsymbol{v} = \mathrm{grad}\; \mathrm{div}\, \boldsymbol{v} - \Delta \boldsymbol{v}$
+
+#+REVEAL: split
+Let $\boldsymbol{r}$ be the radius vector of a typical point in a field and $r$ be the magnitude of $\boldsymbol{r}$. Prove that
+- (a) $\mathrm{div}\,(r^n \boldsymbol{r}) = (n+3) r^n$
+- (b) $\mathrm{curl}\, (r^n \boldsymbol{r}) = 0$
+- (c) $\Delta(r^n) = n(n+1) r^{n-2}$
+
+#+REVEAL: split
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_2.10problem36.png]]
+
+#+REVEAL: split
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_2.10problem37.png]]
+
