@@ -141,7 +141,7 @@ Ask AI:
 ** Motivation
 A recent post in Linkedin reveals the computational simulation of breathing.
 #+ATTR_HTML: :width 800px
-[[./images/breathing.gif]]
+[[./images/animation-breathing.gif]]
 
 * ($\S 1.11$) Equations of Motion and Equilibrium
 ** Fundamentals

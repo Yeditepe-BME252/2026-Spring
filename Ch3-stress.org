@@ -1,0 +1,103 @@
+#+TITLE:  Chapter 3: The Stress Hypothesis
+#+AUTHOR: Fethi Okyar
+#+DATE: 2026-03-19
+#+SUBTITLE: Reading: [Fung/94] [[../textbook_excerpts/1_TensorAlgebra.pdf][Chapter 3]]
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil
+#+REVEAL_EXTRA_CSS: ../style.css
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+HTML_HEAD_EXTRA: <style>
+#+HTML_HEAD_EXTRA: pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
+#+HTML_HEAD_EXTRA: </style>
+
+* ($\S 1.6$) The Stress/Traction Hypothesis
+Consider a material $B$ occupying a spatial region $V$. The body is /transmitting/ a balanced load system shown with /surface forces/ in @@html:<span style="color:red">red</span>@@ and /boundary constraints/ in @@html:<span style="color:#2255cc;">blue</span>@@. A *traction field* arises within the body during this transmission. The word *traction* roughly describes the flow of load per surface. To /illuminate/ the traction field in a region /visualize/ a closed surface $S$ around it and /imagine/ the interaction between the /inside/ ($-$) and the /outside/ ($+$) of $S$. 
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_1.6figure2-load.png]]
+
+** The Stress/Traction Hypothesis
+Let a neighborhood $\Delta S$ on $S$ have an /outward unit normal/ $\boldsymbol{\nu}$, with its direction pointing outward from the interior. Let the  /accumulation of load/ applied by the ($+$) side on the ($-$) side passing thru $\Delta S$ be represented by $\Delta \mathbf{F}$. The *stress hypothesis* can be stated: /as/ $\Delta S$ /tends to a small but bounded size/ $\alpha$, /the ratio/ $\Delta \mathbf{F}/\Delta S$ /tends to a definite limit/ $d\mathbf{F}/dS$, /and the moment of the force acting on the surface/ $\Delta S$ /about any point within the area vanishes/. This limiting vector, called as the *traction* or the *stress vector* can be written as
+$$ \overset{\nu}{\mathbf{T}} = \frac{d\mathbf{F}}{dS}. $$
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_1.6figure2-deltaS.png]]
+
+*** Tractions on Cartesian Planes
+- At an internal point, the standard procedure is to calculate the tractions $\overset{1}{\mathbf{T}}, \overset{2}{\mathbf{T}}, \overset{3}{\mathbf{T}}$ that arise on the planes cornered by a Cartesian triad $\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3$. 
+  #+ATTR_HTML: :width 1600px
+  [[./images/FU94_1.6figure2-tractions.png]]
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- We combine the three Cartesian tractions as the columns of the transpose of a tensor $\boldsymbol{\tau}$ as
+  $$ \left[ \overset{1}{\mathbf{T}}, \overset{2}{\mathbf{T}}, \overset{3}{\mathbf{T}} \right] \triangleq [\tau]^\mathsf{T}  $$
+
+*** The Stress Tensor
+- The tensor, $\boldsymbol{\tau}$, constructed by stacking the three Cartesian internal traction vectors in rows is called as the *stress tensor*. The stress tensor components read
+  $$ \begin{bmatrix} \tau_{11} & \tau_{12} & \tau_{13} \\ \tau_{21} & \tau_{22} & \tau_{23} \\ \tau_{31} & \tau_{32} & \tau_{33} \end{bmatrix} = \begin{bmatrix} \overset{1}{T_1} & \overset{1}{T_2} & \overset{1}{T_3} \\ \overset{2}{T_1} & \overset{2}{T_2} & \overset{2}{T_3} \\ \overset{3}{T_1} & \overset{3}{T_2} & \overset{3}{T_3} \end{bmatrix} \hspace{2em} \mathrm{or} \hspace{2em} \tau_{ij} = \overset{i}{T_j} $$
+  #+ATTR_HTML: :width 1400px
+  [[./images/FU94_3.1figure1.png]]
+
+*** Properties of Internal Traction Vectors
+- The state of stress at a point in a material is described by internal traction vectors on a differential cube element.
+  
+  @@html:<span style="color:#2255cc;">Freehand depiction of traction vectors on the cube</span>@@
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- The differential cube has six faces, three of which have ($+$) normals and the other three have ($-$) normals.
+- The three traction vectors corresponding to ($+$) faces are  $\overset{1}{\mathbf{T}}, \overset{2}{\mathbf{T}}, \overset{3}{\mathbf{T}}$, and the other three associated with the ($-$) faces are $\overset{-1}{\mathbf{T}}, \overset{-2}{\mathbf{T}}, \overset{-3}{\mathbf{T}}$.
+- The action-reaction principle of Newton can be used to relate the traction vectors on opposite cube faces as
+   $$ \overset{i}{\mathbf{T}} = -\overset{-i}{\mathbf{T}} \hspace{2em} \mathrm{or} \hspace{2em} \overset{i}{T_j} = -\overset{-i}{T_j} $$
+- It is standard convention to decompose the traction vector, $\overset{\nu}{\mathbf{T}}$, into it's *normal* part, $(\boldsymbol{\nu} \cdot \overset{\nu}{\mathbf{T}}) \boldsymbol{\nu}$, and it's remaining part, $\overset{\nu}{\mathbf{T}} - (\boldsymbol{\nu} \cdot \overset{\nu}{\mathbf{T}}) \boldsymbol{\nu}$, which is *in-plane* of the surface.
+
+*** Properties of Stress Components
+- In parallel with the parts of the internal traction vectors, the stress components that are normal to the plane are called as *normal stress* while those components which are in-plane are known as *shear stress*.
+  $$ \mathrm{normal} \left\{ \begin{array}{c} \tau_{11} \\ \tau_{22} \\ \tau_{33} \end{array} \right. \hspace{2em} \mathrm{shear}  \left\{ \begin{array}{c} \tau_{12}, \tau_{13} \\ \tau_{21}, \tau_{23} \\ \tau_{31}, \tau_{32} \end{array} \right. $$
+  
+  @@html:<span style="color:#2255cc;">Freehand depiction of traction vectors on the cube</span>@@
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- The normal stresses are given a ($+$) sign if they point away from the surface (in *tension*) and a ($-$) sign if they point towards the surface (in *compression*).
+- The shear component (e.g. $\tau_{ij}$) is considered as positive if it is acting in the $+j$ direction on a plane that has a normal in $+i$ direction, or is in the $-j$ direction on a plane that has a normal in $-i$ direction.
+  
+* ($\S 1.11$) Examples to Elementary Traction Fields
+** Slender Cylindrical (Axial) Members 
+A /member/ (independent part of a structure) is said to be */slender/*, if it has a great length to thickness ratio, i.e., $L/T>>1$, and a constant or slightly-varying cross section swept along the *normal* to the cross-section plane (a.k.a. member's /longitudinal/ or /axial/ direction). Such objects in geometry are known as /cylinders/.
+#+ATTR_HTML: :width 1200px
+[[./images/fig1.11.3-members3d.png]]
+
+*** Axially Loaded Cylindrical Members
+- Consider a member under a *compressive* force $W$. We say that the beam is axially loaded without shear. Applying the stress  hypothesis, we will obtain the relevant *traction vector*. 
+  #+ATTR_HTML: :width 1000px
+  [[./images/FU94_1.11figure9a-uniaxial.png]]
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Relabel coordinates ($x\to x_1$, $y\to x_2$, $z\to x_3$).
+- Take a section of the member using the  $x_3$ plane from the /mid-span/ (region)
+
+  The mapping $\boldsymbol{\nu} \to \boldsymbol{e}_3$ yields $\overset{\nu}{\mathbf{T}} \to \overset{3}{\mathbf{T}}$
+
+*** Derivation of Nominal Normal Stress (Assumptions and Conventions)
+About the traction flow, we assume that:
+- there is no reason that the load /would distribute non-uniformly/ over the cross-section!! (i.e., there is *uniform distribution*, $dW/dA = W/A$, leading to
+  $$ \overset{3}{T_3} = \tau_{33} = \sigma = \frac{W}{A}. $$
+  Here $\sigma$ denotes the *nominal* /normal/ stress. It has units of load per area (e.g. N/cm$^2$).
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Under uniaxial loading, and in planes with normals parallel to the load axis, *only normal traction* arises (no shear tractions, i.e. $\overset{3}{T_1} = \overset{3}{T_2} = 0$).
+- Over planes that contain the load axis (whose normal will not not have an $\boldsymbol{e}_3$ component), *zero traction* previals!! That means $\overset{1}{\mathbf{T}}=\mathbf{0}$ and $\overset{2}{\mathbf{T}}=\mathbf{0}$.
+  
+*** Example:  Loading of the Femur
+#+ATTR_HTML: :width 500px
+[[./images/animation-femur.gif]]
+
+- Femur is the largest and most massive bone in the our body.
+- Assume the load component in the axial-plane to be negligible?? (which is the same as saying the load is entirely axial and no shear component is taken)
+  1. Using average values for a standard female, determine the normal compressive stress.
+  2. Knowing the femur axis deviates from the vertical (gravity axis) on the average by some small angle (e.g. 9 degrees), what is a more realistic state of stress?
+  3. Taking the deviation above as 8 degrees, determine the shear stress to normal stress ratio observed on an axial plane (an axial plane is one which has a normal parallel to the member's axis).
+** Plates under Plane Stress 
+** Stresses in Pressurized Vessels
+*** Spherical Baloons
+*** Cylindrical Tubes
+* ($\S3.2$) Laws of Motion
+* ($\S3.3$) Cauchy's Formula
+* ($\S3.4$) Equations of Equilibrium
+* ($\S3.5$) Transformation of Stress
+* ($\S3.7$) Boundary Conditions

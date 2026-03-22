@@ -30,9 +30,8 @@ Jove: a scientific educational video content provider with free access through Y
 ** Course learning objectives-CLOs
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 
-- [ ] exemplify some basic biomechanical phenomena that arise in living tissues 
 - [ ] read and convert expressions between their tensor, matrix and indicial forms
-- [ ] identify gradient, divergence, curl, and Laplacian operators
+- [ ] identify and use gradient, divergence, and curl in indicial expressions
 - [ ] state the balance of mass
 - [ ] differentiate between surface and body forces
 - [ ] relate the surface traction vector and the stress tensor
@@ -49,8 +48,8 @@ Jove: a scientific educational video content provider with free access through Y
 | 23/2 | Axioms of Mechanics            | Equations of Equilibrium           |
 | 2/3  | Vectors and Tensors, [[./Ch2-vectors.html][Ch.2]]      | Vector Algebra                     |
 | 9/3  | Vector Calculus                | Indicial Notation                  |
-| 16/3 | Coordinate Transformations     | /Ramadan Eve Holiday/              |
-| 23/3 | Gradient Operator              | Stress Tensor                      |
+| 16/3 | Coordinate Transformations     | Gradient Operator                  |
+| 23/3 | Quiz 2                         | Stress Tensor, [[./Ch3-stress.html][Ch.3]]                |
 | 30/3 | Laws of Motion                 | Transformation of Stress           |
 | 6/4  | Stress Boundary Conditions     | States of Stress                   |
 | 13/4 | Mohr's Circle for Plane Stress | Principal Stresses                 |

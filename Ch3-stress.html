@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Chapter 3: The Stress Hypothesis</title>
+<meta name="author" content="Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../style.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<style>
+pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>Chapter 3: The Stress Hypothesis</h2> <h3>Reading: [Fung/94] <a href="../textbook_excerpts/1_TensorAlgebra.pdf">Chapter 3</a></h3> <h4>2026-03-19</h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org057687b">(\(\S 1.6\)) The Stress/Traction Hypothesis</a></li>
+<li><a href="#/slide-org51e66a6">(\(\S 1.11\)) Examples to Elementary Traction Fields</a></li>
+<li><a href="#/slide-org2fd09a6">(\(\S3.2\)) Laws of Motion</a></li>
+<li><a href="#/slide-orgb93b6ea">(\(\S3.3\)) Cauchy&rsquo;s Formula</a></li>
+<li><a href="#/slide-org8c32ba0">(\(\S3.4\)) Equations of Equilibrium</a></li>
+<li><a href="#/slide-org228fd67">(\(\S3.5\)) Transformation of Stress</a></li>
+<li><a href="#/slide-org593541f">(\(\S3.7\)) Boundary Conditions</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-org057687b">
+<h2 id="org057687b">(\(\S 1.6\)) The Stress/Traction Hypothesis</h2>
+<p>
+Consider a material \(B\) occupying a spatial region \(V\). The body is <i>transmitting</i> a balanced load system shown with <i>surface forces</i> in <span style="color:red">red</span> and <i>boundary constraints</i> in <span style="color:#2255cc;">blue</span>. A <b>traction field</b> arises within the body during this transmission. The word <b>traction</b> roughly describes the flow of load per surface. To <i>illuminate</i> the traction field in a region <i>visualize</i> a closed surface \(S\) around it and <i>imagine</i> the interaction between the <i>inside</i> (\(-\)) and the <i>outside</i> (\(+\)) of \(S\). 
+</p>
+
+<div id="orgb90a3a6" class="figure">
+<p><img src="./images/FU94_1.6figure2-load.png" alt="FU94_1.6figure2-load.png" width="1600px" />
+</p>
+</div>
+</section>
+<section id="slide-org584d64a">
+<h3 id="org584d64a">The Stress/Traction Hypothesis</h3>
+<p>
+Let a neighborhood \(\Delta S\) on \(S\) have an <i>outward unit normal</i> \(\boldsymbol{\nu}\), with its direction pointing outward from the interior. Let the  <i>accumulation of load</i> applied by the (\(+\)) side on the (\(-\)) side passing thru \(\Delta S\) be represented by \(\Delta \mathbf{F}\). The <b>stress hypothesis</b> can be stated: <i>as</i> \(\Delta S\) <i>tends to a small but bounded size</i> \(\alpha\), <i>the ratio</i> \(\Delta \mathbf{F}/\Delta S\) <i>tends to a definite limit</i> \(d\mathbf{F}/dS\), <i>and the moment of the force acting on the surface</i> \(\Delta S\) <i>about any point within the area vanishes</i>. This limiting vector, called as the <b>traction</b> or the <b>stress vector</b> can be written as
+\[ \overset{\nu}{\mathbf{T}} = \frac{d\mathbf{F}}{dS}. \]
+</p>
+
+<div id="orgea28b94" class="figure">
+<p><img src="./images/FU94_1.6figure2-deltaS.png" alt="FU94_1.6figure2-deltaS.png" width="1600px" />
+</p>
+</div>
+</section>
+<section id="slide-org5d5aa80">
+<h4 id="org5d5aa80">Tractions on Cartesian Planes</h4>
+<ul>
+<li><p>
+At an internal point, the standard procedure is to calculate the tractions \(\overset{1}{\mathbf{T}}, \overset{2}{\mathbf{T}}, \overset{3}{\mathbf{T}}\) that arise on the planes cornered by a Cartesian triad \(\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3\). 
+</p>
+
+<div id="orgb598703" class="figure">
+<p><img src="./images/FU94_1.6figure2-tractions.png" alt="FU94_1.6figure2-tractions.png" width="1600px" />
+</p>
+</div></li>
+
+</ul>
+<ul>
+<li class="fragment appear">We combine the three Cartesian tractions as the columns of the transpose of a tensor \(\boldsymbol{\tau}\) as
+\[ \left[ \overset{1}{\mathbf{T}}, \overset{2}{\mathbf{T}}, \overset{3}{\mathbf{T}} \right] \triangleq [\tau]^\mathsf{T}  \]</li>
+
+</ul>
+</section>
+<section id="slide-org57ffe1f">
+<h4 id="org57ffe1f">The Stress Tensor</h4>
+<ul>
+<li><p>
+The tensor, \(\boldsymbol{\tau}\), constructed by stacking the three Cartesian internal traction vectors in rows is called as the <b>stress tensor</b>. The stress tensor components read
+\[ \begin{bmatrix} \tau_{11} & \tau_{12} & \tau_{13} \\ \tau_{21} & \tau_{22} & \tau_{23} \\ \tau_{31} & \tau_{32} & \tau_{33} \end{bmatrix} = \begin{bmatrix} \overset{1}{T_1} & \overset{1}{T_2} & \overset{1}{T_3} \\ \overset{2}{T_1} & \overset{2}{T_2} & \overset{2}{T_3} \\ \overset{3}{T_1} & \overset{3}{T_2} & \overset{3}{T_3} \end{bmatrix} \hspace{2em} \mathrm{or} \hspace{2em} \tau_{ij} = \overset{i}{T_j} \]
+</p>
+
+<div id="org6e804c3" class="figure">
+<p><img src="./images/FU94_3.1figure1.png" alt="FU94_3.1figure1.png" width="1400px" />
+</p>
+</div></li>
+
+</ul>
+</section>
+<section id="slide-org4f3d1c6">
+<h4 id="org4f3d1c6">Properties of Internal Traction Vectors</h4>
+<ul>
+<li><p>
+The state of stress at a point in a material is described by internal traction vectors on a differential cube element.
+</p>
+
+<p>
+<span style="color:#2255cc;">Freehand depiction of traction vectors on the cube</span>
+</p></li>
+
+</ul>
+<ul>
+<li class="fragment appear">The differential cube has six faces, three of which have (\(+\)) normals and the other three have (\(-\)) normals.</li>
+<li class="fragment appear">The three traction vectors corresponding to (\(+\)) faces are  \(\overset{1}{\mathbf{T}}, \overset{2}{\mathbf{T}}, \overset{3}{\mathbf{T}}\), and the other three associated with the (\(-\)) faces are \(\overset{-1}{\mathbf{T}}, \overset{-2}{\mathbf{T}}, \overset{-3}{\mathbf{T}}\).</li>
+<li class="fragment appear">The action-reaction principle of Newton can be used to relate the traction vectors on opposite cube faces as
+\[ \overset{i}{\mathbf{T}} = -\overset{-i}{\mathbf{T}} \hspace{2em} \mathrm{or} \hspace{2em} \overset{i}{T_j} = -\overset{-i}{T_j} \]</li>
+<li class="fragment ...">It is standard convention to decompose the traction vector, \(\overset{\nu}{\mathbf{T}}\), into it&rsquo;s <b>normal</b> part, \((\boldsymbol{\nu} \cdot \overset{\nu}{\mathbf{T}}) \boldsymbol{\nu}\), and it&rsquo;s remaining part, \(\overset{\nu}{\mathbf{T}} - (\boldsymbol{\nu} \cdot \overset{\nu}{\mathbf{T}}) \boldsymbol{\nu}\), which is <b>in-plane</b> of the surface.</li>
+
+</ul>
+</section>
+<section id="slide-org77340cd">
+<h4 id="org77340cd">Properties of Stress Components</h4>
+<ul>
+<li><p>
+In parallel with the parts of the internal traction vectors, the stress components that are normal to the plane are called as <b>normal stress</b> while those components which are in-plane are known as <b>shear stress</b>.
+\[ \mathrm{normal} \left\{ \begin{array}{c} \tau_{11} \\ \tau_{22} \\ \tau_{33} \end{array} \right. \hspace{2em} \mathrm{shear}  \left\{ \begin{array}{c} \tau_{12}, \tau_{13} \\ \tau_{21}, \tau_{23} \\ \tau_{31}, \tau_{32} \end{array} \right. \]
+</p>
+
+<p>
+<span style="color:#2255cc;">Freehand depiction of traction vectors on the cube</span>
+</p></li>
+
+</ul>
+<ul>
+<li class="fragment appear">The normal stresses are given a (\(+\)) sign if they point away from the surface (in <b>tension</b>) and a (\(-\)) sign if they point towards the surface (in <b>compression</b>).</li>
+<li class="fragment appear">The shear component (e.g. \(\tau_{ij}\)) is considered as positive if it is acting in the \(+j\) direction on a plane that has a normal in \(+i\) direction, or is in the \(-j\) direction on a plane that has a normal in \(-i\) direction.</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org51e66a6">
+<h2 id="org51e66a6">(\(\S 1.11\)) Examples to Elementary Traction Fields</h2>
+<div class="outline-text-2" id="text-org51e66a6">
+</div>
+</section>
+<section id="slide-orgd61e5eb">
+<h3 id="orgd61e5eb">Slender Cylindrical (Axial) Members</h3>
+<p>
+A <i>member</i> (independent part of a structure) is said to be <b><i>slender</i></b>, if it has a great length to thickness ratio, i.e., \(L/T>>1\), and a constant or slightly-varying cross section swept along the <b>normal</b> to the cross-section plane (a.k.a. member&rsquo;s <i>longitudinal</i> or <i>axial</i> direction). Such objects in geometry are known as <i>cylinders</i>.
+</p>
+
+<div id="orgb3da95e" class="figure">
+<p><img src="./images/fig1.11.3-members3d.png" alt="fig1.11.3-members3d.png" width="1200px" />
+</p>
+</div>
+</section>
+<section id="slide-org611dc8e">
+<h4 id="org611dc8e">Axially Loaded Cylindrical Members</h4>
+<ul>
+<li><p>
+Consider a member under a <b>compressive</b> force \(W\). We say that the beam is axially loaded without shear. Applying the stress  hypothesis, we will obtain the relevant <b>traction vector</b>. 
+</p>
+
+<div id="org15b0653" class="figure">
+<p><img src="./images/FU94_1.11figure9a-uniaxial.png" alt="FU94_1.11figure9a-uniaxial.png" width="1000px" />
+</p>
+</div></li>
+
+</ul>
+<ul>
+<li class="fragment appear">Relabel coordinates (\(x\to x_1\), \(y\to x_2\), \(z\to x_3\)).</li>
+<li class="fragment appear"><p>
+Take a section of the member using the  \(x_3\) plane from the <i>mid-span</i> (region)
+</p>
+
+<p>
+The mapping \(\boldsymbol{\nu} \to \boldsymbol{e}_3\) yields \(\overset{\nu}{\mathbf{T}} \to \overset{3}{\mathbf{T}}\)
+</p></li>
+
+</ul>
+</section>
+<section id="slide-orgc1c977c">
+<h4 id="orgc1c977c">Derivation of Nominal Normal Stress (Assumptions and Conventions)</h4>
+<p>
+About the traction flow, we assume that:
+</p>
+<ul>
+<li>there is no reason that the load <i>would distribute non-uniformly</i> over the cross-section!! (i.e., there is <b>uniform distribution</b>, \(dW/dA = W/A\), leading to
+\[ \overset{3}{T_3} = \tau_{33} = \sigma = \frac{W}{A}. \]
+Here \(\sigma\) denotes the <b>nominal</b> <i>normal</i> stress. It has units of load per area (e.g. N/cm\(^2\)).</li>
+
+</ul>
+<ul>
+<li class="fragment appear">Under uniaxial loading, and in planes with normals parallel to the load axis, <b>only normal traction</b> arises (no shear tractions, i.e. \(\overset{3}{T_1} = \overset{3}{T_2} = 0\)).</li>
+<li class="fragment appear">Over planes that contain the load axis (whose normal will not not have an \(\boldsymbol{e}_3\) component), <b>zero traction</b> previals!! That means \(\overset{1}{\mathbf{T}}=\mathbf{0}\) and \(\overset{2}{\mathbf{T}}=\mathbf{0}\).</li>
+
+</ul>
+</section>
+<section id="slide-org1d9da88">
+<h4 id="org1d9da88">Example:  Loading of the Femur</h4>
+
+<div id="org02bedfd" class="figure">
+<p><img src="./images/animation-femur.gif" alt="animation-femur.gif" width="500px" />
+</p>
+</div>
+
+<ul>
+<li>Femur is the largest and most massive bone in the our body.</li>
+<li>Assume the load component in the axial-plane to be negligible?? (which is the same as saying the load is entirely axial and no shear component is taken)
+<ol>
+<li>Using average values for a standard female, determine the normal compressive stress.</li>
+<li>Knowing the femur axis deviates from the vertical (gravity axis) on the average by some small angle (e.g. 9 degrees), what is a more realistic state of stress?</li>
+<li>Taking the deviation above as 8 degrees, determine the shear stress to normal stress ratio observed on an axial plane (an axial plane is one which has a normal parallel to the member&rsquo;s axis).</li>
+
+</ol></li>
+
+</ul>
+</section>
+<section id="slide-orgb1ac325">
+<h3 id="orgb1ac325">Plates under Plane Stress</h3>
+</section>
+<section id="slide-org513600d">
+<h3 id="org513600d">Stresses in Pressurized Vessels</h3>
+<div class="outline-text-3" id="text-org513600d">
+</div>
+</section>
+<section id="slide-orgdd70088">
+<h4 id="orgdd70088">Spherical Baloons</h4>
+</section>
+<section id="slide-orgeeee9a1">
+<h4 id="orgeeee9a1">Cylindrical Tubes</h4>
+</section>
+</section>
+<section>
+<section id="slide-org2fd09a6">
+<h2 id="org2fd09a6">(\(\S3.2\)) Laws of Motion</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgb93b6ea">
+<h2 id="orgb93b6ea">(\(\S3.3\)) Cauchy&rsquo;s Formula</h2>
+</section>
+</section>
+<section>
+<section id="slide-org8c32ba0">
+<h2 id="org8c32ba0">(\(\S3.4\)) Equations of Equilibrium</h2>
+</section>
+</section>
+<section>
+<section id="slide-org228fd67">
+<h2 id="org228fd67">(\(\S3.5\)) Transformation of Stress</h2>
+</section>
+</section>
+<section>
+<section id="slide-org593541f">
+<h2 id="org593541f">(\(\S3.7\)) Boundary Conditions</h2>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
