@@ -1,7 +1,7 @@
 #+TITLE:  Chapter 3: The Stress Hypothesis
 #+AUTHOR: Fethi Okyar
 #+DATE: 2026-03-19
-#+SUBTITLE: Reading: [Fung/94] [[../textbook_excerpts/1_TensorAlgebra.pdf][Chapter 3]]
+#+SUBTITLE: Reading: [Fung/94] Chapter 3
 #+STARTUP: overview
 #+REVEAL_THEME: simple
 #+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
@@ -14,7 +14,7 @@
 #+HTML_HEAD_EXTRA: </style>
 
 * ($\S 1.6$) The Stress/Traction Hypothesis
-Consider a material $B$ occupying a spatial region $V$. The body is /transmitting/ a balanced load system shown with /surface forces/ in @@html:<span style="color:red">red</span>@@ and /boundary constraints/ in @@html:<span style="color:#2255cc;">blue</span>@@. A *traction field* arises within the body during this transmission. The word *traction* roughly describes the flow of load per surface. To /illuminate/ the traction field in a region /visualize/ a closed surface $S$ around it and /imagine/ the interaction between the /inside/ ($-$) and the /outside/ ($+$) of $S$. 
+Consider a material $B$ occupying a spatial region $V$. The body is /transmitting/ a balanced load system shown with /surface forces/ in @@html:<span style="color:red">red</span>@@ and /boundary constraints/ in @@html:<span style="color:#2255cc;">blue</span>@@. A *traction field* arises within the body during this transmission. The word *traction* roughly describes the flow of load per unit area. To /illuminate/ the traction field in a region /visualize/ an enclosing surface $S$ around it and /imagine/ the interaction between the /inside/ ($-$) and the /outside/ ($+$) of $S$. 
 #+ATTR_HTML: :width 1600px
 [[./images/FU94_1.6figure2-load.png]]
 
@@ -57,6 +57,12 @@ $$ \overset{\nu}{\mathbf{T}} = \frac{d\mathbf{F}}{dS}. $$
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - The normal stresses are given a ($+$) sign if they point away from the surface (in *tension*) and a ($-$) sign if they point towards the surface (in *compression*).
 - The shear component (e.g. $\tau_{ij}$) is considered as positive if it is acting in the $+j$ direction on a plane that has a normal in $+i$ direction, or is in the $-j$ direction on a plane that has a normal in $-i$ direction.
+*** Examples
+- Show the following stress components on a differential cube element $\tau_{11} = 12$ MPa, $\tau_{21} = -6$ MPa, $\tau_{31} = 5$ MPa, and $\tau_{33} = -8$ MPa, with all the remaining stress components identically equan to zero.
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Write the components shown on the stress cube in matrix form.
+  #+ATTR_HTML: :width 600px
+  [[./images/fig3.1-example1.jpg]]
   
 * ($\S 1.11$) Examples to Elementary Traction Fields
 ** Slender Cylindrical (Axial) Members 
@@ -100,4 +106,7 @@ About the traction flow, we assume that:
 * ($\S3.3$) Cauchy's Formula
 * ($\S3.4$) Equations of Equilibrium
 * ($\S3.5$) Transformation of Stress
+educational application hub:
+- [[https://eduapphub.com/apps/app.php?dir=2Dstresstransform]]
+- https://eduapphub.com/apps/app.php?dir=3Dstresstransform
 * ($\S3.7$) Boundary Conditions
