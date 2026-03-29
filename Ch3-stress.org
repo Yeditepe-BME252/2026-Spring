@@ -13,7 +13,7 @@
 #+HTML_HEAD_EXTRA: pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
 #+HTML_HEAD_EXTRA: </style>
 
-* ($\S 1.6$) The Stress/Traction Hypothesis
+* ($\S1.6$) The Stress/Traction Hypothesis
 Consider a material $B$ occupying a spatial region $V$. The body is /transmitting/ a balanced load system shown with /surface forces/ in @@html:<span style="color:red">red</span>@@ and /boundary constraints/ in @@html:<span style="color:#2255cc;">blue</span>@@. A *traction field* arises within the body during this transmission. The word *traction* roughly describes the flow of load per unit area. To /illuminate/ the traction field in a region /visualize/ an enclosing surface $S$ around it and /imagine/ the interaction between the /inside/ ($-$) and the /outside/ ($+$) of $S$. 
 #+ATTR_HTML: :width 1600px
 [[./images/FU94_1.6figure2-load.png]]
@@ -64,7 +64,7 @@ $$ \overset{\nu}{\mathbf{T}} = \frac{d\mathbf{F}}{dS}. $$
   #+ATTR_HTML: :width 600px
   [[./images/fig3.1-example1.jpg]]
   
-* ($\S 1.11$) Examples to Elementary Traction Fields
+* ($\S1.11$) Examples to Elementary Traction Fields
 ** Slender Cylindrical (Axial) Members 
 A /member/ (independent part of a structure) is said to be */slender/*, if it has a great length to thickness ratio, i.e., $L/T>>1$, and a constant or slightly-varying cross section swept along the *normal* to the cross-section plane (a.k.a. member's /longitudinal/ or /axial/ direction). Such objects in geometry are known as /cylinders/.
 #+ATTR_HTML: :width 1200px
@@ -87,21 +87,89 @@ About the traction flow, we assume that:
   Here $\sigma$ denotes the *nominal* /normal/ stress. It has units of load per area (e.g. N/cm$^2$).
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - Under uniaxial loading, and in planes with normals parallel to the load axis, *only normal traction* arises (no shear tractions, i.e. $\overset{3}{T_1} = \overset{3}{T_2} = 0$).
-- Over planes that contain the load axis (whose normal will not not have an $\boldsymbol{e}_3$ component), *zero traction* previals!! That means $\overset{1}{\mathbf{T}}=\mathbf{0}$ and $\overset{2}{\mathbf{T}}=\mathbf{0}$.
+- Over planes that contain the load axis (whose normal will not not have an $\boldsymbol{e}_3$ component), *zero traction* previals!! That means $\overset{1}{\mathbf{T}}=\mathbf{0}$ and $\overset{2}{\mathbf{T}}=\mathbf{0}$, which yield the state of stress
+  $$ [\tau] = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & \tau_{33} \end{bmatrix} $$
+- The given state of stress (having all shear terms identically zero) is also known as a state of *principal stress*. 
   
-*** Example:  Loading of the Femur
+*** Example: Loading of the Femur
 #+ATTR_HTML: :width 500px
 [[./images/animation-femur.gif]]
 
 - Femur is the largest and most massive bone in the our body.
 - Assume the load component in the axial-plane to be negligible?? (which is the same as saying the load is entirely axial and no shear component is taken)
-  1. Using average values for a standard female, determine the normal compressive stress.
+  1. Using average values for a standard female, determine the normal compressive stress. (search keywords: CDC standard anthropometric measurements female data)
   2. Knowing the femur axis deviates from the vertical (gravity axis) on the average by some small angle (e.g. 9 degrees), what is a more realistic state of stress?
   3. Taking the deviation above as 8 degrees, determine the shear stress to normal stress ratio observed on an axial plane (an axial plane is one which has a normal parallel to the member's axis).
-** Plates under Plane Stress 
+** Plates under Plane Stress
+*** Plane State of Stress
+- thin flat plates or membranes stretched by in-plane load systems
+  #+ATTR_HTML: :width 1600px
+  [[./images/FU94-fig4.1.png]]
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- found in ship hulls, pressurized bodies, wings, panels
+- under these conditions the /out-of-plane/ stress components vanish.
+- if you choose a reference coordinate frame whose any two axes lie along the plate's plane, then you get a reduced stress tensor, such that (continue to next section)
+
+*** Reduction of the Stress Tensor to 2-D
+- We may choose the plate coordinate pair to be $(1,2)$, $(2,3)$, or $(1,3)$, in which cases the corresponding stress tensors would read:
+  $$ \tau_{ij} = [\tau] = \begin{bmatrix}  \tau_{11} & \tau_{12} & 0 \\ \tau_{21} & \tau_{22} & 0 \\ 0 & 0 & 0 \end{bmatrix}, \, \{i,j=1,2\}, \quad \begin{bmatrix} 0 & 0 & 0 \\ 0 & \tau_{22} & \tau_{23} \\ 0 & \tau_{32} & \tau_{33} \end{bmatrix}, \, \{i,j=2,3\}, \quad  \mathrm{or}, \; \begin{bmatrix}  \tau_{11} & 0 & \tau_{13} \\ 0 & 0 & 0 \\ \tau_{31} & 0 & \tau_{33} \end{bmatrix}, \, \{i,j=1,3\} $$
+- The two non-zero coordinate components can be combined in a /reduced/ stress tensor, depicting the /state of plane stress/ as
+  $$ \tau_{ij} = [\tau] = \begin{bmatrix}  \tau_{11} & \tau_{12} \\ \tau_{21} & \tau_{22} \end{bmatrix}, \, \{i,j=1,2\} $$
+- There is no special symbol or indicator, whatsoever, that is used when the dimension of space is reduced from 3 to 2, $[\tau]$ prevails. The dimensionality is understood from the context.
+
+*** The Scapula (A flat bone)
+#+ATTR_HTML: :width 800px
+[[./images/fig1.11.4scapula.jpg]]
+
+*** Loading and Fracture of Scapula
+- The state of /in-plane loading/ of the scapula, and the most frequently observed *fracture modes* (according to [[https://orthoinfo.aaos.org/en/diseases--conditions/scapula-shoulder-blade-fractures/][OrthoInfo]])
+  #+ATTR_HTML: :width 1300px
+  [[./images/fig1.11.4scapulaFBD.png]]
+#+ATTR_REVEAL: :frag (appear appear ...)  
+- A nominal stress calculation does not exist for this case (details about loading and boundary restraints should be provided to pose a /boundary-value problem/)
+  
 ** Stresses in Pressurized Vessels
-*** Spherical Baloons
-*** Cylindrical Tubes
+Many biological examples of pressurized biological tissue may be provided.
+#+ATTR_REVEAL: :frag (appear appear ...)  
+- Lung tissue: Maintains subatmospheric interstitial pressure (−2 to −9 mmHg) due to elastic recoil, crucial for alveolar expansion and gas exchange.
+- Kidney: Encapsulated organ with positive interstitial pressure (up to +10 mmHg), aiding fluid filtration and urine formation.
+- Vasculatory system components, veins are pressurized biological tissues, but they operate under much lower pressure compared to arteries. Venous pressure is typically 5–8 mmHg
+
+*** Simplifying Geometry: Spherical Baloons
+Here, we seek for solution of the state of stress in geometries that are similar to spheres.
+#+ATTR_REVEAL: :frag (appear appear ...)  
+- a *biaxial* state of stress, with the nominal membrane stress labeled as $\sigma$, prevails
+  #+ATTR_HTML: :width 1500px
+  [[./images/fig1.11.7sphericalvessel.png]]  
+- Based on the concept of the /free-body diagram/ (provided above), the balance of forces in equilibrium requires that $\pi (r_o^2 - r_i^2) \sigma = \pi r_i^2 p$,
+- from which, the nominal membrane stress is solved in terms of  $p$, the internal pressure:
+  $$ \sigma = \frac{r_i^2 p}{h(r_o + r_i)} \approx \frac{pr}{2h}, \, \mathrm{when} \; t/r_i \ll 1, \, \mathrm{and} \; r_i \approx r_o \triangleq r $$
+
+#+REVEAL: split
+**** SAMPLE CALCULATION
+A sample physiological calculation of membrane stress in an abdominal aortic aneurysm (AAA) uses patient-specific geometry and biomechanical modeling. For a spherical or ellipsoidal aneurysm under internal pressure, Laplace’s law gives circumferential wall stress as $\sigma = pr/2h$ where the blood pressure $p=120$ mmHg $\approx 16$ kPa, lumen radius, $r = 30$ mm, wall thickness, $t = 1.5$ mm, yields
+$$ \sigma = $$
+
+*** Simplifying Geometry: Cylindrical Tubes
+A cylindrical vessel, a.k.a *the tube* is one of the most important inventions used ubiquitiosly in the world.
+#+ATTR_REVEAL: :frag (appear appear ...)  
+- tubes usually convey pressurized media and the tube walls are subjected to pressurization.
+- there are many biological examples, but the primal one is our veins and arteries.
+- a state of uniaxial or biaxial stress arises in tubes, depending on the longitudinal end conditions.
+  
+*** Stresses in Inflated Tubes
+Similar to the /free-body diagram/ was used in the case of spherical vessels, the cylindrical nominal membrane stress is found based on the below free-body diagram
+#+ATTR_HTML: :width 1500px
+[[./images/fig1.11.7sphericalvessel.png]]  
+#+ATTR_REVEAL: :frag (appear appear ...)  
+- a *biaxial* state of stress endures, with the nominal hoop stress, $\sigma_\theta$, and nominal longitudinal stress, $\sigma_x$, which are not necessarily the same.
+
+
+#+REVEAL: split
+[[https://www.sciencedirect.com/science/article/pii/S0741521498702277][Mechanical wall stress in abdominal aortic aneurysm: Influence of diameter and asymmetry]]
+#+ATTR_HTML: :width 1200px
+[[./images/fig1.11.6abdominalvessel.png]]
+
 * ($\S3.2$) Laws of Motion
 * ($\S3.3$) Cauchy's Formula
 * ($\S3.4$) Equations of Equilibrium
