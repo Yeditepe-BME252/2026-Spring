@@ -39,49 +39,49 @@ pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-org42f7cb6">(\(\S 1.6\)) The Stress/Traction Hypothesis</a></li>
-<li><a href="#/slide-orgeb96e15">(\(\S 1.11\)) Examples to Elementary Traction Fields</a></li>
-<li><a href="#/slide-orgb401cbf">(\(\S3.2\)) Laws of Motion</a></li>
-<li><a href="#/slide-orgab111d8">(\(\S3.3\)) Cauchy&rsquo;s Formula</a></li>
-<li><a href="#/slide-orgfa728f8">(\(\S3.4\)) Equations of Equilibrium</a></li>
-<li><a href="#/slide-orga525200">(\(\S3.5\)) Transformation of Stress</a></li>
-<li><a href="#/slide-org8162e97">(\(\S3.7\)) Boundary Conditions</a></li>
+<li><a href="#/slide-org7916262">(\(\S1.6\)) The Stress/Traction Hypothesis</a></li>
+<li><a href="#/slide-orgeeb1718">(\(\S1.11\)) Examples to Elementary Traction Fields</a></li>
+<li><a href="#/slide-org05cdad8">(\(\S3.2\)) Laws of Motion</a></li>
+<li><a href="#/slide-org26e5706">(\(\S3.3\)) Cauchy&rsquo;s Formula</a></li>
+<li><a href="#/slide-org3333c67">(\(\S3.4\)) Equations of Equilibrium</a></li>
+<li><a href="#/slide-orgd312d7c">(\(\S3.5\)) Transformation of Stress</a></li>
+<li><a href="#/slide-org3a6a649">(\(\S3.7\)) Boundary Conditions</a></li>
 </ul>
 </div>
 </div>
 </section>
 <section>
-<section id="slide-org42f7cb6">
-<h2 id="org42f7cb6">(\(\S 1.6\)) The Stress/Traction Hypothesis</h2>
+<section id="slide-org7916262">
+<h2 id="org7916262">(\(\S1.6\)) The Stress/Traction Hypothesis</h2>
 <p>
 Consider a material \(B\) occupying a spatial region \(V\). The body is <i>transmitting</i> a balanced load system shown with <i>surface forces</i> in <span style="color:red">red</span> and <i>boundary constraints</i> in <span style="color:#2255cc;">blue</span>. A <b>traction field</b> arises within the body during this transmission. The word <b>traction</b> roughly describes the flow of load per unit area. To <i>illuminate</i> the traction field in a region <i>visualize</i> an enclosing surface \(S\) around it and <i>imagine</i> the interaction between the <i>inside</i> (\(-\)) and the <i>outside</i> (\(+\)) of \(S\). 
 </p>
 
-<div id="org01a6ef1" class="figure">
+<div id="orge70a9e5" class="figure">
 <p><img src="./images/FU94_1.6figure2-load.png" alt="FU94_1.6figure2-load.png" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-orga2308f6">
-<h3 id="orga2308f6">The Stress/Traction Hypothesis</h3>
+<section id="slide-orga9b4ac1">
+<h3 id="orga9b4ac1">The Stress/Traction Hypothesis</h3>
 <p>
 Let a neighborhood \(\Delta S\) on \(S\) have an <i>outward unit normal</i> \(\boldsymbol{\nu}\), with its direction pointing outward from the interior. Let the  <i>accumulation of load</i> applied by the (\(+\)) side on the (\(-\)) side passing thru \(\Delta S\) be represented by \(\Delta \mathbf{F}\). The <b>stress hypothesis</b> can be stated: <i>as</i> \(\Delta S\) <i>tends to a small but bounded size</i> \(\alpha\), <i>the ratio</i> \(\Delta \mathbf{F}/\Delta S\) <i>tends to a definite limit</i> \(d\mathbf{F}/dS\), <i>and the moment of the force acting on the surface</i> \(\Delta S\) <i>about any point within the area vanishes</i>. This limiting vector, called as the <b>traction</b> or the <b>stress vector</b> can be written as
 \[ \overset{\nu}{\mathbf{T}} = \frac{d\mathbf{F}}{dS}. \]
 </p>
 
-<div id="org468db39" class="figure">
+<div id="orge4d760e" class="figure">
 <p><img src="./images/FU94_1.6figure2-deltaS.png" alt="FU94_1.6figure2-deltaS.png" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-org17f41cb">
-<h4 id="org17f41cb">Tractions on Cartesian Planes</h4>
+<section id="slide-orge049a99">
+<h4 id="orge049a99">Tractions on Cartesian Planes</h4>
 <ul>
 <li><p>
 At an internal point, the standard procedure is to calculate the tractions \(\overset{1}{\mathbf{T}}, \overset{2}{\mathbf{T}}, \overset{3}{\mathbf{T}}\) that arise on the planes cornered by a Cartesian triad \(\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3\). 
 </p>
 
-<div id="orga47deff" class="figure">
+<div id="org1704096" class="figure">
 <p><img src="./images/FU94_1.6figure2-tractions.png" alt="FU94_1.6figure2-tractions.png" width="1600px" />
 </p>
 </div></li>
@@ -93,23 +93,23 @@ At an internal point, the standard procedure is to calculate the tractions \(\ov
 
 </ul>
 </section>
-<section id="slide-org7dd093a">
-<h4 id="org7dd093a">The Stress Tensor</h4>
+<section id="slide-org04c12e7">
+<h4 id="org04c12e7">The Stress Tensor</h4>
 <ul>
 <li><p>
 The tensor, \(\boldsymbol{\tau}\), constructed by stacking the three Cartesian internal traction vectors in rows is called as the <b>stress tensor</b>. The stress tensor components read
 \[ \begin{bmatrix} \tau_{11} & \tau_{12} & \tau_{13} \\ \tau_{21} & \tau_{22} & \tau_{23} \\ \tau_{31} & \tau_{32} & \tau_{33} \end{bmatrix} = \begin{bmatrix} \overset{1}{T_1} & \overset{1}{T_2} & \overset{1}{T_3} \\ \overset{2}{T_1} & \overset{2}{T_2} & \overset{2}{T_3} \\ \overset{3}{T_1} & \overset{3}{T_2} & \overset{3}{T_3} \end{bmatrix} \hspace{2em} \mathrm{or} \hspace{2em} \tau_{ij} = \overset{i}{T_j} \]
 </p>
 
-<div id="org6ea5649" class="figure">
+<div id="orgca71857" class="figure">
 <p><img src="./images/FU94_3.1figure1.png" alt="FU94_3.1figure1.png" width="1400px" />
 </p>
 </div></li>
 
 </ul>
 </section>
-<section id="slide-org5e93597">
-<h4 id="org5e93597">Properties of Internal Traction Vectors</h4>
+<section id="slide-orgacf621e">
+<h4 id="orgacf621e">Properties of Internal Traction Vectors</h4>
 <ul>
 <li><p>
 The state of stress at a point in a material is described by internal traction vectors on a differential cube element.
@@ -129,8 +129,8 @@ The state of stress at a point in a material is described by internal traction v
 
 </ul>
 </section>
-<section id="slide-orgfb13856">
-<h4 id="orgfb13856">Properties of Stress Components</h4>
+<section id="slide-org54d6033">
+<h4 id="org54d6033">Properties of Stress Components</h4>
 <ul>
 <li><p>
 In parallel with the parts of the internal traction vectors, the stress components that are normal to the plane are called as <b>normal stress</b> while those components which are in-plane are known as <b>shear stress</b>.
@@ -148,8 +148,8 @@ In parallel with the parts of the internal traction vectors, the stress componen
 
 </ul>
 </section>
-<section id="slide-org9e7a984">
-<h4 id="org9e7a984">Examples</h4>
+<section id="slide-orge67d4e3">
+<h4 id="orge67d4e3">Examples</h4>
 <ul>
 <li>Show the following stress components on a differential cube element \(\tau_{11} = 12\) MPa, \(\tau_{21} = -6\) MPa, \(\tau_{31} = 5\) MPa, and \(\tau_{33} = -8\) MPa, with all the remaining stress components identically equan to zero.</li>
 
@@ -159,7 +159,7 @@ In parallel with the parts of the internal traction vectors, the stress componen
 Write the components shown on the stress cube in matrix form.
 </p>
 
-<div id="orgd4db72f" class="figure">
+<div id="org8a443f0" class="figure">
 <p><img src="./images/fig3.1-example1.jpg" alt="fig3.1-example1.jpg" width="600px" />
 </p>
 </div></li>
@@ -168,30 +168,30 @@ Write the components shown on the stress cube in matrix form.
 </section>
 </section>
 <section>
-<section id="slide-orgeb96e15">
-<h2 id="orgeb96e15">(\(\S 1.11\)) Examples to Elementary Traction Fields</h2>
-<div class="outline-text-2" id="text-orgeb96e15">
+<section id="slide-orgeeb1718">
+<h2 id="orgeeb1718">(\(\S1.11\)) Examples to Elementary Traction Fields</h2>
+<div class="outline-text-2" id="text-orgeeb1718">
 </div>
 </section>
-<section id="slide-org29d4906">
-<h3 id="org29d4906">Slender Cylindrical (Axial) Members</h3>
+<section id="slide-org10d19c4">
+<h3 id="org10d19c4">Slender Cylindrical (Axial) Members</h3>
 <p>
 A <i>member</i> (independent part of a structure) is said to be <b><i>slender</i></b>, if it has a great length to thickness ratio, i.e., \(L/T>>1\), and a constant or slightly-varying cross section swept along the <b>normal</b> to the cross-section plane (a.k.a. member&rsquo;s <i>longitudinal</i> or <i>axial</i> direction). Such objects in geometry are known as <i>cylinders</i>.
 </p>
 
-<div id="orgf6c0932" class="figure">
+<div id="org9428dd5" class="figure">
 <p><img src="./images/fig1.11.3-members3d.png" alt="fig1.11.3-members3d.png" width="1200px" />
 </p>
 </div>
 </section>
-<section id="slide-org81a44a7">
-<h4 id="org81a44a7">Axially Loaded Cylindrical Members</h4>
+<section id="slide-org54cb0e0">
+<h4 id="org54cb0e0">Axially Loaded Cylindrical Members</h4>
 <ul>
 <li><p>
 Consider a member under a <b>compressive</b> force \(W\). We say that the beam is axially loaded without shear. Applying the stress  hypothesis, we will obtain the relevant <b>traction vector</b>. 
 </p>
 
-<div id="org5c7d7d4" class="figure">
+<div id="orgb431bf6" class="figure">
 <p><img src="./images/FU94_1.11figure9a-uniaxial.png" alt="FU94_1.11figure9a-uniaxial.png" width="1000px" />
 </p>
 </div></li>
@@ -209,8 +209,8 @@ The mapping \(\boldsymbol{\nu} \to \boldsymbol{e}_3\) yields \(\overset{\nu}{\ma
 
 </ul>
 </section>
-<section id="slide-orgc446c06">
-<h4 id="orgc446c06">Derivation of Nominal Normal Stress (Assumptions and Conventions)</h4>
+<section id="slide-orgd5c234b">
+<h4 id="orgd5c234b">Derivation of Nominal Normal Stress (Assumptions and Conventions)</h4>
 <p>
 About the traction flow, we assume that:
 </p>
@@ -224,42 +224,57 @@ Here \(\sigma\) denotes the <b>nominal</b> <i>normal</i> stress. It has units of
 <li class="fragment appear">Under uniaxial loading, and in planes with normals parallel to the load axis, <b>only normal traction</b> arises (no shear tractions, i.e. \(\overset{3}{T_1} = \overset{3}{T_2} = 0\)).</li>
 <li class="fragment appear">Over planes that contain the load axis (whose normal will not not have an \(\boldsymbol{e}_3\) component), <b>zero traction</b> previals!! That means \(\overset{1}{\mathbf{T}}=\mathbf{0}\) and \(\overset{2}{\mathbf{T}}=\mathbf{0}\), which yield the state of stress
 \[ [\tau] = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & \tau_{33} \end{bmatrix} \]</li>
+<li class="fragment appear">The given state of stress (having all shear terms identically zero) is also known as a state of <b>principal stress</b>.</li>
 
 </ul>
 </section>
-<section id="slide-orgfd69682">
-<h4 id="orgfd69682">Example: Loading of the Femur</h4>
+<section id="slide-org260dec3">
+<h4 id="org260dec3">Example: <a href="https://openoregon.pressbooks.pub/bodyphysics2ed/chapter/stress-and-strain-on-the-body/">Loading of the Femur</a></h4>
 
-<div id="org073168b" class="figure">
+<div id="orgac35838" class="figure">
 <p><img src="./images/animation-femur.gif" alt="animation-femur.gif" width="500px" />
 </p>
 </div>
 
 <ul>
-<li>Femur is the largest and most massive bone in the our body.</li>
-<li>Assume the load component in the axial-plane to be negligible?? (which is the same as saying the load is entirely axial and no shear component is taken)
+<li>Femur is the largest and most massive bone in the our body.
 <ol>
+<li>Assume the load component in the axial-plane to be negligible?? (which is the same as saying the load is entirely axial and no shear component is taken)</li>
 <li>Using average values for a standard female, determine the normal compressive stress. (search keywords: CDC standard anthropometric measurements female data)</li>
 <li>Knowing the femur axis deviates from the vertical (gravity axis) on the average by some small angle (e.g. 9 degrees), what is a more realistic state of stress?</li>
-<li>Taking the deviation above as 8 degrees, determine the shear stress to normal stress ratio observed on an axial plane (an axial plane is one which has a normal parallel to the member&rsquo;s axis).</li>
 
 </ol></li>
 
 </ul>
+
 </section>
-<section id="slide-org3927caa">
-<h3 id="org3927caa">Plates under Plane Stress</h3>
-<div class="outline-text-3" id="text-org3927caa">
+<section id="slide-org260dec3-split">
+<p>
+State of Stress on a Plane that is Not Normal to the Load.
+</p>
+
+<div id="org2dead41" class="figure">
+<p><img src="./images/FU94_1.11figure9c-mod.png" alt="FU94_1.11figure9c-mod.png" width="1900px" />
+</p>
+</div>
+<ul>
+<li>Assume a deviation of 8 degrees between the axial load and the femoral axis, determine the shear stress to normal stress ratio observed on an axial plane.</li>
+
+</ul>
+</section>
+<section id="slide-org26f1abe">
+<h3 id="org26f1abe">Plates under Plane Stress</h3>
+<div class="outline-text-3" id="text-org26f1abe">
 </div>
 </section>
-<section id="slide-org42be613">
-<h4 id="org42be613">Plane State of Stress</h4>
+<section id="slide-orgf45dcab">
+<h4 id="orgf45dcab">Plane State of Stress</h4>
 <ul>
 <li><p>
 thin flat plates or membranes stretched by in-plane load systems
 </p>
 
-<div id="org8d1d328" class="figure">
+<div id="orga9cd891" class="figure">
 <p><img src="./images/FU94-fig4.1.png" alt="FU94-fig4.1.png" width="1600px" />
 </p>
 </div></li>
@@ -272,8 +287,8 @@ thin flat plates or membranes stretched by in-plane load systems
 
 </ul>
 </section>
-<section id="slide-orgd8b03b1">
-<h4 id="orgd8b03b1">Reduction of the Stress Tensor to 2-D</h4>
+<section id="slide-org4d8345e">
+<h4 id="org4d8345e">Reduction of the Stress Tensor to 2-D</h4>
 <ul>
 <li>We may choose the plate coordinate pair to be \((1,2)\), \((2,3)\), or \((1,3)\), in which cases the corresponding stress tensors would read:
 \[ \tau_{ij} = [\tau] = \begin{bmatrix}  \tau_{11} & \tau_{12} & 0 \\ \tau_{21} & \tau_{22} & 0 \\ 0 & 0 & 0 \end{bmatrix}, \, \{i,j=1,2\}, \quad \begin{bmatrix} 0 & 0 & 0 \\ 0 & \tau_{22} & \tau_{23} \\ 0 & \tau_{32} & \tau_{33} \end{bmatrix}, \, \{i,j=2,3\}, \quad  \mathrm{or}, \; \begin{bmatrix}  \tau_{11} & 0 & \tau_{13} \\ 0 & 0 & 0 \\ \tau_{31} & 0 & \tau_{33} \end{bmatrix}, \, \{i,j=1,3\} \]</li>
@@ -283,22 +298,22 @@ thin flat plates or membranes stretched by in-plane load systems
 
 </ul>
 </section>
-<section id="slide-orgab98371">
-<h4 id="orgab98371">The Scapula (A flat bone)</h4>
+<section id="slide-org449db02">
+<h4 id="org449db02">The Scapula (A flat bone)</h4>
 
-<div id="orga9761f5" class="figure">
+<div id="orgdf9f33c" class="figure">
 <p><img src="./images/fig1.11.4scapula.jpg" alt="fig1.11.4scapula.jpg" width="800px" />
 </p>
 </div>
 </section>
-<section id="slide-org8f30d0f">
-<h4 id="org8f30d0f">Loading and Fracture of Scapula</h4>
+<section id="slide-org691d0f7">
+<h4 id="org691d0f7">Loading and Fracture of Scapula</h4>
 <ul>
 <li><p>
 The state of <i>in-plane loading</i> of the scapula, and the most frequently observed <b>fracture modes</b> (according to <a href="https://orthoinfo.aaos.org/en/diseases--conditions/scapula-shoulder-blade-fractures/">OrthoInfo</a>)
 </p>
 
-<div id="orge72906b" class="figure">
+<div id="org129ed82" class="figure">
 <p><img src="./images/fig1.11.4scapulaFBD.png" alt="fig1.11.4scapulaFBD.png" width="1300px" />
 </p>
 </div></li>
@@ -309,8 +324,8 @@ The state of <i>in-plane loading</i> of the scapula, and the most frequently obs
 
 </ul>
 </section>
-<section id="slide-orgb814916">
-<h3 id="orgb814916">Stresses in Pressurized Vessels</h3>
+<section id="slide-orgb369ac2">
+<h3 id="orgb369ac2">Stresses in Pressurized Vessels</h3>
 <p>
 Many biological examples of pressurized biological tissue may be provided.
 </p>
@@ -321,8 +336,8 @@ Many biological examples of pressurized biological tissue may be provided.
 
 </ul>
 </section>
-<section id="slide-org18b3f51">
-<h4 id="org18b3f51">Simplifying Geometry: Spherical Baloons</h4>
+<section id="slide-orgbe91420">
+<h4 id="orgbe91420">Simplifying Geometry: Spherical Baloons</h4>
 <p>
 Here, we seek for solution of the state of stress in geometries that are similar to spheres.
 </p>
@@ -331,7 +346,7 @@ Here, we seek for solution of the state of stress in geometries that are similar
 a <b>biaxial</b> state of stress, with the nominal membrane stress labeled as \(\sigma\), prevails
 </p>
 
-<div id="org95c2558" class="figure">
+<div id="orge3a1ff3" class="figure">
 <p><img src="./images/fig1.11.7sphericalvessel.png" alt="fig1.11.7sphericalvessel.png" width="1500px" />  
 </p>
 </div></li>
@@ -342,49 +357,74 @@ a <b>biaxial</b> state of stress, with the nominal membrane stress labeled as \(
 </ul>
 
 </section>
-<section id="slide-org18b3f51-split">
+<section id="slide-orgbe91420-split">
 <ul class="org-ul">
-<li><a id="orgae14a28"></a>SAMPLE CALCULATION<br />
+<li><a id="org0eb219f"></a>SAMPLE CALCULATION<br />
 <p>
-A sample physiological calculation of membrane stress in an abdominal aortic aneurysm (AAA) uses patient-specific geometry and biomechanical modeling. For a spherical or ellipsoidal aneurysm under internal pressure, Laplace’s law gives circumferential wall stress as \(\sigma = pr/2h\) where the blood pressure $p=120$mmHg$&asymp; 16$kPa,
-lumen radius, $r = 30$mm, wall thickness, $t = 1.5$mm, yields
+A sample physiological calculation of membrane stress in an abdominal aortic aneurysm (AAA) uses patient-specific geometry and biomechanical modeling. For a spherical or ellipsoidal aneurysm under internal pressure, Laplace’s law gives circumferential wall stress as \(\sigma = pr/2h\) where the blood pressure \(p=120\) mmHg \(\approx 16\) kPa, lumen radius, \(r = 30\) mm, wall thickness, \(t = 1.5\) mm, yields
 \[ \sigma = \]
 </p>
 </li>
 </ul>
 </section>
-<section id="slide-org01f1282">
-<h4 id="org01f1282">Simplifying Geometry: Cylindrical Tubes</h4>
+<section id="slide-orgadf172c">
+<h4 id="orgadf172c">Simplifying Geometry: Cylindrical Tubes</h4>
+<p>
+A cylindrical vessel, a.k.a <b>the tube</b> is one of the most important inventions used ubiquitiosly in the world.
+</p>
+<ul>
+<li class="fragment appear">tubes usually convey pressurized media and the tube walls are subjected to pressurization.</li>
+<li class="fragment appear">there are many biological examples, but the primal one is our veins and arteries.</li>
+<li class="fragment ...">a state of uniaxial or biaxial stress arises in tubes, depending on the longitudinal end conditions.</li>
+
+</ul>
 </section>
-<section id="slide-org01f1282-split">
+<section id="slide-orgc7b177d">
+<h4 id="orgc7b177d">Stresses in Inflated Tubes</h4>
+<p>
+Similar to the <i>free-body diagram</i> was used in the case of spherical vessels, the cylindrical nominal membrane stress is found based on the below free-body diagram
+</p>
+
+<div id="orgf2a2788" class="figure">
+<p><img src="./images/fig1.11.8cylindervessel.png" alt="fig1.11.8cylindervessel.png" width="1500px" />  
+</p>
+</div>
+<ul>
+<li class="fragment appear">a <b>biaxial</b> state of stress endures, with the nominal hoop stress, \(\sigma_\theta\), and nominal longitudinal stress, \(\sigma_x\), which are not necessarily the same.</li>
+
+</ul>
+
+
+</section>
+<section id="slide-orgc7b177d-split">
 <p>
 <a href="https://www.sciencedirect.com/science/article/pii/S0741521498702277">Mechanical wall stress in abdominal aortic aneurysm: Influence of diameter and asymmetry</a>
 </p>
 
-<div id="org163e856" class="figure">
+<div id="orgfb13918" class="figure">
 <p><img src="./images/fig1.11.6abdominalvessel.png" alt="fig1.11.6abdominalvessel.png" width="1200px" />
 </p>
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgb401cbf">
-<h2 id="orgb401cbf">(\(\S3.2\)) Laws of Motion</h2>
+<section id="slide-org05cdad8">
+<h2 id="org05cdad8">(\(\S3.2\)) Laws of Motion</h2>
 </section>
 </section>
 <section>
-<section id="slide-orgab111d8">
-<h2 id="orgab111d8">(\(\S3.3\)) Cauchy&rsquo;s Formula</h2>
+<section id="slide-org26e5706">
+<h2 id="org26e5706">(\(\S3.3\)) Cauchy&rsquo;s Formula</h2>
 </section>
 </section>
 <section>
-<section id="slide-orgfa728f8">
-<h2 id="orgfa728f8">(\(\S3.4\)) Equations of Equilibrium</h2>
+<section id="slide-org3333c67">
+<h2 id="org3333c67">(\(\S3.4\)) Equations of Equilibrium</h2>
 </section>
 </section>
 <section>
-<section id="slide-orga525200">
-<h2 id="orga525200">(\(\S3.5\)) Transformation of Stress</h2>
+<section id="slide-orgd312d7c">
+<h2 id="orgd312d7c">(\(\S3.5\)) Transformation of Stress</h2>
 <p>
 educational application hub:
 </p>
@@ -396,8 +436,8 @@ educational application hub:
 </section>
 </section>
 <section>
-<section id="slide-org8162e97">
-<h2 id="org8162e97">(\(\S3.7\)) Boundary Conditions</h2>
+<section id="slide-org3a6a649">
+<h2 id="org3a6a649">(\(\S3.7\)) Boundary Conditions</h2>
 </section>
 </section>
 </div>

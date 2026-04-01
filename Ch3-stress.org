@@ -91,15 +91,22 @@ About the traction flow, we assume that:
   $$ [\tau] = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & \tau_{33} \end{bmatrix} $$
 - The given state of stress (having all shear terms identically zero) is also known as a state of *principal stress*. 
   
-*** Example: Loading of the Femur
+*** Example: [[https://openoregon.pressbooks.pub/bodyphysics2ed/chapter/stress-and-strain-on-the-body/][Loading of the Femur]]
 #+ATTR_HTML: :width 500px
 [[./images/animation-femur.gif]]
 
 - Femur is the largest and most massive bone in the our body.
-- Assume the load component in the axial-plane to be negligible?? (which is the same as saying the load is entirely axial and no shear component is taken)
-  1. Using average values for a standard female, determine the normal compressive stress. (search keywords: CDC standard anthropometric measurements female data)
-  2. Knowing the femur axis deviates from the vertical (gravity axis) on the average by some small angle (e.g. 9 degrees), what is a more realistic state of stress?
-  3. Taking the deviation above as 8 degrees, determine the shear stress to normal stress ratio observed on an axial plane (an axial plane is one which has a normal parallel to the member's axis).
+  1. Assume the load component in the axial-plane to be negligible?? (which is the same as saying the load is entirely axial and no shear component is taken)
+  2. Using average values for a standard female, determine the normal compressive stress. (search keywords: CDC standard anthropometric measurements female data)
+  3. Knowing the femur axis deviates from the vertical (gravity axis) on the average by some small angle (e.g. 9 degrees), what is a more realistic state of stress?
+ 
+#+REVEAL: split
+State of Stress on a Plane that is Not Normal to the Load.
+#+ATTR_HTML: :width 1900px
+[[./images/FU94_1.11figure9c-mod.png]]
+- Assume a deviation of 8 degrees between the axial load and the femoral axis, determine the shear stress to normal stress ratio observed on an axial plane.
+
+
 ** Plates under Plane Stress
 *** Plane State of Stress
 - thin flat plates or membranes stretched by in-plane load systems
@@ -160,7 +167,7 @@ A cylindrical vessel, a.k.a *the tube* is one of the most important inventions u
 *** Stresses in Inflated Tubes
 Similar to the /free-body diagram/ was used in the case of spherical vessels, the cylindrical nominal membrane stress is found based on the below free-body diagram
 #+ATTR_HTML: :width 1500px
-[[./images/fig1.11.7sphericalvessel.png]]  
+[[./images/fig1.11.8cylindervessel.png]]  
 #+ATTR_REVEAL: :frag (appear appear ...)  
 - a *biaxial* state of stress endures, with the nominal hoop stress, $\sigma_\theta$, and nominal longitudinal stress, $\sigma_x$, which are not necessarily the same.
 
