@@ -50,9 +50,9 @@ Jove: a scientific educational video content provider with free access through Y
 | 9/3  | Vector Calculus                | Indicial Notation                  |
 | 16/3 | Coordinate Transformations     | Gradient Operator                  |
 | 23/3 | Quiz 2                         | Stress Tensor, [[./Ch3-stress.html][Ch.3]]                |
-| 30/3 | Laws of Motion                 | Transformation of Stress           |
-| 6/4  | Stress Boundary Conditions     | States of Stress                   |
-| 13/4 | Mohr's Circle for Plane Stress | Principal Stresses                 |
+| 30/3 | Quiz 3                         | Elementary Examples of Stress      |
+| 6/4  | Laws of Motion                 | Cauchy's Formula, Transformation   |
+| 13/4 | Boundary Conditions            | Principal Stresses                 |
 | 20/4 | Deformation                    | /National Sovereignty Day Holiday/ |
 | 27/4 | Strain                         | Geometric Interpretation           |
 | 4/5  | Other Strain Measures          | Velocity Fields and Compatibility  |

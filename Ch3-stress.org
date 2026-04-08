@@ -214,8 +214,64 @@ $$ \int_{\partial B(t)} \overset{\nu}{\boldsymbol{t}} dA +  \int_{B(t)} \boldsym
   $$ \int_{\partial B(t)} \boldsymbol{r} \times \overset{\nu}{\boldsymbol{t}} dA +  \int_{B(t)} \boldsymbol{r} \times \boldsymbol{b} dV =  \int_{B(t)} (\boldsymbol{r} \times \boldsymbol{v} \rho dV)^{\!\bullet} $$
 
 * ($\S3.3$) Cauchy's Formula
-* ($\S3.4$) Equations of Equilibrium
-* ($\S3.5$) Transformation of Stress
+Relates the components of the traction that resides over a plane with a normal $\nu$, with the unit normal and the stress tensor components.
+$$ \overset{\nu}{t_j} = \nu_i \tau_{ij} $$
+Note that similar relations between the traction vector components on cartesian planes, the base vector and stress tensor components exists:
+\begin{align}
+ \overset{1}{t_j} & = \boldsymbol{e}_{1i} \tau_{ij} \\
+ \overset{2}{t_j} & = \boldsymbol{e}_{2i} \tau_{ij} \\
+ \overset{3}{t_j} & = \boldsymbol{e}_{3i} \tau_{ij} \\
+\end{align}
+ 
+#+REVEAL: split
+#+ATTR_HTML: :width 1600px
+[[./images/fig3.3-cubecut.jpg]]
+#+ATTR_REVEAL: :frag (appear)  
+- The internal surface traction at a point $P$ over a plane with a normal $\nu$ was defined by $\overset{\nu}{\boldsymbol{T}}$ or $\overset{\nu}{\boldsymbol{t}}$. The traction over the opposite plane (with a normal $-\nu$) is equal in magnitude but opposite in direction, i.e. $\overset{-\nu}{\boldsymbol{t}} = -\overset{\nu}{\boldsymbol{t}}$.
+- This is also true for the tractions that lie over cartesian planes, e.g.  $\overset{-1}{\boldsymbol{t}} = -\overset{1}{\boldsymbol{t}}$, etc.
+- From geometry, we define the area formed by the intersection of an oblique plane with normal $\nu$, and the three other cartesian planes, as $dS$.
+- The projection of $dS$ onto the cartesian plane $i$ (perpendicular to $x_i$) is given by $dS_i = \nu_i dS$.
+
+** Motion Law Applied to a Tetrahedron Cut
+#+ATTR_HTML: :width 1100px
+[[./images/FU94_3.3figure5.png]]
+#+ATTR_REVEAL: :frag (appear)  
+- For the tetrahedron cut with four surfaces ($dS_i, dS$) and volume $dV={{1}\over{3}}h dS$:
+- Surface forces: $-\overset{1}{\boldsymbol{t}} dS_1$, $-\overset{2}{\boldsymbol{t}} dS_2$, $-\overset{3}{\boldsymbol{t}} dS_3$ on cartesian planes and $\overset{\nu}{\boldsymbol{t}} dS$ on the oblique plane
+- Body force: $\boldsymbol{b} {{1}\over{3}}h dS$.
+- Inertial term: $\dot{\boldsymbol{v}} {{1}\over{3}}h dS$.
+
+#+REVEAL: split
+#+ATTR_HTML: :width 1100px
+[[./images/FU94_3.3figure5.png]]
+#+ATTR_REVEAL: :frag (appear)  
+- The balance of linear momentum for the tetrahedron cut reads:
+  $$ -\overset{1}{\boldsymbol{t}} dS_1 - \overset{2}{\boldsymbol{t}} dS_2 - \overset{3}{\boldsymbol{t}} dS_3 + \overset{\nu}{\boldsymbol{t}} dS + \boldsymbol{b} {{1}\over{3}}h dS = \dot{\boldsymbol{v}} {{1}\over{3}}h dS $$
+- Replacing $dS_i = \nu_i dS$, dividing by $dS$, and taking the limit as $h \to 0$, we obtain
+  $$ \overset{\nu}{\boldsymbol{t}} = \nu_1 \overset{1}{\boldsymbol{t}} + \nu_2 \overset{2}{\boldsymbol{t}} + \nu_3 \overset{3}{\boldsymbol{t}} $$
+
+#+REVEAL: split
+#+ATTR_HTML: :width 1100px
+[[./images/FU94_3.3figure5.png]]
+#+ATTR_REVEAL: :frag (appear)  
+- Arranging the components $\nu_i$ in a vector form and the vectors $\overset{i}{\boldsymbol{t}}$ in a matrix form yields
+  $$ \overset{\nu}{\boldsymbol{t}} = \{\nu_1\; \nu_2\; \nu_3 \} \begin{bmatrix} -\; \overset{1}{\boldsymbol{t}} \to \\ -\; \overset{2}{\boldsymbol{t}} \to \\ -\; \overset{3}{\boldsymbol{t}} \to \end{bmatrix} $$
+- and noting that the matrix components $\overset{i}{t}_j$ corresponds identically with the stress tensor components $\tau_{ij}$, we get the Cauchy's Formula $\overset{\nu}{t}_j = \nu_i \tau_{ij}$. 
+
+* ($\S3.5$) Transformation of Stress Components
+Remember how coordinates of a point, $x_j,\,j=1,2,3$, could be transformed from the basis $\boldsymbol{e}_j$ into another bases $\boldsymbol{e}_{i'}$?
+- We the rotation tensor definition $\beta_{i'j} = \boldsymbol{e}_{i'} \cdot \boldsymbol{e}_j$ for this purpose, and write the transformed coordinates as
+  $$ x_{i'} = \beta_{i'j} x_j $$
+- Can this approach be used to transform the stress tensor components, $\tau_{ij} \to \tau_{i'j'}$?
+
+** The Rotation Tensor Transforms a Second-Order Tensor
+#+ATTR_HTML: :width 1100px
+[[./images/FU94_3.5figure9.png]]
+#+ATTR_REVEAL: :frag (appear)  
+- Stress is a second-order tensor with two indices $\tau_{ij}$ where the components are expressed with respect to a particular coordinate frame using a set of basis vectors, $\boldsymbol{e}_i$.
+- Consider an alternative coordinate frame using it's own set of basis vectors, $\boldsymbol{e}_{j'}$.
+- How are the stress components in the two frames, $\tau_{ij}$ and $\tau_{i'j'}$ related?
+
 educational application hub:
 - [[https://eduapphub.com/apps/app.php?dir=2Dstresstransform]]
 - https://eduapphub.com/apps/app.php?dir=3Dstresstransform
