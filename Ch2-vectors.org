@@ -180,8 +180,11 @@ It may be instructive to revisit the ideas of /combinations/ and /permutations/
   $$ \frac{d}{dt}m\boldsymbol{v} = \sum_i \boldsymbol{F}^i $$
   essentially provides three equations in a 3-D space
 
-#+REVEAL: split
-Or consider describing a plane with normal $\boldsymbol{n}$ that is at a distance $p$ from a point $O$.
+*** Describing a Plane via it's Normal
+:PROPERTIES:
+:CUSTOM_ID: plane-normal
+:END:
+Consider describing a plane with normal $\boldsymbol{n}$ that is at a distance $p$ from a point $O$.
 #+ATTR_REVEAL: :frag (appear)
 - We can show that the position vector $\boldsymbol{r}$ for any point $P$ that starts from $O$ and end up in this plane satisfies $\boldsymbol{r} \cdot \boldsymbol{n} = p$.
   #+ATTR_HTML: :width 1200px

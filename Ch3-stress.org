@@ -244,35 +244,64 @@ Note that similar relations between the traction vector components on cartesian 
 #+REVEAL: split
 #+ATTR_HTML: :width 1100px
 [[./images/FU94_3.3figure5.png]]
-#+ATTR_REVEAL: :frag (appear)  
 - The balance of linear momentum for the tetrahedron cut reads:
-  $$ -\overset{1}{\boldsymbol{t}} dS_1 - \overset{2}{\boldsymbol{t}} dS_2 - \overset{3}{\boldsymbol{t}} dS_3 + \overset{\nu}{\boldsymbol{t}} dS + \boldsymbol{b} {{1}\over{3}}h dS = \dot{\boldsymbol{v}} {{1}\over{3}}h dS $$
+  $$ -\overset{1}{\boldsymbol{t}} dS_1 - \overset{2}{\boldsymbol{t}} dS_2 - \overset{3}{\boldsymbol{t}} dS_3 + \overset{\nu}{\boldsymbol{t}} dS + \boldsymbol{b} {{h}\over{3}} dS = \dot{\boldsymbol{v}} {{h}\over{3}} dS $$
+#+ATTR_REVEAL: :frag (appear)  
 - Replacing $dS_i = \nu_i dS$, dividing by $dS$, and taking the limit as $h \to 0$, we obtain
   $$ \overset{\nu}{\boldsymbol{t}} = \nu_1 \overset{1}{\boldsymbol{t}} + \nu_2 \overset{2}{\boldsymbol{t}} + \nu_3 \overset{3}{\boldsymbol{t}} $$
 
 #+REVEAL: split
 #+ATTR_HTML: :width 1100px
 [[./images/FU94_3.3figure5.png]]
-#+ATTR_REVEAL: :frag (appear)  
 - Arranging the components $\nu_i$ in a vector form and the vectors $\overset{i}{\boldsymbol{t}}$ in a matrix form yields
   $$ \overset{\nu}{\boldsymbol{t}} = \{\nu_1\; \nu_2\; \nu_3 \} \begin{bmatrix} -\; \overset{1}{\boldsymbol{t}} \to \\ -\; \overset{2}{\boldsymbol{t}} \to \\ -\; \overset{3}{\boldsymbol{t}} \to \end{bmatrix} $$
+#+ATTR_REVEAL: :frag (appear)  
 - and noting that the matrix components $\overset{i}{t}_j$ corresponds identically with the stress tensor components $\tau_{ij}$, we get the Cauchy's Formula $\overset{\nu}{t}_j = \nu_i \tau_{ij}$. 
 
+*** Sample Problem 1: ([[./Ch2-vectors.html::#plane-normal][use plane formula]])
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_3.3problem7.png]]
+
+*** Sample Problem 2
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_3.3problem8.png]]
+
 * ($\S3.5$) Transformation of Stress Components
-Remember how coordinates of a point, $x_j,\,j=1,2,3$, could be transformed from the basis $\boldsymbol{e}_j$ into another bases $\boldsymbol{e}_{i'}$?
-- We the rotation tensor definition $\beta_{i'j} = \boldsymbol{e}_{i'} \cdot \boldsymbol{e}_j$ for this purpose, and write the transformed coordinates as
+Remember how coordinates of a point, $x_j$, could be transformed from the basis $\boldsymbol{e}_j$ into another bases $\boldsymbol{e}_{i'}$?
+- We used the rotation tensor definition $\beta_{i'j} = \boldsymbol{e}_{i'} \cdot \boldsymbol{e}_j$ for this purpose, and wrote the transformed coordinates as
   $$ x_{i'} = \beta_{i'j} x_j $$
 - Can this approach be used to transform the stress tensor components, $\tau_{ij} \to \tau_{i'j'}$?
 
 ** The Rotation Tensor Transforms a Second-Order Tensor
-#+ATTR_HTML: :width 1100px
+#+ATTR_HTML: :width 1000px
 [[./images/FU94_3.5figure9.png]]
 #+ATTR_REVEAL: :frag (appear)  
 - Stress is a second-order tensor with two indices $\tau_{ij}$ where the components are expressed with respect to a particular coordinate frame using a set of basis vectors, $\boldsymbol{e}_i$.
 - Consider an alternative coordinate frame using it's own set of basis vectors, $\boldsymbol{e}_{j'}$.
 - How are the stress components in the two frames, $\tau_{ij}$ and $\tau_{i'j'}$ related?
 
-educational application hub:
+#+REVEAL: split
+#+ATTR_HTML: :width 1000px
+[[./images/FU94_3.5figure9.png]]
+- As it turns out each one of the indices of a higher-order tensor can be and should be transformed by a coordinate transformation operation
+#+ATTR_REVEAL: :frag (appear)  
+- Thus, for a second-order tensor such as stress, two transformations are in order, as
+  $$ \tau_{i'j'} = \beta_{i'i} \beta_{j'j} \tau_{ij}. $$
+- Noting the order in which inner product takes place, the matrix form reveals
+  $$ [\tau'] = [\beta] [\tau] [\beta]^T $$
+  where a normal matrix multiplication occurs in a row-column operation which a transposed multiplication occurs in a column-column operation. 
+  
+*** Educational Application Hub:
+Tools for transforming components of the second-order stress tensor
 - [[https://eduapphub.com/apps/app.php?dir=2Dstresstransform]]
 - https://eduapphub.com/apps/app.php?dir=3Dstresstransform
+
+*** Sample Problem 1
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_3.4problem6.png]]
+
+*** Sample Problem 2
+#+ATTR_HTML: :width 800px
+[[./images/fig3.4-problem1.jpg]]
+
 * ($\S3.7$) Boundary Conditions
