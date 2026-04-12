@@ -1,0 +1,142 @@
+\documentclass[tikz, border=14pt]{standalone}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta, calc}
+
+%% ── Colours ──────────────────────────────────────────────────
+\definecolor{mfill} {RGB}{200,218,240}
+\definecolor{mfillD}{RGB}{155,182,215}
+\definecolor{mfillT}{RGB}{228,238,250}
+\definecolor{mline} {RGB}{ 40, 70,130}
+\definecolor{cfill} {RGB}{255,238,185}
+\definecolor{cline} {RGB}{148, 98,  0}
+\definecolor{dcol}  {RGB}{148,  0,  0}
+\definecolor{acol}  {RGB}{ 10,110, 10}
+\definecolor{hfill} {RGB}{240,242,245}
+
+\tikzset{
+  ME/.style={draw=mline, line width=0.85pt},
+  CE/.style={draw=cline, line width=1.10pt},
+  DA/.style={dcol,
+    {Latex[length=3pt,width=2pt]}-{Latex[length=3pt,width=2pt]},
+    line width=0.60pt},
+  DE/.style={dcol, line width=0.45pt},
+  AX/.style={acol, line width=0.65pt,
+    dash pattern=on 5.5pt off 1.8pt on 1.2pt off 1.8pt},
+}
+
+%% ── View: elevation 72 deg, azimuth 115 deg ─────────────────
+% \tdplotsetmaincoords{70}{110}
+\tdplotsetmaincoords{20}{240}
+
+\begin{document}
+\begin{tikzpicture}[tdplot_main_coords]
+
+%%=============================================================
+%% GLOBAL PARAMETERS
+%%=============================================================
+\pgfmathsetmacro{\LL}{5.5}    % member length (x-axis)
+\pgfmathsetmacro{\MX}{\LL/2}  % mid-span x (cut plane)
+\pgfmathsetmacro{\SEP}{3.8}   % lateral spacing (y-axis)
+
+%%=============================================================
+%% MEMBER 2 – SOLID CIRCULAR  (radius Ro)
+%% Centre at y=SEP
+%%=============================================================
+\pgfmathsetmacro{\Ro}{1.25}
+\pgfmathsetmacro{\TH}{136}
+\pgfmathsetmacro{\YB}{\SEP}
+
+% Dim r_o  (upper-left direction in yz-plane)
+\pgfmathsetmacro{\rox}{\Ro*0.50}
+\pgfmathsetmacro{\roz}{\Ro*0.87}
+
+% Dim L
+\pgfmathsetmacro{\Lbot}{\Ro+0.35}
+
+%%=============================================================
+%% MEMBER 3 – HOLLOW CIRCULAR  (Ri inner, Ro outer)
+%% Centre at y=2*SEP
+%%=============================================================
+\pgfmathsetmacro{\Roo}{\Ro}
+\pgfmathsetmacro{\Ri}{0.9}
+\pgfmathsetmacro{\YC}{2*\SEP}
+
+% FILLED REGIONS
+%% Back outer ellipse
+%\fill[mfill]
+%  plot[domain=0:360, samples=72, smooth]
+%  ({0}, {\YC + \Roo*cos(\x)}, {\Roo*sin(\x)}) -- cycle;
+%% Cut annular face
+%\fill[cfill, opacity=0.92]
+%  plot[domain=0:360, samples=72, smooth]
+%  ({\MX}, {\YC + \Roo*cos(\x)}, {\Roo*sin(\x)}) -- cycle;
+%% Front inner hole
+%\fill[mfillD!140]
+%  plot[domain=0:360, samples=72, smooth]
+%  ({\LL}, {\YC + \Ri*cos(\x)}, {\Ri*sin(\x)}) -- cycle;
+%% Front outer ellipse
+%\fill[mfillD, opacity=0.7]
+%  plot[domain=0:360, samples=72, smooth]
+%  ({\LL}, {\YC + \Roo*cos(\x)}, {\Roo*sin(\x)}) -- cycle;
+%% Body silhouette
+%\fill[mfill!80, opacity=.5]
+%  (0, {\YC + \Ro*cos(\TH)}, {\Ro*sin(\TH)}) -- (\LL, {\YC + \Ro*cos(\TH)}, {\Ro*sin(\TH)}) -- (\LL, {\YC + \Ro*cos(\TH+180)}, {\Ro*sin(\TH+180)}) -- (0, {\YC + \Ro*cos(\TH+180)}, {\Ro*sin(\TH+180)}) -- cycle;
+  
+% Back outer ellipse
+\draw[mline, line width=0.85pt]
+  plot[domain=0:360, samples=72, smooth]
+  ({0}, {\YC + \Roo*cos(\x)}, {\Roo*sin(\x)});
+
+% moved back inner hole above the body silhouette
+\draw[mline, dashed, line width=0.85pt]
+  plot[domain=0:360, samples=72, smooth]
+  ({0}, {\YC + \Ri*cos(\x)}, {\Ri*sin(\x)});
+
+% Cut annular face
+\draw[cline, line width=1.1pt]
+  plot[domain=0:360, samples=72, smooth]
+  ({\MX}, {\YC + \Roo*cos(\x)}, {\Roo*sin(\x)});
+\draw[cline, line width=1.1pt]
+  plot[domain=0:360, samples=72, smooth]
+  ({\MX}, {\YC + \Ri*cos(\x)}, {\Ri*sin(\x)});
+
+% Body silhouette
+\draw[mline, line width=0.85pt] (0, {\YC + \Ro*cos(\TH)}, {\Ro*sin(\TH)}) -- (\LL, {\YC + \Ro*cos(\TH)}, {\Ro*sin(\TH)});
+\draw[mline, line width=0.85pt] (\LL, {\YC + \Ro*cos(\TH+180)}, {\Ro*sin(\TH+180)}) -- (0, {\YC + \Ro*cos(\TH+180)}, {\Ro*sin(\TH+180)});
+
+% Front outer ellipse
+\draw[mline, line width=0.85pt]
+  plot[domain=0:360, samples=72, smooth]
+  ({\LL}, {\YC + \Roo*cos(\x)}, {\Roo*sin(\x)});
+% Front inner hole
+\draw[mline, line width=0.85pt]
+  plot[domain=0:360, samples=72, smooth]
+  ({\LL}, {\YC + \Ri*cos(\x)}, {\Ri*sin(\x)});
+
+% Axis
+\draw[AX] (-0.55,\YC,0)--(\LL+0.65,\YC,0);
+
+% Dim r_o  (upper-left)
+\pgfmathsetmacro{\rox}{\Roo*0.50}
+\pgfmathsetmacro{\roz}{\Roo*0.87}
+\draw[DA] (\MX,\YC,0)--(\MX,{\YC+\rox},{\roz});
+\node[dcol, font=\small] at (\MX,{\YC+\rox*0.5},{\roz}) [above right] {$r_o$};
+
+% Dim r_i  (lower-left)
+\pgfmathsetmacro{\rix}{\Ri*0.50}
+\pgfmathsetmacro{\riz}{\Ri*0.87}
+\draw[DA] (\MX,\YC,0)--(\MX,{\YC+\rix},{-\riz});
+\node[dcol, font=\small] at (\MX,{\YC+\rix*0.5},{-\riz}) [below right] {$r_i$};
+
+% Dim L
+\pgfmathsetmacro{\Lbot}{\Ro+0.35}
+\draw[DE] (0,\YC,\Lbot-0.2)--(0,\YC,\Lbot+0.2);
+\draw[DE] (\LL,\YC,\Lbot-0.2)--(\LL,\YC,\Lbot+0.2);
+\draw[DA] (0,\YC,\Lbot+0.1)--(\LL,\YC,\Lbot+0.1);
+\node[dcol, font=\small] at (\MX,\YC,\Lbot+0.14) [above] {$L$};
+
+
+\end{tikzpicture}
+\end{document}

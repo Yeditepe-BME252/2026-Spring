@@ -20,21 +20,21 @@ Consider a material $B$ occupying a spatial region $V$. The body is /transmittin
 
 ** The Stress/Traction Hypothesis
 Let a neighborhood $\Delta S$ on $S$ have an /outward unit normal/ $\boldsymbol{\nu}$, with its direction pointing outward from the interior. Let the  /accumulation of load/ applied by the ($+$) side on the ($-$) side passing thru $\Delta S$ be represented by $\Delta \mathbf{F}$. The *stress hypothesis* can be stated: /as/ $\Delta S$ /tends to a small but bounded size/ $\alpha$, /the ratio/ $\Delta \mathbf{F}/\Delta S$ /tends to a definite limit/ $d\mathbf{F}/dS$, /and the moment of the force acting on the surface/ $\Delta S$ /about any point within the area vanishes/. This limiting vector, called as the *traction* or the *stress vector* can be written as
-$$ \overset{\nu}{\mathbf{T}} = \frac{d\mathbf{F}}{dS}. $$
+$$ \overset{\nu}{\mathbf{T}} = \overset{\nu}{\mathbf{t}} = \frac{d\mathbf{F}}{dS}. $$
 #+ATTR_HTML: :width 1600px
 [[./images/FU94_1.6figure2-deltaS.png]]
 
 *** Tractions on Cartesian Planes
-- At an internal point, the standard procedure is to calculate the tractions $\overset{1}{\mathbf{T}}, \overset{2}{\mathbf{T}}, \overset{3}{\mathbf{T}}$ that arise on the planes cornered by a Cartesian triad $\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3$. 
+- At an internal point, the standard procedure is to calculate the tractions $\overset{1}{\boldsymbol{t}}, \overset{2}{\boldsymbol{t}}, \overset{3}{\boldsymbol{t}}$ that arise on the planes cornered by a Cartesian triad $\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3$. 
   #+ATTR_HTML: :width 1600px
   [[./images/FU94_1.6figure2-tractions.png]]
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - We combine the three Cartesian tractions as the columns of the transpose of a tensor $\boldsymbol{\tau}$ as
-  $$ \left[ \overset{1}{\mathbf{T}}, \overset{2}{\mathbf{T}}, \overset{3}{\mathbf{T}} \right] \triangleq [\tau]^\mathsf{T}  $$
+  $$ \left[ \overset{1}{\boldsymbol{t}}, \overset{2}{\boldsymbol{t}}, \overset{3}{\boldsymbol{t}} \right] \triangleq [\tau]^\mathsf{T}  $$
 
 *** The Stress Tensor
 - The tensor, $\boldsymbol{\tau}$, constructed by stacking the three Cartesian internal traction vectors in rows is called as the *stress tensor*. The stress tensor components read
-  $$ \begin{bmatrix} \tau_{11} & \tau_{12} & \tau_{13} \\ \tau_{21} & \tau_{22} & \tau_{23} \\ \tau_{31} & \tau_{32} & \tau_{33} \end{bmatrix} = \begin{bmatrix} \overset{1}{T_1} & \overset{1}{T_2} & \overset{1}{T_3} \\ \overset{2}{T_1} & \overset{2}{T_2} & \overset{2}{T_3} \\ \overset{3}{T_1} & \overset{3}{T_2} & \overset{3}{T_3} \end{bmatrix} \hspace{2em} \mathrm{or} \hspace{2em} \tau_{ij} = \overset{i}{T_j} $$
+  $$ \begin{bmatrix} \tau_{11} & \tau_{12} & \tau_{13} \\ \tau_{21} & \tau_{22} & \tau_{23} \\ \tau_{31} & \tau_{32} & \tau_{33} \end{bmatrix} = \begin{bmatrix} \overset{ 1}{t_1} & \overset{1}{t_2} & \overset{1}{t_3} \\ \overset{2}{t_1} & \overset{2}{t_2} & \overset{2}{t_3} \\ \overset{3}{t_1} & \overset{3}{t_2} & \overset{3}{t_3} \end{bmatrix} \hspace{2em} \mathrm{or} \hspace{2em} \tau_{ij} = \overset{i}{t_j} $$
   #+ATTR_HTML: :width 1400px
   [[./images/FU94_3.1figure1.png]]
 
@@ -44,10 +44,10 @@ $$ \overset{\nu}{\mathbf{T}} = \frac{d\mathbf{F}}{dS}. $$
   @@html:<span style="color:#2255cc;">Freehand depiction of traction vectors on the cube</span>@@
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - The differential cube has six faces, three of which have ($+$) normals and the other three have ($-$) normals.
-- The three traction vectors corresponding to ($+$) faces are  $\overset{1}{\mathbf{T}}, \overset{2}{\mathbf{T}}, \overset{3}{\mathbf{T}}$, and the other three associated with the ($-$) faces are $\overset{-1}{\mathbf{T}}, \overset{-2}{\mathbf{T}}, \overset{-3}{\mathbf{T}}$.
+- The three traction vectors corresponding to ($+$) faces are  $\overset{1}{\boldsymbol{t}}, \overset{2}{\boldsymbol{t}}, \overset{3}{\boldsymbol{t}}$, and the other three associated with the ($-$) faces are $\overset{-1}{\boldsymbol{t}}, \overset{-2}{\boldsymbol{t}}, \overset{-3}{\boldsymbol{t}}$.
 - The action-reaction principle of Newton can be used to relate the traction vectors on opposite cube faces as
-   $$ \overset{i}{\mathbf{T}} = -\overset{-i}{\mathbf{T}} \hspace{2em} \mathrm{or} \hspace{2em} \overset{i}{T_j} = -\overset{-i}{T_j} $$
-- It is standard convention to decompose the traction vector, $\overset{\nu}{\mathbf{T}}$, into it's *normal* part, $(\boldsymbol{\nu} \cdot \overset{\nu}{\mathbf{T}}) \boldsymbol{\nu}$, and it's remaining part, $\overset{\nu}{\mathbf{T}} - (\boldsymbol{\nu} \cdot \overset{\nu}{\mathbf{T}}) \boldsymbol{\nu}$, which is *in-plane* of the surface.
+   $$ \overset{i}{\boldsymbol{t}} = -\overset{-i}{\boldsymbol{t}} \hspace{2em} \mathrm{or} \hspace{2em} \overset{i}{t_j} = -\overset{-i}{t_j} $$
+- It is standard convention to decompose the traction vector, $\overset{\nu}{\boldsymbol{t}}$, into it's *normal* part, $(\boldsymbol{\nu} \cdot \overset{\nu}{\boldsymbol{t}}) \boldsymbol{\nu}$, and it's remaining part, $\overset{\nu}{\boldsymbol{t}} - (\boldsymbol{\nu} \cdot \overset{\nu}{\boldsymbol{t}}) \boldsymbol{\nu}$, which is *in-plane* of the surface.
 
 *** Properties of Stress Components
 - In parallel with the parts of the internal traction vectors, the stress components that are normal to the plane are called as *normal stress* while those components which are in-plane are known as *shear stress*.
@@ -78,16 +78,16 @@ A /member/ (independent part of a structure) is said to be */slender/*, if it ha
 - Relabel coordinates ($x\to x_1$, $y\to x_2$, $z\to x_3$).
 - Take a section of the member using the  $x_3$ plane from the /mid-span/ (region)
 
-  The mapping $\boldsymbol{\nu} \to \boldsymbol{e}_3$ yields $\overset{\nu}{\mathbf{T}} \to \overset{3}{\mathbf{T}}$
+  The mapping $\boldsymbol{\nu} \to \boldsymbol{e}_3$ yields $\overset{\nu}{\boldsymbol{t}} \to \overset{3}{\boldsymbol{t}}$
 
 *** Derivation of Nominal Normal Stress (Assumptions and Conventions)
 About the traction flow, we assume that:
 - there is no reason that the load /would distribute non-uniformly/ over the cross-section!! (i.e., there is *uniform distribution*, $dW/dA = W/A$, leading to
-  $$ \overset{3}{T_3} = \tau_{33} = \sigma = \frac{W}{A}. $$
+  $$ \overset{3}{t_3} = \tau_{33} = \sigma = \frac{W}{A}. $$
   Here $\sigma$ denotes the *nominal* /normal/ stress. It has units of load per area (e.g. N/cm$^2$).
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- Under uniaxial loading, and in planes with normals parallel to the load axis, *only normal traction* arises (no shear tractions, i.e. $\overset{3}{T_1} = \overset{3}{T_2} = 0$).
-- Over planes that contain the load axis (whose normal will not not have an $\boldsymbol{e}_3$ component), *zero traction* previals!! That means $\overset{1}{\mathbf{T}}=\mathbf{0}$ and $\overset{2}{\mathbf{T}}=\mathbf{0}$, which yield the state of stress
+- Under uniaxial loading, and in planes with normals parallel to the load axis, *only normal traction* arises (no shear tractions, i.e. $\overset{3}{t_1} = \overset{3}{t_2} = 0$).
+- Over planes that contain the load axis (whose normal will not not have an $\boldsymbol{e}_3$ component), *zero traction* previals!! That means $\overset{1}{\boldsymbol{t}}=\mathbf{0}$ and $\overset{2}{\boldsymbol{t}}=\mathbf{0}$, which yield the state of stress
   $$ [\tau] = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & \tau_{33} \end{bmatrix} $$
 - The given state of stress (having all shear terms identically zero) is also known as a state of *principal stress*. 
   
@@ -105,7 +105,6 @@ State of Stress on a Plane that is Not Normal to the Load.
 #+ATTR_HTML: :width 1900px
 [[./images/FU94_1.11figure9c-mod.png]]
 - Assume a deviation of 8 degrees between the axial load and the femoral axis, determine the shear stress to normal stress ratio observed on an axial plane.
-
 
 ** Plates under Plane Stress
 *** Plane State of Stress
@@ -304,4 +303,67 @@ Tools for transforming components of the second-order stress tensor
 #+ATTR_HTML: :width 800px
 [[./images/fig3.4-problem1.jpg]]
 
+#+REVEAL: split
+#+ATTR_REVEAL: :frag (appear)
+- Initial script produced in class
+  #+BEGIN_SRC octave
+    B = [-2 1 6]  % point definition, upper end of axis
+    C = [-1 0.5 6.5] % point definition, state of stress is given here
+    BC = C - B   % line segment from axis (is this perpendicular to OB?)
+    e_1p = BC / norm(BC)   % e_r ?? 
+    e_3p = [0 0 1]         % e_z ??
+    e_2p = cross(e_3p,e_1p)
+    beta=[e_1p;e_2p;e_3p]
+  #+END_SRC
+- Two problems with this script can be identified
+  #+ATTR_REVEAL: :frag (appear)
+  1. the cylinder axis may not be aligned with $x_3$
+  2. Segment BC may not be purely radial
+- Corrected script     
+  #+BEGIN_SRC octave
+    e_BC = BC / norm(BC)   % vector may not be radial, do not call it e_1p
+    e_3p = B / norm(B)     % vector e_3p is not [0 0 1], OB -> B
+    C_3p = dot(C,e_3p)     % scalar projection of C onto e_3p
+    CT3p = C - C_3p*e_3p   % vector component of C perpendicular to e_3p
+    e_1p = CT3p / norm(CT3p)  
+    e_2p = cross(e_3p,e_1p)
+    beta=[e_1p;e_2p;e_3p]
+  #+END_SRC
+
 * ($\S3.7$) Boundary Conditions
+Describing various state of stress conditions that arise in bodies.
+#+ATTR_REVEAL: :frag (appear)  
+- condition of a body submerged in a fluid
+  #+ATTR:REVEAL: :frag (appear)
+  + a building subjected to wind
+  + a vessel wall subjected to internal pressure
+- condition at a bimaterial interface
+  #+ATTR:REVEAL: :frag (appear)
+  + relative sliding and contact between bodies
+  + sticking interface (various joining methods exist)
+- condition of point loads (singularities)
+  + point forces and force couples
+We know something about the forces or motion on the surface of a solid or a fluid and inquire what happens within ...
+
+*** A Bimaterial Square Block Under Axial Contraction
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_3.7figure11a.png]]
+- Imagine the square is made of a soft upper half and a hard lower part joined together by the middle horizontal line.
+#+ATTR_REVEAL: :frag (appear)
+- Let the square block be compressed by the lateral side walls on the left and right. What will be the state of stress at the bimaterial interface?
+- How will the state of stress change within each body?
+
+#+REVEAL: split
+#+ATTR_HTML: :width 1300px
+[[./images/FU94_3.7figure11bcd.png]]
+- From the interface, traction vector changes slightly within the soft part (a), and the hard part (b)
+#+ATTR_REVEAL: :frag (appear)
+- At the interface, boundary condition requires the /continuity of traction/, i.e. $\overset{i}{t}^{(1)} = \overset{i}{t}^{(2)}$.
+
+*** What is external?
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_3.7paragraph.png]]
+
+** Sample Problem: Hydrostatic Stress
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_3.7problem4.png]]

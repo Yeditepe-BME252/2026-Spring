@@ -39,48 +39,48 @@ pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-org1694c40">(\(\S1.6\)) The Stress/Traction Hypothesis</a></li>
-<li><a href="#/slide-org1f2b2d8">(\(\S1.11\)) Examples to Elementary Traction Fields</a></li>
-<li><a href="#/slide-orgba1ceec">(\(\S3.2\)) Laws of Motion</a></li>
-<li><a href="#/slide-org2b100d3">(\(\S3.3\)) Cauchy&rsquo;s Formula</a></li>
-<li><a href="#/slide-org7d9540d">(\(\S3.5\)) Transformation of Stress Components</a></li>
-<li><a href="#/slide-org4c6bc39">(\(\S3.7\)) Boundary Conditions</a></li>
+<li><a href="#/slide-orge39a4e9">(\(\S1.6\)) The Stress/Traction Hypothesis</a></li>
+<li><a href="#/slide-orgccdbb75">(\(\S1.11\)) Examples to Elementary Traction Fields</a></li>
+<li><a href="#/slide-orgd897036">(\(\S3.2\)) Laws of Motion</a></li>
+<li><a href="#/slide-org8472f77">(\(\S3.3\)) Cauchy&rsquo;s Formula</a></li>
+<li><a href="#/slide-org1a098a4">(\(\S3.5\)) Transformation of Stress Components</a></li>
+<li><a href="#/slide-orgb4407e3">(\(\S3.7\)) Boundary Conditions</a></li>
 </ul>
 </div>
 </div>
 </section>
 <section>
-<section id="slide-org1694c40">
-<h2 id="org1694c40">(\(\S1.6\)) The Stress/Traction Hypothesis</h2>
+<section id="slide-orge39a4e9">
+<h2 id="orge39a4e9">(\(\S1.6\)) The Stress/Traction Hypothesis</h2>
 <p>
 Consider a material \(B\) occupying a spatial region \(V\). The body is <i>transmitting</i> a balanced load system shown with <i>surface forces</i> in <span style="color:red">red</span> and <i>boundary constraints</i> in <span style="color:#2255cc;">blue</span>. A <b>traction field</b> arises within the body during this transmission. The word <b>traction</b> roughly describes the flow of load per unit area. To <i>illuminate</i> the traction field in a region <i>visualize</i> an enclosing surface \(S\) around it and <i>imagine</i> the interaction between the <i>inside</i> (\(-\)) and the <i>outside</i> (\(+\)) of \(S\). 
 </p>
 
-<div id="org3caeb19" class="figure">
+<div id="org833b2c2" class="figure">
 <p><img src="./images/FU94_1.6figure2-load.png" alt="FU94_1.6figure2-load.png" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-org10f43f8">
-<h3 id="org10f43f8">The Stress/Traction Hypothesis</h3>
+<section id="slide-org24c679b">
+<h3 id="org24c679b">The Stress/Traction Hypothesis</h3>
 <p>
 Let a neighborhood \(\Delta S\) on \(S\) have an <i>outward unit normal</i> \(\boldsymbol{\nu}\), with its direction pointing outward from the interior. Let the  <i>accumulation of load</i> applied by the (\(+\)) side on the (\(-\)) side passing thru \(\Delta S\) be represented by \(\Delta \mathbf{F}\). The <b>stress hypothesis</b> can be stated: <i>as</i> \(\Delta S\) <i>tends to a small but bounded size</i> \(\alpha\), <i>the ratio</i> \(\Delta \mathbf{F}/\Delta S\) <i>tends to a definite limit</i> \(d\mathbf{F}/dS\), <i>and the moment of the force acting on the surface</i> \(\Delta S\) <i>about any point within the area vanishes</i>. This limiting vector, called as the <b>traction</b> or the <b>stress vector</b> can be written as
-\[ \overset{\nu}{\mathbf{T}} = \frac{d\mathbf{F}}{dS}. \]
+\[ \overset{\nu}{\mathbf{T}} = \overset{\nu}{\mathbf{t}} = \frac{d\mathbf{F}}{dS}. \]
 </p>
 
-<div id="org8c7c9de" class="figure">
+<div id="org69e6710" class="figure">
 <p><img src="./images/FU94_1.6figure2-deltaS.png" alt="FU94_1.6figure2-deltaS.png" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-org5f61d3e">
-<h4 id="org5f61d3e">Tractions on Cartesian Planes</h4>
+<section id="slide-org800ee76">
+<h4 id="org800ee76">Tractions on Cartesian Planes</h4>
 <ul>
 <li><p>
-At an internal point, the standard procedure is to calculate the tractions \(\overset{1}{\mathbf{T}}, \overset{2}{\mathbf{T}}, \overset{3}{\mathbf{T}}\) that arise on the planes cornered by a Cartesian triad \(\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3\). 
+At an internal point, the standard procedure is to calculate the tractions \(\overset{1}{\boldsymbol{t}}, \overset{2}{\boldsymbol{t}}, \overset{3}{\boldsymbol{t}}\) that arise on the planes cornered by a Cartesian triad \(\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3\). 
 </p>
 
-<div id="org58703d8" class="figure">
+<div id="org73eddbc" class="figure">
 <p><img src="./images/FU94_1.6figure2-tractions.png" alt="FU94_1.6figure2-tractions.png" width="1600px" />
 </p>
 </div></li>
@@ -88,27 +88,27 @@ At an internal point, the standard procedure is to calculate the tractions \(\ov
 </ul>
 <ul>
 <li class="fragment appear">We combine the three Cartesian tractions as the columns of the transpose of a tensor \(\boldsymbol{\tau}\) as
-\[ \left[ \overset{1}{\mathbf{T}}, \overset{2}{\mathbf{T}}, \overset{3}{\mathbf{T}} \right] \triangleq [\tau]^\mathsf{T}  \]</li>
+\[ \left[ \overset{1}{\boldsymbol{t}}, \overset{2}{\boldsymbol{t}}, \overset{3}{\boldsymbol{t}} \right] \triangleq [\tau]^\mathsf{T}  \]</li>
 
 </ul>
 </section>
-<section id="slide-orgb8326a2">
-<h4 id="orgb8326a2">The Stress Tensor</h4>
+<section id="slide-org873d01a">
+<h4 id="org873d01a">The Stress Tensor</h4>
 <ul>
 <li><p>
 The tensor, \(\boldsymbol{\tau}\), constructed by stacking the three Cartesian internal traction vectors in rows is called as the <b>stress tensor</b>. The stress tensor components read
-\[ \begin{bmatrix} \tau_{11} & \tau_{12} & \tau_{13} \\ \tau_{21} & \tau_{22} & \tau_{23} \\ \tau_{31} & \tau_{32} & \tau_{33} \end{bmatrix} = \begin{bmatrix} \overset{1}{T_1} & \overset{1}{T_2} & \overset{1}{T_3} \\ \overset{2}{T_1} & \overset{2}{T_2} & \overset{2}{T_3} \\ \overset{3}{T_1} & \overset{3}{T_2} & \overset{3}{T_3} \end{bmatrix} \hspace{2em} \mathrm{or} \hspace{2em} \tau_{ij} = \overset{i}{T_j} \]
+\[ \begin{bmatrix} \tau_{11} & \tau_{12} & \tau_{13} \\ \tau_{21} & \tau_{22} & \tau_{23} \\ \tau_{31} & \tau_{32} & \tau_{33} \end{bmatrix} = \begin{bmatrix} \overset{ 1}{t_1} & \overset{1}{t_2} & \overset{1}{t_3} \\ \overset{2}{t_1} & \overset{2}{t_2} & \overset{2}{t_3} \\ \overset{3}{t_1} & \overset{3}{t_2} & \overset{3}{t_3} \end{bmatrix} \hspace{2em} \mathrm{or} \hspace{2em} \tau_{ij} = \overset{i}{t_j} \]
 </p>
 
-<div id="org99cc4ec" class="figure">
+<div id="org4097851" class="figure">
 <p><img src="./images/FU94_3.1figure1.png" alt="FU94_3.1figure1.png" width="1400px" />
 </p>
 </div></li>
 
 </ul>
 </section>
-<section id="slide-org4ecc88f">
-<h4 id="org4ecc88f">Properties of Internal Traction Vectors</h4>
+<section id="slide-orgc1ade58">
+<h4 id="orgc1ade58">Properties of Internal Traction Vectors</h4>
 <ul>
 <li><p>
 The state of stress at a point in a material is described by internal traction vectors on a differential cube element.
@@ -121,15 +121,15 @@ The state of stress at a point in a material is described by internal traction v
 </ul>
 <ul>
 <li class="fragment appear">The differential cube has six faces, three of which have (\(+\)) normals and the other three have (\(-\)) normals.</li>
-<li class="fragment appear">The three traction vectors corresponding to (\(+\)) faces are  \(\overset{1}{\mathbf{T}}, \overset{2}{\mathbf{T}}, \overset{3}{\mathbf{T}}\), and the other three associated with the (\(-\)) faces are \(\overset{-1}{\mathbf{T}}, \overset{-2}{\mathbf{T}}, \overset{-3}{\mathbf{T}}\).</li>
+<li class="fragment appear">The three traction vectors corresponding to (\(+\)) faces are  \(\overset{1}{\boldsymbol{t}}, \overset{2}{\boldsymbol{t}}, \overset{3}{\boldsymbol{t}}\), and the other three associated with the (\(-\)) faces are \(\overset{-1}{\boldsymbol{t}}, \overset{-2}{\boldsymbol{t}}, \overset{-3}{\boldsymbol{t}}\).</li>
 <li class="fragment appear">The action-reaction principle of Newton can be used to relate the traction vectors on opposite cube faces as
-\[ \overset{i}{\mathbf{T}} = -\overset{-i}{\mathbf{T}} \hspace{2em} \mathrm{or} \hspace{2em} \overset{i}{T_j} = -\overset{-i}{T_j} \]</li>
-<li class="fragment ...">It is standard convention to decompose the traction vector, \(\overset{\nu}{\mathbf{T}}\), into it&rsquo;s <b>normal</b> part, \((\boldsymbol{\nu} \cdot \overset{\nu}{\mathbf{T}}) \boldsymbol{\nu}\), and it&rsquo;s remaining part, \(\overset{\nu}{\mathbf{T}} - (\boldsymbol{\nu} \cdot \overset{\nu}{\mathbf{T}}) \boldsymbol{\nu}\), which is <b>in-plane</b> of the surface.</li>
+\[ \overset{i}{\boldsymbol{t}} = -\overset{-i}{\boldsymbol{t}} \hspace{2em} \mathrm{or} \hspace{2em} \overset{i}{t_j} = -\overset{-i}{t_j} \]</li>
+<li class="fragment ...">It is standard convention to decompose the traction vector, \(\overset{\nu}{\boldsymbol{t}}\), into it&rsquo;s <b>normal</b> part, \((\boldsymbol{\nu} \cdot \overset{\nu}{\boldsymbol{t}}) \boldsymbol{\nu}\), and it&rsquo;s remaining part, \(\overset{\nu}{\boldsymbol{t}} - (\boldsymbol{\nu} \cdot \overset{\nu}{\boldsymbol{t}}) \boldsymbol{\nu}\), which is <b>in-plane</b> of the surface.</li>
 
 </ul>
 </section>
-<section id="slide-org74dabe8">
-<h4 id="org74dabe8">Properties of Stress Components</h4>
+<section id="slide-org68d3d8c">
+<h4 id="org68d3d8c">Properties of Stress Components</h4>
 <ul>
 <li><p>
 In parallel with the parts of the internal traction vectors, the stress components that are normal to the plane are called as <b>normal stress</b> while those components which are in-plane are known as <b>shear stress</b>.
@@ -147,8 +147,8 @@ In parallel with the parts of the internal traction vectors, the stress componen
 
 </ul>
 </section>
-<section id="slide-org8d5f2c5">
-<h4 id="org8d5f2c5">Examples</h4>
+<section id="slide-org26fbc5b">
+<h4 id="org26fbc5b">Examples</h4>
 <ul>
 <li>Show the following stress components on a differential cube element \(\tau_{11} = 12\) MPa, \(\tau_{21} = -6\) MPa, \(\tau_{31} = 5\) MPa, and \(\tau_{33} = -8\) MPa, with all the remaining stress components identically equan to zero.</li>
 
@@ -158,7 +158,7 @@ In parallel with the parts of the internal traction vectors, the stress componen
 Write the components shown on the stress cube in matrix form.
 </p>
 
-<div id="org5406bd5" class="figure">
+<div id="org73133f6" class="figure">
 <p><img src="./images/fig3.1-example1.jpg" alt="fig3.1-example1.jpg" width="600px" />
 </p>
 </div></li>
@@ -167,30 +167,30 @@ Write the components shown on the stress cube in matrix form.
 </section>
 </section>
 <section>
-<section id="slide-org1f2b2d8">
-<h2 id="org1f2b2d8">(\(\S1.11\)) Examples to Elementary Traction Fields</h2>
-<div class="outline-text-2" id="text-org1f2b2d8">
+<section id="slide-orgccdbb75">
+<h2 id="orgccdbb75">(\(\S1.11\)) Examples to Elementary Traction Fields</h2>
+<div class="outline-text-2" id="text-orgccdbb75">
 </div>
 </section>
-<section id="slide-org8a28064">
-<h3 id="org8a28064">Slender Cylindrical (Axial) Members</h3>
+<section id="slide-org128be7f">
+<h3 id="org128be7f">Slender Cylindrical (Axial) Members</h3>
 <p>
 A <i>member</i> (independent part of a structure) is said to be <b><i>slender</i></b>, if it has a great length to thickness ratio, i.e., \(L/T>>1\), and a constant or slightly-varying cross section swept along the <b>normal</b> to the cross-section plane (a.k.a. member&rsquo;s <i>longitudinal</i> or <i>axial</i> direction). Such objects in geometry are known as <i>cylinders</i>.
 </p>
 
-<div id="org7d9f93b" class="figure">
+<div id="org18f0b5a" class="figure">
 <p><img src="./images/fig1.11.3-members3d.png" alt="fig1.11.3-members3d.png" width="1200px" />
 </p>
 </div>
 </section>
-<section id="slide-orgd6329a1">
-<h4 id="orgd6329a1">Axially Loaded Cylindrical Members</h4>
+<section id="slide-orgd954d27">
+<h4 id="orgd954d27">Axially Loaded Cylindrical Members</h4>
 <ul>
 <li><p>
 Consider a member under a <b>compressive</b> force \(W\). We say that the beam is axially loaded without shear. Applying the stress  hypothesis, we will obtain the relevant <b>traction vector</b>. 
 </p>
 
-<div id="orgd07ec60" class="figure">
+<div id="orgefeee2e" class="figure">
 <p><img src="./images/FU94_1.11figure9a-uniaxial.png" alt="FU94_1.11figure9a-uniaxial.png" width="1000px" />
 </p>
 </div></li>
@@ -203,34 +203,34 @@ Take a section of the member using the  \(x_3\) plane from the <i>mid-span</i> (
 </p>
 
 <p>
-The mapping \(\boldsymbol{\nu} \to \boldsymbol{e}_3\) yields \(\overset{\nu}{\mathbf{T}} \to \overset{3}{\mathbf{T}}\)
+The mapping \(\boldsymbol{\nu} \to \boldsymbol{e}_3\) yields \(\overset{\nu}{\boldsymbol{t}} \to \overset{3}{\boldsymbol{t}}\)
 </p></li>
 
 </ul>
 </section>
-<section id="slide-org6db3ca1">
-<h4 id="org6db3ca1">Derivation of Nominal Normal Stress (Assumptions and Conventions)</h4>
+<section id="slide-org74b18fd">
+<h4 id="org74b18fd">Derivation of Nominal Normal Stress (Assumptions and Conventions)</h4>
 <p>
 About the traction flow, we assume that:
 </p>
 <ul>
 <li>there is no reason that the load <i>would distribute non-uniformly</i> over the cross-section!! (i.e., there is <b>uniform distribution</b>, \(dW/dA = W/A\), leading to
-\[ \overset{3}{T_3} = \tau_{33} = \sigma = \frac{W}{A}. \]
+\[ \overset{3}{t_3} = \tau_{33} = \sigma = \frac{W}{A}. \]
 Here \(\sigma\) denotes the <b>nominal</b> <i>normal</i> stress. It has units of load per area (e.g. N/cm\(^2\)).</li>
 
 </ul>
 <ul>
-<li class="fragment appear">Under uniaxial loading, and in planes with normals parallel to the load axis, <b>only normal traction</b> arises (no shear tractions, i.e. \(\overset{3}{T_1} = \overset{3}{T_2} = 0\)).</li>
-<li class="fragment appear">Over planes that contain the load axis (whose normal will not not have an \(\boldsymbol{e}_3\) component), <b>zero traction</b> previals!! That means \(\overset{1}{\mathbf{T}}=\mathbf{0}\) and \(\overset{2}{\mathbf{T}}=\mathbf{0}\), which yield the state of stress
+<li class="fragment appear">Under uniaxial loading, and in planes with normals parallel to the load axis, <b>only normal traction</b> arises (no shear tractions, i.e. \(\overset{3}{t_1} = \overset{3}{t_2} = 0\)).</li>
+<li class="fragment appear">Over planes that contain the load axis (whose normal will not not have an \(\boldsymbol{e}_3\) component), <b>zero traction</b> previals!! That means \(\overset{1}{\boldsymbol{t}}=\mathbf{0}\) and \(\overset{2}{\boldsymbol{t}}=\mathbf{0}\), which yield the state of stress
 \[ [\tau] = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & \tau_{33} \end{bmatrix} \]</li>
 <li class="fragment appear">The given state of stress (having all shear terms identically zero) is also known as a state of <b>principal stress</b>.</li>
 
 </ul>
 </section>
-<section id="slide-orgbfa56d2">
-<h4 id="orgbfa56d2">Example: <a href="https://openoregon.pressbooks.pub/bodyphysics2ed/chapter/stress-and-strain-on-the-body/">Loading of the Femur</a></h4>
+<section id="slide-orge5fc276">
+<h4 id="orge5fc276">Example: <a href="https://openoregon.pressbooks.pub/bodyphysics2ed/chapter/stress-and-strain-on-the-body/">Loading of the Femur</a></h4>
 
-<div id="orged38d0b" class="figure">
+<div id="org409ab01" class="figure">
 <p><img src="./images/animation-femur.gif" alt="animation-femur.gif" width="500px" />
 </p>
 </div>
@@ -247,12 +247,12 @@ Here \(\sigma\) denotes the <b>nominal</b> <i>normal</i> stress. It has units of
 </ul>
 
 </section>
-<section id="slide-orgbfa56d2-split">
+<section id="slide-orge5fc276-split">
 <p>
 State of Stress on a Plane that is Not Normal to the Load.
 </p>
 
-<div id="orgefb6707" class="figure">
+<div id="org849ac84" class="figure">
 <p><img src="./images/FU94_1.11figure9c-mod.png" alt="FU94_1.11figure9c-mod.png" width="1900px" />
 </p>
 </div>
@@ -261,19 +261,19 @@ State of Stress on a Plane that is Not Normal to the Load.
 
 </ul>
 </section>
-<section id="slide-org4ed1253">
-<h3 id="org4ed1253">Plates under Plane Stress</h3>
-<div class="outline-text-3" id="text-org4ed1253">
+<section id="slide-org3ab2036">
+<h3 id="org3ab2036">Plates under Plane Stress</h3>
+<div class="outline-text-3" id="text-org3ab2036">
 </div>
 </section>
-<section id="slide-orgc51a528">
-<h4 id="orgc51a528">Plane State of Stress</h4>
+<section id="slide-org503ca8e">
+<h4 id="org503ca8e">Plane State of Stress</h4>
 <ul>
 <li><p>
 thin flat plates or membranes stretched by in-plane load systems
 </p>
 
-<div id="orgfc6aecf" class="figure">
+<div id="org55bb24c" class="figure">
 <p><img src="./images/FU94-fig4.1.png" alt="FU94-fig4.1.png" width="1600px" />
 </p>
 </div></li>
@@ -286,8 +286,8 @@ thin flat plates or membranes stretched by in-plane load systems
 
 </ul>
 </section>
-<section id="slide-org66c33d6">
-<h4 id="org66c33d6">Reduction of the Stress Tensor to 2-D</h4>
+<section id="slide-org0fb2078">
+<h4 id="org0fb2078">Reduction of the Stress Tensor to 2-D</h4>
 <ul>
 <li>We may choose the plate coordinate pair to be \((1,2)\), \((2,3)\), or \((1,3)\), in which cases the corresponding stress tensors would read:
 \[ \tau_{ij} = [\tau] = \begin{bmatrix}  \tau_{11} & \tau_{12} & 0 \\ \tau_{21} & \tau_{22} & 0 \\ 0 & 0 & 0 \end{bmatrix}, \, \{i,j=1,2\}, \quad \begin{bmatrix} 0 & 0 & 0 \\ 0 & \tau_{22} & \tau_{23} \\ 0 & \tau_{32} & \tau_{33} \end{bmatrix}, \, \{i,j=2,3\}, \quad  \mathrm{or}, \; \begin{bmatrix}  \tau_{11} & 0 & \tau_{13} \\ 0 & 0 & 0 \\ \tau_{31} & 0 & \tau_{33} \end{bmatrix}, \, \{i,j=1,3\} \]</li>
@@ -300,22 +300,22 @@ thin flat plates or membranes stretched by in-plane load systems
 
 </ul>
 </section>
-<section id="slide-orgf5d22b3">
-<h4 id="orgf5d22b3">The Scapula (A flat bone)</h4>
+<section id="slide-orgc0c0764">
+<h4 id="orgc0c0764">The Scapula (A flat bone)</h4>
 
-<div id="org42241f0" class="figure">
+<div id="org593d3a7" class="figure">
 <p><img src="./images/fig1.11.4scapula.jpg" alt="fig1.11.4scapula.jpg" width="800px" />
 </p>
 </div>
 </section>
-<section id="slide-org8677dd0">
-<h4 id="org8677dd0">Loading and Fracture of Scapula</h4>
+<section id="slide-orge811892">
+<h4 id="orge811892">Loading and Fracture of Scapula</h4>
 <ul>
 <li><p>
 The state of <i>in-plane loading</i> of the scapula, and the most frequently observed <b>fracture modes</b> (according to <a href="https://orthoinfo.aaos.org/en/diseases--conditions/scapula-shoulder-blade-fractures/">OrthoInfo</a>)
 </p>
 
-<div id="org01eb8da" class="figure">
+<div id="org6a86fa5" class="figure">
 <p><img src="./images/fig1.11.4scapulaFBD.png" alt="fig1.11.4scapulaFBD.png" width="1300px" />
 </p>
 </div></li>
@@ -326,8 +326,8 @@ The state of <i>in-plane loading</i> of the scapula, and the most frequently obs
 
 </ul>
 </section>
-<section id="slide-orgb5c06b5">
-<h3 id="orgb5c06b5">Stresses in Pressurized Vessels</h3>
+<section id="slide-org1fc53fb">
+<h3 id="org1fc53fb">Stresses in Pressurized Vessels</h3>
 <p>
 Many biological examples of pressurized biological tissue may be provided.
 </p>
@@ -340,8 +340,8 @@ Many biological examples of pressurized biological tissue may be provided.
 </section>
 </section>
 <section>
-<section id="slide-orgba1ceec">
-<h2 id="orgba1ceec">(\(\S3.2\)) Laws of Motion</h2>
+<section id="slide-orgd897036">
+<h2 id="orgd897036">(\(\S3.2\)) Laws of Motion</h2>
 <ul>
 <li>Let the space occupied by a material body \(B\) at time \(t\), be denoted it&rsquo;s configuration \(B(t)\).</li>
 <li>Let \(\boldsymbol{r}\) denote the position vector of a material point \(X\).</li>
@@ -351,8 +351,8 @@ Many biological examples of pressurized biological tissue may be provided.
 
 </ul>
 </section>
-<section id="slide-org94726db">
-<h3 id="org94726db">Balance of Mass</h3>
+<section id="slide-org6dc640a">
+<h3 id="org6dc640a">Balance of Mass</h3>
 <ul>
 <li class="fragment appear">The total mass of the material configuration \(B(t)\) can be expressed by integration.</li>
 <li class="fragment appear">We can denote the mass enclosed in \(dV\) by \(\rho dV\).</li>
@@ -367,9 +367,9 @@ where \(\frac{D}{Dt}(\ldots)\) and \((\ldots)^{\!\bullet}\) denote the <i>materi
 </ul>
 
 </section>
-<section id="slide-org94726db-split">
+<section id="slide-org6dc640a-split">
 <ul class="org-ul">
-<li><a id="org27d9400"></a>Notes of Importance<br />
+<li><a id="org3932a3f"></a>Notes of Importance<br />
 <ol>
 <li class="fragment appear">the balance of mass states that the net change in mass is given by the material time rate of the mass integral, \(\dot{\mathcal{M}}\).</li>
 <li class="fragment appear">the role of material time derivative to highlight the difference between \(\int_B (\cdots)^{\!\bullet}\) and \(\int_{B(t)} (\cdots)^{\!\bullet}\)</li>
@@ -386,8 +386,8 @@ How would you describe the difference between a time derivative in the usual (<i
 </li>
 </ul>
 </section>
-<section id="slide-orga1125d0">
-<h3 id="orga1125d0">Balance of Linear Momentum</h3>
+<section id="slide-orge0015bd">
+<h3 id="orge0015bd">Balance of Linear Momentum</h3>
 <ul>
 <li class="fragment appear">The total linear momentum of the material configuration \(B(t)\) can also be expressed by integration.</li>
 <li class="fragment appear">We denote the linear momentum of the mass \(\rho dV\) by multiplying it with its velocity as \(\boldsymbol{v} \rho dV\).</li>
@@ -399,8 +399,8 @@ where \(\dot{\mathcal{P}}\) denotes the material time derivative of the linear m
 
 </ul>
 </section>
-<section id="slide-org4ebde38">
-<h4 id="org4ebde38">Classification of External Loads</h4>
+<section id="slide-org468ff53">
+<h4 id="org468ff53">Classification of External Loads</h4>
 <ul>
 <li class="fragment appear">In the mechanics of continuous media, there are two types of external forces acting on material bodies.
 <ol>
@@ -426,15 +426,15 @@ where \(\boldsymbol{n}\) is the unit outward normal at the surface of \(B\).</li
 
 </ul>
 </section>
-<section id="slide-org16126c4">
-<h4 id="org16126c4">Balance of Linear Momentum (with forces)</h4>
+<section id="slide-org7b92da5">
+<h4 id="org7b92da5">Balance of Linear Momentum (with forces)</h4>
 <p>
 Replacing the general expression of the resultant of external forces, \(\mathcal{F}\) with the above force type definitions, we arrive at the terminal integral expression
 \[ \int_{\partial B(t)} \overset{\nu}{\boldsymbol{t}} dA +  \int_{B(t)} \boldsymbol{b} dV =  \int_{B(t)} (\boldsymbol{v} \rho dV)^{\!\bullet} \]
 </p>
 </section>
-<section id="slide-org8bc2199">
-<h3 id="org8bc2199">Balance of Moment of Momentum</h3>
+<section id="slide-org9b3e6ae">
+<h3 id="org9b3e6ae">Balance of Moment of Momentum</h3>
 <ul>
 <li class="fragment appear">The integral of the moment of momentum of the differential mass element about the origin \(O\), \(\boldsymbol{r} \times \boldsymbol{v} \rho dV\), over the domain \(B(t)\), i.e.,
 \[ \mathcal{H}^O = \int_{B(t)} \boldsymbol{r} \times \boldsymbol{v} \rho dV \]
@@ -448,8 +448,8 @@ is the <i>moment of momentum</i> of the configuration at \(B(t)\).</li>
 </section>
 </section>
 <section>
-<section id="slide-org2b100d3">
-<h2 id="org2b100d3">(\(\S3.3\)) Cauchy&rsquo;s Formula</h2>
+<section id="slide-org8472f77">
+<h2 id="org8472f77">(\(\S3.3\)) Cauchy&rsquo;s Formula</h2>
 <p>
 Relates the components of the traction that resides over a plane with a normal \(\nu\), with the unit normal and the stress tensor components.
 \[ \overset{\nu}{t_j} = \nu_i \tau_{ij} \]
@@ -465,9 +465,9 @@ Note that similar relations between the traction vector components on cartesian 
 </div>
 
 </section>
-<section id="slide-org2b100d3-split">
+<section id="slide-org8472f77-split">
 
-<div id="orgd99d471" class="figure">
+<div id="org82e953e" class="figure">
 <p><img src="./images/fig3.3-cubecut.jpg" alt="fig3.3-cubecut.jpg" width="1600px" />
 </p>
 </div>
@@ -479,10 +479,10 @@ Note that similar relations between the traction vector components on cartesian 
 
 </ul>
 </section>
-<section id="slide-org7c01df7">
-<h3 id="org7c01df7">Motion Law Applied to a Tetrahedron Cut</h3>
+<section id="slide-orgd5f1660">
+<h3 id="orgd5f1660">Motion Law Applied to a Tetrahedron Cut</h3>
 
-<div id="org9fa3295" class="figure">
+<div id="orge4401b7" class="figure">
 <p><img src="./images/FU94_3.3figure5.png" alt="FU94_3.3figure5.png" width="1100px" />
 </p>
 </div>
@@ -495,9 +495,9 @@ Note that similar relations between the traction vector components on cartesian 
 </ul>
 
 </section>
-<section id="slide-org7c01df7-split">
+<section id="slide-orgd5f1660-split">
 
-<div id="org314fac5" class="figure">
+<div id="org67afc62" class="figure">
 <p><img src="./images/FU94_3.3figure5.png" alt="FU94_3.3figure5.png" width="1100px" />
 </p>
 </div>
@@ -513,9 +513,9 @@ Note that similar relations between the traction vector components on cartesian 
 </ul>
 
 </section>
-<section id="slide-org7c01df7-split">
+<section id="slide-orgd5f1660-split">
 
-<div id="orga545b09" class="figure">
+<div id="org92d2fe5" class="figure">
 <p><img src="./images/FU94_3.3figure5.png" alt="FU94_3.3figure5.png" width="1100px" />
 </p>
 </div>
@@ -529,26 +529,26 @@ Note that similar relations between the traction vector components on cartesian 
 
 </ul>
 </section>
-<section id="slide-org2a53102">
-<h4 id="org2a53102">Sample Problem 1: (<a href="./Ch2-vectors.html#plane-normal">use plane formula</a>)</h4>
+<section id="slide-org229863d">
+<h4 id="org229863d">Sample Problem 1: (<a href="./Ch2-vectors.html#plane-normal">use plane formula</a>)</h4>
 
-<div id="orgacb1a64" class="figure">
+<div id="orgf42039f" class="figure">
 <p><img src="./images/FU94_3.3problem7.png" alt="FU94_3.3problem7.png" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-org00f26d7">
-<h4 id="org00f26d7">Sample Problem 2</h4>
+<section id="slide-org93211e7">
+<h4 id="org93211e7">Sample Problem 2</h4>
 
-<div id="orgfdd2706" class="figure">
+<div id="orgeb0d5b6" class="figure">
 <p><img src="./images/FU94_3.3problem8.png" alt="FU94_3.3problem8.png" width="1600px" />
 </p>
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org7d9540d">
-<h2 id="org7d9540d">(\(\S3.5\)) Transformation of Stress Components</h2>
+<section id="slide-org1a098a4">
+<h2 id="org1a098a4">(\(\S3.5\)) Transformation of Stress Components</h2>
 <p>
 Remember how coordinates of a point, \(x_j\), could be transformed from the basis \(\boldsymbol{e}_j\) into another bases \(\boldsymbol{e}_{i'}\)?
 </p>
@@ -559,10 +559,10 @@ Remember how coordinates of a point, \(x_j\), could be transformed from the basi
 
 </ul>
 </section>
-<section id="slide-orgcdc59d7">
-<h3 id="orgcdc59d7">The Rotation Tensor Transforms a Second-Order Tensor</h3>
+<section id="slide-org0cc42a2">
+<h3 id="org0cc42a2">The Rotation Tensor Transforms a Second-Order Tensor</h3>
 
-<div id="org58657d7" class="figure">
+<div id="orgfaaab79" class="figure">
 <p><img src="./images/FU94_3.5figure9.png" alt="FU94_3.5figure9.png" width="1000px" />
 </p>
 </div>
@@ -574,9 +574,9 @@ Remember how coordinates of a point, \(x_j\), could be transformed from the basi
 </ul>
 
 </section>
-<section id="slide-orgcdc59d7-split">
+<section id="slide-org0cc42a2-split">
 
-<div id="org4baeb09" class="figure">
+<div id="org8985988" class="figure">
 <p><img src="./images/FU94_3.5figure9.png" alt="FU94_3.5figure9.png" width="1000px" />
 </p>
 </div>
@@ -593,8 +593,8 @@ where a normal matrix multiplication occurs in a row-column operation which a tr
 
 </ul>
 </section>
-<section id="slide-orgf3e90f5">
-<h4 id="orgf3e90f5">Educational Application Hub:</h4>
+<section id="slide-org655300a">
+<h4 id="org655300a">Educational Application Hub:</h4>
 <p>
 Tools for transforming components of the second-order stress tensor
 </p>
@@ -604,26 +604,145 @@ Tools for transforming components of the second-order stress tensor
 
 </ul>
 </section>
-<section id="slide-org2e2850e">
-<h4 id="org2e2850e">Sample Problem 1</h4>
+<section id="slide-org6a95d7e">
+<h4 id="org6a95d7e">Sample Problem 1</h4>
 
-<div id="org62c9a2d" class="figure">
+<div id="org3aa991e" class="figure">
 <p><img src="./images/FU94_3.4problem6.png" alt="FU94_3.4problem6.png" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-orgaefb821">
-<h4 id="orgaefb821">Sample Problem 2</h4>
+<section id="slide-org3748456">
+<h4 id="org3748456">Sample Problem 2</h4>
 
-<div id="org2ccc8fb" class="figure">
+<div id="org975f057" class="figure">
 <p><img src="./images/fig3.4-problem1.jpg" alt="fig3.4-problem1.jpg" width="800px" />
 </p>
 </div>
+
+</section>
+<section id="slide-org3748456-split">
+<ul>
+<li class="fragment appear"><p>
+Initial script produced in class
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-octave"   ><code trim>B <span style="color: #4f97d7;">=</span> [<span style="color: #4f97d7;">-</span>2 1 6]  <span style="color: #2aa1ae; background-color: #292e34;">% point definition, upper end of axis</span>
+C <span style="color: #4f97d7;">=</span> [<span style="color: #4f97d7;">-</span>1 0.5 6.5] <span style="color: #2aa1ae; background-color: #292e34;">% point definition, state of stress is given here</span>
+BC <span style="color: #4f97d7;">=</span> C <span style="color: #4f97d7;">-</span> B   <span style="color: #2aa1ae; background-color: #292e34;">% line segment from axis (is this perpendicular to OB?)</span>
+e_1p <span style="color: #4f97d7;">=</span> BC <span style="color: #4f97d7;">/</span> norm(BC)   <span style="color: #2aa1ae; background-color: #292e34;">% e_r ?? </span>
+e_3p <span style="color: #4f97d7;">=</span> [0 0 1]         <span style="color: #2aa1ae; background-color: #292e34;">% e_z ??</span>
+e_2p <span style="color: #4f97d7;">=</span> cross(e_3p<span style="color: #4f97d7;">,</span>e_1p)
+beta<span style="color: #4f97d7;">=</span>[e_1p<span style="color: #4f97d7;">;</span>e_2p<span style="color: #4f97d7;">;</span>e_3p]
+</code></pre>
+</div></li>
+<li class="fragment appear">Two problems with this script can be identified
+<ol>
+<li class="fragment appear">the cylinder axis may not be aligned with \(x_3\)</li>
+<li class="fragment appear">Segment BC may not be purely radial</li>
+
+</ol></li>
+<li class="fragment appear"><p>
+Corrected script     
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-octave"   ><code trim>e_BC <span style="color: #4f97d7;">=</span> BC <span style="color: #4f97d7;">/</span> norm(BC)   <span style="color: #2aa1ae; background-color: #292e34;">% vector may not be radial, do not call it e_1p</span>
+e_3p <span style="color: #4f97d7;">=</span> B <span style="color: #4f97d7;">/</span> norm(B)     <span style="color: #2aa1ae; background-color: #292e34;">% vector e_3p is not [0 0 1], OB -&gt; B</span>
+C_3p <span style="color: #4f97d7;">=</span> dot(C<span style="color: #4f97d7;">,</span>e_3p)     <span style="color: #2aa1ae; background-color: #292e34;">% scalar projection of C onto e_3p</span>
+CT3p <span style="color: #4f97d7;">=</span> C <span style="color: #4f97d7;">-</span> C_3p<span style="color: #4f97d7;">*</span>e_3p   <span style="color: #2aa1ae; background-color: #292e34;">% vector component of C perpendicular to e_3p</span>
+e_1p <span style="color: #4f97d7;">=</span> CT3p <span style="color: #4f97d7;">/</span> norm(CT3p)  
+e_2p <span style="color: #4f97d7;">=</span> cross(e_3p<span style="color: #4f97d7;">,</span>e_1p)
+beta<span style="color: #4f97d7;">=</span>[e_1p<span style="color: #4f97d7;">;</span>e_2p<span style="color: #4f97d7;">;</span>e_3p]
+</code></pre>
+</div></li>
+
+</ul>
 </section>
 </section>
 <section>
-<section id="slide-org4c6bc39">
-<h2 id="org4c6bc39">(\(\S3.7\)) Boundary Conditions</h2>
+<section id="slide-orgb4407e3">
+<h2 id="orgb4407e3">(\(\S3.7\)) Boundary Conditions</h2>
+<p>
+Describing various state of stress conditions that arise in bodies.
+</p>
+<ul>
+<li class="fragment appear"><p>
+condition of a body submerged in a fluid
+</p>
+<ul>
+<li>a building subjected to wind</li>
+<li>a vessel wall subjected to internal pressure</li>
+
+</ul></li>
+<li class="fragment appear"><p>
+condition at a bimaterial interface
+</p>
+<ul>
+<li>relative sliding and contact between bodies</li>
+<li>sticking interface (various joining methods exist)</li>
+
+</ul></li>
+<li class="fragment appear">condition of point loads (singularities)
+<ul>
+<li>point forces and force couples</li>
+
+</ul></li>
+
+</ul>
+<p>
+We know something about the forces or motion on the surface of a solid or a fluid and inquire what happens within &#x2026;
+</p>
+</section>
+<section id="slide-org7525836">
+<h4 id="org7525836">A Bimaterial Square Block Under Axial Contraction</h4>
+
+<div id="orgf1e4bcb" class="figure">
+<p><img src="./images/FU94_3.7figure11a.png" alt="FU94_3.7figure11a.png" width="1600px" />
+</p>
+</div>
+<ul>
+<li>Imagine the square is made of a soft upper half and a hard lower part joined together by the middle horizontal line.</li>
+
+</ul>
+<ul>
+<li class="fragment appear">Let the square block be compressed by the lateral side walls on the left and right. What will be the state of stress at the bimaterial interface?</li>
+<li class="fragment appear">How will the state of stress change within each body?</li>
+
+</ul>
+
+</section>
+<section id="slide-org7525836-split">
+
+<div id="org020ebcc" class="figure">
+<p><img src="./images/FU94_3.7figure11bcd.png" alt="FU94_3.7figure11bcd.png" width="1300px" />
+</p>
+</div>
+<ul>
+<li>From the interface, traction vector changes slightly within the soft part (a), and the hard part (b)</li>
+
+</ul>
+<ul>
+<li class="fragment appear">At the interface, boundary condition requires the <i>continuity of traction</i>, i.e. \(\overset{i}{t}^{(1)} = \overset{i}{t}^{(2)}\).</li>
+
+</ul>
+</section>
+<section id="slide-org1cd9774">
+<h4 id="org1cd9774">What is external?</h4>
+
+<div id="orgd8eb93a" class="figure">
+<p><img src="./images/FU94_3.7paragraph.png" alt="FU94_3.7paragraph.png" width="1600px" />
+</p>
+</div>
+</section>
+<section id="slide-org43aa0e8">
+<h3 id="org43aa0e8">Sample Problem: Hydrostatic Stress</h3>
+
+<div id="org637e06c" class="figure">
+<p><img src="./images/FU94_3.7problem4.png" alt="FU94_3.7problem4.png" width="1600px" />
+</p>
+</div>
 </section>
 </section>
 </div>
