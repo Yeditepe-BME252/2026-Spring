@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Chapter 5: Deformation and Strain</title>
+<meta name="author" content="Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../style.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<style>
+pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>Chapter 5: Deformation and Strain</h2> <h3>Reading: [Fung/94] Chapter 5</h3> <h4>2026-04-25</h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org62d48b2">(\(\S5.1\)) Deformation</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-org62d48b2">
+<h2 id="org62d48b2">(\(\S5.1\)) Deformation</h2>
+
+<div id="org47385b7" class="figure">
+<p><img src="./images/FU94_5.1heading.png" alt="FU94_5.1heading.png" width="1600px" />
+</p>
+</div>
+</section>
+<section id="slide-org114d092">
+<h3 id="org114d092">Questions</h3>
+<ul>
+<li>How can you picture/visualize deformation?
+<ul>
+<li class="fragment appear">Scribing regularly spaced lines on a slender rod/bar or a rubber band and axially loading it in tension so as to induce a 2% deformation?
+<ul>
+<li class="fragment appear">the notion of relative deformation, leading to the definition of <i>strain</i>, \(\epsilon_a\).</li>
+<li class="fragment appear">10% strain? 100% strain??</li>
+
+</ul></li>
+<li class="fragment appear">What happens if the axial load on the bar is reversed, what is the expected deformation mode(s) in compression?
+<ul>
+<li class="fragment appear">Can the relation of the applied load versus lateral displacement at the mid-span be predicted for a stiff bar?</li>
+
+</ul></li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org6d8f820">
+<h4 id="org6d8f820">Bending</h4>
+<ul>
+<li><p>
+A bar with a rectangular inscribed grid on it, bent by an equal and opposite pair of transverse couple moments at its two ends. What is the expected configurational change?
+</p>
+<ul>
+<li class="fragment appear">The initially straight longitudinal axis deforms into a nearly circular arc shape?</li>
+<li class="fragment appear">Transverse cross-sections remain plane?</li>
+<li class="fragment appear">Longitudinal fibers below the centrodial plane elongate, while the fibers above contract.</li>
+
+</ul>
+
+<div id="org001b60f" class="figure">
+<p><img src="./images/FU94_5.1bend.png" alt="FU94_5.1bend.png" width="1600px" />
+</p>
+</div></li>
+
+</ul>
+</section>
+<section id="slide-org6e68c58">
+<h4 id="org6e68c58">Twisting</h4>
+<ul>
+<li><p>
+The same bar is twisted by an equal and opposite pair of axial couple moments at its two ends. How is it expected to deform?
+</p>
+<ul>
+<li class="fragment appear">The longitudinal axis stays straight, with a slight amount of contraction (shortening).</li>
+<li class="fragment appear">The transverse planes remain plane through the process.</li>
+<li class="fragment appear">A axially increasing relative rotation of transverse sections from one end to the other.</li>
+
+</ul>
+
+<div id="orgc4124cb" class="figure">
+<p><img src="./images/FU94_5.1twist.png" alt="FU94_5.1twist.png" width="1600px" />
+</p>
+</div></li>
+
+</ul>
+</section>
+<section id="slide-org870336d">
+<h3 id="org870336d">Definitions</h3>
+<p>
+Configurations (undeformed, <i>initial</i>, reference, etc. and deformed, <i>current</i>, etc.)
+</p>
+<ul>
+<li class="fragment appear">Concepts related with deformation
+<ul>
+<li class="fragment appear">Initial length, \(L_0\).</li>
+<li class="fragment appear">Deformed length, \(L\).</li>
+<li class="fragment appear">Stretch ratio, \(L/L_0\).</li>
+<li class="fragment ...">Strain\(^{(1)}\), \(\epsilon = \frac{L-L_0}{L_0}\) or \(\epsilon' = \frac{L-L_0}{L}\)</li>
+<li class="fragment ...">These are also known as the <i>material</i> and <i>spatial</i> strain measures, respectively.</li>
+<li class="fragment ...">Strain\(^{(2)}\), \(E_{/} = \frac{L^2-L_0^2}{L_0^2}\) or \(e_{/} = \frac{L^2-L_0^2}{L^2}\)</li>
+<li class="fragment ...">\(^{(1)}\) is known as <i>engineering</i> strain measure, while \(^{(2)}\) is known as the <i>finite</i> strain measure.</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org98f4b99">
+<h4 id="org98f4b99">Query AI:</h4>
+<pre style="&quot;font-size: 1.5em;&quot;" class="example" id="org34f4594">
+How can the difference between the configurational notions represented by
+the words /initial/ and /current/ be explained to an undergraduate
+biomedical engineering program cohort?
+</pre>
+
+<div id="orgd4d0841" class="figure">
+<p><img src="./images/FU94_5.1figure2.png" alt="FU94_5.1figure2.png" class="fragment (appear appear ...)" width="1600px" />
+</p>
+</div>
+</section>
+<section id="slide-org282c7a8">
+<h3 id="org282c7a8">Deformation as a <b>Process</b> from Initial to Current</h3>
+<ul>
+<li><p>
+We use the points of a body, \(\mathcal{B}\), to describe the deformation process between the initial configuration (coordinates \(a_1,\, a_2,\, a_3\)) and current configuration (coordinates \(x_1,\, x_2,\, x_3\)).
+</p>
+
+<div id="org6e75420" class="figure">
+<p><img src="./images/FU94_5.1figure2.png" alt="FU94_5.1figure2.png" width="1600px" />
+</p>
+</div></li>
+
+</ul>
+<ul>
+<li class="fragment appear">Note the duality used in this description, the notions of &ldquo;initial&rdquo; and &ldquo;current&rdquo;.</li>
+<li class="fragment appear">The motion of a point, \(P\), from its initial configuration to it&rsquo;s current configuration, \(P'\), is called its <i>displacement</i>, \(\boldsymbol{u} = \bar{PP'}\).</li>
+
+</ul>
+</section>
+<section id="slide-org6454eef">
+<h4 id="org6454eef">Mapping Functions</h4>
+<p>
+Mathematical definition of the body&rsquo;s motion from initial to current state.
+</p>
+<div style="position: relative;">
+  <img src="./images/FU94_5.1bend_initial.png" width="1200"/>
+  <img src="./images/FU94_5.1bend_current.png" width="1200"
+       style="position: absolute; top: 0; left: 360px;"
+       class="fragment appear"/>
+</div>
+<ul>
+<li class="fragment appear">The deformation process can be simulated by mapping functions which take the initial coordinates, \(a_i\), as arguments and yield the current coordinates, \(x_i\), as output
+\[ x_i = \chi_i(a_1,\,a_2,\,a_3) \]</li>
+<li class="fragment appear">There has to be a unique <i>inverse</i> mapping of this motion, given by functions which take the current coordinates as arguments and yield the initial coordinates as output 
+\[ a_i = \alpha_i(x_1,\,x_2,\,x_3) \]</li>
+<li class="fragment ...">\(\chi(a_1,\,a_2,\,a_3)\) and \(\alpha_i(x_1,\,x_2,\,x_3)\) can be called as the <i>forward</i> and <i>backward</i> mapping functions, respectively.</li>
+
+</ul>
+</section>
+<section id="slide-orge00bf29">
+<h4 id="orge00bf29">Displacement of a Point</h4>
+<ul>
+<li>During deformation a point \(P\) initally at \((a_1,\,a_2,\,a_3)\) moves to \(P'\) at \((x_1,\,x_2,\,x_3)\). The <i>displacement</i> of \(P\) can be obtained in terms of the initial coordinates, by subtracting the initial coordinates from the current ones as
+\[ u_i (a_1,\,a_2,\,a_3) = \chi_i(a_1,\,a_2,\,a_3) - a_i \]</li>
+
+</ul>
+<ul>
+<li class="fragment appear">Alternatively, the displacement can also be computed in terms of the current coordinates as
+\[ u_i (x_1,\,x_2,\,x_3) = x_i - \alpha_i (x_1,\,x_2,\,x_3) \]</li>
+<li class="fragment appear">In this course, the former definition will be used.</li>
+
+</ul>
+</section>
+<section id="slide-org7c9f76e">
+<h3 id="org7c9f76e">Examples</h3>
+<div class="outline-text-3" id="text-org7c9f76e">
+</div>
+</section>
+<section id="slide-org820603a">
+<h4 id="org820603a">5.9</h4>
+<p>
+Consider the square plate of unit size shown below. Find the forward mapping functions from \(a_i\) to \(x_i\)?
+</p>
+
+<div id="orgd7d7bd4" class="figure">
+<p><img src="./images/FU94_5.1problem9.png" alt="FU94_5.1problem9.png" width="1600px" />
+</p>
+</div>
+</section>
+<section id="slide-org88300df">
+<h4 id="org88300df">5.12</h4>
+<p>
+A unit square \(OABC\) is distorted to \(OA'B'C'\) in three ways as shown below. In each of the cases write down the displacement field \(u_1,\,u_2\) of every point in the square as a function of the location \((a_1,\,a_2)\).
+</p>
+
+<div id="org5156da3" class="figure">
+<p><img src="./images/FU94_5.1problem12.png" alt="FU94_5.1problem12.png" width="1600px" />
+</p>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+#+TITLE:  Chapter 5: Deformation and Strain
+#+AUTHOR: Fethi Okyar
+#+DATE: 2026-04-25
+#+SUBTITLE: Reading: [Fung/94] Chapter 5
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil
+#+REVEAL_EXTRA_CSS: ../style.css
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+HTML_HEAD_EXTRA: <style>
+#+HTML_HEAD_EXTRA: pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
+#+HTML_HEAD_EXTRA: </style>
+
+* ($\S5.1$) Deformation
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_5.1heading.png]]
+
+** Questions
+- How can you picture/visualize deformation?
+  #+ATTR_REVEAL: :frag (appear appear appear ...)
+  + Scribing regularly spaced lines on a slender rod/bar or a rubber band and axially loading it in tension so as to induce a 2% deformation?
+    #+ATTR_REVEAL: :frag (appear appear ...)
+    - the notion of relative deformation, leading to the definition of /strain/, $\epsilon_a$.
+    - 10% strain? 100% strain??
+  + What happens if the axial load on the bar is reversed, what is the expected deformation mode(s) in compression?
+    #+ATTR_REVEAL: :frag (appear appear ...)
+    - Can the relation of the applied load versus lateral displacement at the mid-span be predicted for a stiff bar?
+
+*** Bending            
+- A bar with a rectangular inscribed grid on it, bent by an equal and opposite pair of transverse couple moments at its two ends. What is the expected configurational change?
+  #+ATTR_REVEAL: :frag (appear appear appear ...)
+  + The initially straight longitudinal axis deforms into a nearly circular arc shape?
+  + Transverse cross-sections remain plane?
+  + Longitudinal fibers below the centrodial plane elongate, while the fibers above contract.
+  #+ATTR_HTML: :width 1600px
+  [[./images/FU94_5.1bend.png]]
+
+*** Twisting
+- The same bar is twisted by an equal and opposite pair of axial couple moments at its two ends. How is it expected to deform?
+  #+ATTR_REVEAL: :frag (appear appear appear ...)
+  + The longitudinal axis stays straight, with a slight amount of contraction (shortening).
+  + The transverse planes remain plane through the process.
+  + A axially increasing relative rotation of transverse sections from one end to the other.
+  #+ATTR_HTML: :width 1600px
+  [[./images/FU94_5.1twist.png]]
+    
+** Definitions
+Configurations (undeformed, /initial/, reference, etc. and deformed, /current/, etc.)
+#+ATTR_REVEAL: :frag (appear appear ...)
+- Concepts related with deformation
+  #+ATTR_REVEAL: :frag (appear appear appear ...)
+  - Initial length, $L_0$.
+  - Deformed length, $L$.
+  - Stretch ratio, $L/L_0$.
+  - Strain$^{(1)}$, $\epsilon = \frac{L-L_0}{L_0}$ or $\epsilon' = \frac{L-L_0}{L}$
+  - These are also known as the /material/ and /spatial/ strain measures, respectively.
+  - Strain$^{(2)}$, $E_{/} = \frac{L^2-L_0^2}{L_0^2}$ or $e_{/} = \frac{L^2-L_0^2}{L^2}$
+  - $^{(1)}$ is known as /engineering/ strain measure, while $^{(2)}$ is known as the /finite/ strain measure.
+
+*** Query AI:
+#+ATTR_REVEAL: :code_attribs data-line-numbers
+#+ATTR_HTML: :style "font-size: 1.5em;"
+#+BEGIN_EXAMPLE
+How can the difference between the configurational notions represented by
+the words /initial/ and /current/ be explained to an undergraduate
+biomedical engineering program cohort?
+#+END_EXAMPLE
+#+ATTR_REVEAL: :frag (appear appear ...)
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_5.1figure2.png]]
+
+** Deformation as a *Process* from Initial to Current
+- We use the points of a body, $\mathcal{B}$, to describe the deformation process between the initial configuration (coordinates $a_1,\, a_2,\, a_3$) and current configuration (coordinates $x_1,\, x_2,\, x_3$).
+  #+ATTR_HTML: :width 1600px
+  [[./images/FU94_5.1figure2.png]]
+#+ATTR_REVEAL: :frag (appear appear ...)
+- Note the duality used in this description, the notions of "initial" and "current".
+- The motion of a point, $P$, from its initial configuration to it's current configuration, $P'$, is called its /displacement/, $\boldsymbol{u} = \bar{PP'}$.
+
+*** Mapping Functions
+Mathematical definition of the body's motion from initial to current state.
+#+BEGIN_EXPORT html
+<div style="position: relative;">
+  <img src="./images/FU94_5.1bend_initial.png" width="1200"/>
+  <img src="./images/FU94_5.1bend_current.png" width="1200"
+       style="position: absolute; top: 0; left: 360px;"
+       class="fragment appear"/>
+</div>
+#+END_EXPORT
+#+ATTR_REVEAL: :frag (appear appear ...)
+- The deformation process can be simulated by mapping functions which take the initial coordinates, $a_i$, as arguments and yield the current coordinates, $x_i$, as output
+  $$ x_i = \chi_i(a_1,\,a_2,\,a_3) $$
+- There has to be a unique /inverse/ mapping of this motion, given by functions which take the current coordinates as arguments and yield the initial coordinates as output 
+  $$ a_i = \alpha_i(x_1,\,x_2,\,x_3) $$
+- $\chi(a_1,\,a_2,\,a_3)$ and $\alpha_i(x_1,\,x_2,\,x_3)$ can be called as the /forward/ and /backward/ mapping functions, respectively.
+
+*** Displacement of a Point
+- During deformation a point $P$ initally at $(a_1,\,a_2,\,a_3)$ moves to $P'$ at $(x_1,\,x_2,\,x_3)$. The /displacement/ of $P$ can be obtained in terms of the initial coordinates, by subtracting the initial coordinates from the current ones as
+  $$ u_i (a_1,\,a_2,\,a_3) = \chi_i(a_1,\,a_2,\,a_3) - a_i $$
+#+ATTR_REVEAL: :frag (appear appear ...)
+- Alternatively, the displacement can also be computed in terms of the current coordinates as
+  $$ u_i (x_1,\,x_2,\,x_3) = x_i - \alpha_i (x_1,\,x_2,\,x_3) $$
+- In this course, the former definition will be used.
+
+** Examples
+*** 5.9
+Consider the square plate of unit size shown below. Find the forward mapping functions from $a_i$ to $x_i$?
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_5.1problem9.png]]
+*** 5.12
+A unit square $OABC$ is distorted to $OA'B'C'$ in three ways as shown below. In each of the cases write down the displacement field $u_1,\,u_2$ of every point in the square as a function of the location $(a_1,\,a_2)$.
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_5.1problem12.png]]

@@ -53,8 +53,8 @@ Jove: a scientific educational video content provider with free access through Y
 | 30/3 | Quiz 3                         | Elementary Examples of Stress      |
 | 6/4  | Laws of Motion                 | Cauchy's Formula, Transformation   |
 | 13/4 | Boundary Conditions            | Principal Stresses                 |
-| 20/4 | Deformation                    | /National Sovereignty Day Holiday/ |
-| 27/4 | Strain                         | Geometric Interpretation           |
+| 20/4 | Quiz 4                         | /National Sovereignty Day Holiday/ |
+| 27/4 | Deformation, [[https://yeditepe-bme252.github.io/2026-Spring/Ch5-strain.html][Ch.5]]              | Strain                             |
 | 4/5  | Other Strain Measures          | Velocity Fields and Compatibility  |
 | 11/5 | Constitutive Equations         | Fluids and Elastic Solids          |
 | 18/5 | /Commemoration of Ataturk Day/ | Isotropy                           |
