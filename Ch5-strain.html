@@ -39,34 +39,37 @@ pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-org62d48b2">(\(\S5.1\)) Deformation</a></li>
+<li><a href="#/slide-org636be52">(\(\S5.1\)) Deformation</a></li>
+<li><a href="#/slide-org5fadd12">(\(\S5.2\)) Strain</a></li>
+<li><a href="#/slide-org9595e7a">(\(\S5.3\)) Strain in terms of Displacements</a></li>
+<li><a href="#/slide-orged2472f">(\(\S5.4\)) Geometric Interpretation of Strain</a></li>
 </ul>
 </div>
 </div>
 </section>
 <section>
-<section id="slide-org62d48b2">
-<h2 id="org62d48b2">(\(\S5.1\)) Deformation</h2>
+<section id="slide-org636be52">
+<h2 id="org636be52">(\(\S5.1\)) Deformation</h2>
 
-<div id="org47385b7" class="figure">
+<div id="org3dc3acf" class="figure">
 <p><img src="./images/FU94_5.1heading.png" alt="FU94_5.1heading.png" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-org114d092">
-<h3 id="org114d092">Questions</h3>
+<section id="slide-org400a3c8">
+<h3 id="org400a3c8">Questions</h3>
 <ul>
 <li>How can you picture/visualize deformation?
 <ul>
 <li class="fragment appear">Scribing regularly spaced lines on a slender rod/bar or a rubber band and axially loading it in tension so as to induce a 2% deformation?
 <ul>
-<li class="fragment appear">the notion of relative deformation, leading to the definition of <i>strain</i>, \(\epsilon_a\).</li>
 <li class="fragment appear">10% strain? 100% strain??</li>
+<li class="fragment appear">the notion of relative deformation, leading to the definition of <i>strain</i>, \(\epsilon_a\).</li>
 
 </ul></li>
-<li class="fragment appear">What happens if the axial load on the bar is reversed, what is the expected deformation mode(s) in compression?
+<li class="fragment appear">What happens when the axial load on the bar is reversed, what is the expected deformation mode(s) in compression?
 <ul>
-<li class="fragment appear">Can the relation of the applied load versus lateral displacement at the mid-span be predicted for a stiff bar?</li>
+<li class="fragment appear">Can the relation of the applied load versus axial displacement of the bar be predicted for a stiff bar?</li>
 
 </ul></li>
 
@@ -74,8 +77,8 @@ pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
 
 </ul>
 </section>
-<section id="slide-org6d8f820">
-<h4 id="org6d8f820">Bending</h4>
+<section id="slide-orge4b7a8d">
+<h4 id="orge4b7a8d">Bending</h4>
 <ul>
 <li><p>
 A bar with a rectangular inscribed grid on it, bent by an equal and opposite pair of transverse couple moments at its two ends. What is the expected configurational change?
@@ -87,35 +90,35 @@ A bar with a rectangular inscribed grid on it, bent by an equal and opposite pai
 
 </ul>
 
-<div id="org001b60f" class="figure">
+<div id="orge005c43" class="figure">
 <p><img src="./images/FU94_5.1bend.png" alt="FU94_5.1bend.png" width="1600px" />
 </p>
 </div></li>
 
 </ul>
 </section>
-<section id="slide-org6e68c58">
-<h4 id="org6e68c58">Twisting</h4>
+<section id="slide-orgd2b2047">
+<h4 id="orgd2b2047">Twisting</h4>
 <ul>
 <li><p>
-The same bar is twisted by an equal and opposite pair of axial couple moments at its two ends. How is it expected to deform?
+A similar bar is twisted by an equal and opposite pair of axial couple moments at its two ends. How is it expected to deform?
 </p>
 <ul>
 <li class="fragment appear">The longitudinal axis stays straight, with a slight amount of contraction (shortening).</li>
 <li class="fragment appear">The transverse planes remain plane through the process.</li>
-<li class="fragment appear">A axially increasing relative rotation of transverse sections from one end to the other.</li>
+<li class="fragment appear">An angle of twist results from the accumulation of relative rotation of sections from one end to the other.</li>
 
 </ul>
 
-<div id="orgc4124cb" class="figure">
+<div id="org861db41" class="figure">
 <p><img src="./images/FU94_5.1twist.png" alt="FU94_5.1twist.png" width="1600px" />
 </p>
 </div></li>
 
 </ul>
 </section>
-<section id="slide-org870336d">
-<h3 id="org870336d">Definitions</h3>
+<section id="slide-orgde03015">
+<h3 id="orgde03015">Definitions</h3>
 <p>
 Configurations (undeformed, <i>initial</i>, reference, etc. and deformed, <i>current</i>, etc.)
 </p>
@@ -134,27 +137,27 @@ Configurations (undeformed, <i>initial</i>, reference, etc. and deformed, <i>cur
 
 </ul>
 </section>
-<section id="slide-org98f4b99">
-<h4 id="org98f4b99">Query AI:</h4>
-<pre style="&quot;font-size: 1.5em;&quot;" class="example" id="org34f4594">
+<section id="slide-org609ce68">
+<h4 id="org609ce68">Query AI:</h4>
+<pre style="&quot;font-size: 2.5em;&quot;" class="example" id="orgb0f516d">
 How can the difference between the configurational notions represented by
 the words /initial/ and /current/ be explained to an undergraduate
 biomedical engineering program cohort?
 </pre>
 
-<div id="orgd4d0841" class="figure">
+<div id="org42e35d2" class="figure">
 <p><img src="./images/FU94_5.1figure2.png" alt="FU94_5.1figure2.png" class="fragment (appear appear ...)" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-org282c7a8">
-<h3 id="org282c7a8">Deformation as a <b>Process</b> from Initial to Current</h3>
+<section id="slide-org05162c7">
+<h3 id="org05162c7">Deformation as a <b>Process</b> from Initial to Current</h3>
 <ul>
 <li><p>
 We use the points of a body, \(\mathcal{B}\), to describe the deformation process between the initial configuration (coordinates \(a_1,\, a_2,\, a_3\)) and current configuration (coordinates \(x_1,\, x_2,\, x_3\)).
 </p>
 
-<div id="org6e75420" class="figure">
+<div id="org405779b" class="figure">
 <p><img src="./images/FU94_5.1figure2.png" alt="FU94_5.1figure2.png" width="1600px" />
 </p>
 </div></li>
@@ -166,8 +169,8 @@ We use the points of a body, \(\mathcal{B}\), to describe the deformation proces
 
 </ul>
 </section>
-<section id="slide-org6454eef">
-<h4 id="org6454eef">Mapping Functions</h4>
+<section id="slide-orgf5c8061">
+<h4 id="orgf5c8061">Mapping Functions</h4>
 <p>
 Mathematical definition of the body&rsquo;s motion from initial to current state.
 </p>
@@ -181,13 +184,13 @@ Mathematical definition of the body&rsquo;s motion from initial to current state
 <li class="fragment appear">The deformation process can be simulated by mapping functions which take the initial coordinates, \(a_i\), as arguments and yield the current coordinates, \(x_i\), as output
 \[ x_i = \chi_i(a_1,\,a_2,\,a_3) \]</li>
 <li class="fragment appear">There has to be a unique <i>inverse</i> mapping of this motion, given by functions which take the current coordinates as arguments and yield the initial coordinates as output 
-\[ a_i = \alpha_i(x_1,\,x_2,\,x_3) \]</li>
-<li class="fragment ...">\(\chi(a_1,\,a_2,\,a_3)\) and \(\alpha_i(x_1,\,x_2,\,x_3)\) can be called as the <i>forward</i> and <i>backward</i> mapping functions, respectively.</li>
+\[ a_i = \chi^{-1}_i(x_1,\,x_2,\,x_3) \]</li>
+<li class="fragment ...">\(\chi(a_1,\,a_2,\,a_3)\) and \(\chi^{-1}_i(x_1,\,x_2,\,x_3)\) can be called as the <i>forward</i> and <i>backward</i> mapping functions, respectively.</li>
 
 </ul>
 </section>
-<section id="slide-orge00bf29">
-<h4 id="orge00bf29">Displacement of a Point</h4>
+<section id="slide-org7f2de83">
+<h4 id="org7f2de83">Displacement of a Point</h4>
 <ul>
 <li>During deformation a point \(P\) initally at \((a_1,\,a_2,\,a_3)\) moves to \(P'\) at \((x_1,\,x_2,\,x_3)\). The <i>displacement</i> of \(P\) can be obtained in terms of the initial coordinates, by subtracting the initial coordinates from the current ones as
 \[ u_i (a_1,\,a_2,\,a_3) = \chi_i(a_1,\,a_2,\,a_3) - a_i \]</li>
@@ -195,37 +198,395 @@ Mathematical definition of the body&rsquo;s motion from initial to current state
 </ul>
 <ul>
 <li class="fragment appear">Alternatively, the displacement can also be computed in terms of the current coordinates as
-\[ u_i (x_1,\,x_2,\,x_3) = x_i - \alpha_i (x_1,\,x_2,\,x_3) \]</li>
+\[ u_i (x_1,\,x_2,\,x_3) = x_i - \chi^{-1}_i (x_1,\,x_2,\,x_3) \]</li>
 <li class="fragment appear">In this course, the former definition will be used.</li>
 
 </ul>
 </section>
-<section id="slide-org7c9f76e">
-<h3 id="org7c9f76e">Examples</h3>
-<div class="outline-text-3" id="text-org7c9f76e">
+<section id="slide-org5613961">
+<h3 id="org5613961">Examples</h3>
+<div class="outline-text-3" id="text-org5613961">
 </div>
 </section>
-<section id="slide-org820603a">
-<h4 id="org820603a">5.9</h4>
+<section id="slide-orgdb415a1">
+<h4 id="orgdb415a1">5.9</h4>
 <p>
 Consider the square plate of unit size shown below. Find the forward mapping functions from \(a_i\) to \(x_i\)?
 </p>
 
-<div id="orgd7d7bd4" class="figure">
+<div id="org955bd31" class="figure">
 <p><img src="./images/FU94_5.1problem9.png" alt="FU94_5.1problem9.png" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-org88300df">
-<h4 id="org88300df">5.12</h4>
+<section id="slide-org94c01b7">
+<h4 id="org94c01b7">5.12</h4>
 <p>
 A unit square \(OABC\) is distorted to \(OA'B'C'\) in three ways as shown below. In each of the cases write down the displacement field \(u_1,\,u_2\) of every point in the square as a function of the location \((a_1,\,a_2)\).
 </p>
 
-<div id="org5156da3" class="figure">
+<div id="org2eb5f12" class="figure">
 <p><img src="./images/FU94_5.1problem12.png" alt="FU94_5.1problem12.png" width="1600px" />
 </p>
 </div>
+</section>
+<section id="slide-org67af616">
+<h3 id="org67af616">Python Snippets</h3>
+<div class="outline-text-3" id="text-org67af616">
+</div>
+</section>
+<section id="slide-org7da1139">
+<h4 id="org7da1139">wavy mapping function</h4>
+<p>
+a Python script using Matplotlib to visualize a trigonometric deformation mapping. It deforms a regular grid using a wavy, trigonometric function.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #4f97d7; font-weight: bold;">import</span> numpy <span style="color: #4f97d7; font-weight: bold;">as</span> np
+<span style="color: #4f97d7; font-weight: bold;">import</span> matplotlib.pyplot <span style="color: #4f97d7; font-weight: bold;">as</span> plt
+
+<span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">plot_deformed_grid</span>(map_func, xlim=(-3, 3), ylim=(-3, 3), grid_size=20):
+    <span style="color: #9f8766;">"""
+    Plots a regular grid and its deformation by map_func.
+    """</span>
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Create the original grid
+</span>    <span style="color: #7590db;">x</span> = np.linspace(xlim[0], xlim[1], grid_size)
+    <span style="color: #7590db;">y</span> = np.linspace(ylim[0], ylim[1], grid_size)
+    <span style="color: #7590db;">X</span>, <span style="color: #7590db;">Y</span> = np.meshgrid(x, y)
+
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Apply the deformation function
+</span>    <span style="color: #7590db;">X_deformed</span>, <span style="color: #7590db;">Y_deformed</span> = map_func(X, Y)
+
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Plot
+</span>    <span style="color: #7590db;">fig</span>, <span style="color: #7590db;">ax</span> = plt.subplots(figsize=(8, 8))
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Plot original grid in light grey
+</span>    <span style="color: #4f97d7; font-weight: bold;">for</span> i <span style="color: #4f97d7; font-weight: bold;">in</span> <span style="color: #4f97d7;">range</span>(grid_size):
+        ax.plot(X[i, :], Y[i, :], color=<span style="color: #2d9574;">'lightgrey'</span>, linewidth=1)
+        ax.plot(X[:, i], Y[:, i], color=<span style="color: #2d9574;">'lightgrey'</span>, linewidth=1)
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Plot deformed grid in blue
+</span>    <span style="color: #4f97d7; font-weight: bold;">for</span> i <span style="color: #4f97d7; font-weight: bold;">in</span> <span style="color: #4f97d7;">range</span>(grid_size):
+        ax.plot(X_deformed[i, :], Y_deformed[i, :], color=<span style="color: #2d9574;">'C0'</span>, linewidth=1)
+        ax.plot(X_deformed[:, i], Y_deformed[:, i], color=<span style="color: #2d9574;">'C0'</span>, linewidth=1)
+    ax.set_xlim(xlim)
+    ax.set_ylim(ylim)
+    ax.set_aspect(<span style="color: #2d9574;">'equal'</span>)
+    ax.axis(<span style="color: #2d9574;">'off'</span>)
+    plt.show()
+
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Define a trigonometric deformation function
+</span><span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">wavy_deformation</span>(x, y):
+    <span style="color: #4f97d7; font-weight: bold;">return</span> x + 0.5 * np.sin(2 * y), y + 0.5 * np.cos(2 * x)
+
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Generate the plot
+</span><span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">plot_deformed_grid(wavy_deformation)
+</span>
+<span style="color: #2aa1ae; background-color: #292e34;">## </span><span style="color: #2aa1ae; background-color: #292e34;">how to run
+</span><span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">start a python REPL in emacs (M-x run-python)
+</span><span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">from deformation_wavy import plot_deformed_grid, wavy_deformation</span>
+</code></pre>
+</div>
+
+<p>
+Consider using <a href="https://www.pythonanywhere.com/login/">https://www.pythonanywhere.com/login/</a> to give this code a try!
+</p>
+</section>
+<section id="slide-orgf8db4c0">
+<h4 id="orgf8db4c0">shear animation</h4>
+<p>
+a Python script that creates a time-dependent simulation of a simple homogeneous deformation (pure shear) and saves it as a GIF.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #4f97d7; font-weight: bold;">import</span> numpy <span style="color: #4f97d7; font-weight: bold;">as</span> np
+<span style="color: #4f97d7; font-weight: bold;">import</span> matplotlib.pyplot <span style="color: #4f97d7; font-weight: bold;">as</span> plt
+<span style="color: #4f97d7; font-weight: bold;">from</span> matplotlib.animation <span style="color: #4f97d7; font-weight: bold;">import</span> FuncAnimation
+<span style="color: #4f97d7; font-weight: bold;">from</span> matplotlib.patches <span style="color: #4f97d7; font-weight: bold;">import</span> Circle
+
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Create the original grid
+</span><span style="color: #7590db;">x</span> = np.linspace(-2, 2, 9)
+<span style="color: #7590db;">y</span> = np.linspace(-2, 2, 9)
+<span style="color: #7590db;">X</span>, <span style="color: #7590db;">Y</span> = np.meshgrid(x, y)
+
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Set up the figure and axis
+</span><span style="color: #7590db;">fig</span>, <span style="color: #7590db;">ax</span> = plt.subplots(figsize=(8, 8))
+ax.set_xlim(-4, 4)
+ax.set_ylim(-4, 4)
+ax.set_aspect(<span style="color: #2d9574;">'equal'</span>)
+ax.axis(<span style="color: #2d9574;">'off'</span>)
+<span style="color: #7590db;">lines</span> = []
+
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Create the initial grid lines
+</span><span style="color: #4f97d7; font-weight: bold;">for</span> i <span style="color: #4f97d7; font-weight: bold;">in</span> <span style="color: #4f97d7;">range</span>(<span style="color: #4f97d7;">len</span>(x)):
+    <span style="color: #7590db;">line</span>, = ax.plot(X[i, :], Y[i, :], <span style="color: #2d9574;">'lightgrey'</span>, lw=1)
+    lines.append(line)
+    <span style="color: #7590db;">line</span>, = ax.plot(X[:, i], Y[:, i], <span style="color: #2d9574;">'lightgrey'</span>, lw=1)
+    lines.append(line)
+
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Add a small circle to visualize local deformation
+</span><span style="color: #7590db;">circle</span> = Circle((0, 0), 0.2, fill=<span style="color: #a45bad;">False</span>, color=<span style="color: #2d9574;">'red'</span>, lw=2)
+ax.add_patch(circle)
+
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Update function for animation
+</span><span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">update</span>(frame):
+    <span style="color: #7590db;">t</span> = frame / 10  <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Time parameter from 0 to 1
+</span>    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Pure shear deformation: F = [[1, k(t)], [0, 1]]
+</span>    <span style="color: #7590db;">k</span> = 2 * t  <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Shear magnitude increases with time
+</span>    <span style="color: #7590db;">X_deformed</span> = X + k * Y
+    <span style="color: #7590db;">Y_deformed</span> = Y
+
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Update grid lines
+</span>    <span style="color: #4f97d7; font-weight: bold;">for</span> i <span style="color: #4f97d7; font-weight: bold;">in</span> <span style="color: #4f97d7;">range</span>(<span style="color: #4f97d7;">len</span>(x)):
+        lines[i*2].set_data(X_deformed[i, :], Y_deformed[i, :])
+        lines[i*2+1].set_data(X_deformed[:, i], Y_deformed[:, i])
+
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Update the circle (approximated by a polygon)
+</span>    <span style="color: #7590db;">theta</span> = np.linspace(0, 2*np.pi, 20)
+    <span style="color: #7590db;">circle_x</span> = 0.2 * np.cos(theta)
+    <span style="color: #7590db;">circle_y</span> = 0.2 * np.sin(theta)
+    <span style="color: #7590db;">circle_x_deformed</span> = circle_x + k * circle_y
+    <span style="color: #7590db;">circle_y_deformed</span> = circle_y
+    circle.<span style="color: #7590db;">center</span> = (0, 0)  <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Update the center position
+</span>    <span style="color: #2aa1ae; background-color: #292e34;">#</span><span style="color: #2aa1ae; background-color: #292e34;">circle.set_xy(np.column_stack([circle_x_deformed, circle_y_deformed]))
+</span>
+    <span style="color: #4f97d7; font-weight: bold;">return</span> lines + [circle]
+
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Create the animation
+</span><span style="color: #7590db;">anim</span> = FuncAnimation(fig, update, frames=21, interval=200, blit=<span style="color: #a45bad;">True</span>)
+
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Save as a GIF (requires imagemagick or pillow)
+</span><span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">anim.save('time_dependent_shear.gif', writer='pillow', fps=5)
+</span>
+plt.show()   
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org5fadd12">
+<h2 id="org5fadd12">(\(\S5.2\)) Strain</h2>
+<ul>
+<li>What is strain? A stress-like second-order tensor which carry deformational information.</li>
+<li>Why is it important? While stress and strain are related to each other through material behavior, it is only possible to directly measure strain. Stress can only be inferred from a strain measurement.</li>
+
+</ul>
+</section>
+<section id="slide-orgeded68a">
+<h4 id="orgeded68a">Seeing Strain via Photoelasticity</h4>
+<ul>
+<li><p>
+What does strain look like? Strain is a second-order tensor field. When transparent parts (like glass) are deformed, their light transmitting behaviour is effected by the strain field. As a result we capture optical fringe patterns by photography, known as photoelasticity. [<a href="https://www.researchgate.net/publication/225195907_The_stress_intensity_near_a_stiffener_disclosed_by_photoelasticity/">1</a>]
+</p>
+
+<div id="org8b2dba5" class="figure">
+<p><img src="./images/fig5.2_photoelasticity.png" alt="fig5.2_photoelasticity.png" width="1600px" />
+</p>
+</div></li>
+
+</ul>
+</section>
+<section id="slide-org06bc415">
+<h4 id="org06bc415">Measuring Strain</h4>
+<ul>
+<li><p>
+There are various method to measure strain in a part. One of the most popular methods is by strain gage attachement on the outer surface of a part. More modern techniques involve observing parts by optical cameras and applying digital image correlation to convert the images to strain fields. [<a href="https://community.sw.siemens.com/s/article/Digital-Image-Correlation-for-Static-Testing">2</a>]
+</p>
+
+<div id="org01a8f6d" class="figure">
+<p><img src="./images/animation_rtaImage.gif" alt="animation_rtaImage.gif" width="500px" />
+</p>
+</div></li>
+
+</ul>
+</section>
+<section id="slide-org2a2a163">
+<h3 id="org2a2a163">Strain Types</h3>
+<div class="outline-text-3" id="text-org2a2a163">
+</div>
+</section>
+<section id="slide-org5465058">
+<h4 id="org5465058">Normal Strains</h4>
+<p>
+The change in length of a directed fiber, e.g., \(d\boldsymbol{X}_1\), \(d\boldsymbol{X}_2\)
+</p>
+<ul>
+<li class="fragment appear">This mode of deformation is known as dilatational, involving size changes.</li>
+<li class="fragment appear">Length changes are associated with the term <b>normal</b> strain.</li>
+<li class="fragment ...">In 3D space, normal strain readings need to be taken from <span class="underline">at least three</span> non-parallel fiber directions in order to construct the strain tensor</li>
+
+</ul>
+
+<div id="orga690fad" class="figure">
+<p><img src="./images/fig5.2_deformingFibers.png" alt="fig5.2_deformingFibers.png" width="1200px" />
+</p>
+</div>
+</section>
+<section id="slide-orgfc16055">
+<h4 id="orgfc16055">Shear Strains</h4>
+<p>
+The change in the angle between a pair of directed fibers.
+</p>
+<ul>
+<li class="fragment appear">This mode of deformation is known as distortional, involving shape changes.</li>
+<li class="fragment appear">Angle changes are associated with the term <b>shear</b> strain.</li>
+<li class="fragment ...">In 3D space, shear strain readings need to be taken from <span class="underline">at least three</span> pairs of non-parallel fibers in order to finalize the strain tensor.</li>
+
+</ul>
+
+<div id="orga2ee0d4" class="figure">
+<p><img src="./images/fig5.2_deformingFibers.png" alt="fig5.2_deformingFibers.png" width="1200px" />
+</p>
+</div>
+</section>
+<section id="slide-org4899da0">
+<h3 id="org4899da0">Mathematical Definition of Strain</h3>
+
+<div id="org1fd147a" class="figure">
+<p><img src="./images/FU94_5.2figure3.png" alt="FU94_5.2figure3.png" width="800px" />
+</p>
+</div>
+<ul>
+<li>Consider a short fiber connecting the points \(P(a_1,\,a_2,\,a_3)\) and \(P'(a_1+da_1,\, a_2+da_2,\, a_3+da_3)\). The square of the lengths \(ds_0\) of \(PP'\) in the initial configuration is
+\[ ds_0^2 = da_1^2 + da_2^2 + da_3^2 \]</li>
+
+</ul>
+<ul>
+<li class="fragment appear">As a result of the motion, \(PP'\) is moved to \(QQ'\) in the current configuration, where \(Q(x_1, \,x_2, \,x_3)\) and \(Q'(x_1+dx_1,\, x_2+dx_2,\, x_3+dx_3)\), and the square of the length, \(ds\) of the deformed fiber \(QQ'\) is
+\[ ds^2 = dx_1^2 + dx_2^2 + dx_3^2 \]</li>
+
+</ul>
+
+</section>
+<section id="slide-org4899da0-split">
+
+<div id="org6a87ae3" class="figure">
+<p><img src="./images/FU94_5.2figure3.png" alt="FU94_5.2figure3.png" width="800px" />
+</p>
+</div>
+<ul>
+<li>The components of the current fiber, \(dx_i\) can be related to the components of the initial fiber \(da_i\) using the chain rule of differentiation on the mapping functions,
+\[ dx_i = \frac{\partial \chi_i}{\partial a_j} da_j \]</li>
+
+</ul>
+<ul>
+<li class="fragment appear"><p>
+Making use of the indicial representation of the scalar (dot) product, the square of length of the fiber element in its initial and deformed cofiguration can be expressed as
+</p>
+<div>
+\begin{align}
+ds_0^2 & = \delta_{ij} da_i da_j \\
+ds^2  & = \delta_{ij} dx_i dx_j = \delta_{ij} \frac{\partial \chi_i}{\partial a_l} da_l \frac{\partial \chi_j}{\partial a_m} da_m = \delta_{ij} \frac{\partial \chi_i}{\partial a_l}  \frac{\partial \chi_j}{\partial a_m} da_l da_m
+\end{align}
+
+</div></li>
+
+</ul>
+
+</section>
+<section id="slide-org4899da0-split">
+
+<div id="org228b2da" class="figure">
+<p><img src="./images/FU94_5.2figure3.png" alt="FU94_5.2figure3.png" width="800px" />
+</p>
+</div>
+<ul>
+<li>The difference between the squares of the length elements may be written, after appropriate changes in the dummy indices as
+\[ ds^2 - ds_0^2 = \left(\delta_{lm} \frac{\partial \chi_l}{\partial a_i}  \frac{\partial \chi_m}{\partial a_j} - \delta_{ij} \right) da_i da_j = E_{ij} da_i da_j \]</li>
+
+</ul>
+<ul>
+<li class="fragment appear">Note that the paranthesized expression was replace with \(E_{ij}\) which is now formally defined as the finite strain tensor
+\[ E_{ij} = \frac{1}{2} \left(\delta_{lm} \frac{\partial \chi_l}{\partial a_i}  \frac{\partial \chi_m}{\partial a_j} - \delta_{ij} \right) \]</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org9595e7a">
+<h2 id="org9595e7a">(\(\S5.3\)) Strain in terms of Displacements</h2>
+<ul>
+<li>The finite strain components, \(E_{ij}\), were derived in terms of the deformation <i>mapping</i> functions, \(\chi_i\).</li>
+
+</ul>
+<ul>
+<li class="fragment appear">It is also possible to write \(E_{ij}\) in terms of the displacements, \(u_i\). For that, we introduce
+\[ u_l = \chi_l - a_l \]</li>
+<li class="fragment appear">Take the derivative of the above with respect to the initial coordinates \(a_l\), and solve for \(\chi_l\) as
+\[ \frac{\partial \chi_l}{\partial a_i} = \frac{\partial u_l}{\partial a_i} + \delta_{li} \]</li>
+<li class="fragment appear"><p>
+Substitute this into the previous definition of \(E_{ij}\)
+</p>
+<div>
+\begin{align}
+E_{ij} & = \frac{1}{2} \left[ \delta_{lm} \left( \frac{\partial u_l}{\partial a_i} + \delta_{li} \right) \left( \frac{\partial u_m}{\partial a_j} + \delta_{mj} \right) - \delta_{ij} \right] \\
+       & = \frac{1}{2} \left[ \frac{\partial u_j}{\partial a_i} + \frac{\partial u_i}{\partial a_j} + \frac{\partial u_l}{\partial a_i} \frac{\partial u_l}{\partial a_j} \right]
+\end{align}         
+
+</div></li>
+
+</ul>
+</section>
+<section id="slide-orgb866abf">
+<h4 id="orgb866abf">Unabridged (Classical) Notation</h4>
+<ul>
+<li>To retrieve the expression of finite strain in the classical notation, we replace
+<ul>
+<li>\(x_1,\,x_2,\,x_3\) with \(x,\,y,\,z\),</li>
+<li>\(a_1,\,a_2,\,a_3\) with \(a,\,b,\,c\),</li>
+<li>\(u_1,\,u_2,\,u_3\) with \(u,\,v,\,w\).</li>
+
+</ul></li>
+
+</ul>
+<ul>
+<li class="fragment appear">This yields  
+\[  E_{aa} = \frac{\partial u}{\partial a} + \frac{1}{2} \left[ \left( \frac{\partial u}{\partial a} \right)^2 + \left( \frac{\partial v}{\partial a} \right)^2 + \left( \frac{\partial w}{\partial a} \right)^2 \right] \]</li>
+<li class="fragment appear">and
+\[  E_{ab} = \frac{1}{2} \left[ \frac{\partial u}{\partial b} + \frac{\partial v}{\partial a} + \left( \frac{\partial u}{\partial a}\frac{\partial u}{\partial b} + \frac{\partial v}{\partial a}\frac{\partial v}{\partial b} + \frac{\partial w}{\partial a}\frac{\partial w}{\partial b}  \right)  \right] \]</li>
+
+</ul>
+</section>
+<section id="slide-orgb08bf92">
+<h3 id="orgb08bf92">Infinitesimal Motion and Strain</h3>
+<ul>
+<li>When the displacements \(u_i \ll b\), (they are very small in comparison to the characteristic dimension of the body \(\mathcal{B}\)),</li>
+<li>Then the difference between the initial and deformed coordinated vanish and we may use
+<ul>
+<li>\(a \to x\)</li>
+<li>\(b \to y\)</li>
+<li>\(c \to z\)</li>
+
+</ul></li>
+
+</ul>
+<ul>
+<li class="fragment appear">and the second order terms such as \(\frac{\partial w}{\partial a}\frac{\partial w}{\partial b}\) may be neglected</li>
+<li class="fragment appear">Then the finite strain tensor reduces to the <b>engineering</b> or <b>small</b> strain tensor, \(E_{ij} \to \epsilon_{ij}\)  given by
+\[ \epsilon_{ij} = \frac{1}{2} \left( \frac{\partial u_j}{\partial x_i} + \frac{\partial u_i}{\partial x_j} \right) \]</li>
+
+</ul>
+</section>
+<section id="slide-orge957d14">
+<h4 id="orge957d14">Small Strains in Classical Notation</h4>
+<p>
+When the small strains are expressed in classical notation
+</p>
+<ul>
+<li>\(x_1,\,x_2,\,x_3\) with \(x,\,y,\,z\),</li>
+<li>\(u_1,\,u_2,\,u_3\) with \(u,\,v,\,w\).</li>
+
+</ul>
+
+<div id="orgf7f2eaa" class="figure">
+<p><img src="./images/FU94_5.3equation7.png" alt="FU94_5.3equation7.png" width="1600px" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orged2472f">
+<h2 id="orged2472f">(\(\S5.4\)) Geometric Interpretation of Strain</h2>
 </section>
 </section>
 </div>
