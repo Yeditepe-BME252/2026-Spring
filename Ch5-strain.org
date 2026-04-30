@@ -184,10 +184,22 @@ The change in the angle between a pair of directed fibers.
 #+ATTR_HTML: :width 800px
 [[./images/FU94_5.2figure3.png]]
 - The difference between the squares of the length elements may be written, after appropriate changes in the dummy indices as
-  $$ ds^2 - ds_0^2 = \left(\delta_{lm} \frac{\partial \chi_l}{\partial a_i}  \frac{\partial \chi_m}{\partial a_j} - \delta_{ij} \right) da_i da_j = E_{ij} da_i da_j $$
+  $$ ds^2 - ds_0^2 = \left(\delta_{lm} \frac{\partial \chi_l}{\partial a_i}  \frac{\partial \chi_m}{\partial a_j} - \delta_{ij} \right) da_i da_j = 2 E_{ij} da_i da_j $$
 #+ATTR_REVEAL: :frag (appear)
-- Note that the paranthesized expression was replace with $E_{ij}$ which is now formally defined as the finite strain tensor
+- The finite strain tensor $E_{ij}$ introduced above is
   $$ E_{ij} = \frac{1}{2} \left(\delta_{lm} \frac{\partial \chi_l}{\partial a_i}  \frac{\partial \chi_m}{\partial a_j} - \delta_{ij} \right) $$
+- Also note that strain can be cast into a matrix form. It is symmetric. The diagonal terms are the normal strains while the off-diagonal ones are the shear strains.
+
+** Examples
+*** 5.9
+Consider the square plate for which the forward mapping functions from $a_i$ to $x_i$ were determined. Compute the corresponding finite strain tensor.
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_5.1problem9.png]]
+
+*** 5.12
+Consider the square plate for which the forward mapping functions from $a_i$ to $x_i$ were determined for the three cases. Compute the corresponding finite strain tensor for each case.
+#+ATTR_HTML: :width 1600px
+[[./images/FU94_5.1problem12.png]]
 
 * ($\S5.3$) Strain in terms of Displacements
 - The finite strain components, $E_{ij}$, were derived in terms of the deformation /mapping/ functions, $\chi_i$.
