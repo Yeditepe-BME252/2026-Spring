@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Chapter 6: Velocity Fields</title>
+<meta name="author" content="Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../style.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<style>
+pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>Chapter 6: Velocity Fields</h2> <h3>Reading: [Fung/94] Chapter 6</h3> <h4>2026-05-06</h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org19a1c52">(\(\S6.1\)) Velocity Fields</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-org19a1c52">
+<h2 id="org19a1c52">(\(\S6.1\)) Velocity Fields</h2>
+<div style="text-align:center;">
+<video width="700" controls>
+  <source src="./images/windy.mp4" type="video/mp4">
+</video>
+</div>
+</section>
+<section id="slide-org649aeb3">
+<h3 id="org649aeb3">Fluids</h3>
+<ul>
+<li>In the study if a fluid, we are generally concerned with the a flow, and it&rsquo;s velocity field. The field of flow is described by the time rate of change in the position vector \(\dot{\boldsymbol{x}}\), called the velocity vector field.</li>
+
+</ul>
+<ul>
+<li class="fragment appear">The velocity components in indicial notation read, \(v_i = v_i(x_1,\,x_2,\,x_3,t)\).</li>
+<li class="fragment appear">The velocity difference between two adjacent points \(P\) and \(P'\) located at \(x_i\) and \(x_i + dx_i\) can be found by invoking the chain rule of differentiation as
+\[ dv_i = \frac{\partial v_i}{\partial x_j} dx_j. \]</li>
+<li class="fragment appear">This also corresponds to the operation
+\[ d\boldsymbol{v} = d\boldsymbol{x} \cdot \nabla\boldsymbol{v} \]
+where \(\nabla\boldsymbol{v}\) is known as the <i>velocity gradient</i> tensor.</li>
+
+</ul>
+</section>
+<section id="slide-org8f623ca">
+<h4 id="org8f623ca">Cartan Decomposition of the Velocity Gradient</h4>
+<p>
+The <i>Cartan</i> decomposition of the velocity gradient vector yields
+  \[ \frac{\partial v_i}{\partial x_j} = \frac{1}{2} \left( \frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i} \right) +  \frac{1}{2} \left( \frac{\partial v_i}{\partial x_j} - \frac{\partial v_j}{\partial x_i} \right) \]
+  where the left term on the right hand side is a symmetric tensor and the one on the right is a skew-symmetric tensor.
+</p>
+</section>
+<section id="slide-org0e93274">
+<h3 id="org0e93274">Definitions</h3>
+<ul>
+<li>The symmetric part of the velocity gradient is the rate of deformation tensor, (or the deformation rate tensor)
+\[ V_{ij} \equiv  \frac{1}{2} \left( \frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i} \right), \]</li>
+
+</ul>
+<ul>
+<li class="fragment appear">while the skew-symmetric part is called the spin tensor
+\[ \Omega_{ij} \equiv \frac{1}{2} \left( \frac{\partial v_i}{\partial x_j} - \frac{\partial v_j}{\partial x_i} \right). \]</li>
+<li class="fragment appear">Then
+\[ \frac{\partial v_i}{\partial x_j} = V_{ij} + \Omega_{ij} \]</li>
+<li class="fragment appear">Evidently, \(V_{ij}\) is symmetric and \(\Omega_{ij}\) is skew-symmetric
+\[ V_{ij} = V_{ji}, \hspace{2em} \Omega_{ij} = -\Omega_{ji}. \]</li>
+
+</ul>
+</section>
+<section id="slide-orge413792">
+<h3 id="orge413792">Vorticity</h3>
+<ul>
+<li>The tensor \(\Omega_{ij}\) has only three independent (non-zero) elements
+\[ [\Omega_{ij}] = \begin{bmatrix} 0 & \Omega_{12} & \Omega_{13} \\ -\Omega_{12} & 0 & \Omega_{23} \\ -\Omega_{13} & -\Omega_{23} & 0 \end{bmatrix} \]</li>
+
+</ul>
+<ul>
+<li class="fragment appear">There exists a vector \(\boldsymbol{\omega}\) dual to \(\boldsymbol{\Omega}\); that is
+\[ \omega_k \equiv \varepsilon_{kij} \Omega_{ij}; \hspace{2em} \mathrm{i.e.} \hspace{2em} \boldsymbol{\omega} = \nabla \times \boldsymbol{v} = \mathrm{curl}\,\boldsymbol{v} \]
+where \(\varepsilon_{kij}\) is the permutation tensor, and the vector \(\boldsymbol{\omega}\) is called the <i>vorticity</i> vector.</li>
+
+</ul>
+</section>
+<section id="slide-org2f95739">
+<h4 id="org2f95739">Query AI:</h4>
+<pre style="&quot;font-size: 2.5em;&quot;" class="example" id="org147b10e">
+Provide a clear definition of vorticity in a flow field.
+If possible, provide illustrations or suggest references or sources
+that point graphical illustrations depicting vorticity.
+</pre>
+</section>
+<section id="slide-orgbe7a1cb">
+<h3 id="orgbe7a1cb">Problems</h3>
+<div class="outline-text-3" id="text-orgbe7a1cb">
+</div>
+</section>
+<section id="slide-orgfd25267">
+<h4 id="orgfd25267">6.1</h4>
+
+<div id="orgb4f8040" class="figure">
+<p><img src="./images/FU94_6.1problem1.png" alt="FU94_6.1problem1.png" width="1600px" />
+</p>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
