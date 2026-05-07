@@ -39,22 +39,23 @@ pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-org19a1c52">(\(\S6.1\)) Velocity Fields</a></li>
+<li><a href="#/slide-orgf74b97c">(\(\S6.1\)) Velocity Fields</a></li>
+<li><a href="#/slide-org75605d1">Acceleration</a></li>
 </ul>
 </div>
 </div>
 </section>
 <section>
-<section id="slide-org19a1c52">
-<h2 id="org19a1c52">(\(\S6.1\)) Velocity Fields</h2>
+<section id="slide-orgf74b97c">
+<h2 id="orgf74b97c">(\(\S6.1\)) Velocity Fields</h2>
 <div style="text-align:center;">
 <video width="700" controls>
   <source src="./images/windy.mp4" type="video/mp4">
 </video>
 </div>
 </section>
-<section id="slide-org649aeb3">
-<h3 id="org649aeb3">Fluids</h3>
+<section id="slide-org68997e3">
+<h3 id="org68997e3">Fluids</h3>
 <ul>
 <li>In the study if a fluid, we are generally concerned with the a flow, and it&rsquo;s velocity field. The field of flow is described by the time rate of change in the position vector \(\dot{\boldsymbol{x}}\), called the velocity vector field.</li>
 
@@ -69,16 +70,16 @@ where \(\nabla\boldsymbol{v}\) is known as the <i>velocity gradient</i> tensor.<
 
 </ul>
 </section>
-<section id="slide-org8f623ca">
-<h4 id="org8f623ca">Cartan Decomposition of the Velocity Gradient</h4>
+<section id="slide-org86b2de0">
+<h4 id="org86b2de0">Cartan Decomposition of the Velocity Gradient</h4>
 <p>
 The <i>Cartan</i> decomposition of the velocity gradient vector yields
   \[ \frac{\partial v_i}{\partial x_j} = \frac{1}{2} \left( \frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i} \right) +  \frac{1}{2} \left( \frac{\partial v_i}{\partial x_j} - \frac{\partial v_j}{\partial x_i} \right) \]
   where the left term on the right hand side is a symmetric tensor and the one on the right is a skew-symmetric tensor.
 </p>
 </section>
-<section id="slide-org0e93274">
-<h3 id="org0e93274">Definitions</h3>
+<section id="slide-orga3d803e">
+<h3 id="orga3d803e">Definitions</h3>
 <ul>
 <li>The symmetric part of the velocity gradient is the rate of deformation tensor, (or the deformation rate tensor)
 \[ V_{ij} \equiv  \frac{1}{2} \left( \frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i} \right), \]</li>
@@ -94,8 +95,8 @@ The <i>Cartan</i> decomposition of the velocity gradient vector yields
 
 </ul>
 </section>
-<section id="slide-orge413792">
-<h3 id="orge413792">Vorticity</h3>
+<section id="slide-org31fcb22">
+<h3 id="org31fcb22">Vorticity</h3>
 <ul>
 <li>The tensor \(\Omega_{ij}\) has only three independent (non-zero) elements
 \[ [\Omega_{ij}] = \begin{bmatrix} 0 & \Omega_{12} & \Omega_{13} \\ -\Omega_{12} & 0 & \Omega_{23} \\ -\Omega_{13} & -\Omega_{23} & 0 \end{bmatrix} \]</li>
@@ -108,26 +109,62 @@ where \(\varepsilon_{kij}\) is the permutation tensor, and the vector \(\boldsym
 
 </ul>
 </section>
-<section id="slide-org2f95739">
-<h4 id="org2f95739">Query AI:</h4>
-<pre style="&quot;font-size: 2.5em;&quot;" class="example" id="org147b10e">
+<section id="slide-org38820f4">
+<h4 id="org38820f4">Query AI:</h4>
+<pre style="&quot;font-size: 2.5em;&quot;" class="example" id="orgaef2ca6">
 Provide a clear definition of vorticity in a flow field.
 If possible, provide illustrations or suggest references or sources
 that point graphical illustrations depicting vorticity.
 </pre>
 </section>
-<section id="slide-orgbe7a1cb">
-<h3 id="orgbe7a1cb">Problems</h3>
-<div class="outline-text-3" id="text-orgbe7a1cb">
+<section id="slide-orgd56b1d0">
+<h3 id="orgd56b1d0">Problems</h3>
+<div class="outline-text-3" id="text-orgd56b1d0">
 </div>
 </section>
-<section id="slide-orgfd25267">
-<h4 id="orgfd25267">6.1</h4>
+<section id="slide-org389ef97">
+<h4 id="org389ef97">6.1</h4>
 
-<div id="orgb4f8040" class="figure">
+<div id="orge7b4fb2" class="figure">
 <p><img src="./images/FU94_6.1problem1.png" alt="FU94_6.1problem1.png" width="1600px" />
 </p>
 </div>
+</section>
+</section>
+<section>
+<section id="slide-org75605d1">
+<h2 id="org75605d1">Acceleration</h2>
+<p>
+<i>Acceleration is the time rate of change of velocity.</i>
+</p>
+</section>
+<section id="slide-orga42e4bf">
+<h3 id="orga42e4bf">Derivation Process</h3>
+<ul>
+<li>As the velocity field has been provided in terms of the current (moving) coordinate system, i.e., \(x_1,\,x_2,\,x_3\), its derivate needs to be handled with care.</li>
+
+</ul>
+<ul>
+<li class="fragment appear"><p>
+Remember the derivative of a function of function, i.e. \(G(\boldsymbol{x}(t),t)\)
+</p>
+<div>
+\begin{align} \frac{D G}{Dt} = \dot{G} & = \frac{\partial G}{\partial t} + \frac{\partial \boldsymbol{x}}{\partial t} \cdot \frac{\partial G}{\partial \boldsymbol{x}}  \\
+    & = \frac{\partial G}{\partial t} + \dot{\boldsymbol{x}} \cdot \nabla G
+\end{align}
+
+</div></li>
+<li class="fragment appear">Replacing \(G\) with \(\boldsymbol{v} = \dot{\boldsymbol{x}}\), we get
+\[ \dot{\boldsymbol{v}} = \frac{\partial \boldsymbol{v}}{\partial t} + \boldsymbol{v} \cdot \nabla \boldsymbol{v} \]</li>
+<li class="fragment appear">The second term on the right hand side is known as the <i>convective</i> (or sometimes as the <i>advective</i>) derivative term, and it appears when a field is represented in terms of the moving coordinates.</li>
+
+</ul>
+</section>
+<section id="slide-org2bc25f8">
+<h4 id="org2bc25f8">Exercise</h4>
+<p>
+Express the acceleration vector in indicial notation.
+</p>
 </section>
 </section>
 </div>

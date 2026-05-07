@@ -70,4 +70,18 @@ that point graphical illustrations depicting vorticity.
 #+ATTR_HTML: :width 1600px
 [[./images/FU94_6.1problem1.png]]
 
- 
+* Acceleration
+/Acceleration is the time rate of change of velocity./
+** Derivation Process
+- As the velocity field has been provided in terms of the current (moving) coordinate system, i.e., $x_1,\,x_2,\,x_3$, its derivate needs to be handled with care.
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Remember the derivative of a function of function, i.e. $G(\boldsymbol{x}(t),t)$
+  \begin{align} \frac{D G}{Dt} = \dot{G} & = \frac{\partial G}{\partial t} + \frac{\partial \boldsymbol{x}}{\partial t} \cdot \frac{\partial G}{\partial \boldsymbol{x}}  \\
+      & = \frac{\partial G}{\partial t} + \dot{\boldsymbol{x}} \cdot \nabla G
+  \end{align}
+- Replacing $G$ with $\boldsymbol{v} = \dot{\boldsymbol{x}}$, we get
+  $$ \dot{\boldsymbol{v}} = \frac{\partial \boldsymbol{v}}{\partial t} + \boldsymbol{v} \cdot \nabla \boldsymbol{v} $$
+- The second term on the right hand side is known as the /convective/ (or sometimes as the /advective/) derivative term, and it appears when a field is represented in terms of the moving coordinates.
+
+*** Exercise
+Express the acceleration vector in indicial notation.

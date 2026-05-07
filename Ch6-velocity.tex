@@ -29,9 +29,9 @@
 \tableofcontents
 
 \section*{(\(\S6.1\)) Velocity Fields}
-\label{sec:org4f0ae79}
+\label{sec:orgb2d6bdf}
 \subsection*{Fluids}
-\label{sec:org046e972}
+\label{sec:orgc4b3d34}
 \begin{itemize}
 \item In the study if a fluid, we are generally concerned with the a flow, and it's velocity field. The field of flow is described by the time rate of change in the position vector \(\dot{\boldsymbol{x}}\), called the velocity vector field.
 \end{itemize}
@@ -44,12 +44,12 @@ $$ d\boldsymbol{v} = d\boldsymbol{x} \cdot \nabla\boldsymbol{v} $$
 where \(\nabla\boldsymbol{v}\) is known as the \emph{velocity gradient} tensor.
 \end{itemize}
 \subsubsection*{Cartan Decomposition of the Velocity Gradient}
-\label{sec:orgb4b2f5b}
+\label{sec:org8b648af}
 The \emph{Cartan} decomposition of the velocity gradient vector yields
   $$ \frac{\partial v_i}{\partial x_j} = \frac{1}{2} \left( \frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i} \right) +  \frac{1}{2} \left( \frac{\partial v_i}{\partial x_j} - \frac{\partial v_j}{\partial x_i} \right) $$
   where the left term on the right hand side is a symmetric tensor and the one on the right is a skew-symmetric tensor.
 \subsection*{Definitions}
-\label{sec:org47a0db1}
+\label{sec:org7dbee8c}
 \begin{itemize}
 \item The symmetric part of the velocity gradient is the rate of deformation tensor, (or the deformation rate tensor)
 $$ V_{ij} \equiv  \frac{1}{2} \left( \frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i} \right), $$
@@ -63,7 +63,7 @@ $$ \frac{\partial v_i}{\partial x_j} = V_{ij} + \Omega_{ij} $$
 $$ V_{ij} = V_{ji}, \hspace{2em} \Omega_{ij} = -\Omega_{ji}. $$
 \end{itemize}
 \subsection*{Vorticity}
-\label{sec:org71de79e}
+\label{sec:org46ba111}
 \begin{itemize}
 \item The tensor \(\Omega_{ij}\) has only three independent (non-zero) elements
 $$ [\Omega_{ij}] = \begin{bmatrix} 0 & \Omega_{12} & \Omega_{13} \\ -\Omega_{12} & 0 & \Omega_{23} \\ -\Omega_{13} & -\Omega_{23} & 0 \end{bmatrix} $$
@@ -74,17 +74,37 @@ $$ \omega_k \equiv \varepsilon_{kij} \Omega_{ij}; \hspace{2em} \mathrm{i.e.} \hs
 where \(\varepsilon_{kij}\) is the permutation tensor, and the vector \(\boldsymbol{\omega}\) is called the \emph{vorticity} vector.
 \end{itemize}
 \subsubsection*{Query AI:}
-\label{sec:orgedf0d65}
+\label{sec:org4d8213f}
 \begin{verbatim}
 Provide a clear definition of vorticity in a flow field.
 If possible, provide illustrations or suggest references or sources
 that point graphical illustrations depicting vorticity.
 \end{verbatim}
 \subsection*{Problems}
-\label{sec:org7602f6c}
+\label{sec:orgd2f9c9c}
 \subsubsection*{6.1}
-\label{sec:org83b7a6f}
+\label{sec:org25376b4}
 \begin{center}
 \includegraphics[width=.9\linewidth]{./images/FU94_6.1problem1.png}
 \end{center}
+\section*{Acceleration}
+\label{sec:orgbd06499}
+\emph{Acceleration is the time rate of change of velocity.}
+\subsection*{Derivation Process}
+\label{sec:org876727e}
+\begin{itemize}
+\item As the velocity field has been provided in terms of the current (moving) coordinate system, i.e., \(x_1,\,x_2,\,x_3\), its derivate needs to be handled with care.
+\end{itemize}
+\begin{itemize}
+\item Remember the derivative of a function of function, i.e. \(G(\boldsymbol{x}(t),t)\)
+\begin{align} \frac{D G}{Dt} = \dot{G} & = \frac{\partial G}{\partial t} + \frac{\partial \boldsymbol{x}}{\partial t} \cdot \frac{\partial G}{\partial \boldsymbol{x}}  \\
+    & = \frac{\partial G}{\partial t} + \dot{\boldsymbol{x}} \cdot \nabla G
+\end{align}
+\item Replacing \(G\) with \(\boldsymbol{v} = \dot{\boldsymbol{x}}\), we get
+$$ \dot{\boldsymbol{v}} = \frac{\partial \boldsymbol{v}}{\partial t} + \boldsymbol{v} \cdot \nabla \boldsymbol{v} $$
+\item The second term on the right hand side is known as the \emph{convective} (or sometimes as the \emph{advective}) derivative term, and it appears when a field is represented in terms of the moving coordinates.
+\end{itemize}
+\subsubsection*{Exercise}
+\label{sec:org2e7f093}
+Express the acceleration vector in indicial notation.
 \end{document}
