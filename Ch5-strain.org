@@ -212,7 +212,7 @@ Given the *mapping* from the initial to current configuration, $\chi_i(a_1,\, a_
   
 ** Polar Decomposition
 This is a process where a second-order tensor can be split into a product of two tensors, in two ways, as:
-$$ \boldsymbol{F} = \boldsymbol{U} \boldsymbol{R} = \boldsymbol{R} \boldsymbol{V} $$
+$$ \boldsymbol{F} = \boldsymbol{R} \boldsymbol{U} = \boldsymbol{V} \boldsymbol{R} $$
 where $\boldsymbol{R}$ is a pure rotation and $\boldsymbol{U}$ and $\boldsymbol{V}$ are known as the *right* and *left* /stretch/ tensors.
 
 #+ATTR_REVEAL: :frag (appear)
@@ -358,6 +358,10 @@ tensors.
 
 #+ATTR_REVEAL: :frag (appear)
 _Physical Example_: A sheet of metal passing through a rolling mill with misaligned rolls, so that the sheet is simultaneously compressed in thickness, stretched in the rolling direction, and subjected to an asymmetric shear across its width. Every small neighbourhood of the sheet undergoes the same general linear map, making this a textbook case of homogeneous deformation at the process scale.
+
+#+REVEAL: split
+#+ATTR_HTML: :width 1600px
+[[./images/fig5.2_homoDefor.png]]
 
 *** Case 6 — Rigid body rotation
 \[

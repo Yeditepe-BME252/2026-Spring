@@ -39,26 +39,26 @@ pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-orgccb06e8">(\(\S5.1\)) Deformation</a></li>
-<li><a href="#/slide-orgfa096ed">(\(\S5.2\)) Strain</a></li>
-<li><a href="#/slide-org5b87a5e">Deformation Gradient, \(\boldsymbol{F}\)</a></li>
-<li><a href="#/slide-org673c57c">Coding, Analysis and Interpretation</a></li>
-<li><a href="#/slide-org536a11d">(\(\S5.3\)) Strain/Displacement Relations (Not Included in BME252)</a></li>
+<li><a href="#/slide-orgf837c13">(\(\S5.1\)) Deformation</a></li>
+<li><a href="#/slide-org09aac1b">(\(\S5.2\)) Strain</a></li>
+<li><a href="#/slide-orgab0fba8">Deformation Gradient, \(\boldsymbol{F}\)</a></li>
+<li><a href="#/slide-org03f6b6d">Coding, Analysis and Interpretation</a></li>
+<li><a href="#/slide-orge76ea72">(\(\S5.3\)) Strain/Displacement Relations (Not Included in BME252)</a></li>
 </ul>
 </div>
 </div>
 </section>
 <section>
-<section id="slide-orgccb06e8">
-<h2 id="orgccb06e8">(\(\S5.1\)) Deformation</h2>
+<section id="slide-orgf837c13">
+<h2 id="orgf837c13">(\(\S5.1\)) Deformation</h2>
 
-<div id="orge17afb6" class="figure">
+<div id="org1e3da08" class="figure">
 <p><img src="./images/FU94_5.1heading.png" alt="FU94_5.1heading.png" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-orgcf121f6">
-<h3 id="orgcf121f6">Questions</h3>
+<section id="slide-org33abdb5">
+<h3 id="org33abdb5">Questions</h3>
 <ul>
 <li>How can you picture/visualize deformation?
 <ul>
@@ -78,8 +78,8 @@ pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
 
 </ul>
 </section>
-<section id="slide-org8e2c088">
-<h4 id="org8e2c088">Bending</h4>
+<section id="slide-org91d4e6e">
+<h4 id="org91d4e6e">Bending</h4>
 <ul>
 <li><p>
 A bar with a rectangular inscribed grid on it, bent by an equal and opposite pair of transverse couple moments at its two ends. What is the expected configurational change?
@@ -91,15 +91,15 @@ A bar with a rectangular inscribed grid on it, bent by an equal and opposite pai
 
 </ul>
 
-<div id="orge0087ea" class="figure">
+<div id="orgc25b5b1" class="figure">
 <p><img src="./images/FU94_5.1bend.png" alt="FU94_5.1bend.png" width="1600px" />
 </p>
 </div></li>
 
 </ul>
 </section>
-<section id="slide-org776889d">
-<h4 id="org776889d">Twisting</h4>
+<section id="slide-org3053e25">
+<h4 id="org3053e25">Twisting</h4>
 <ul>
 <li><p>
 A similar bar is twisted by an equal and opposite pair of axial couple moments at its two ends. How is it expected to deform?
@@ -111,15 +111,15 @@ A similar bar is twisted by an equal and opposite pair of axial couple moments a
 
 </ul>
 
-<div id="orgb15fa92" class="figure">
+<div id="org3372323" class="figure">
 <p><img src="./images/FU94_5.1twist.png" alt="FU94_5.1twist.png" width="1600px" />
 </p>
 </div></li>
 
 </ul>
 </section>
-<section id="slide-org6b61ece">
-<h3 id="org6b61ece">Definitions</h3>
+<section id="slide-org0f7eec8">
+<h3 id="org0f7eec8">Definitions</h3>
 <p>
 Configurations (undeformed, <i>initial</i>, reference, etc. and deformed, <i>current</i>, etc.)
 </p>
@@ -138,27 +138,27 @@ Configurations (undeformed, <i>initial</i>, reference, etc. and deformed, <i>cur
 
 </ul>
 </section>
-<section id="slide-org579be3c">
-<h4 id="org579be3c">Query AI:</h4>
-<pre style="&quot;font-size: 2.5em;&quot;" class="example" id="org4f207ec">
+<section id="slide-org38ac1a8">
+<h4 id="org38ac1a8">Query AI:</h4>
+<pre style="&quot;font-size: 2.5em;&quot;" class="example" id="org34858d6">
 How can the difference between the configurational notions represented by
 the words /initial/ and /current/ be explained to an undergraduate
 biomedical engineering program cohort?
 </pre>
 
-<div id="orgd72eb97" class="figure">
+<div id="org4ef0fbd" class="figure">
 <p><img src="./images/FU94_5.1figure2.png" alt="FU94_5.1figure2.png" class="fragment (appear appear ...)" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-org5220ee6">
-<h3 id="org5220ee6">Deformation as a <b>Process</b> from Initial to Current</h3>
+<section id="slide-org96bfa18">
+<h3 id="org96bfa18">Deformation as a <b>Process</b> from Initial to Current</h3>
 <ul>
 <li><p>
 We use the points of a body, \(\mathcal{B}\), to describe the deformation process between the initial configuration (coordinates \(a_1,\, a_2,\, a_3\)) and current configuration (coordinates \(x_1,\, x_2,\, x_3\)).
 </p>
 
-<div id="org43e3bfa" class="figure">
+<div id="org602a548" class="figure">
 <p><img src="./images/FU94_5.1figure2.png" alt="FU94_5.1figure2.png" width="1600px" />
 </p>
 </div></li>
@@ -170,8 +170,8 @@ We use the points of a body, \(\mathcal{B}\), to describe the deformation proces
 
 </ul>
 </section>
-<section id="slide-orgaa6bc4a">
-<h4 id="orgaa6bc4a">Mapping Functions</h4>
+<section id="slide-orgceca0d5">
+<h4 id="orgceca0d5">Mapping Functions</h4>
 <p>
 Mathematical definition of the body&rsquo;s motion from initial to current state.
 </p>
@@ -190,8 +190,8 @@ Mathematical definition of the body&rsquo;s motion from initial to current state
 
 </ul>
 </section>
-<section id="slide-orgf1a7d5f">
-<h4 id="orgf1a7d5f">Displacement of a Point</h4>
+<section id="slide-orgaf41cff">
+<h4 id="orgaf41cff">Displacement of a Point</h4>
 <ul>
 <li>During deformation a point \(P\) initally at \((a_1,\,a_2,\,a_3)\) moves to \(P'\) at \((x_1,\,x_2,\,x_3)\). The <i>displacement</i> of \(P\) can be obtained in terms of the initial coordinates, by subtracting the initial coordinates from the current ones as
 \[ u_i (a_1,\,a_2,\,a_3) = \chi_i(a_1,\,a_2,\,a_3) - a_i \]</li>
@@ -204,40 +204,40 @@ Mathematical definition of the body&rsquo;s motion from initial to current state
 
 </ul>
 </section>
-<section id="slide-orgec0d0c1">
-<h3 id="orgec0d0c1">Examples</h3>
-<div class="outline-text-3" id="text-orgec0d0c1">
+<section id="slide-orgd043506">
+<h3 id="orgd043506">Examples</h3>
+<div class="outline-text-3" id="text-orgd043506">
 </div>
 </section>
-<section id="slide-orgb404f64">
-<h4 id="orgb404f64">5.9</h4>
+<section id="slide-org513d900">
+<h4 id="org513d900">5.9</h4>
 <p>
 Consider the square plate of unit size shown below. Find the forward mapping functions from \(a_i\) to \(x_i\)?
 </p>
 
-<div id="org8c802e8" class="figure">
+<div id="org5e65a10" class="figure">
 <p><img src="./images/FU94_5.1problem9.png" alt="FU94_5.1problem9.png" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-orge204549">
-<h4 id="orge204549">5.12</h4>
+<section id="slide-org1a0ed37">
+<h4 id="org1a0ed37">5.12</h4>
 <p>
 A unit square \(OABC\) is distorted to \(OA'B'C'\) in three ways as shown below. In each of the cases write down the displacement field \(u_1,\,u_2\) of every point in the square as a function of the location \((a_1,\,a_2)\).
 </p>
 
-<div id="orgc5a752f" class="figure">
+<div id="org6459010" class="figure">
 <p><img src="./images/FU94_5.1problem12.png" alt="FU94_5.1problem12.png" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-org97d44b4">
-<h3 id="org97d44b4">Python Snippets</h3>
-<div class="outline-text-3" id="text-org97d44b4">
+<section id="slide-org4f8eab8">
+<h3 id="org4f8eab8">Python Snippets</h3>
+<div class="outline-text-3" id="text-org4f8eab8">
 </div>
 </section>
-<section id="slide-org6ac694e">
-<h4 id="org6ac694e">wavy mapping function</h4>
+<section id="slide-org66d4343">
+<h4 id="org66d4343">wavy mapping function</h4>
 <p>
 a Python script using Matplotlib to visualize a trigonometric deformation mapping. It deforms a regular grid using a wavy, trigonometric function.
 </p>
@@ -292,8 +292,8 @@ a Python script using Matplotlib to visualize a trigonometric deformation mappin
 Consider using <a href="https://www.pythonanywhere.com/login/">https://www.pythonanywhere.com/login/</a> to give this code a try!
 </p>
 </section>
-<section id="slide-org2003071">
-<h4 id="org2003071">shear animation</h4>
+<section id="slide-org592a83b">
+<h4 id="org592a83b">shear animation</h4>
 <p>
 a Python script that creates a time-dependent simulation of a simple homogeneous deformation (pure shear) and saves it as a GIF.
 </p>
@@ -364,49 +364,49 @@ plt.show()
 </section>
 </section>
 <section>
-<section id="slide-orgfa096ed">
-<h2 id="orgfa096ed">(\(\S5.2\)) Strain</h2>
+<section id="slide-org09aac1b">
+<h2 id="org09aac1b">(\(\S5.2\)) Strain</h2>
 <ul>
 <li>What is strain? A stress-like second-order tensor which carry deformational information.</li>
 <li>Why is it important? While stress and strain are related to each other through material behavior, it is only possible to directly measure strain. Stress can only be inferred from a strain measurement.</li>
 
 </ul>
 </section>
-<section id="slide-org5a28db1">
-<h4 id="org5a28db1">Seeing Strain via Photoelasticity</h4>
+<section id="slide-org32b0ebd">
+<h4 id="org32b0ebd">Seeing Strain via Photoelasticity</h4>
 <ul>
 <li><p>
 What does strain look like? Strain is a second-order tensor field. When transparent parts (like glass) are deformed, their light transmitting behaviour is effected by the strain field. As a result we capture optical fringe patterns by photography, known as photoelasticity. [<a href="https://www.researchgate.net/publication/225195907_The_stress_intensity_near_a_stiffener_disclosed_by_photoelasticity/">1</a>]
 </p>
 
-<div id="orgfab66d3" class="figure">
+<div id="orge9a5a0e" class="figure">
 <p><img src="./images/fig5.2_photoelasticity.png" alt="fig5.2_photoelasticity.png" width="1600px" />
 </p>
 </div></li>
 
 </ul>
 </section>
-<section id="slide-org4ec88d2">
-<h4 id="org4ec88d2">Measuring Strain</h4>
+<section id="slide-org6f37cfe">
+<h4 id="org6f37cfe">Measuring Strain</h4>
 <ul>
 <li><p>
 There are various method to measure strain in a part. One of the most popular methods is by strain gage attachement on the outer surface of a part. More modern techniques involve observing parts by optical cameras and applying digital image correlation to convert the images to strain fields. [<a href="https://community.sw.siemens.com/s/article/Digital-Image-Correlation-for-Static-Testing">2</a>]
 </p>
 
-<div id="orgd86dfc5" class="figure">
+<div id="org0f83b8e" class="figure">
 <p><img src="./images/animation_rtaImage.gif" alt="animation_rtaImage.gif" width="500px" />
 </p>
 </div></li>
 
 </ul>
 </section>
-<section id="slide-org4557da8">
-<h3 id="org4557da8">Strain Types</h3>
-<div class="outline-text-3" id="text-org4557da8">
+<section id="slide-org0ae7ab2">
+<h3 id="org0ae7ab2">Strain Types</h3>
+<div class="outline-text-3" id="text-org0ae7ab2">
 </div>
 </section>
-<section id="slide-org51ca4b4">
-<h4 id="org51ca4b4">Normal Strains</h4>
+<section id="slide-orgaff5a37">
+<h4 id="orgaff5a37">Normal Strains</h4>
 <p>
 The change in length of a directed fiber, e.g., \(d\boldsymbol{X}_1\), \(d\boldsymbol{X}_2\)
 </p>
@@ -417,13 +417,13 @@ The change in length of a directed fiber, e.g., \(d\boldsymbol{X}_1\), \(d\bolds
 
 </ul>
 
-<div id="org94a241d" class="figure">
+<div id="orgdf4d464" class="figure">
 <p><img src="./images/fig5.2_deformingFibers.png" alt="fig5.2_deformingFibers.png" width="1200px" />
 </p>
 </div>
 </section>
-<section id="slide-orgeb6341b">
-<h4 id="orgeb6341b">Shear Strains</h4>
+<section id="slide-orgdc743b8">
+<h4 id="orgdc743b8">Shear Strains</h4>
 <p>
 The change in the angle between a pair of directed fibers.
 </p>
@@ -434,15 +434,15 @@ The change in the angle between a pair of directed fibers.
 
 </ul>
 
-<div id="org6d19e04" class="figure">
+<div id="org6c3df32" class="figure">
 <p><img src="./images/fig5.2_deformingFibers.png" alt="fig5.2_deformingFibers.png" width="1200px" />
 </p>
 </div>
 </section>
-<section id="slide-org9c32d9a">
-<h3 id="org9c32d9a">Mathematical Definition of Strain</h3>
+<section id="slide-org15237e8">
+<h3 id="org15237e8">Mathematical Definition of Strain</h3>
 
-<div id="org6b18d31" class="figure">
+<div id="org8139fcc" class="figure">
 <p><img src="./images/FU94_5.2figure3.png" alt="FU94_5.2figure3.png" width="800px" />
 </p>
 </div>
@@ -458,9 +458,9 @@ The change in the angle between a pair of directed fibers.
 </ul>
 
 </section>
-<section id="slide-org9c32d9a-split">
+<section id="slide-org15237e8-split">
 
-<div id="orga7a474b" class="figure">
+<div id="org8c65be6" class="figure">
 <p><img src="./images/FU94_5.2figure3.png" alt="FU94_5.2figure3.png" width="800px" />
 </p>
 </div>
@@ -484,9 +484,9 @@ ds^2  & = \delta_{ij} dx_i dx_j = \delta_{ij} \frac{\partial \chi_i}{\partial a_
 </ul>
 
 </section>
-<section id="slide-org9c32d9a-split">
+<section id="slide-org15237e8-split">
 
-<div id="org7219cb1" class="figure">
+<div id="orgdfecb64" class="figure">
 <p><img src="./images/FU94_5.2figure3.png" alt="FU94_5.2figure3.png" width="800px" />
 </p>
 </div>
@@ -502,37 +502,37 @@ ds^2  & = \delta_{ij} dx_i dx_j = \delta_{ij} \frac{\partial \chi_i}{\partial a_
 
 </ul>
 </section>
-<section id="slide-org3e955f0">
-<h3 id="org3e955f0">Examples</h3>
-<div class="outline-text-3" id="text-org3e955f0">
+<section id="slide-org8229862">
+<h3 id="org8229862">Examples</h3>
+<div class="outline-text-3" id="text-org8229862">
 </div>
 </section>
-<section id="slide-orge098866">
-<h4 id="orge098866">5.9</h4>
+<section id="slide-org6ef0634">
+<h4 id="org6ef0634">5.9</h4>
 <p>
 Consider the square plate for which the forward mapping functions from \(a_i\) to \(x_i\) were determined. Compute the corresponding finite strain tensor.
 </p>
 
-<div id="orgc975306" class="figure">
+<div id="orge522e16" class="figure">
 <p><img src="./images/FU94_5.1problem9.png" alt="FU94_5.1problem9.png" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-org72b108e">
-<h4 id="org72b108e">5.12</h4>
+<section id="slide-org3a876de">
+<h4 id="org3a876de">5.12</h4>
 <p>
 Consider the square plate for which the forward mapping functions from \(a_i\) to \(x_i\) were determined for the three cases. Compute the corresponding finite strain tensor for each case.
 </p>
 
-<div id="org07da872" class="figure">
+<div id="org2965323" class="figure">
 <p><img src="./images/FU94_5.1problem12.png" alt="FU94_5.1problem12.png" width="1600px" />
 </p>
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org5b87a5e">
-<h2 id="org5b87a5e">Deformation Gradient, \(\boldsymbol{F}\)</h2>
+<section id="slide-orgab0fba8">
+<h2 id="orgab0fba8">Deformation Gradient, \(\boldsymbol{F}\)</h2>
 <p>
 Given the <b>mapping</b> from the initial to current configuration, \(\chi_i(a_1,\, a_2,\, a_3)\), it&rsquo;s gradient can be taken by
 </p>
@@ -549,15 +549,15 @@ Given the <b>mapping</b> from the initial to current configuration, \(\chi_i(a_1
 which is known as the <b>deformation gradient</b> tensor.
 </p>
 </section>
-<section id="slide-org35585d9">
-<h3 id="org35585d9">Polar Decomposition</h3>
+<section id="slide-org9b0a1e6">
+<h3 id="org9b0a1e6">Polar Decomposition</h3>
 <p>
 This is a process where a second-order tensor can be split into a product of two tensors, in two ways, as:
-\[ \boldsymbol{F} = \boldsymbol{U} \boldsymbol{R} = \boldsymbol{R} \boldsymbol{V} \]
+\[ \boldsymbol{F} = \boldsymbol{R} \boldsymbol{U} = \boldsymbol{V} \boldsymbol{R} \]
 where \(\boldsymbol{R}\) is a pure rotation and \(\boldsymbol{U}\) and \(\boldsymbol{V}\) are known as the <b>right</b> and <b>left</b> <i>stretch</i> tensors.
 </p>
 
-<pre class="example fragment (appear)" id="orgdaf80e4">
+<pre class="example fragment (appear)" id="org3def4e8">
 Octave (GNU Octave / MATLAB)
 ---------------------------
 F = [1.2, 0.5; 0.2, 0.9];          % example deformation gradient
@@ -566,7 +566,7 @@ F = [1.2, 0.5; 0.2, 0.9];          % example deformation gradient
 V = V';                             % make V match definition
 </pre>
 
-<pre class="example fragment (appear)" id="org05af18f">
+<pre class="example fragment (appear)" id="orgf4231df">
 Python (with SciPy)
 -------------------
 import numpy as np
@@ -579,16 +579,16 @@ R, V = polar(F, side='left')             # F = V @ R
 </pre>
 
 </section>
-<section id="slide-org35585d9-split">
+<section id="slide-org9b0a1e6-split">
 
-<div id="orgbb50854" class="figure">
+<div id="orgb309c0e" class="figure">
 <p><img src="./images/fig5.4_polarDecomp.png" alt="fig5.4_polarDecomp.png" width="1600px" />
 </p>
 </div>
 </section>
-<section id="slide-org30014f0">
-<h4 id="org30014f0">Query AI:</h4>
-<pre style="&quot;font-size: 2.5em;&quot;" class="example" id="org6c0391d">
+<section id="slide-org0ed8eff">
+<h4 id="org0ed8eff">Query AI:</h4>
+<pre style="&quot;font-size: 2.5em;&quot;" class="example" id="orge1ecb33">
 Provide a clear definition of the polar decomposition of the deformation gradient.
 If possible, provide illustrations or suggest references or sources that point 
 graphical illustrations depicting the nature of U and V.
@@ -596,8 +596,8 @@ graphical illustrations depicting the nature of U and V.
 </section>
 </section>
 <section>
-<section id="slide-org673c57c">
-<h2 id="org673c57c">Coding, Analysis and Interpretation</h2>
+<section id="slide-org03f6b6d">
+<h2 id="org03f6b6d">Coding, Analysis and Interpretation</h2>
 <p>
 For every mapping listed in the sections below, a complete exercise
 consists of the following tasks carried out in the student&rsquo;s programming
@@ -605,8 +605,8 @@ language of choice.  The tasks are listed here once and apply uniformly
 to all cases.
 </p>
 </section>
-<section id="slide-org277d285">
-<h4 id="org277d285">Task 1 — Visualise the deformed grid</h4>
+<section id="slide-org553cae1">
+<h4 id="org553cae1">Task 1 — Visualise the deformed grid</h4>
 <p>
 Map a regular rectangular grid of material points
 \((a_1, a_2)\) through the deformation \(x_j = \chi_j(a_i)\) and plot
@@ -614,9 +614,13 @@ the deformed configuration alongside the reference grid.  This is the
 most immediate visual check: the student sees directly how straight
 material lines curve, rotate, stretch or fold.
 </p>
+
+<p>
+Use the python snippet <a href="./snippets/deformation.py">./snippets/deformation.py</a> for visualization.
+</p>
 </section>
-<section id="slide-org16151bc">
-<h4 id="org16151bc">Task 2 — Compute the deformation gradient F</h4>
+<section id="slide-org7af6141">
+<h4 id="org7af6141">Task 2 — Compute the deformation gradient F</h4>
 <p>
 Evaluate the deformation gradient component by component:
 \[
@@ -625,14 +629,14 @@ Evaluate the deformation gradient component by component:
 For inhomogeneous mappings \(\boldsymbol{F}\) is a function of position; verify that \(J = \det(F) > 0\) everywhere, or locate the points where this condition is violated and discuss their physical meaning (self-intersection, folding of the body, etc.).
 </p>
 </section>
-<section id="slide-org1d7e9d5">
-<h4 id="org1d7e9d5">Task 3 — Compute the polar decompositions of F</h4>
+<section id="slide-org6c29c6d">
+<h4 id="org6c29c6d">Task 3 — Compute the polar decompositions of F</h4>
 <p>
 Evaluate U, V, and R.
 </p>
 </section>
-<section id="slide-orgc3e36d5">
-<h4 id="orgc3e36d5">Task 4 — Compute the finite strain tensor E</h4>
+<section id="slide-org2541ec1">
+<h4 id="org2541ec1">Task 4 — Compute the finite strain tensor E</h4>
 <p>
 Form the previous derivation of the finite strain tensor, the finite strain tensor can be written in terms of the deformation gradient as 
 \[
@@ -640,20 +644,8 @@ Form the previous derivation of the finite strain tensor, the finite strain tens
 \]
 </p>
 </section>
-<section id="slide-org771bf50">
-<h4 id="org771bf50">Task 5 — Physical interpretation and DIC analogy</h4>
-<p>
-For the waveform mappings in particular, overlay the deformed grid on
-the reference grid and identify by eye the regions of axial
-compression, axial tension and shear before computing.  Compare the
-visual estimate with the computed strain field.  This exercise
-approximates what an analyst does when interpreting Digital Image
-Correlation (DIC) full-field measurements, and builds the physical
-intuition that separates an analyst from a software operator.
-</p>
-</section>
-<section id="slide-org83615c8">
-<h3 id="org83615c8">Homogeneous Deformations</h3>
+<section id="slide-org1fe7434">
+<h3 id="org1fe7434">Homogeneous Deformations</h3>
 <p>
 In a homogeneous deformation the deformation gradient \(F\) is
 <i>constant</i> throughout the body — every material neighbourhood deforms
@@ -663,8 +655,8 @@ are uniform fields and can be evaluated by hand before being verified
 numerically.
 </p>
 </section>
-<section id="slide-org9a107d0">
-<h4 id="org9a107d0">Case 1 — Pure dilatation</h4>
+<section id="slide-org746017b">
+<h4 id="org746017b">Case 1 — Pure dilatation</h4>
 <p>
 \[
   x_1 = \lambda\, a_1, \qquad x_2 = \lambda\, a_2
@@ -677,8 +669,8 @@ equally in every direction. Determinant of the deformation gradient, \(J = \lamb
 <span class="underline">Physical example</span>: a point on or in an expanding balloon.
 </p>
 </section>
-<section id="slide-org776c7e9">
-<h4 id="org776c7e9">Case 2 — Uniaxial extension with lateral contraction</h4>
+<section id="slide-org671b636">
+<h4 id="org671b636">Case 2 — Uniaxial extension with lateral contraction</h4>
 <p>
 \[
   x_1 = \lambda\, a_1, \qquad x_2 = \mu\, a_2, \qquad \lambda \neq \mu
@@ -690,8 +682,8 @@ The case \(\lambda\mu = 1\) yields an isochoric (volume-preserving) deformation.
 <span class="underline">Physical example</span>: A rubber band stretched between two fingers. The band elongates along its axis and narrows in the transverse direction. If the rubber is nearly incompressible \(\mu \lambda \approx 1\), making this also the natural place to introduce the concept of the Poisson ratio as the ratio of lateral strain response to an induced axial strain.
 </p>
 </section>
-<section id="slide-org6080098">
-<h4 id="org6080098">Case 3 — Pure shear</h4>
+<section id="slide-orgbe76391">
+<h4 id="orgbe76391">Case 3 — Pure shear</h4>
 <p>
 \[
   x_1 = \lambda\, a_1, \qquad x_2 = \frac{1}{\lambda}\, a_2
@@ -707,8 +699,8 @@ do not.
 <span class="underline">Physical example</span>: A thin-walled cylindrical pressure vessel under combined axial compression and internal pressure, tuned so that the two stresses are equal and opposite. In the material the principal axes of strain coincide with the vessel axes, and no shear appears on those faces — a state called pure shear in the stress sense. A square element cut at 45\(^\circ\) to the axis experiences maximum shear with no normal strain, which is what students see when they rotate the strain tensor from the principal frame.
 </p>
 </section>
-<section id="slide-org6cc3f46">
-<h4 id="org6cc3f46">Case 4 — Simple shear</h4>
+<section id="slide-org9065495">
+<h4 id="org9065495">Case 4 — Simple shear</h4>
 <p>
 \[
   x_1 = a_1 + \kappa\, a_2, \qquad x_2 = a_2
@@ -731,8 +723,8 @@ the linearised theory.
 <span class="underline">Physical example</span>: A rectangular block of soft tissue or rubber bonded between two rigid plates, with one plate sliding parallel to the other — the standard lap-joint or elastomeric bearing geometry. The deformation is exactly simple shear. Engineering examples include rubber vibration isolators, bridge bearing pads, and the shear layer in a sandwich panel. The nonlinear term \(E_{22} = \kappa^2/2\) has a measurable consequence in rubber: the normal stress difference that tends to push the plates apart, known as the Poynting effect.
 </p>
 </section>
-<section id="slide-org169da29">
-<h4 id="org169da29">Case 5 — General homogeneous deformation</h4>
+<section id="slide-orgdefedd4">
+<h4 id="orgdefedd4">Case 5 — General homogeneous deformation</h4>
 <p>
 \[
   x_1 = \alpha\, a_1 + \beta\, a_2, \qquad
@@ -753,9 +745,17 @@ tensors.
 <p class="fragment (appear)">
 <span class="underline">Physical Example</span>: A sheet of metal passing through a rolling mill with misaligned rolls, so that the sheet is simultaneously compressed in thickness, stretched in the rolling direction, and subjected to an asymmetric shear across its width. Every small neighbourhood of the sheet undergoes the same general linear map, making this a textbook case of homogeneous deformation at the process scale.
 </p>
+
 </section>
-<section id="slide-org035a3ac">
-<h4 id="org035a3ac">Case 6 — Rigid body rotation</h4>
+<section id="slide-orgdefedd4-split">
+
+<div id="org2c769dd" class="figure">
+<p><img src="./images/fig5.2_homoDefor.png" alt="fig5.2_homoDefor.png" width="1600px" />
+</p>
+</div>
+</section>
+<section id="slide-org334ed0a">
+<h4 id="org334ed0a">Case 6 — Rigid body rotation</h4>
 <p>
 \[
   x_1 = a_1\cos\theta - a_2\sin\theta, \qquad
@@ -779,16 +779,16 @@ well as small stretches.
 
 <hr />
 </section>
-<section id="slide-orgfcbb60e">
-<h3 id="orgfcbb60e">Inhomogeneous Deformations</h3>
+<section id="slide-orge9e973f">
+<h3 id="orge9e973f">Inhomogeneous Deformations</h3>
 <p>
 Here \(F = F(a_i)\) varies from point to point.  The mappings remain
 analytically tractable, bridging the gap between the uniform-field
 homogeneous cases and full boundary-value problems.
 </p>
 </section>
-<section id="slide-orgc04b9e0">
-<h4 id="orgc04b9e0">Case 7 — Pure bending into a circular arc</h4>
+<section id="slide-orgd27bdd2">
+<h4 id="orgd27bdd2">Case 7 — Pure bending into a circular arc</h4>
 <p>
 \[
   x_1 = (R - a_2)\sin\!\left(\frac{a_1}{R}\right), \qquad
@@ -808,8 +808,8 @@ is inhomogeneous even though the curvature is uniform.
 <span class="underline">Physical Example</span>: A metal ruler or a thin steel strip bent by equal and opposite end moments until it takes a circular arc shape.
 </p>
 </section>
-<section id="slide-org3a0e69d">
-<h4 id="org3a0e69d">Case 8 — Radial expansion of a disk</h4>
+<section id="slide-org0f22f64">
+<h4 id="org0f22f64">Case 8 — Radial expansion of a disk</h4>
 <p>
 Expressed in Cartesian material coordinates with \(r_0 = \sqrt{a_1^2 + a_2^2}\):
 \[
@@ -828,8 +828,8 @@ transformation exercise (Task 5).
 <span class="underline">Physical Example</span>: A gas turbine with its blades rotating at a high speed, expanding outwards.
 </p>
 </section>
-<section id="slide-org86f4ad6">
-<h4 id="org86f4ad6">Case 9 — Tapered uniaxial stretch</h4>
+<section id="slide-orgfa93cc6">
+<h4 id="orgfa93cc6">Case 9 — Tapered uniaxial stretch</h4>
 <p>
 \[
   x_1 = \lambda(a_2)\, a_1, \qquad x_2 = a_2
@@ -848,8 +848,8 @@ for the first time.
 </p>
 <hr />
 </section>
-<section id="slide-org73ffea5">
-<h3 id="org73ffea5">Semi-Homogeneous Deformations Involving Waveforms</h3>
+<section id="slide-org4bb4082">
+<h3 id="org4bb4082">Semi-Homogeneous Deformations Involving Waveforms</h3>
 <p>
 The displacement field in each case is a waveform modulated over the
 domain.  \(F\) varies smoothly from point to point, producing alternating
@@ -859,8 +859,8 @@ These cases are the most visually compelling and most directly
 connected to experimental observation.
 </p>
 </section>
-<section id="slide-orga4a5683">
-<h4 id="orga4a5683">Case 10 — Sinusoidal longitudinal wave</h4>
+<section id="slide-org732c3be">
+<h4 id="org732c3be">Case 10 — Sinusoidal longitudinal wave</h4>
 <p>
 \[
   x_1 = a_1 + A\sin\!\left(\frac{2\pi a_1}{L}\right), \qquad
@@ -879,8 +879,8 @@ admissibility requirement \(J > 0\).
 <span class="underline">Physical Example</span>: A one-dimensional compressive ultrasonic wave propagating through a metal bar. The instantaneous displacement pattern at a fixed time is a sinusoidal modulation of the axial position of each material plane. Regions where material planes are crowding together are in compression (\(F_{11}<1\)) and regions where they are spreading apart are in tension (\(F_{11}>1\)). The condition \(J=0\) corresponds to the wave amplitude at which adjacent material planes would collide — the onset of shock formation.
 </p>
 </section>
-<section id="slide-org0a15a06">
-<h4 id="org0a15a06">Case 11 — Sinusoidal transverse wave</h4>
+<section id="slide-org3186398">
+<h4 id="org3186398">Case 11 — Sinusoidal transverse wave</h4>
 <p>
 \[
   x_1 = a_1 + A\sin\!\left(\frac{2\pi a_2}{L}\right), \qquad
@@ -899,8 +899,8 @@ entire catalogue.
 <span class="underline">Physical Example</span>: A transverse seismic S-wave propagating horizontally through the ground, or equivalently the snapshot of a vibrating string at a fixed instant. Each horizontal layer of material is displaced laterally by an amount that varies sinusoidally with depth, producing a spatially oscillating shear strain field. The fringe pattern produced in a photoelastic model under this deformation is visually almost identical to the actual isochromatic fringes observed in loaded transparent specimens, which is why this case makes the connection to photoelasticity so direct.
 </p>
 </section>
-<section id="slide-orgf9ccdc0">
-<h4 id="orgf9ccdc0">Case 12 — Biaxial sinusoidal deformation</h4>
+<section id="slide-org9a1b4aa">
+<h4 id="org9a1b4aa">Case 12 — Biaxial sinusoidal deformation</h4>
 <p>
 \[
   x_1 = a_1 + A\sin\!\left(\frac{2\pi a_2}{L}\right), \qquad
@@ -918,8 +918,8 @@ eye before computing (Task 6).
 <span class="underline">Physical Example</span>: A prominent physical example of biaxial sinusoidal deformation is the formation of surface wrinkles in thin-film structures attached to compliant substrates.  When a thin film bonded to a soft substrate is subjected to in-plane biaxial compression, it often develops sinusoidal waves (one-dimensional instability mode) or a square-checkerboard array as an initial instability pattern before potentially transforming into more localized folds or ridges.
 </p>
 </section>
-<section id="slide-orgdc8b494">
-<h4 id="orgdc8b494">Case 13 — Localised necking / shear band</h4>
+<section id="slide-orgc71db6f">
+<h4 id="orgc71db6f">Case 13 — Localised necking / shear band</h4>
 <p>
 \[
   x_1 = a_1 + A\,e^{-a_2^2/w^2}\,a_1, \qquad x_2 = a_2
@@ -937,8 +937,8 @@ the concept of a localisation length scale.
 <span class="underline">Physical Example</span>: The neck that forms in a ductile metal tensile specimen just before fracture — the classic Considère instability. The gauge section develops a localised reduction in cross-sectional area; material inside the neck is stretching rapidly while material outside is barely deforming. The Gaussian envelope \(e^{-a_2^2/w^2}\) captures the smooth transition between the deforming zone and the essentially rigid shoulders on either side, and the bandwidth \(w\) maps directly onto the observable neck width.
 </p>
 </section>
-<section id="slide-orgb9e292d">
-<h4 id="orgb9e292d">Case 14 — Surface wrinkling</h4>
+<section id="slide-orgc060b4c">
+<h4 id="orgc060b4c">Case 14 — Surface wrinkling</h4>
 <p>
  \[
   x_1 = a_1, \qquad
@@ -959,8 +959,8 @@ polymer sheets and biological membranes.
 </section>
 </section>
 <section>
-<section id="slide-org536a11d">
-<h2 id="org536a11d">(\(\S5.3\)) Strain/Displacement Relations (Not Included in BME252)</h2>
+<section id="slide-orge76ea72">
+<h2 id="orge76ea72">(\(\S5.3\)) Strain/Displacement Relations (Not Included in BME252)</h2>
 <ul>
 <li>The finite strain components, \(E_{ij}\), were derived in terms of the deformation <i>mapping</i> functions, \(\chi_i\).</li>
 
@@ -983,8 +983,8 @@ E_{ij} & = \frac{1}{2} \left[ \delta_{lm} \left( \frac{\partial u_l}{\partial a_
 
 </ul>
 </section>
-<section id="slide-org2fb3295">
-<h4 id="org2fb3295">Unabridged (Classical) Notation</h4>
+<section id="slide-org0756a15">
+<h4 id="org0756a15">Unabridged (Classical) Notation</h4>
 <ul>
 <li>To retrieve the expression of finite strain in the classical notation, we replace
 <ul>
@@ -1003,8 +1003,8 @@ E_{ij} & = \frac{1}{2} \left[ \delta_{lm} \left( \frac{\partial u_l}{\partial a_
 
 </ul>
 </section>
-<section id="slide-org57a20a7">
-<h3 id="org57a20a7">Infinitesimal Motion and Strain</h3>
+<section id="slide-orgab99920">
+<h3 id="orgab99920">Infinitesimal Motion and Strain</h3>
 <ul>
 <li>When the displacements \(u_i \ll b\), (they are very small in comparison to the characteristic dimension of the body \(\mathcal{B}\)),</li>
 <li>Then the difference between the initial and deformed coordinated vanish and we may use
@@ -1023,8 +1023,8 @@ E_{ij} & = \frac{1}{2} \left[ \delta_{lm} \left( \frac{\partial u_l}{\partial a_
 
 </ul>
 </section>
-<section id="slide-org0be4065">
-<h4 id="org0be4065">Small Strains in Classical Notation</h4>
+<section id="slide-org08d01be">
+<h4 id="org08d01be">Small Strains in Classical Notation</h4>
 <p>
 When the small strains are expressed in classical notation
 </p>
@@ -1034,7 +1034,7 @@ When the small strains are expressed in classical notation
 
 </ul>
 
-<div id="org6fe640f" class="figure">
+<div id="orgd470c40" class="figure">
 <p><img src="./images/FU94_5.3equation7.png" alt="FU94_5.3equation7.png" width="1600px" />
 </p>
 </div>
