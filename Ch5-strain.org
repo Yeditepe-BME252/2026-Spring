@@ -252,6 +252,9 @@ graphical illustrations depicting the nature of U and V.
 #+END_EXAMPLE
 
 * Coding, Analysis and Interpretation
+:PROPERTIES:
+:CUSTOM_ID: mappings
+:END:
 For every mapping listed in the sections below, a complete exercise
 consists of the following tasks carried out in the student's programming
 language of choice.  The tasks are listed here once and apply uniformly

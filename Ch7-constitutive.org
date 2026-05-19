@@ -44,8 +44,8 @@
   $$ \tau_{ij} = C_{ijkl} \epsilon_{kl} $$
 
 ** Reduction
-- The actual number of independent material parameters? 81? certainly not!
 #+ATTR_REVEAL: :frag (appear appear appear ...)
+- The actual number of independent material parameters? 81? certainly not!
 - *Important Note:* Stress is a symmetric tensor! Since $\tau_{ij} = \tau_{ji}$, we need
   $$ C_{ijkl} \epsilon_{kl} = C_{jikl} \epsilon_{kl} \; \forall \, k,l $$
 - This requires that $C_{ijkl} = C_{jikl}$, and is known as the first *minor symmetry* in the $C$ tensor, reducing the number of coefficients, $81 \to 54$.
